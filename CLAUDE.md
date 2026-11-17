@@ -9,6 +9,7 @@
 - `npm run check` — typecheck + eslint + prettier + vitest (запускай перед кожним комітом)
 - `npm run build` — продакшн-збірка в `dist/` (base `/crux/` для GitHub Pages)
 - `SEEDS=1000 npm test -- generator` — повна перевірка проходимості стін (довго)
+- `npm run e2e` — Playwright: проходження стіни на мобільному в'юпорті (локально: `CHROME_PATH=/usr/bin/google-chrome`)
 
 ## Архітектура
 
@@ -40,5 +41,5 @@
 
 - TypeScript strict, без `any`. Коментарі й тексти UI — українською.
 - Зміни в `core/` — лише з тестами. Детермінізм: усе випадкове — через `mulberry32(seed)`.
-- Нові слова: перевіряти написання й рід у словниках SAV (slovnik.juls.savba.sk).
+- Нові слова: перевіряти написання й рід у словниках SAV (slovnik.juls.savba.sk). Розмовні форми — лише в `skAlt`, основна форма нормативна. Стан перевірки — у `docs/content.md`.
 - `?debug` у URL відкриває `window.crux` (Phaser.Game) для e2e і налагодження.

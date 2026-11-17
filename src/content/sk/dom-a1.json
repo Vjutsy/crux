@@ -79,7 +79,8 @@
       "sk": "gauč",
       "ua": "диван",
       "pos": "noun",
-      "gender": "m"
+      "gender": "m",
+      "skAlt": ["pohovka"]
     },
     {
       "id": "koberec",

@@ -158,7 +158,8 @@
       "sk": "taxík",
       "ua": "таксі",
       "pos": "noun",
-      "gender": "m"
+      "gender": "m",
+      "skAlt": ["taxi"]
     },
     {
       "id": "stanica",

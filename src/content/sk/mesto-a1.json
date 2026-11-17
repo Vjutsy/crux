@@ -69,10 +69,10 @@
     },
     {
       "id": "benzinka",
-      "sk": "benzínka",
+      "sk": "čerpacia stanica",
       "ua": "заправка",
-      "pos": "noun",
-      "gender": "f"
+      "pos": "phrase",
+      "skAlt": ["benzínka", "benzínová pumpa"]
     },
     {
       "id": "metro",
@@ -90,10 +90,11 @@
     },
     {
       "id": "motorka",
-      "sk": "motorka",
+      "sk": "motocykel",
       "ua": "мотоцикл",
       "pos": "noun",
-      "gender": "f"
+      "gender": "m",
+      "skAlt": ["motorka"]
     },
     {
       "id": "vodic",

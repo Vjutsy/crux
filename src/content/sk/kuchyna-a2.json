@@ -21,10 +21,10 @@
     },
     {
       "id": "mikrovlnka",
-      "sk": "mikrovlnka",
+      "sk": "mikrovlnná rúra",
       "ua": "мікрохвильовка",
-      "pos": "noun",
-      "gender": "f"
+      "pos": "phrase",
+      "skAlt": ["mikrovlnka"]
     },
     {
       "id": "kanvica",
@@ -52,7 +52,8 @@
       "sk": "doska na krájanie",
       "ua": "обробна дошка",
       "pos": "phrase",
-      "uaAlt": ["дошка"]
+      "uaAlt": ["дошка"],
+      "skAlt": ["krájacia doska"]
     },
     {
       "id": "recept",

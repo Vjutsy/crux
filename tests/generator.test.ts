@@ -2,8 +2,8 @@ import { describe, expect, it } from 'vitest';
 import { findRoute, generateWall } from '../src/core/generator';
 import { walls } from '../src/data/walls';
 
-// У CI прогоняємо по 15 seed на кожну стіну; локально можна збільшити SEEDS=1000.
-const SEEDS = Number(process.env.SEEDS ?? 15);
+// У CI прогоняємо по 40 seed на кожну стіну; локально можна збільшити SEEDS=1000.
+const SEEDS = Number(process.env.SEEDS ?? 40);
 
 describe('генератор стін', () => {
   it('детермінований: той самий seed — та сама стіна', () => {

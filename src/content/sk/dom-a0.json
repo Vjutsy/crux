@@ -147,7 +147,8 @@
       "sk": "dedko",
       "ua": "дідусь",
       "pos": "noun",
-      "gender": "m"
+      "gender": "m",
+      "skAlt": ["dedo"]
     },
     {
       "id": "muz",

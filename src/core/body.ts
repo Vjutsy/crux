@@ -117,10 +117,32 @@ export function solvePose(holds: readonly Hold[], c: Contacts, opts: SolveOption
   }
   sx /= n;
   sy /= n;
+  // Центр тулуба має лежати в перетині кіл «зачіп − зміщення суглоба, радіус = довжина кінцівки».
+  // Перебираємо сітку лише в рамці цього перетину — це в рази швидше за повний квадрат.
+  let x0 = -radius;
+  let x1 = radius;
+  let y0 = -radius;
+  let y1 = radius;
+  for (const k of LIMBS) {
+    const i = c[k];
+    if (i < 0) continue;
+    const off = anchor({ x: 0, y: 0 }, k, body);
+    const R = limbLength(k, body) * REACH_SLACK;
+    const cx = holds[i]!.x - off.x - sx;
+    const cy = holds[i]!.y - off.y - sy;
+    x0 = Math.max(x0, cx - R);
+    x1 = Math.min(x1, cx + R);
+    y0 = Math.max(y0, cy - R);
+    y1 = Math.min(y1, cy + R);
+  }
+  if (x0 > x1 || y0 > y1) return null;
+  // Вирівнюємо на ту саму сітку, що й раніше, щоб результат не залежав від рамки.
+  const gx0 = Math.ceil(x0 / step) * step;
+  const gy0 = Math.ceil(y0 / step) * step;
   let best: Point | null = null;
   let bestCost = Infinity;
-  for (let dx = -radius; dx <= radius; dx += step) {
-    for (let dy = -radius; dy <= radius; dy += step) {
+  for (let dx = gx0; dx <= x1; dx += step) {
+    for (let dy = gy0; dy <= y1; dy += step) {
       const p = { x: sx + dx, y: sy + dy };
       if (!poseValid(holds, c, p, body)) continue;
       // Ближче до попередньої пози; легка перевага нижчому тулубу (тіло «висить»).
