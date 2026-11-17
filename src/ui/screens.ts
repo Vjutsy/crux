@@ -45,7 +45,7 @@ export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Pro
         })
         .join('')}</div>
       <h2>Скелелаз</h2>
-      <div class="grid">${climbers.map((c) => `<button class="pick" data-climber="${c.id}" aria-pressed="${c.id === settings.climber}"><span class="swatch" style="background:#${c.shirt.toString(16).padStart(6, '0')}"></span>${esc(c.name)}</button>`).join('')}</div>
+      <div class="grid">${climbers.map((c) => `<button class="pick" data-climber="${c.id}" aria-pressed="${c.id === settings.climber}"><span class="swatch" style="background:${c.sweater}"></span>${esc(c.name)}</button>`).join('')}</div>
       <div class="toggles">
         <button class="pick" data-toggle="sound" aria-pressed="${settings.sound}">Звуки</button>
         <button class="pick" data-toggle="music" aria-pressed="${settings.music}">Музика</button>

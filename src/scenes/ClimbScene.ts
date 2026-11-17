@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import { sound } from '../audio';
-import { DEFAULT_BODY, LIMB_NAMES, type Limb, LIMBS, type Point, anchor, danglingEnd, ikJoint, limbLength } from '../core/body';
+import { LIMB_NAMES, type Limb, LIMBS, type Point, danglingEnd } from '../core/body';
 import {
   type ClimbEvent,
   type ClimbState,
@@ -20,6 +20,7 @@ import { hashSeed, mulberry32, type Rng } from '../core/rng';
 import type { WordGroup } from '../content/schema';
 import type { Climber } from '../data/climbers';
 import type { WallConfig } from '../data/walls';
+import { drawClimber } from '../ui/climberArt';
 import { askQuestion } from '../ui/questionCard';
 import { toast } from '../ui/toast';
 import { type WallTheme, themeFor } from './backgrounds';
@@ -80,7 +81,10 @@ export class ClimbScene extends Phaser.Scene {
   private tutorialStep = -1;
   private holdsGfx!: Phaser.GameObjects.Graphics;
   private hintGfx!: Phaser.GameObjects.Graphics;
-  private bodyGfx!: Phaser.GameObjects.Graphics;
+  private actor!: SVGSVGElement;
+  private look: { at: Point; until: number } | null = null;
+  private vx = 0;
+  private lastX = 0;
   private disp!: { torso: Point; ends: Point[] };
   private camY = 0;
   private shakeTimer = 0;
@@ -120,13 +124,17 @@ export class ClimbScene extends Phaser.Scene {
     this.theme.draw(bg, w.width, w.height);
     this.holdsGfx = this.add.graphics().setDepth(1);
     this.hintGfx = this.add.graphics().setDepth(3);
-    this.bodyGfx = this.add.graphics().setDepth(4);
+    this.actor = document.getElementById('actor') as unknown as SVGSVGElement;
+    this.actor.removeAttribute('hidden');
 
     this.disp = { torso: { ...this.s.torso }, ends: LIMBS.map((k) => this.limbEnd(k)) };
     this.camY = this.s.torso.y;
     this.fitCamera();
     this.scale.on('resize', this.fitCamera, this);
+    this.lastX = this.s.torso.x;
     this.events.once('shutdown', () => {
+      this.actor.innerHTML = '';
+      this.actor.setAttribute('hidden', '');
       for (const t of this.labels) t.destroy();
       this.labels = [];
       this.scale.off('resize', this.fitCamera, this);
@@ -184,6 +192,7 @@ export class ClimbScene extends Phaser.Scene {
       const e = this.disp.ends[k]!;
       if (Math.hypot(e.x - wp.x, e.y - wp.y) < LIMB_HIT) {
         this.selected = this.selected === k ? null : k;
+        this.look = { at: { ...e }, until: this.time.now + 1200 };
         sound.tap();
         toast(this.selected === null ? 'Кінцівку обере гра' : `Рухаємо: ${LIMB_NAMES[this.selected]}`);
         this.drawHolds();
@@ -216,6 +225,7 @@ export class ClimbScene extends Phaser.Scene {
   private async moveTo(limb: Limb, hold: number) {
     const res = move(this.s, limb, hold);
     if (res.kind === 'invalid') return;
+    this.look = { at: { ...this.s.wall.holds[hold]! }, until: this.time.now + 1200 };
     sound.tap();
     this.hintHold = -1;
     this.selected = null;
@@ -377,7 +387,7 @@ export class ClimbScene extends Phaser.Scene {
     }
 
     if (this.ragdoll) {
-      this.drawRagdoll();
+      this.drawRagdoll(time);
       return;
     }
     this.disp.torso = lerp(this.disp.torso, this.s.torso);
@@ -403,60 +413,47 @@ export class ClimbScene extends Phaser.Scene {
       sound.heartbeat();
       this.beatTimer = 1.3 - f * 0.6;
     }
-    this.drawBody(jx, jy, f);
+    this.drawActor(time, { x: this.disp.torso.x + jx, y: this.disp.torso.y + jy }, this.disp.ends, f);
   }
 
-  private drawBody(jx: number, jy: number, f: number) {
-    const g = this.bodyGfx.clear();
-    const look = this.data0.climber;
-    const c = { x: this.disp.torso.x + jx, y: this.disp.torso.y + jy };
-    const b = DEFAULT_BODY;
-    const ink = f >= 0.8 ? COLORS.danger : COLORS.ink;
-    const sl = anchor(c, 0);
-    const sr = anchor(c, 1);
-    const hl = anchor(c, 2);
-    const hr = anchor(c, 3);
-    // Ноги й руки.
-    g.lineStyle(4.5, ink, 1);
-    for (const k of LIMBS) {
-      const root = anchor(c, k);
-      const end = this.disp.ends[k]!;
-      const mid = ikJoint(root, end, limbLength(k), k % 2 === 1 ? 1 : -1);
-      g.lineBetween(root.x, root.y, mid.x, mid.y).lineBetween(mid.x, mid.y, end.x, end.y);
-    }
-    // Тулуб-футболка.
-    g.fillStyle(look.shirt, 1).fillRoundedRect(sl.x - 3, sl.y - 3, sr.x - sl.x + 6, hl.y - sl.y + 4, 6);
-    g.lineStyle(2, ink, 1).strokeRoundedRect(sl.x - 3, sl.y - 3, sr.x - sl.x + 6, hl.y - sl.y + 4, 6);
-    g.lineStyle(4.5, ink, 1).lineBetween(hl.x, hl.y, hr.x, hr.y);
-    // Голова.
-    const hy = c.y - b.torso / 2 - 12;
-    g.fillStyle(look.skin, 1).fillCircle(c.x, hy, 9);
-    g.fillStyle(look.helmet ?? look.hair, 1)
-      .slice(c.x, hy, look.helmet ? 10.5 : 9.5, Math.PI, 0, false)
-      .fillPath();
-    g.lineStyle(2, ink, 1).strokeCircle(c.x, hy, 9);
-    // Кружечки кінцівок: вибрана — помаранчева, та що висить — червона.
-    for (const k of LIMBS) {
-      const e = this.disp.ends[k]!;
-      const sel = this.selected === k;
-      const col = sel ? COLORS.select : this.s.contacts[k] < 0 ? COLORS.danger : COLORS.card;
-      g.fillStyle(col, 1).fillCircle(e.x, e.y, sel ? 8 : 5.5);
-      g.lineStyle(2, COLORS.ink, 1).strokeCircle(e.x, e.y, sel ? 8 : 5.5);
-    }
+  /** SVG-шар зі скелелазом: viewBox = видима частина світу, тож малюємо у світових координатах. */
+  private syncActorView() {
+    const v = this.cameras.main.worldView;
+    this.actor.setAttribute('viewBox', `${v.x.toFixed(2)} ${v.y.toFixed(2)} ${v.width.toFixed(2)} ${v.height.toFixed(2)}`);
   }
 
-  private drawRagdoll() {
-    const r = this.ragdoll!;
-    const g = this.bodyGfx.clear();
-    const look = this.data0.climber;
-    g.lineStyle(4.5, COLORS.ink, 1);
-    r.lines().forEach(([p, q], i) => {
-      if (i === 0) g.lineStyle(9, look.shirt, 1);
-      else g.lineStyle(4.5, COLORS.ink, 1);
-      g.lineBetween(p.x, p.y, q.x, q.y);
+  private drawActor(time: number, c: Point, ends: readonly Point[], tired: number, rotate = 0) {
+    this.syncActorView();
+    const t = reducedMotion() ? 1 : time / 1000;
+    this.vx += ((c.x - this.lastX) * -0.6 - this.vx) * 0.15;
+    this.lastX = c.x;
+    const look = this.look && this.look.until > time ? this.look.at : this.selected !== null ? this.disp.ends[this.selected]! : null;
+    const art = drawClimber(this.data0.climber, c, ends, t, {
+      tired,
+      look,
+      vx: this.vx,
+      handles: !this.ragdoll,
+      selected: this.selected,
+      dangling: this.s.contacts.map((i) => i < 0),
     });
-    const h = r.headPos();
-    g.fillStyle(look.skin, 1).fillCircle(h.x, h.y, 9);
-    g.lineStyle(2, COLORS.ink, 1).strokeCircle(h.x, h.y, 9);
+    this.actor.innerHTML = rotate ? `<g transform="rotate(${rotate.toFixed(1)} ${c.x.toFixed(1)} ${c.y.toFixed(1)})">${art}</g>` : art;
+  }
+
+  /** Регдол: беремо тулуб і кінці кінцівок з фізики, малюємо ту саму модель, повернуту за хребтом. */
+  private drawRagdoll(time: number) {
+    const lines = this.ragdoll!.lines();
+    const [top, bottom] = lines[0]!;
+    const c = { x: (top.x + bottom.x) / 2, y: (top.y + bottom.y) / 2 };
+    const angle = Math.atan2(bottom.y - top.y, bottom.x - top.x) - Math.PI / 2;
+    const cos = Math.cos(-angle);
+    const sin = Math.sin(-angle);
+    // Кінці кінцівок переводимо в «прямостоячу» систему тулуба, а весь малюнок повертаємо назад.
+    const ends = [0, 1, 2, 3].map((k) => {
+      const p = lines[2 + k * 2]![1];
+      const dx = p.x - c.x;
+      const dy = p.y - c.y;
+      return { x: c.x + dx * cos - dy * sin, y: c.y + dx * sin + dy * cos };
+    });
+    this.drawActor(time, c, ends, 1, (angle * 180) / Math.PI);
   }
 }
