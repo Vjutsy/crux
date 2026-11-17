@@ -1,0 +1,189 @@
+{
+  "id": "dom-a2",
+  "themeId": "dom",
+  "theme": "Дім і сім'я",
+  "cefr": "A2",
+  "words": [
+    {
+      "id": "stahovat-sa",
+      "sk": "sťahovať sa",
+      "ua": "переїжджати",
+      "pos": "verb"
+    },
+    {
+      "id": "najomne",
+      "sk": "nájomné",
+      "ua": "орендна плата",
+      "pos": "noun",
+      "gender": "n",
+      "uaAlt": ["оренда"]
+    },
+    {
+      "id": "majitel",
+      "sk": "majiteľ",
+      "ua": "власник",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vchod",
+      "sk": "vchod",
+      "ua": "вхід",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vytah",
+      "sk": "výťah",
+      "ua": "ліфт",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "poschodie",
+      "sk": "poschodie",
+      "ua": "поверх",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "kurenie",
+      "sk": "kúrenie",
+      "ua": "опалення",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "elektrina",
+      "sk": "elektrina",
+      "ua": "електрика",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nabytok",
+      "sk": "nábytok",
+      "ua": "меблі",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zariadeny",
+      "sk": "zariadený",
+      "ua": "мебльований",
+      "pos": "adj"
+    },
+    {
+      "id": "utulny",
+      "sk": "útulný",
+      "ua": "затишний",
+      "pos": "adj"
+    },
+    {
+      "id": "priestranny",
+      "sk": "priestranný",
+      "ua": "просторий",
+      "pos": "adj"
+    },
+    {
+      "id": "svadba",
+      "sk": "svadba",
+      "ua": "весілля",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "narodeniny",
+      "sk": "narodeniny",
+      "ua": "день народження",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "oslava",
+      "sk": "oslava",
+      "ua": "святкування",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pribuzny",
+      "sk": "príbuzný",
+      "ua": "родич",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "bratranec",
+      "sk": "bratranec",
+      "ua": "двоюрідний брат",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sesternica",
+      "sk": "sesternica",
+      "ua": "двоюрідна сестра",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dvojcata",
+      "sk": "dvojčatá",
+      "ua": "близнюки",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "susedka",
+      "sk": "susedka",
+      "ua": "сусідка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pozvat",
+      "sk": "pozvať",
+      "ua": "запросити",
+      "pos": "verb"
+    },
+    {
+      "id": "navstivit",
+      "sk": "navštíviť",
+      "ua": "відвідати",
+      "pos": "verb"
+    },
+    {
+      "id": "opravit",
+      "sk": "opraviť",
+      "ua": "полагодити",
+      "pos": "verb",
+      "uaAlt": ["відремонтувати"]
+    },
+    {
+      "id": "vymalovat",
+      "sk": "vymaľovať",
+      "ua": "пофарбувати",
+      "pos": "verb"
+    },
+    {
+      "id": "starat-sa",
+      "sk": "starať sa",
+      "ua": "піклуватися",
+      "pos": "verb"
+    },
+    {
+      "id": "vychovavat",
+      "sk": "vychovávať",
+      "ua": "виховувати",
+      "pos": "verb"
+    },
+    {
+      "id": "dochodca",
+      "sk": "dôchodca",
+      "ua": "пенсіонер",
+      "pos": "noun",
+      "gender": "m"
+    }
+  ]
+}

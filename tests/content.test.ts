@@ -27,3 +27,14 @@ describe('контент', () => {
     });
   }
 });
+
+describe('усі групи разом', () => {
+  it('id слів унікальні між групами (ключі коробок Лейтнера)', () => {
+    const ids = files.flatMap((f) => WordGroup.parse(JSON.parse(readFileSync(join(dir, f), 'utf8'))).words.map((w) => w.id));
+    expect(new Set(ids).size).toBe(ids.length);
+  });
+  it('є 4 теми × 3 рівні', () => {
+    const keys = files.map((f) => f.replace('.json', ''));
+    for (const t of ['kuchyna', 'dom', 'mesto', 'cas']) for (const c of ['a0', 'a1', 'a2']) expect(keys).toContain(`${t}-${c}`);
+  });
+});

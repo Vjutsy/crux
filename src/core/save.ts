@@ -10,6 +10,9 @@ export interface Progress {
   stars: Record<string, number>;
   boxes: LeitnerBoxes;
   streak: { lastDay: string; count: number };
+  settings: { sound: boolean; music: boolean; climber: string };
+  /** Навчання на першій стіні вже пройдене. */
+  tutorialDone: boolean;
 }
 
 const KEY = 'crux-progress';
@@ -20,12 +23,17 @@ export const emptyProgress = (): Progress => ({
   stars: {},
   boxes: {},
   streak: { lastDay: '', count: 0 },
+  settings: { sound: true, music: true, climber: 'iva' },
+  tutorialDone: false,
 });
 
 export async function loadProgress(): Promise<Progress> {
   try {
-    const p = await get<Progress>(KEY);
-    return p?.version === 1 ? p : emptyProgress();
+    const p = await get<Partial<Progress>>(KEY);
+    if (p?.version !== 1) return emptyProgress();
+    // Поля, додані пізніше, заповнюємо значеннями за замовчуванням.
+    const base = emptyProgress();
+    return { ...base, ...p, settings: { ...base.settings, ...p.settings } } as Progress;
   } catch {
     return emptyProgress();
   }

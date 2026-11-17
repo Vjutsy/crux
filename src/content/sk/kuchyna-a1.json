@@ -1,0 +1,195 @@
+{
+  "id": "kuchyna-a1",
+  "themeId": "kuchyna",
+  "theme": "Кухня і їжа",
+  "cefr": "A1",
+  "words": [
+    {
+      "id": "ryza",
+      "sk": "ryža",
+      "ua": "рис",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "cestoviny",
+      "sk": "cestoviny",
+      "ua": "макарони",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zemiak",
+      "sk": "zemiak",
+      "ua": "картопля",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "mrkva",
+      "sk": "mrkva",
+      "ua": "морква",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "cibula",
+      "sk": "cibuľa",
+      "ua": "цибуля",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "cesnak",
+      "sk": "cesnak",
+      "ua": "часник",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "paradajka",
+      "sk": "paradajka",
+      "ua": "помідор",
+      "pos": "noun",
+      "gender": "f",
+      "uaAlt": ["томат"]
+    },
+    {
+      "id": "uhorka",
+      "sk": "uhorka",
+      "ua": "огірок",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "ryba",
+      "sk": "ryba",
+      "ua": "риба",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kura",
+      "sk": "kura",
+      "ua": "курка",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "sunka",
+      "sk": "šunka",
+      "ua": "шинка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "klobasa",
+      "sk": "klobása",
+      "ua": "ковбаса",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "jogurt",
+      "sk": "jogurt",
+      "ua": "йогурт",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "olej",
+      "sk": "olej",
+      "ua": "олія",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "muka",
+      "sk": "múka",
+      "ua": "борошно",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "ranajky",
+      "sk": "raňajky",
+      "ua": "сніданок",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "obed",
+      "sk": "obed",
+      "ua": "обід",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vecera",
+      "sk": "večera",
+      "ua": "вечеря",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "hladny",
+      "sk": "hladný",
+      "ua": "голодний",
+      "pos": "adj"
+    },
+    {
+      "id": "smadny",
+      "sk": "smädný",
+      "ua": "спраглий",
+      "pos": "adj"
+    },
+    {
+      "id": "chutny",
+      "sk": "chutný",
+      "ua": "смачний",
+      "pos": "adj"
+    },
+    {
+      "id": "sladky",
+      "sk": "sladký",
+      "ua": "солодкий",
+      "pos": "adj"
+    },
+    {
+      "id": "slany",
+      "sk": "slaný",
+      "ua": "солоний",
+      "pos": "adj"
+    },
+    {
+      "id": "horky",
+      "sk": "horký",
+      "ua": "гіркий",
+      "pos": "adj"
+    },
+    {
+      "id": "kysly",
+      "sk": "kyslý",
+      "ua": "кислий",
+      "pos": "adj"
+    },
+    {
+      "id": "krajat",
+      "sk": "krájať",
+      "ua": "різати",
+      "pos": "verb"
+    },
+    {
+      "id": "piect",
+      "sk": "piecť",
+      "ua": "пекти",
+      "pos": "verb"
+    },
+    {
+      "id": "umyvat",
+      "sk": "umývať",
+      "ua": "мити",
+      "pos": "verb"
+    }
+  ]
+}

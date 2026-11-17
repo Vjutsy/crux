@@ -1,0 +1,202 @@
+{
+  "id": "dom-a1",
+  "themeId": "dom",
+  "theme": "Дім і сім'я",
+  "cefr": "A1",
+  "words": [
+    {
+      "id": "obyvacka",
+      "sk": "obývačka",
+      "ua": "вітальня",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "spalna",
+      "sk": "spálňa",
+      "ua": "спальня",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "chodba",
+      "sk": "chodba",
+      "ua": "коридор",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "schody",
+      "sk": "schody",
+      "ua": "сходи",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "balkon",
+      "sk": "balkón",
+      "ua": "балкон",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zahrada",
+      "sk": "záhrada",
+      "ua": "сад",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pivnica",
+      "sk": "pivnica",
+      "ua": "підвал",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "podlaha",
+      "sk": "podlaha",
+      "ua": "підлога",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "strop",
+      "sk": "strop",
+      "ua": "стеля",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "skrina",
+      "sk": "skriňa",
+      "ua": "шафа",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "gauc",
+      "sk": "gauč",
+      "ua": "диван",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "koberec",
+      "sk": "koberec",
+      "ua": "килим",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zrkadlo",
+      "sk": "zrkadlo",
+      "ua": "дзеркало",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "vankus",
+      "sk": "vankúš",
+      "ua": "подушка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "perina",
+      "sk": "perina",
+      "ua": "ковдра",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "sprcha",
+      "sk": "sprcha",
+      "ua": "душ",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vana",
+      "sk": "vaňa",
+      "ua": "ванна",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "manzel",
+      "sk": "manžel",
+      "ua": "чоловік (у шлюбі)",
+      "pos": "noun",
+      "gender": "m",
+      "uaAlt": ["чоловік"]
+    },
+    {
+      "id": "manzelka",
+      "sk": "manželka",
+      "ua": "дружина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "rodicia",
+      "sk": "rodičia",
+      "ua": "батьки",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "stryko",
+      "sk": "strýko",
+      "ua": "дядько",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "teta",
+      "sk": "teta",
+      "ua": "тітка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vnuk",
+      "sk": "vnuk",
+      "ua": "онук",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vnucka",
+      "sk": "vnučka",
+      "ua": "онука",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "sused",
+      "sk": "sused",
+      "ua": "сусід",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "upratovat",
+      "sk": "upratovať",
+      "ua": "прибирати",
+      "pos": "verb"
+    },
+    {
+      "id": "varit-obed",
+      "sk": "variť obed",
+      "ua": "готувати обід",
+      "pos": "phrase"
+    },
+    {
+      "id": "oprat",
+      "sk": "oprať",
+      "ua": "випрати",
+      "pos": "verb"
+    }
+  ]
+}

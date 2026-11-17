@@ -1,0 +1,207 @@
+{
+  "id": "cas-a2",
+  "themeId": "cas",
+  "theme": "Числа, час, погода",
+  "cefr": "A2",
+  "words": [
+    {
+      "id": "predpoved-pocasia",
+      "sk": "predpoveď počasia",
+      "ua": "прогноз погоди",
+      "pos": "phrase"
+    },
+    {
+      "id": "teplota",
+      "sk": "teplota",
+      "ua": "температура",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "stupen",
+      "sk": "stupeň",
+      "ua": "градус",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "mraz",
+      "sk": "mráz",
+      "ua": "мороз",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "duha",
+      "sk": "dúha",
+      "ua": "веселка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "blesk",
+      "sk": "blesk",
+      "ua": "блискавка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "hrom",
+      "sk": "hrom",
+      "ua": "грім",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "slnecno",
+      "sk": "slnečno",
+      "ua": "сонячно",
+      "pos": "adv"
+    },
+    {
+      "id": "zamracene",
+      "sk": "zamračené",
+      "ua": "хмарно",
+      "pos": "adv"
+    },
+    {
+      "id": "prsi",
+      "sk": "prší",
+      "ua": "іде дощ",
+      "pos": "phrase",
+      "uaAlt": ["йде дощ"]
+    },
+    {
+      "id": "snezi",
+      "sk": "sneží",
+      "ua": "іде сніг",
+      "pos": "phrase",
+      "uaAlt": ["йде сніг"]
+    },
+    {
+      "id": "fuka-vietor",
+      "sk": "fúka vietor",
+      "ua": "дме вітер",
+      "pos": "phrase"
+    },
+    {
+      "id": "pol-hodiny",
+      "sk": "pol hodiny",
+      "ua": "пів години",
+      "pos": "phrase",
+      "uaAlt": ["півгодини"]
+    },
+    {
+      "id": "stvrt",
+      "sk": "štvrť",
+      "ua": "чверть",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "polnoc",
+      "sk": "polnoc",
+      "ua": "північ",
+      "pos": "noun",
+      "gender": "f",
+      "uaAlt": ["опівночі"]
+    },
+    {
+      "id": "poludnie",
+      "sk": "poludnie",
+      "ua": "полудень",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "vikend",
+      "sk": "víkend",
+      "ua": "вихідні",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sviatok",
+      "sk": "sviatok",
+      "ua": "свято",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "dovolenka",
+      "sk": "dovolenka",
+      "ua": "відпустка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "storocie",
+      "sk": "storočie",
+      "ua": "століття",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "buduci",
+      "sk": "budúci",
+      "ua": "наступний",
+      "pos": "adj",
+      "uaAlt": ["майбутній"]
+    },
+    {
+      "id": "minuly",
+      "sk": "minulý",
+      "ua": "минулий",
+      "pos": "adj"
+    },
+    {
+      "id": "skoro",
+      "sk": "skoro",
+      "ua": "рано",
+      "pos": "adv"
+    },
+    {
+      "id": "neskoro",
+      "sk": "neskoro",
+      "ua": "пізно",
+      "pos": "adv"
+    },
+    {
+      "id": "casto",
+      "sk": "často",
+      "ua": "часто",
+      "pos": "adv"
+    },
+    {
+      "id": "niekedy",
+      "sk": "niekedy",
+      "ua": "іноді",
+      "pos": "adv",
+      "uaAlt": ["інколи"]
+    },
+    {
+      "id": "nikdy",
+      "sk": "nikdy",
+      "ua": "ніколи",
+      "pos": "adv"
+    },
+    {
+      "id": "vzdy",
+      "sk": "vždy",
+      "ua": "завжди",
+      "pos": "adv"
+    },
+    {
+      "id": "prvy",
+      "sk": "prvý",
+      "ua": "перший",
+      "pos": "num"
+    },
+    {
+      "id": "druhy",
+      "sk": "druhý",
+      "ua": "другий",
+      "pos": "num"
+    }
+  ]
+}

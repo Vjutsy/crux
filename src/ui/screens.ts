@@ -1,5 +1,6 @@
 /** Екрани меню (тема, рівень, стіна) і результату (зірки + слова з помилками). */
 import type { WordGroup } from '../content/schema';
+import { climbers } from '../data/climbers';
 import type { Progress } from '../core/save';
 import type { WallConfig } from '../data/walls';
 import type { ClimbSummary } from '../scenes/ClimbScene';
@@ -13,12 +14,18 @@ export interface MenuChoice {
   daily: boolean;
 }
 
-export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Progress, onStart: (c: MenuChoice) => void) {
+export interface MenuHandlers {
+  onStart: (c: MenuChoice) => void;
+  onSettings: (s: Progress['settings']) => void;
+}
+
+export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Progress, { onStart, onSettings }: MenuHandlers) {
   const el = document.getElementById('menu')!;
   const themes = [...new Map(groups.map((g) => [g.themeId, g.theme])).entries()];
   let themeId = themes[0]?.[0] ?? '';
   let groupId = groups.find((g) => g.themeId === themeId)?.id ?? '';
   let wallN = Math.min(progress.unlockedWall, walls.length);
+  const settings = { ...progress.settings };
 
   const render = () => {
     const levels = groups.filter((g) => g.themeId === themeId);
@@ -37,6 +44,12 @@ export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Pro
           return `<button class="pick" data-wall="${w.wall}" aria-pressed="${w.wall === wallN}" ${w.wall > progress.unlockedWall ? 'disabled' : ''}>Стіна ${w.wall}<br><small>${starsText(st)}</small></button>`;
         })
         .join('')}</div>
+      <h2>Скелелаз</h2>
+      <div class="grid">${climbers.map((c) => `<button class="pick" data-climber="${c.id}" aria-pressed="${c.id === settings.climber}"><span class="swatch" style="background:#${c.shirt.toString(16).padStart(6, '0')}"></span>${esc(c.name)}</button>`).join('')}</div>
+      <div class="toggles">
+        <button class="pick" data-toggle="sound" aria-pressed="${settings.sound}">Звуки</button>
+        <button class="pick" data-toggle="music" aria-pressed="${settings.music}">Музика</button>
+      </div>
       <button class="go" id="go">Лізти!</button>
       <button class="go" id="daily" style="background:#ffffff26;color:#fff">Щоденна стіна</button>`;
   };
@@ -46,7 +59,13 @@ export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Pro
     if (b.dataset.theme) themeId = b.dataset.theme;
     else if (b.dataset.group) groupId = b.dataset.group;
     else if (b.dataset.wall) wallN = Number(b.dataset.wall);
-    else if (b.id === 'go' || b.id === 'daily') {
+    else if (b.dataset.climber) {
+      settings.climber = b.dataset.climber;
+      onSettings({ ...settings });
+    } else if (b.dataset.toggle === 'sound' || b.dataset.toggle === 'music') {
+      settings[b.dataset.toggle] = !settings[b.dataset.toggle];
+      onSettings({ ...settings });
+    } else if (b.id === 'go' || b.id === 'daily') {
       const group = groups.find((g) => g.id === groupId);
       if (!group) return;
       el.hidden = true;

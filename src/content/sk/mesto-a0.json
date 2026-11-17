@@ -1,0 +1,214 @@
+{
+  "id": "mesto-a0",
+  "themeId": "mesto",
+  "theme": "Місто і транспорт",
+  "cefr": "A0",
+  "words": [
+    {
+      "id": "mesto",
+      "sk": "mesto",
+      "ua": "місто",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "ulica",
+      "sk": "ulica",
+      "ua": "вулиця",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "namestie",
+      "sk": "námestie",
+      "ua": "площа",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "obchod",
+      "sk": "obchod",
+      "ua": "магазин",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "banka",
+      "sk": "banka",
+      "ua": "банк",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "posta",
+      "sk": "pošta",
+      "ua": "пошта",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "skola",
+      "sk": "škola",
+      "ua": "школа",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nemocnica",
+      "sk": "nemocnica",
+      "ua": "лікарня",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "lekaren",
+      "sk": "lekáreň",
+      "ua": "аптека",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "restauracia",
+      "sk": "reštaurácia",
+      "ua": "ресторан",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kaviaren",
+      "sk": "kaviareň",
+      "ua": "кав'ярня",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "park",
+      "sk": "park",
+      "ua": "парк",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "most",
+      "sk": "most",
+      "ua": "міст",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kostol",
+      "sk": "kostol",
+      "ua": "церква",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "hrad",
+      "sk": "hrad",
+      "ua": "замок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "auto",
+      "sk": "auto",
+      "ua": "автомобіль",
+      "pos": "noun",
+      "gender": "n",
+      "uaAlt": ["машина", "авто"]
+    },
+    {
+      "id": "autobus",
+      "sk": "autobus",
+      "ua": "автобус",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vlak",
+      "sk": "vlak",
+      "ua": "потяг",
+      "pos": "noun",
+      "gender": "m",
+      "uaAlt": ["поїзд"]
+    },
+    {
+      "id": "elektricka",
+      "sk": "električka",
+      "ua": "трамвай",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "bicykel",
+      "sk": "bicykel",
+      "ua": "велосипед",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "lietadlo",
+      "sk": "lietadlo",
+      "ua": "літак",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "taxik",
+      "sk": "taxík",
+      "ua": "таксі",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "stanica",
+      "sk": "stanica",
+      "ua": "станція",
+      "pos": "noun",
+      "gender": "f",
+      "uaAlt": ["вокзал"]
+    },
+    {
+      "id": "letisko",
+      "sk": "letisko",
+      "ua": "аеропорт",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "ist",
+      "sk": "ísť",
+      "ua": "іти",
+      "pos": "verb",
+      "uaAlt": ["йти"]
+    },
+    {
+      "id": "vlavo",
+      "sk": "vľavo",
+      "ua": "ліворуч",
+      "pos": "adv",
+      "uaAlt": ["наліво"]
+    },
+    {
+      "id": "vpravo",
+      "sk": "vpravo",
+      "ua": "праворуч",
+      "pos": "adv",
+      "uaAlt": ["направо"]
+    },
+    {
+      "id": "rovno",
+      "sk": "rovno",
+      "ua": "прямо",
+      "pos": "adv"
+    },
+    {
+      "id": "mapa",
+      "sk": "mapa",
+      "ua": "мапа",
+      "pos": "noun",
+      "gender": "f",
+      "uaAlt": ["карта"]
+    }
+  ]
+}

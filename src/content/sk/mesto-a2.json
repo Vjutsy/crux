@@ -1,0 +1,200 @@
+{
+  "id": "mesto-a2",
+  "themeId": "mesto",
+  "theme": "Місто і транспорт",
+  "cefr": "A2",
+  "words": [
+    {
+      "id": "dopravna-zapcha",
+      "sk": "dopravná zápcha",
+      "ua": "затор",
+      "pos": "phrase",
+      "uaAlt": ["пробка"]
+    },
+    {
+      "id": "meskanie",
+      "sk": "meškanie",
+      "ua": "запізнення",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "spiatocny-listok",
+      "sk": "spiatočný lístok",
+      "ua": "квиток туди й назад",
+      "pos": "phrase"
+    },
+    {
+      "id": "batozina",
+      "sk": "batožina",
+      "ua": "багаж",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kufor",
+      "sk": "kufor",
+      "ua": "валіза",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "odchod",
+      "sk": "odchod",
+      "ua": "відправлення",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "prichod",
+      "sk": "príchod",
+      "ua": "прибуття",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "colnica",
+      "sk": "colnica",
+      "ua": "митниця",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pas",
+      "sk": "pas",
+      "ua": "паспорт",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "ubytovanie",
+      "sk": "ubytovanie",
+      "ua": "проживання",
+      "pos": "noun",
+      "gender": "n",
+      "uaAlt": ["житло"]
+    },
+    {
+      "id": "rezervacia",
+      "sk": "rezervácia",
+      "ua": "бронювання",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "turista",
+      "sk": "turista",
+      "ua": "турист",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sprievodca",
+      "sk": "sprievodca",
+      "ua": "гід",
+      "pos": "noun",
+      "gender": "m",
+      "uaAlt": ["екскурсовод"]
+    },
+    {
+      "id": "pamiatka",
+      "sk": "pamiatka",
+      "ua": "пам'ятка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "predmestie",
+      "sk": "predmestie",
+      "ua": "передмістя",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "centrum",
+      "sk": "centrum",
+      "ua": "центр",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "budova",
+      "sk": "budova",
+      "ua": "будівля",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "mrakodrap",
+      "sk": "mrakodrap",
+      "ua": "хмарочос",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "chodec",
+      "sk": "chodec",
+      "ua": "пішохід",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pokuta",
+      "sk": "pokuta",
+      "ua": "штраф",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nehoda",
+      "sk": "nehoda",
+      "ua": "аварія",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "odbocit",
+      "sk": "odbočiť",
+      "ua": "повернути",
+      "pos": "verb"
+    },
+    {
+      "id": "zaparkovat",
+      "sk": "zaparkovať",
+      "ua": "припаркувати",
+      "pos": "verb"
+    },
+    {
+      "id": "zmeskat",
+      "sk": "zmeškať",
+      "ua": "запізнитися на",
+      "pos": "verb",
+      "uaAlt": ["пропустити"]
+    },
+    {
+      "id": "najst",
+      "sk": "nájsť",
+      "ua": "знайти",
+      "pos": "verb"
+    },
+    {
+      "id": "stratit-sa",
+      "sk": "stratiť sa",
+      "ua": "заблукати",
+      "pos": "verb"
+    },
+    {
+      "id": "peso",
+      "sk": "pešo",
+      "ua": "пішки",
+      "pos": "adv"
+    },
+    {
+      "id": "rusny",
+      "sk": "rušný",
+      "ua": "жвавий",
+      "pos": "adj",
+      "uaAlt": ["людний"]
+    }
+  ]
+}

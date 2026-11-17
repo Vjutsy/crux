@@ -1,0 +1,206 @@
+{
+  "id": "mesto-a1",
+  "themeId": "mesto",
+  "theme": "Місто і транспорт",
+  "cefr": "A1",
+  "words": [
+    {
+      "id": "zastavka",
+      "sk": "zastávka",
+      "ua": "зупинка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "listok",
+      "sk": "lístok",
+      "ua": "квиток",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "cestovny-poriadok",
+      "sk": "cestovný poriadok",
+      "ua": "розклад руху",
+      "pos": "phrase",
+      "uaAlt": ["розклад"]
+    },
+    {
+      "id": "nastupiste",
+      "sk": "nástupište",
+      "ua": "платформа",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "krizovatka",
+      "sk": "križovatka",
+      "ua": "перехрестя",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "semafor",
+      "sk": "semafor",
+      "ua": "світлофор",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "chodnik",
+      "sk": "chodník",
+      "ua": "тротуар",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "priechod-pre-chodcov",
+      "sk": "priechod pre chodcov",
+      "ua": "пішохідний перехід",
+      "pos": "phrase"
+    },
+    {
+      "id": "parkovisko",
+      "sk": "parkovisko",
+      "ua": "парковка",
+      "pos": "noun",
+      "gender": "n",
+      "uaAlt": ["стоянка"]
+    },
+    {
+      "id": "benzinka",
+      "sk": "benzínka",
+      "ua": "заправка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "metro",
+      "sk": "metro",
+      "ua": "метро",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "lod",
+      "sk": "loď",
+      "ua": "корабель",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "motorka",
+      "sk": "motorka",
+      "ua": "мотоцикл",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vodic",
+      "sk": "vodič",
+      "ua": "водій",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "cestujuci",
+      "sk": "cestujúci",
+      "ua": "пасажир",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kino",
+      "sk": "kino",
+      "ua": "кінотеатр",
+      "pos": "noun",
+      "gender": "n",
+      "uaAlt": ["кіно"]
+    },
+    {
+      "id": "divadlo",
+      "sk": "divadlo",
+      "ua": "театр",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "muzeum",
+      "sk": "múzeum",
+      "ua": "музей",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "kniznica",
+      "sk": "knižnica",
+      "ua": "бібліотека",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "trh",
+      "sk": "trh",
+      "ua": "ринок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "radnica",
+      "sk": "radnica",
+      "ua": "ратуша",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "policia",
+      "sk": "polícia",
+      "ua": "поліція",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "hotel",
+      "sk": "hotel",
+      "ua": "готель",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "cestovat",
+      "sk": "cestovať",
+      "ua": "подорожувати",
+      "pos": "verb"
+    },
+    {
+      "id": "nastupit",
+      "sk": "nastúpiť",
+      "ua": "сісти (в транспорт)",
+      "pos": "verb"
+    },
+    {
+      "id": "vystupit",
+      "sk": "vystúpiť",
+      "ua": "вийти (з транспорту)",
+      "pos": "verb"
+    },
+    {
+      "id": "prestupit",
+      "sk": "prestúpiť",
+      "ua": "пересісти",
+      "pos": "verb"
+    },
+    {
+      "id": "blizko",
+      "sk": "blízko",
+      "ua": "близько",
+      "pos": "adv"
+    },
+    {
+      "id": "daleko",
+      "sk": "ďaleko",
+      "ua": "далеко",
+      "pos": "adv"
+    }
+  ]
+}

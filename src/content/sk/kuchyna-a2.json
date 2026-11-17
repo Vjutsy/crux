@@ -1,0 +1,195 @@
+{
+  "id": "kuchyna-a2",
+  "themeId": "kuchyna",
+  "theme": "Кухня і їжа",
+  "cefr": "A2",
+  "words": [
+    {
+      "id": "pribor",
+      "sk": "príbor",
+      "ua": "столові прибори",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "drez",
+      "sk": "drez",
+      "ua": "мийка",
+      "pos": "noun",
+      "gender": "m",
+      "uaAlt": ["раковина"]
+    },
+    {
+      "id": "mikrovlnka",
+      "sk": "mikrovlnka",
+      "ua": "мікрохвильовка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kanvica",
+      "sk": "kanvica",
+      "ua": "чайник",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "struhadlo",
+      "sk": "strúhadlo",
+      "ua": "тертка",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "naberacka",
+      "sk": "naberačka",
+      "ua": "ополоник",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "doska-na-krajanie",
+      "sk": "doska na krájanie",
+      "ua": "обробна дошка",
+      "pos": "phrase",
+      "uaAlt": ["дошка"]
+    },
+    {
+      "id": "recept",
+      "sk": "recept",
+      "ua": "рецепт",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "prisada",
+      "sk": "prísada",
+      "ua": "інгредієнт",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "porcia",
+      "sk": "porcia",
+      "ua": "порція",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "jedalny-listok",
+      "sk": "jedálny lístok",
+      "ua": "меню",
+      "pos": "phrase"
+    },
+    {
+      "id": "zelenina",
+      "sk": "zelenina",
+      "ua": "овочі",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "ovocie",
+      "sk": "ovocie",
+      "ua": "фрукти",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "casnik",
+      "sk": "čašník",
+      "ua": "офіціант",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "ucet",
+      "sk": "účet",
+      "ua": "рахунок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "prepitne",
+      "sk": "prepitné",
+      "ua": "чайові",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "chut",
+      "sk": "chuť",
+      "ua": "смак",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "hlad",
+      "sk": "hlad",
+      "ua": "голод",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "smad",
+      "sk": "smäd",
+      "ua": "спрага",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "cerstvy",
+      "sk": "čerstvý",
+      "ua": "свіжий",
+      "pos": "adj"
+    },
+    {
+      "id": "zdravy",
+      "sk": "zdravý",
+      "ua": "здоровий",
+      "pos": "adj"
+    },
+    {
+      "id": "vegetariansky",
+      "sk": "vegetariánsky",
+      "ua": "вегетаріанський",
+      "pos": "adj"
+    },
+    {
+      "id": "objednat",
+      "sk": "objednať",
+      "ua": "замовити",
+      "pos": "verb"
+    },
+    {
+      "id": "ochutnat",
+      "sk": "ochutnať",
+      "ua": "скуштувати",
+      "pos": "verb"
+    },
+    {
+      "id": "zohriat",
+      "sk": "zohriať",
+      "ua": "розігріти",
+      "pos": "verb"
+    },
+    {
+      "id": "smazit",
+      "sk": "smažiť",
+      "ua": "смажити",
+      "pos": "verb"
+    },
+    {
+      "id": "dusit",
+      "sk": "dusiť",
+      "ua": "тушкувати",
+      "pos": "verb"
+    },
+    {
+      "id": "prestriet-stol",
+      "sk": "prestrieť stôl",
+      "ua": "накрити на стіл",
+      "pos": "phrase"
+    }
+  ]
+}

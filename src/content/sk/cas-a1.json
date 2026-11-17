@@ -1,0 +1,211 @@
+{
+  "id": "cas-a1",
+  "themeId": "cas",
+  "theme": "Числа, час, погода",
+  "cefr": "A1",
+  "words": [
+    {
+      "id": "jedenast",
+      "sk": "jedenásť",
+      "ua": "одинадцять",
+      "pos": "num"
+    },
+    {
+      "id": "dvanast",
+      "sk": "dvanásť",
+      "ua": "дванадцять",
+      "pos": "num"
+    },
+    {
+      "id": "dvadsat",
+      "sk": "dvadsať",
+      "ua": "двадцять",
+      "pos": "num"
+    },
+    {
+      "id": "tridsat",
+      "sk": "tridsať",
+      "ua": "тридцять",
+      "pos": "num"
+    },
+    {
+      "id": "sto",
+      "sk": "sto",
+      "ua": "сто",
+      "pos": "num"
+    },
+    {
+      "id": "tisic",
+      "sk": "tisíc",
+      "ua": "тисяча",
+      "pos": "num"
+    },
+    {
+      "id": "januar",
+      "sk": "január",
+      "ua": "січень",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "februar",
+      "sk": "február",
+      "ua": "лютий",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "marec",
+      "sk": "marec",
+      "ua": "березень",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "april",
+      "sk": "apríl",
+      "ua": "квітень",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "maj",
+      "sk": "máj",
+      "ua": "травень",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "jun",
+      "sk": "jún",
+      "ua": "червень",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "jul",
+      "sk": "júl",
+      "ua": "липень",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "august",
+      "sk": "august",
+      "ua": "серпень",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "september",
+      "sk": "september",
+      "ua": "вересень",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "oktober",
+      "sk": "október",
+      "ua": "жовтень",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "november",
+      "sk": "november",
+      "ua": "листопад",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "december",
+      "sk": "december",
+      "ua": "грудень",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "jar",
+      "sk": "jar",
+      "ua": "весна",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "leto",
+      "sk": "leto",
+      "ua": "літо",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "jesen",
+      "sk": "jeseň",
+      "ua": "осінь",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "tyzden",
+      "sk": "týždeň",
+      "ua": "тиждень",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "mesiac",
+      "sk": "mesiac",
+      "ua": "місяць",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "rok",
+      "sk": "rok",
+      "ua": "рік",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "minuta",
+      "sk": "minúta",
+      "ua": "хвилина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vietor",
+      "sk": "vietor",
+      "ua": "вітер",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "oblak",
+      "sk": "oblak",
+      "ua": "хмара",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "burka",
+      "sk": "búrka",
+      "ua": "гроза",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "hmla",
+      "sk": "hmla",
+      "ua": "туман",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "studeny",
+      "sk": "studený",
+      "ua": "холодний",
+      "pos": "adj"
+    }
+  ]
+}

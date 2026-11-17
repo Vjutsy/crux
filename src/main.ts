@@ -1,5 +1,7 @@
 import Phaser from 'phaser';
 import './styles.css';
+import { setAudio, unlockAudio } from './audio';
+import { getClimber } from './data/climbers';
 import { groups } from './content';
 import { loadProgress, saveProgress, today, touchStreak, type Progress } from './core/save';
 import { walls } from './data/walls';
@@ -25,7 +27,14 @@ function startClimb(choice: MenuChoice) {
   last = choice;
   progress = touchStreak(progress);
   void saveProgress(progress);
-  const data: ClimbData = { group: choice.group, wall: choice.wall, boxes: progress.boxes, seedSalt: choice.daily ? today() : '' };
+  const data: ClimbData = {
+    group: choice.group,
+    wall: choice.wall,
+    boxes: progress.boxes,
+    climber: getClimber(progress.settings.climber),
+    tutorial: !progress.tutorialDone && choice.wall.wall === 1 && !choice.daily,
+    seedSalt: choice.daily ? today() : '',
+  };
   hud.hidden = false;
   game.scene.start('climb', data);
 }
@@ -33,7 +42,14 @@ function startClimb(choice: MenuChoice) {
 function menu() {
   hud.hidden = true;
   game.scene.stop('climb');
-  showMenu(groups, walls, progress, startClimb);
+  showMenu(groups, walls, progress, {
+    onStart: startClimb,
+    onSettings: (settings) => {
+      progress = { ...progress, settings };
+      setAudio(settings);
+      void saveProgress(progress);
+    },
+  });
 }
 
 game.events.on('climb:end', (s: ClimbSummary) => {
@@ -43,6 +59,7 @@ game.events.on('climb:end', (s: ClimbSummary) => {
     ...progress,
     boxes: s.boxes,
     stars: { ...progress.stars, [key]: Math.max(progress.stars[key] ?? 0, s.stars) },
+    tutorialDone: progress.tutorialDone || s.tutorialDone,
     unlockedWall: s.won ? Math.max(progress.unlockedWall, Math.min(walls.length, s.wall + 1)) : progress.unlockedWall,
   };
   void saveProgress(progress);
@@ -52,4 +69,7 @@ game.events.on('climb:end', (s: ClimbSummary) => {
 });
 
 document.getElementById('hud-menu')!.addEventListener('click', menu);
+// Звук можна вмикати лише після жесту користувача.
+setAudio(progress.settings);
+document.addEventListener('pointerdown', unlockAudio, { once: true });
 menu();
