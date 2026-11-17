@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, interactive-widget=resizes-content" />
+    <meta name="theme-color" content="#3d4fd6" />
+    <meta name="description" content="Crux — лізь на стіну, вивчаючи словацькі слова" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/icon-192.png" />
+    <title>Crux</title>
+  </head>
+  <body>
+    <div id="game"></div>
+
+    <div id="hud" class="hud" hidden>
+      <button id="hud-menu" class="chip" type="button" aria-label="Меню">☰</button>
+      <span id="hud-steps" class="chip">Кроки 0</span>
+      <span id="hud-combo" class="chip">Комбо 0</span>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <div id="card" class="card" hidden>
+      <div class="q" id="card-q"><small id="card-hint"></small><span id="card-prompt"></span></div>
+      <div class="answers" id="card-answers"></div>
+    </div>
+
+    <section id="menu" class="screen" hidden></section>
+    <section id="result" class="screen" hidden></section>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

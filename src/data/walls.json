@@ -1,0 +1,72 @@
+[
+  {
+    "wall": 1,
+    "moves": 16,
+    "startSteps": 6,
+    "typingShare": 0,
+    "requireDiacritics": false
+  },
+  {
+    "wall": 2,
+    "moves": 18,
+    "startSteps": 6,
+    "typingShare": 0,
+    "requireDiacritics": false
+  },
+  {
+    "wall": 3,
+    "moves": 20,
+    "startSteps": 5,
+    "typingShare": 0.1,
+    "requireDiacritics": false
+  },
+  {
+    "wall": 4,
+    "moves": 22,
+    "startSteps": 5,
+    "typingShare": 0.2,
+    "requireDiacritics": false
+  },
+  {
+    "wall": 5,
+    "moves": 24,
+    "startSteps": 5,
+    "typingShare": 0.25,
+    "requireDiacritics": false
+  },
+  {
+    "wall": 6,
+    "moves": 26,
+    "startSteps": 4,
+    "typingShare": 0.3,
+    "requireDiacritics": true
+  },
+  {
+    "wall": 7,
+    "moves": 28,
+    "startSteps": 4,
+    "typingShare": 0.35,
+    "requireDiacritics": true
+  },
+  {
+    "wall": 8,
+    "moves": 30,
+    "startSteps": 4,
+    "typingShare": 0.4,
+    "requireDiacritics": true
+  },
+  {
+    "wall": 9,
+    "moves": 32,
+    "startSteps": 3,
+    "typingShare": 0.45,
+    "requireDiacritics": true
+  },
+  {
+    "wall": 10,
+    "moves": 34,
+    "startSteps": 3,
+    "typingShare": 0.5,
+    "requireDiacritics": true
+  }
+]
