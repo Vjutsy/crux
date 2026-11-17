@@ -31,7 +31,7 @@ async function nextMove(page: Page) {
 }
 
 async function climb(page: Page, wrongFirst: number) {
-  let moves = 0;
+  let questions = 0;
   for (let guard = 0; guard < 400; guard++) {
     const st = await nextMove(page);
     if (st.status === 'won' || st.status === 'fallen' || st.status === 'nohint') return st.status;
@@ -41,9 +41,17 @@ async function climb(page: Page, wrongFirst: number) {
     }
     await page.mouse.click(st.x, st.y);
     const card = page.locator('#card');
-    await expect(card).toBeVisible();
+    // Питання з'являється лише на синіх бонусних зачепах.
+    const asked = await card
+      .waitFor({ state: 'visible', timeout: 500 })
+      .then(() => true)
+      .catch(() => false);
+    if (!asked) {
+      await page.waitForTimeout(150);
+      continue;
+    }
     const answer = answerFor(await page.locator('#card-prompt').innerText());
-    const wrong = moves < wrongFirst;
+    const wrong = questions < wrongFirst;
     if (await page.locator('#card-input').isVisible()) {
       await page.locator('#card-input').fill(wrong ? 'xxx' : answer);
       await page.locator('.answers .ok').click();
@@ -53,7 +61,7 @@ async function climb(page: Page, wrongFirst: number) {
       const i = texts.findIndex((t) => (t === answer) !== wrong);
       await opts.nth(i).click();
     }
-    moves++;
+    questions++;
     await expect(card).toBeHidden();
   }
   return 'timeout';

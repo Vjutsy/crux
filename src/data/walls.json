@@ -2,71 +2,71 @@
   {
     "wall": 1,
     "moves": 16,
-    "startSteps": 6,
     "typingShare": 0,
-    "requireDiacritics": false
+    "requireDiacritics": false,
+    "stepFactor": 0.9
   },
   {
     "wall": 2,
     "moves": 18,
-    "startSteps": 6,
     "typingShare": 0,
-    "requireDiacritics": false
+    "requireDiacritics": false,
+    "stepFactor": 0.85
   },
   {
     "wall": 3,
     "moves": 20,
-    "startSteps": 5,
     "typingShare": 0.1,
-    "requireDiacritics": false
+    "requireDiacritics": false,
+    "stepFactor": 0.8
   },
   {
     "wall": 4,
     "moves": 22,
-    "startSteps": 5,
     "typingShare": 0.2,
-    "requireDiacritics": false
+    "requireDiacritics": false,
+    "stepFactor": 0.77
   },
   {
     "wall": 5,
     "moves": 24,
-    "startSteps": 5,
     "typingShare": 0.25,
-    "requireDiacritics": false
+    "requireDiacritics": false,
+    "stepFactor": 0.74
   },
   {
     "wall": 6,
     "moves": 26,
-    "startSteps": 4,
     "typingShare": 0.3,
-    "requireDiacritics": true
+    "requireDiacritics": true,
+    "stepFactor": 0.7
   },
   {
     "wall": 7,
     "moves": 28,
-    "startSteps": 4,
     "typingShare": 0.35,
-    "requireDiacritics": true
+    "requireDiacritics": true,
+    "stepFactor": 0.67
   },
   {
     "wall": 8,
     "moves": 30,
-    "startSteps": 4,
     "typingShare": 0.4,
-    "requireDiacritics": true
+    "requireDiacritics": true,
+    "stepFactor": 0.64
   },
   {
     "wall": 9,
     "moves": 32,
-    "startSteps": 3,
     "typingShare": 0.45,
-    "requireDiacritics": true
+    "requireDiacritics": true,
+    "stepFactor": 0.6
   },
   {
     "wall": 10,
     "moves": 34,
-    "startSteps": 3,
     "typingShare": 0.5,
-    "requireDiacritics": true
+    "requireDiacritics": true,
+    "stepFactor": 0.56
   }
 ]

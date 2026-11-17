@@ -1,7 +1,19 @@
 import Phaser from 'phaser';
 import { sound } from '../audio';
 import { DEFAULT_BODY, LIMB_NAMES, type Limb, LIMBS, type Point, anchor, danglingEnd, ikJoint, limbLength } from '../core/body';
-import { type ClimbState, answer, attempt, autoLimb, canReach, fatigue, reachableHolds, startClimb, stars } from '../core/climb';
+import {
+  type ClimbEvent,
+  type ClimbState,
+  answer,
+  autoLimb,
+  canReach,
+  fatigue,
+  move,
+  reachableHolds,
+  startClimb,
+  stars,
+  stepBudget,
+} from '../core/climb';
 import { findRoute, generateWall } from '../core/generator';
 import { type LeitnerBoxes, buildQuestion, pickMode, pickWord, updateBox } from '../core/questions';
 import { hashSeed, mulberry32, type Rng } from '../core/rng';
@@ -37,7 +49,6 @@ export interface ClimbSummary {
 
 const COLORS = {
   hold: 0x3d4fd6,
-  blocked: 0x9a9a9a,
   ink: 0x17181c,
   card: 0xffffff,
   select: 0xff8a1f,
@@ -50,10 +61,10 @@ const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)'
 
 /** Навчальні підказки: показуються по черзі на перших ходах. */
 const TUTORIAL = [
-  'Сині зачепи — ті, куди тіло дістане. Торкніться зачепа з помаранчевим кільцем',
-  'Правильно — кінцівка переставилась. Спроба коштує крок, правильна відповідь його повертає',
-  'Можна торкнутися кружечка на руці чи нозі, щоб рухати саме її',
-  '3 правильні поспіль дають +1 крок. Помилка блокує зачіп. Далі — самі!',
+  'Темні зачепи — ті, куди тіло дістане. Торкніться зачепа з помаранчевим кільцем',
+  'Кожен рух коштує 1 крок. Кроки скінчаться — скелелаз зірветься',
+  'Сині зачепи — бонусні: правильна відповідь на питання дає +3 кроки',
+  'Можна торкнутися кружечка на руці чи нозі, щоб рухати саме її. Далі — самі!',
 ];
 
 export class ClimbScene extends Phaser.Scene {
@@ -76,6 +87,7 @@ export class ClimbScene extends Phaser.Scene {
   private beatTimer = 0;
   private ragdoll: Ragdoll | null = null;
   private hintHold = -1;
+  private labels: Phaser.GameObjects.Text[] = [];
 
   constructor() {
     super({ key: 'climb', physics: { default: 'matter', matter: { gravity: { x: 0, y: 1.1 }, enableSleeping: false } } });
@@ -97,7 +109,8 @@ export class ClimbScene extends Phaser.Scene {
     const { group, wall: cfg, seedSalt = '' } = this.data0;
     const seed = hashSeed(group.id, cfg.wall, seedSalt);
     this.rng = mulberry32(seed ^ 0x5bd1e995);
-    this.s = startClimb(generateWall(seed, { moves: cfg.moves }), cfg.startSteps);
+    const wall = generateWall(seed, { moves: cfg.moves });
+    this.s = startClimb(wall, stepBudget(wall, cfg.stepFactor));
     this.theme = themeFor(group.themeId);
     const w = this.s.wall;
 
@@ -105,15 +118,17 @@ export class ClimbScene extends Phaser.Scene {
     // Фон малюємо із запасом угору: на високих екранах над стіною видно «небо».
     const bg = this.add.graphics();
     this.theme.draw(bg, w.width, w.height);
-    this.holdsGfx = this.add.graphics();
-    this.hintGfx = this.add.graphics();
-    this.bodyGfx = this.add.graphics();
+    this.holdsGfx = this.add.graphics().setDepth(1);
+    this.hintGfx = this.add.graphics().setDepth(3);
+    this.bodyGfx = this.add.graphics().setDepth(4);
 
     this.disp = { torso: { ...this.s.torso }, ends: LIMBS.map((k) => this.limbEnd(k)) };
     this.camY = this.s.torso.y;
     this.fitCamera();
     this.scale.on('resize', this.fitCamera, this);
     this.events.once('shutdown', () => {
+      for (const t of this.labels) t.destroy();
+      this.labels = [];
       this.scale.off('resize', this.fitCamera, this);
       this.ragdoll?.destroy();
     });
@@ -151,7 +166,7 @@ export class ClimbScene extends Phaser.Scene {
       return;
     }
     toast(text, 5000);
-    this.hintHold = this.tutorialStep <= 1 ? (this.hint()?.hold ?? -1) : -1;
+    this.hintHold = this.tutorialStep <= 2 ? (this.hint()?.hold ?? -1) : -1;
   }
 
   // ---------- ввід ----------
@@ -161,7 +176,7 @@ export class ClimbScene extends Phaser.Scene {
     const best = this.nearestHold(wp);
     // Якщо кінцівку вже вибрано і тап влучив у досяжний для неї зачіп — рухаємо (навіть якщо поруч інша кінцівка).
     if (this.selected !== null && best >= 0 && canReach(this.s, this.selected, best)) {
-      void this.ask(this.selected, best);
+      void this.moveTo(this.selected, best);
       return;
     }
     // Інакше кружечок кінцівки має пріоритет: так руку чи ногу вибирають вручну.
@@ -181,7 +196,7 @@ export class ClimbScene extends Phaser.Scene {
       toast(this.selected !== null ? `${LIMB_NAMES[this.selected]} туди не дістане` : 'Туди тіло фізично не дістане');
       return;
     }
-    void this.ask(limb, best);
+    void this.moveTo(limb, best);
   }
 
   private nearestHold(wp: Point): number {
@@ -197,11 +212,19 @@ export class ClimbScene extends Phaser.Scene {
     return best;
   }
 
-  private async ask(limb: Limb, hold: number) {
-    if (!attempt(this.s, limb, hold)) return;
+  /** Рух на зачіп: звичайний — одразу, бонусний — через питання. */
+  private async moveTo(limb: Limb, hold: number) {
+    const res = move(this.s, limb, hold);
+    if (res.kind === 'invalid') return;
     sound.tap();
-    this.busy = true;
     this.hintHold = -1;
+    this.selected = null;
+    if (res.kind === 'moved') this.afterMove(res.events);
+    else await this.ask(limb);
+  }
+
+  private async ask(limb: Limb) {
+    this.busy = true;
     this.updateHud();
     this.drawHolds();
     const { group, wall: cfg } = this.data0;
@@ -216,29 +239,34 @@ export class ClimbScene extends Phaser.Scene {
       this.mistakes.push({ prompt: q.prompt, expected: q.expected[0]!, given: res.given });
     }
     if (res.check === 'accepted') toast(`Зараховано. Правильно: ${q.expected[0]}`);
-    if (res.correct) sound.good();
-    else {
-      sound.bad();
-      navigator.vibrate?.(40);
-    }
-
-    const events = answer(this.s, res.correct, this.rng);
+    if (!res.correct) navigator.vibrate?.(40);
     this.busy = false;
-    this.selected = null;
+    this.afterMove(answer(this.s, res.correct, this.rng));
+  }
+
+  private afterMove(events: ClimbEvent[]) {
     for (const e of events) {
+      if (e.type === 'bonus') {
+        sound.good();
+        toast(`Правильно! +${e.steps} кроки`);
+      }
+      if (e.type === 'burned') {
+        sound.bad();
+        toast('Бонус згорів');
+      }
       if (e.type === 'combo') {
         sound.combo();
-        toast(`Комбо ×${e.combo}: +1 крок`);
+        toast(`Комбо ×${e.combo}: ще +1 крок`);
       }
       if (e.type === 'slipped') {
         sound.slip();
         toast(`Від утоми зісковзнула ${LIMB_NAMES[e.limb]}!`);
       }
     }
-    if (this.tutorialStep >= 0 && res.correct) {
+    if (this.tutorialStep >= 0) {
       this.tutorialStep++;
       this.showTutorial();
-    } else if (this.tutorialStep >= 0) this.showTutorial();
+    }
     this.updateHud();
     this.drawHolds();
     if (this.s.status === 'won') {
@@ -251,7 +279,7 @@ export class ClimbScene extends Phaser.Scene {
   /** Підказка: наступний рух маршруту з поточної пози (для навчання і e2e-тестів). */
   hint(): { limb: Limb; hold: number } | null {
     const w = this.s.wall;
-    const route = findRoute({ holds: w.holds, top: w.top, start: this.s.contacts, startTorso: this.s.torso }, this.s.blocked);
+    const route = findRoute({ holds: w.holds, top: w.top, start: this.s.contacts, startTorso: this.s.torso });
     return route?.moves[0] ?? null;
   }
 
@@ -297,16 +325,37 @@ export class ClimbScene extends Phaser.Scene {
 
   private drawHolds() {
     const g = this.holdsGfx.clear();
+    for (const t of this.labels) t.destroy();
+    this.labels = [];
     const active =
       this.busy || this.s.status !== 'climbing' ? new Set<number>() : new Set(reachableHolds(this.s, this.selected ?? undefined));
     const used = new Set(this.s.contacts);
     this.s.wall.holds.forEach((h, i) => {
-      const blocked = this.s.blocked.has(i);
-      const color = blocked ? COLORS.blocked : active.has(i) ? COLORS.hold : this.theme.idle;
+      const bonus = this.s.bonus.has(i);
+      const reach = active.has(i);
       const [w, hh] = h.top ? [40, 20] : [20, 14];
-      if (blocked || active.has(i) || used.has(i)) g.fillStyle(color, 1).fillEllipse(h.x, h.y, w, hh);
-      g.lineStyle(2.2, color, 1).strokeEllipse(h.x, h.y, w, hh);
-      if (blocked) g.lineStyle(1.8, COLORS.card, 1).lineBetween(h.x - 5, h.y - 4, h.x + 4, h.y + 4);
+      if (bonus) {
+        // Сині — лише бонусні зачепи. Досяжний — суцільний із «+3», недосяжний — блідий.
+        g.fillStyle(COLORS.hold, reach ? 1 : 0.35).fillEllipse(h.x, h.y, w + 4, hh + 4);
+        g.lineStyle(reach ? 3 : 2, COLORS.hold, 1).strokeEllipse(h.x, h.y, w + 4, hh + 4);
+        const t = this.add
+          .text(h.x, h.y - 15, '+3', {
+            fontFamily: 'system-ui, sans-serif',
+            fontSize: '11px',
+            fontStyle: 'bold',
+            color: '#ffffff',
+            backgroundColor: '#3d4fd6',
+            padding: { x: 3, y: 1 },
+          })
+          .setOrigin(0.5)
+          .setDepth(2)
+          .setAlpha(reach ? 1 : 0.6);
+        this.labels.push(t);
+      } else {
+        // Звичайні: досяжні — залиті кольором теми, решта — контур.
+        if (reach || used.has(i)) g.fillStyle(this.theme.idle, reach ? 0.9 : 0.55).fillEllipse(h.x, h.y, w, hh);
+        g.lineStyle(reach ? 3 : 2, this.theme.idle, reach ? 1 : 0.7).strokeEllipse(h.x, h.y, w, hh);
+      }
       if (h.top) {
         g.fillStyle(COLORS.danger, 1).fillTriangle(h.x + 22, h.y - 34, h.x + 22, h.y - 20, h.x + 38, h.y - 27);
         g.lineStyle(2, COLORS.ink, 1).lineBetween(h.x + 22, h.y - 36, h.x + 22, h.y - 8);

@@ -3,8 +3,8 @@
  *
  * 1. «Хребет» маршруту — драбина зачепів ліворуч-праворуч з кроком, меншим за руку.
  * 2. Обманки й резервні гілки (рівномірне розсіювання з мінімальною відстанню).
- * 3. Перевірка «тілом»: пошук по позах (ліва/права рука, ліва/права нога) має дійти до вершини,
- *    навіть якщо після помилок заблокувати кілька зачепів маршруту.
+ * 3. Перевірка «тілом»: пошук по позах (ліва/права рука, ліва/права нога) має дійти до вершини.
+ * 4. Бонусні (сині) зачепи ставимо на знайдений маршрут кожні 3–5 рухів: лише на них з'являються питання.
  */
 import { type Contacts, type Hold, type Limb, LIMBS, anchor, isHand, limbLength, solvePose, tryMove, type Point } from './body';
 import { mulberry32, type Rng } from './rng';
@@ -24,16 +24,20 @@ export interface Wall {
   start: Contacts;
   startTorso: Point;
   top: number;
+  /** Бонусні (сині) зачепи: правильна відповідь на них дає кроки. */
+  bonus: number[];
+  /** Довжина еталонного маршруту в рухах — від неї рахується бюджет кроків. */
+  routeLength: number;
 }
 
 export interface WallParams {
   /** Цільова кількість рухів кінцівками до вершини. */
   moves: number;
-  /** Скільки заблокованих зачепів маршрут має витримати. */
-  robustness?: number;
+  /** Відстань між бонусними зачепами на маршруті, у рухах [від, до]. */
+  bonusEvery?: [number, number];
 }
 
-function layout(seed: number, moves: number): Omit<Wall, 'startTorso'> {
+function layout(seed: number, moves: number): Omit<Wall, 'startTorso' | 'bonus' | 'routeLength'> {
   const rng: Rng = mulberry32(seed);
   const height = Math.round(BASE_HEIGHT + moves * PX_PER_MOVE);
   const H = height;
@@ -116,28 +120,39 @@ export function findRoute(
   return null;
 }
 
+/** Обирає бонусні зачепи на маршруті: кожні 3–5 рухів, не стартові й не вершина. */
+export function pickBonus(route: RouteResult, wall: Pick<Wall, 'start' | 'top'>, rng: Rng, every: [number, number] = [3, 5]): number[] {
+  const [lo, hi] = every;
+  const bonus: number[] = [];
+  const span = () => lo + Math.floor(rng() * (hi - lo + 1));
+  for (let i = span() - 1; i < route.moves.length - 1; i += span()) {
+    // Якщо потрапили на непридатний зачіп — беремо найближчий наступний хід маршруту.
+    for (let j = i; j < route.moves.length - 1; j++) {
+      const h = route.moves[j]!.hold;
+      if (h !== wall.top && !wall.start.includes(h) && !bonus.includes(h)) {
+        bonus.push(h);
+        i = j;
+        break;
+      }
+    }
+  }
+  return bonus;
+}
+
 /**
  * Генерує стіну, гарантовано проходиму. Якщо seed дає непрохідну стіну —
  * детерміновано пробуємо наступні варіанти (той самий seed завжди дасть ту саму стіну).
  */
 export function generateWall(seed: number, params: WallParams): Wall {
-  const robustness = params.robustness ?? 2;
   for (let attempt = 0; attempt < 30; attempt++) {
     const base = layout((seed + attempt * 7919) >>> 0, params.moves);
     const startTorso = solvePose(base.holds, base.start);
     if (!startTorso) continue;
-    const wall: Wall = { ...base, seed, startTorso };
-    const route = findRoute(wall);
+    const draft = { ...base, seed, startTorso, bonus: [], routeLength: 0 };
+    const route = findRoute(draft);
     if (!route) continue;
-    // Стійкість: блокуємо кілька зачепів маршруту (як після помилок) — шлях має лишитись.
-    const candidates = [...route.used].filter((i) => i !== wall.top && !wall.start.includes(i));
-    const rng = mulberry32(seed ^ 0x9e3779b9);
-    const blocked = new Set<number>();
-    while (blocked.size < Math.min(robustness, candidates.length)) {
-      blocked.add(candidates[Math.floor(rng() * candidates.length)]!);
-    }
-    if (blocked.size && !findRoute(wall, blocked)) continue;
-    return wall;
+    const bonus = pickBonus(route, draft, mulberry32(seed ^ 0x9e3779b9), params.bonusEvery);
+    return { ...draft, bonus, routeLength: route.moves.length };
   }
   throw new Error(`Не вдалося згенерувати проходиму стіну для seed ${seed}`);
 }
