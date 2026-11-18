@@ -8,6 +8,7 @@ import '@fontsource/nunito/latin-400.css';
 import '@fontsource/nunito/latin-700.css';
 import '@fontsource/nunito/latin-800.css';
 import './styles.css';
+import { registerSW } from 'virtual:pwa-register';
 import { setAudio, unlockAudio } from './audio';
 import { getClimber } from './data/climbers';
 import { groups } from './content';
@@ -15,6 +16,15 @@ import { loadProgress, saveProgress, touchStreak, type Progress } from './core/s
 import { walls } from './data/walls';
 import { type ClimbData, ClimbScene, type ClimbSummary } from './scenes/ClimbScene';
 import { type MenuChoice, showIntro, showMenu, showResult } from './ui/screens';
+
+// Офлайн-кеш: коли на сайті з'являється нова версія, вона одразу підміняє стару
+// (сторінка перезавантажується сама), а відкрита вкладка перевіряє оновлення щогодини.
+registerSW({
+  immediate: true,
+  onRegisteredSW(_url, reg) {
+    if (reg) setInterval(() => void reg.update(), 60 * 60 * 1000);
+  },
+});
 
 const game = new Phaser.Game({
   type: Phaser.AUTO,

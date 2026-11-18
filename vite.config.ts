@@ -8,6 +8,8 @@ export default defineConfig({
   plugins: [
     VitePWA({
       registerType: 'autoUpdate',
+      // реєстрація в main.ts: нова версія сама перезавантажує сторінку
+      injectRegister: false,
       includeAssets: ['icon.svg'],
       manifest: {
         name: 'Crux — словацька на скелі',
@@ -24,7 +26,13 @@ export default defineConfig({
           { src: 'icon-512.png', sizes: '512x512', type: 'image/png', purpose: 'maskable' },
         ],
       },
-      workbox: { globPatterns: ['**/*.{js,css,html,svg,png,json,woff2}'], maximumFileSizeToCacheInBytes: 4 * 1024 * 1024 },
+      workbox: {
+        clientsClaim: true,
+        skipWaiting: true,
+        cleanupOutdatedCaches: true,
+        globPatterns: ['**/*.{js,css,html,svg,png,json,woff2}'],
+        maximumFileSizeToCacheInBytes: 4 * 1024 * 1024,
+      },
     }),
   ],
   test: { include: ['tests/**/*.test.ts'], testTimeout: 60_000 },
