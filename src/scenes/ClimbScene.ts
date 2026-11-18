@@ -23,7 +23,7 @@ import type { WallConfig } from '../data/walls';
 import { drawClimber } from '../ui/climberArt';
 import { askQuestion } from '../ui/questionCard';
 import { toast } from '../ui/toast';
-import { type WallTheme, themeFor } from './backgrounds';
+import { type HoldState, SCENERY_DEFS, type WallTheme, holdSvg, themeFor } from './backgrounds';
 import { type Ragdoll, createRagdoll } from './ragdoll';
 
 export interface ClimbData {
@@ -48,23 +48,15 @@ export interface ClimbSummary {
   tutorialDone: boolean;
 }
 
-const COLORS = {
-  hold: 0x3d4fd6,
-  ink: 0x17181c,
-  card: 0xffffff,
-  select: 0xff8a1f,
-  danger: 0xe8323c,
-  hint: 0xff8a1f,
-};
 const HOLD_HIT = 22;
 const LIMB_HIT = 20;
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /** Навчальні підказки: показуються по черзі на перших ходах. */
 const TUTORIAL = [
-  'Темні зачепи — ті, куди тіло дістане. Торкніться зачепа з помаранчевим кільцем',
+  'Яскраві зачепи з теплим ореолом — ті, куди тіло дістане. Торкніться зачепа з пунктирним кільцем',
   'Кожен рух коштує 1 крок. Кроки скінчаться — скелелаз зірветься',
-  'Сині зачепи — бонусні: правильна відповідь на питання дає +3 кроки',
+  'Сині самоцвіти — бонусні: правильна відповідь на питання дає +3 кроки',
   'Можна торкнутися кружечка на руці чи нозі, щоб рухати саме її. Далі — самі!',
 ];
 
@@ -79,8 +71,11 @@ export class ClimbScene extends Phaser.Scene {
   private selected: Limb | null = null;
   private busy = false;
   private tutorialStep = -1;
-  private holdsGfx!: Phaser.GameObjects.Graphics;
-  private hintGfx!: Phaser.GameObjects.Graphics;
+  private scenery!: SVGSVGElement;
+  private holdsLayer!: SVGGElement;
+  /** Бонуси, що згоріли після помилки (малюються сірим тріснутим каменем). */
+  private burned = new Set<number>();
+  private shakeUntil = 0;
   private actor!: SVGSVGElement;
   private look: { at: Point; until: number } | null = null;
   private vx = 0;
@@ -91,7 +86,6 @@ export class ClimbScene extends Phaser.Scene {
   private beatTimer = 0;
   private ragdoll: Ragdoll | null = null;
   private hintHold = -1;
-  private labels: Phaser.GameObjects.Text[] = [];
 
   constructor() {
     super({ key: 'climb', physics: { default: 'matter', matter: { gravity: { x: 0, y: 1.1 }, enableSleeping: false } } });
@@ -118,12 +112,13 @@ export class ClimbScene extends Phaser.Scene {
     this.theme = themeFor(group.themeId);
     const w = this.s.wall;
 
-    this.cameras.main.setBackgroundColor(this.theme.base);
-    // Фон малюємо із запасом угору: на високих екранах над стіною видно «небо».
-    const bg = this.add.graphics();
-    this.theme.draw(bg, w.width, w.height);
-    this.holdsGfx = this.add.graphics().setDepth(1);
-    this.hintGfx = this.add.graphics().setDepth(3);
+    // Стіна й зачепи — SVG-шар #scenery під скелелазом (дизайн «Скеледроми і зачепи»).
+    // Фон із запасом угору й убоки: на високих екранах над стіною видно «небо».
+    this.burned = new Set();
+    this.scenery = document.getElementById('scenery') as unknown as SVGSVGElement;
+    this.scenery.innerHTML = `${SCENERY_DEFS}<rect x="-200" y="-2000" width="${w.width + 400}" height="${w.height + 2400}" fill="${this.theme.base}"/><g>${this.theme.draw(w.width, w.height, seed)}</g><g id="sc-holds"></g>`;
+    this.holdsLayer = this.scenery.querySelector('#sc-holds') as SVGGElement;
+    this.scenery.removeAttribute('hidden');
     this.actor = document.getElementById('actor') as unknown as SVGSVGElement;
     this.actor.removeAttribute('hidden');
 
@@ -133,10 +128,11 @@ export class ClimbScene extends Phaser.Scene {
     this.scale.on('resize', this.fitCamera, this);
     this.lastX = this.s.torso.x;
     this.events.once('shutdown', () => {
-      this.actor.innerHTML = '';
-      this.actor.setAttribute('hidden', '');
-      for (const t of this.labels) t.destroy();
-      this.labels = [];
+      for (const el of [this.actor, this.scenery]) {
+        el.innerHTML = '';
+        el.setAttribute('hidden', '');
+        el.style.transform = '';
+      }
       this.scale.off('resize', this.fitCamera, this);
       this.ragdoll?.destroy();
     });
@@ -175,6 +171,7 @@ export class ClimbScene extends Phaser.Scene {
     }
     toast(text, 5000);
     this.hintHold = this.tutorialStep <= 2 ? (this.hint()?.hold ?? -1) : -1;
+    if (this.holdsLayer) this.drawHolds();
   }
 
   // ---------- ввід ----------
@@ -261,6 +258,7 @@ export class ClimbScene extends Phaser.Scene {
         toast(`Правильно! +${e.steps} кроки`);
       }
       if (e.type === 'burned') {
+        this.burned.add(e.hold);
         sound.bad();
         toast('Бонус згорів');
       }
@@ -334,43 +332,24 @@ export class ClimbScene extends Phaser.Scene {
   }
 
   private drawHolds() {
-    const g = this.holdsGfx.clear();
-    for (const t of this.labels) t.destroy();
-    this.labels = [];
     const active =
       this.busy || this.s.status !== 'climbing' ? new Set<number>() : new Set(reachableHolds(this.s, this.selected ?? undefined));
     const used = new Set(this.s.contacts);
+    const hint = this.busy ? -1 : this.hintHold;
+    const parts: string[] = [];
     this.s.wall.holds.forEach((h, i) => {
-      const bonus = this.s.bonus.has(i);
-      const reach = active.has(i);
-      const [w, hh] = h.top ? [40, 20] : [20, 14];
-      if (bonus) {
-        // Сині — лише бонусні зачепи. Досяжний — суцільний із «+3», недосяжний — блідий.
-        g.fillStyle(COLORS.hold, reach ? 1 : 0.35).fillEllipse(h.x, h.y, w + 4, hh + 4);
-        g.lineStyle(reach ? 3 : 2, COLORS.hold, 1).strokeEllipse(h.x, h.y, w + 4, hh + 4);
-        const t = this.add
-          .text(h.x, h.y - 15, '+3', {
-            fontFamily: 'system-ui, sans-serif',
-            fontSize: '11px',
-            fontStyle: 'bold',
-            color: '#ffffff',
-            backgroundColor: '#3d4fd6',
-            padding: { x: 3, y: 1 },
-          })
-          .setOrigin(0.5)
-          .setDepth(2)
-          .setAlpha(reach ? 1 : 0.6);
-        this.labels.push(t);
-      } else {
-        // Звичайні: досяжні — залиті кольором теми, решта — контур.
-        if (reach || used.has(i)) g.fillStyle(this.theme.idle, reach ? 0.9 : 0.55).fillEllipse(h.x, h.y, w, hh);
-        g.lineStyle(reach ? 3 : 2, this.theme.idle, reach ? 1 : 0.7).strokeEllipse(h.x, h.y, w, hh);
-      }
-      if (h.top) {
-        g.fillStyle(COLORS.danger, 1).fillTriangle(h.x + 22, h.y - 34, h.x + 22, h.y - 20, h.x + 38, h.y - 27);
-        g.lineStyle(2, COLORS.ink, 1).lineBetween(h.x + 22, h.y - 36, h.x + 22, h.y - 8);
-      }
+      let st: HoldState;
+      if (h.top) st = 'top';
+      else if (this.s.bonus.has(i)) st = active.has(i) ? 'bonus' : 'bonusFar';
+      else if (this.burned.has(i) && !used.has(i)) st = 'burnt';
+      else if (i === hint) st = 'hint';
+      else if (used.has(i)) st = 'used';
+      else if (active.has(i)) st = 'reach';
+      else st = 'idle';
+      // Форма з індексу зачепа: детерміновано, тож стіна завжди виглядає однаково.
+      parts.push(holdSvg(this.theme, st, h.x, h.y, (i * 7 + 3) % 3));
     });
+    this.holdsLayer.innerHTML = parts.join('');
   }
 
   override update(time: number, dtMs: number) {
@@ -378,13 +357,11 @@ export class ClimbScene extends Phaser.Scene {
     const a = 1 - Math.exp(-dt * 10);
     const lerp = (p: Point, q: Point) => ({ x: p.x + (q.x - p.x) * a, y: p.y + (q.y - p.y) * a });
 
-    // Пульсуюче кільце підказки під час навчання.
-    this.hintGfx.clear();
-    if (this.hintHold >= 0 && !this.busy) {
-      const h = this.s.wall.holds[this.hintHold]!;
-      const r = 16 + Math.sin(time / 180) * 4;
-      this.hintGfx.lineStyle(3, COLORS.hint, 1).strokeCircle(h.x, h.y, r);
-    }
+    // Тряска екрана від утоми: зсуваємо обидва SVG-шари.
+    const shake =
+      time < this.shakeUntil ? `translate(${((Math.random() - 0.5) * 6).toFixed(1)}px, ${((Math.random() - 0.5) * 4).toFixed(1)}px)` : '';
+    this.actor.style.transform = shake;
+    this.scenery.style.transform = shake;
 
     if (this.ragdoll) {
       this.drawRagdoll(time);
@@ -406,7 +383,7 @@ export class ClimbScene extends Phaser.Scene {
     this.shakeTimer -= dt;
     this.beatTimer -= dt;
     if (!still && f >= 0.8 && this.shakeTimer <= 0) {
-      this.cameras.main.shake(250, 0.004);
+      this.shakeUntil = time + 250;
       this.shakeTimer = 1.6;
     }
     if (f >= 0.6 && this.beatTimer <= 0 && this.s.status === 'climbing') {
@@ -419,7 +396,9 @@ export class ClimbScene extends Phaser.Scene {
   /** SVG-шар зі скелелазом: viewBox = видима частина світу, тож малюємо у світових координатах. */
   private syncActorView() {
     const v = this.cameras.main.worldView;
-    this.actor.setAttribute('viewBox', `${v.x.toFixed(2)} ${v.y.toFixed(2)} ${v.width.toFixed(2)} ${v.height.toFixed(2)}`);
+    const box = `${v.x.toFixed(2)} ${v.y.toFixed(2)} ${v.width.toFixed(2)} ${v.height.toFixed(2)}`;
+    this.actor.setAttribute('viewBox', box);
+    if (this.scenery.getAttribute('viewBox') !== box) this.scenery.setAttribute('viewBox', box);
   }
 
   private drawActor(time: number, c: Point, ends: readonly Point[], tired: number, rotate = 0) {

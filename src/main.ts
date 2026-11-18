@@ -19,7 +19,7 @@ import { type MenuChoice, showIntro, showMenu, showResult } from './ui/screens';
 const game = new Phaser.Game({
   type: Phaser.AUTO,
   parent: 'game',
-  backgroundColor: '#1c1a2b',
+  transparent: true,
   scale: { mode: Phaser.Scale.RESIZE, width: window.innerWidth, height: window.innerHeight },
   render: { antialias: true },
 });

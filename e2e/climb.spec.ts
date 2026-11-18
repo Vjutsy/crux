@@ -119,6 +119,6 @@ test('перше відкриття — вступ веде одразу на п
   await page.goto('/?debug');
   for (const name of ['Далі', 'Далі', 'Перша стіна']) await page.getByRole('button', { name }).click();
   await expect(page.locator('#hud')).toBeVisible();
-  await expect(page.locator('#toast')).toContainText('Торкніться зачепа');
+  await expect(page.locator('#toast')).toContainText('Торкніться зачепа з пунктирним кільцем');
   await page.close();
 });
