@@ -69,6 +69,12 @@ export const sound = {
   combo: sfx(() => [659, 784, 988].forEach((f, i) => tone(f, 0.12, 'square', 0.1, i * 0.07))),
   slip: sfx(() => tone(400, 0.3, 'sine', 0.2, 0, undefined, 120)),
   fall: sfx(() => tone(500, 0.9, 'sine', 0.25, 0, undefined, 60)),
+  thud: sfx(() => {
+    tone(110, 0.22, 'sine', 0.5, 0, undefined, 45);
+    tone(70, 0.3, 'triangle', 0.25, 0.02, undefined, 40);
+  }),
+  // «Тінь-тінь-тінь» — дзвіночки над головою, як у старих мультиках.
+  dizzy: sfx(() => [1568, 1976, 1760, 2093, 1568, 1976].forEach((f, i) => tone(f, 0.09, 'triangle', 0.07, 0.15 + i * 0.13))),
   win: sfx(() => [523, 659, 784, 1047].forEach((f, i) => tone(f, 0.25, 'triangle', 0.22, i * 0.12))),
   heartbeat: sfx(() => {
     tone(70, 0.12, 'sine', 0.5);

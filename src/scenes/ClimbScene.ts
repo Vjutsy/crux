@@ -25,6 +25,7 @@ import { askQuestion } from '../ui/questionCard';
 import { toast } from '../ui/toast';
 import { type HoldState, SCENERY_DEFS, type WallTheme, holdSvg, themeFor } from './backgrounds';
 import { type Ragdoll, createRagdoll } from './ragdoll';
+import { dizzyStars } from './dizzy';
 
 export interface ClimbData {
   group: WordGroup;
@@ -57,6 +58,10 @@ const SNAP = 30;
 const DRAG_START = 8;
 /** Скільки «неба» над стіною може показати камера (частка висоти екрана). */
 const SKY = 0.45;
+/** Скільки кружляють зірочки, перш ніж з'явиться екран результату. */
+const DIZZY_MS = 1900;
+/** Відстань від центру тулуба до центру голови в моделі скелелаза. */
+const B_HEAD = 34;
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /** Навчальні підказки: показуються по черзі на перших ходах. */
@@ -92,6 +97,11 @@ export class ClimbScene extends Phaser.Scene {
   private shakeTimer = 0;
   private beatTimer = 0;
   private ragdoll: Ragdoll | null = null;
+  /** Підлога й бокові стінки для регдолу. */
+  private bounds: MatterJS.BodyType[] = [];
+  private fallAt = 0;
+  /** Коли тіло гепнулось на підлогу: від цього моменту навколо голови кружляють зірочки. */
+  private landedAt = 0;
   private hintHold = -1;
   /** Перетягування кінцівки пальцем: куди тягнемо і до якого зачепа вона «прилипла». */
   private drag: { limb: Limb; start: Point; end: Point; target: number; moved: boolean; reach: Set<number> } | null = null;
@@ -108,6 +118,9 @@ export class ClimbScene extends Phaser.Scene {
     this.selected = null;
     this.busy = false;
     this.ragdoll = null;
+    this.bounds = [];
+    this.fallAt = 0;
+    this.landedAt = 0;
     this.tutorialStep = data.tutorial ? 0 : -1;
     this.hintHold = -1;
   }
@@ -144,6 +157,7 @@ export class ClimbScene extends Phaser.Scene {
       }
       this.scale.off('resize', this.fitCamera, this);
       this.ragdoll?.destroy();
+      for (const b of this.bounds) this.matter.world.remove(b);
     });
 
     this.input.on('pointerdown', (p: Phaser.Input.Pointer) => this.onDown(p));
@@ -396,8 +410,26 @@ export class ClimbScene extends Phaser.Scene {
     this.busy = true;
     sound.fall();
     navigator.vibrate?.([60, 40, 120]);
-    this.ragdoll = createRagdoll(this, this.disp.torso, this.disp.ends, this.disp.torso.x < this.s.wall.width / 2 ? -1 : 1);
-    this.time.delayedCall(1600, () => this.finish());
+    const { width: W, height: H } = this.s.wall;
+    // Підлога (на дерев'яній смузі внизу стіни) і бортики з боків: тіло падає вниз і лишається в кадрі.
+    const wall = { isStatic: true, friction: 0.9 };
+    this.bounds = [
+      this.matter.add.rectangle(W / 2, H - 6 + 20, W * 3, 40, wall),
+      this.matter.add.rectangle(-20, H / 2, 40, H * 3, wall),
+      this.matter.add.rectangle(W + 20, H / 2, 40, H * 3, wall),
+    ];
+    this.ragdoll = createRagdoll(this, this.disp.torso, this.disp.ends, this.disp.torso.x < W / 2 ? -1 : 1);
+    this.fallAt = this.time.now;
+  }
+
+  /** Тіло лежить (або падає задовго): гуп, зірочки над головою, і за мить — екран результату. */
+  private land(time: number) {
+    this.landedAt = time;
+    sound.thud();
+    sound.dizzy();
+    navigator.vibrate?.(80);
+    this.shakeUntil = time + 250;
+    this.time.delayedCall(DIZZY_MS, () => this.finish());
   }
 
   private finish() {
@@ -460,6 +492,15 @@ export class ClimbScene extends Phaser.Scene {
     this.scenery.style.transform = shake;
 
     if (this.ragdoll) {
+      // Камера йде за головою вниз.
+      const head = this.ragdoll.headPos();
+      this.camY += (head.y - 40 - this.camY) * a * 0.6;
+      this.cameras.main.centerOn(this.s.wall.width / 2, this.camY);
+      if (!this.landedAt) {
+        const v = this.ragdoll.head.velocity;
+        const onFloor = head.y > this.s.wall.height - 90 && Math.hypot(v.x, v.y) < 2.5;
+        if ((onFloor && time - this.fallAt > 500) || time - this.fallAt > 3500) this.land(time);
+      }
       this.drawRagdoll(time);
       return;
     }
@@ -500,7 +541,7 @@ export class ClimbScene extends Phaser.Scene {
     if (this.scenery.getAttribute('viewBox') !== box) this.scenery.setAttribute('viewBox', box);
   }
 
-  private drawActor(time: number, c: Point, ends: readonly Point[], tired: number, rotate = 0) {
+  private drawActor(time: number, c: Point, ends: readonly Point[], tired: number, rotate = 0, overlay = '') {
     this.syncActorView();
     const t = reducedMotion() ? 1 : time / 1000;
     this.vx += ((c.x - this.lastX) * -0.6 - this.vx) * 0.15;
@@ -514,7 +555,8 @@ export class ClimbScene extends Phaser.Scene {
       selected: this.selected,
       dangling: this.s.contacts.map((i) => i < 0),
     });
-    this.actor.innerHTML = rotate ? `<g transform="rotate(${rotate.toFixed(1)} ${c.x.toFixed(1)} ${c.y.toFixed(1)})">${art}</g>` : art;
+    const body = rotate ? `<g transform="rotate(${rotate.toFixed(1)} ${c.x.toFixed(1)} ${c.y.toFixed(1)})">${art}</g>` : art;
+    this.actor.innerHTML = body + overlay;
   }
 
   /** Регдол: беремо тулуб і кінці кінцівок з фізики, малюємо ту саму модель, повернуту за хребтом. */
@@ -532,6 +574,10 @@ export class ClimbScene extends Phaser.Scene {
       const dy = p.y - c.y;
       return { x: c.x + dx * cos - dy * sin, y: c.y + dx * sin + dy * cos };
     });
-    this.drawActor(time, c, ends, 1, (angle * 180) / Math.PI);
+    // Голова моделі — над тулубом; повертаємо цю точку разом із малюнком.
+    const up = B_HEAD;
+    const head = { x: c.x + Math.sin(angle) * up, y: c.y - Math.cos(angle) * up };
+    const stars = this.landedAt ? dizzyStars(head, angle, time - this.landedAt, reducedMotion() ? 0 : time / 1000) : '';
+    this.drawActor(time, c, ends, 1, (angle * 180) / Math.PI, stars);
   }
 }
