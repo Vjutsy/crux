@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import { sound } from '../audio';
-import { LIMB_NAMES, type Limb, LIMBS, type Point, danglingEnd } from '../core/body';
+import { LIMB_NAMES, type Limb, LIMBS, type Point, anchor, danglingEnd, limbLength } from '../core/body';
 import {
   type ClimbEvent,
   type ClimbState,
@@ -49,7 +49,14 @@ export interface ClimbSummary {
 }
 
 const HOLD_HIT = 22;
-const LIMB_HIT = 20;
+/** Зона, де палець «хапає» кисть чи стопу. */
+const LIMB_HIT = 24;
+/** Наскільки близько до зачепа треба піднести кінцівку, щоб вона «прилипла». */
+const SNAP = 30;
+/** Зсув пальця, після якого дотик вважається перетягуванням, а не тапом. */
+const DRAG_START = 8;
+/** Скільки «неба» над стіною може показати камера (частка висоти екрана). */
+const SKY = 0.45;
 const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 /** Навчальні підказки: показуються по черзі на перших ходах. */
@@ -57,7 +64,7 @@ const TUTORIAL = [
   'Яскраві зачепи з теплим ореолом — ті, куди тіло дістане. Торкніться зачепа з пунктирним кільцем',
   'Кожен рух коштує 1 крок. Кроки скінчаться — скелелаз зірветься',
   'Сині самоцвіти — бонусні: правильна відповідь на питання дає +3 кроки',
-  'Можна торкнутися кружечка на руці чи нозі, щоб рухати саме її. Далі — самі!',
+  'Руку чи ногу можна тягнути пальцем до зачепа — він збільшиться, коли кінцівка дістане. Далі — самі!',
 ];
 
 export class ClimbScene extends Phaser.Scene {
@@ -86,6 +93,8 @@ export class ClimbScene extends Phaser.Scene {
   private beatTimer = 0;
   private ragdoll: Ragdoll | null = null;
   private hintHold = -1;
+  /** Перетягування кінцівки пальцем: куди тягнемо і до якого зачепа вона «прилипла». */
+  private drag: { limb: Limb; start: Point; end: Point; target: number; moved: boolean; reach: Set<number> } | null = null;
 
   constructor() {
     super({ key: 'climb', physics: { default: 'matter', matter: { gravity: { x: 0, y: 1.1 }, enableSleeping: false } } });
@@ -137,7 +146,9 @@ export class ClimbScene extends Phaser.Scene {
       this.ragdoll?.destroy();
     });
 
-    this.input.on('pointerdown', (p: Phaser.Input.Pointer) => this.onTap(p));
+    this.input.on('pointerdown', (p: Phaser.Input.Pointer) => this.onDown(p));
+    this.input.on('pointermove', (p: Phaser.Input.Pointer) => this.onMove(p));
+    this.input.on('pointerup', (p: Phaser.Input.Pointer) => this.onUp(p));
     this.drawHolds();
     this.updateHud();
     if (this.tutorialStep >= 0) this.showTutorial();
@@ -149,9 +160,11 @@ export class ClimbScene extends Phaser.Scene {
     const { width: W, height: H } = this.s.wall;
     const zoom = this.scale.width / W;
     cam.setZoom(zoom);
-    // Якщо стіна нижча за екран — показуємо «небо» над нею, а низ стіни притискаємо до низу екрана.
+    // Над стіною — «небо»: камера може піднятися вище, тож верхні зачепи не ховаються під кнопками.
+    // Низ стіни притиснутий до низу екрана.
     const viewH = this.scale.height / zoom;
-    cam.setBounds(0, Math.min(0, H - viewH), W, Math.max(H, viewH));
+    const top = Math.min(-viewH * SKY, H - viewH);
+    cam.setBounds(0, top, W, H - top);
     cam.centerOn(W / 2, this.camY);
   }
 
@@ -175,6 +188,87 @@ export class ClimbScene extends Phaser.Scene {
   }
 
   // ---------- ввід ----------
+  /** Найближча кисть чи стопа під пальцем. */
+  private limbAt(wp: Point): Limb | null {
+    let best: Limb | null = null;
+    let bd = LIMB_HIT;
+    for (const k of LIMBS) {
+      const e = this.disp.ends[k]!;
+      const d = Math.hypot(e.x - wp.x, e.y - wp.y);
+      if (d < bd) {
+        bd = d;
+        best = k;
+      }
+    }
+    return best;
+  }
+
+  private onDown(p: Phaser.Input.Pointer) {
+    this.drag = null;
+    if (this.busy || this.s.status !== 'climbing') return;
+    const wp = this.cameras.main.getWorldPoint(p.x, p.y);
+    const k = this.limbAt(wp);
+    if (k === null) return;
+    // Можливе перетягування: запам'ятовуємо, до яких зачепів ця кінцівка дістає.
+    this.drag = {
+      limb: k,
+      start: { x: wp.x, y: wp.y },
+      end: { ...this.disp.ends[k]! },
+      target: -1,
+      moved: false,
+      reach: new Set(reachableHolds(this.s, k)),
+    };
+  }
+
+  private onMove(p: Phaser.Input.Pointer) {
+    const d = this.drag;
+    if (!d || !p.isDown || this.busy) return;
+    const wp = this.cameras.main.getWorldPoint(p.x, p.y);
+    if (!d.moved) {
+      if (Math.hypot(wp.x - d.start.x, wp.y - d.start.y) < DRAG_START) return;
+      d.moved = true;
+      this.selected = d.limb;
+      this.hintHold = -1;
+    }
+    // Кінцівка тягнеться за пальцем, але не довша за себе.
+    const a = anchor(this.s.torso, d.limb);
+    const L = limbLength(d.limb) * 1.02;
+    const dx = wp.x - a.x;
+    const dy = wp.y - a.y;
+    const dist = Math.hypot(dx, dy) || 1;
+    d.end = dist > L ? { x: a.x + (dx / dist) * L, y: a.y + (dy / dist) * L } : { x: wp.x, y: wp.y };
+    // «Прилипання» до найближчого досяжного зачепа під пальцем.
+    let target = -1;
+    let bd = SNAP;
+    for (const i of d.reach) {
+      const h = this.s.wall.holds[i]!;
+      const dd = Math.hypot(h.x - wp.x, h.y - wp.y);
+      if (dd < bd) {
+        bd = dd;
+        target = i;
+      }
+    }
+    if (target >= 0) d.end = { ...this.s.wall.holds[target]! };
+    if (target !== d.target) {
+      d.target = target;
+      if (target >= 0) sound.tap();
+      this.drawHolds();
+    }
+    this.look = { at: d.end, until: this.time.now + 600 };
+  }
+
+  private onUp(p: Phaser.Input.Pointer) {
+    const d = this.drag;
+    this.drag = null;
+    if (d?.moved) {
+      this.selected = null;
+      if (d.target >= 0) void this.moveTo(d.limb, d.target);
+      else this.drawHolds();
+      return;
+    }
+    this.onTap(p);
+  }
+
   private onTap(p: Phaser.Input.Pointer) {
     if (this.busy || this.s.status !== 'climbing') return;
     const wp = this.cameras.main.getWorldPoint(p.x, p.y);
@@ -347,7 +441,9 @@ export class ClimbScene extends Phaser.Scene {
       else if (active.has(i)) st = 'reach';
       else st = 'idle';
       // Форма з індексу зачепа: детерміновано, тож стіна завжди виглядає однаково.
-      parts.push(holdSvg(this.theme, st, h.x, h.y, (i * 7 + 3) % 3));
+      // Зачіп, до якого «прилипла» кінцівка під пальцем, збільшується.
+      const grab = this.drag?.moved === true && this.drag.target === i;
+      parts.push(holdSvg(this.theme, st, h.x, h.y, (i * 7 + 3) % 3, grab));
     });
     this.holdsLayer.innerHTML = parts.join('');
   }
@@ -368,7 +464,10 @@ export class ClimbScene extends Phaser.Scene {
       return;
     }
     this.disp.torso = lerp(this.disp.torso, this.s.torso);
-    this.disp.ends = LIMBS.map((k) => lerp(this.disp.ends[k]!, this.limbEnd(k)));
+    // Кінцівка, яку тягнуть, іде за пальцем швидше, решта — плавно до своїх зачепів.
+    this.disp.ends = LIMBS.map((k) =>
+      this.drag?.moved && this.drag.limb === k ? this.drag.end : lerp(this.disp.ends[k]!, this.limbEnd(k)),
+    );
 
     // Камера плавно тримає скелелаза трохи нижче центру екрана.
     this.camY += (this.s.torso.y - 40 - this.camY) * a;

@@ -122,3 +122,45 @@ test('перше відкриття — вступ веде одразу на п
   await expect(page.locator('#toast')).toContainText('Торкніться зачепа з пунктирним кільцем');
   await page.close();
 });
+
+test('руку чи ногу можна перетягнути до зачепа', async ({ page }) => {
+  await page.getByRole('button', { name: 'Грати' }).click();
+  await page.getByRole('button', { name: 'Лізти!' }).click();
+  await expect(page.locator('#hud')).toBeVisible();
+  await page.waitForTimeout(800);
+  // Беремо наступний хід маршруту, але виконуємо його перетягуванням кінцівки, а не тапом.
+  const plan = await page.evaluate(() => {
+    type Scene = {
+      s: { wall: { holds: { x: number; y: number }[] }; contacts: number[]; bonus: Set<number> };
+      disp: { ends: { x: number; y: number }[] };
+      hint(): { limb: number; hold: number } | null;
+      toScreen(p: { x: number; y: number }): { x: number; y: number };
+    };
+    const sc = (window as unknown as { crux: { scene: { getScene(k: string): Scene } } }).crux.scene.getScene('climb');
+    const m = sc.hint()!;
+    return {
+      from: sc.toScreen(sc.s.wall.holds[sc.s.contacts[m.limb]!]!),
+      to: sc.toScreen(sc.s.wall.holds[m.hold]!),
+      hold: m.hold,
+      limb: m.limb,
+      bonus: sc.s.bonus.has(m.hold),
+    };
+  });
+  await page.mouse.move(plan.from.x, plan.from.y);
+  await page.mouse.down();
+  for (let i = 1; i <= 10; i++)
+    await page.mouse.move(plan.from.x + ((plan.to.x - plan.from.x) * i) / 10, plan.from.y + ((plan.to.y - plan.from.y) * i) / 10);
+  await page.mouse.up();
+  if (plan.bonus) await expect(page.locator('#card')).toBeVisible();
+  else
+    await expect
+      .poll(() =>
+        page.evaluate(
+          ([limb]) =>
+            (window as unknown as { crux: { scene: { getScene(k: string): { s: { contacts: number[] } } } } }).crux.scene.getScene('climb')
+              .s.contacts[limb!],
+          [plan.limb],
+        ),
+      )
+      .toBe(plan.hold);
+});

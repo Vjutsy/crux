@@ -207,11 +207,15 @@ const pulse = (attr: string, a: number, b: number, phase: number) =>
   `<animate attributeName="${attr}" values="${f(a)};${f(b)};${f(a)}" dur="2.1s" begin="-${f(phase)}s" repeatCount="indefinite"/>`;
 
 /** SVG одного зачепа. si — номер форми теми (визначається з індексу зачепа, тож стіна завжди та сама). */
-export function holdSvg(theme: WallTheme, state: HoldState, x: number, y: number, si: number): string {
+export function holdSvg(theme: WallTheme, state: HoldState, x: number, y: number, si: number, grab = false): string {
   const [shape, col] = theme.shapes[si % theme.shapes.length]!;
   const S = SH[shape];
   const phase = (x * 0.037 + y * 0.011) % 2.1;
-  const g = (inner: string, extra = '') => `<g transform="translate(${f(x)} ${f(y)})"${extra}>${inner}</g>`;
+  // grab — кінцівка під пальцем «прилипла» до цього зачепа: він збільшується, світлішає й отримує кільце.
+  const g = (inner: string, extra = '') =>
+    grab
+      ? `<g transform="translate(${f(x)} ${f(y)})"${extra}><ellipse rx="26" ry="22" fill="url(#reachGlow)"/><circle r="19" fill="none" stroke="#fff3d6" stroke-width="2"/><g transform="scale(1.45)">${inner}</g></g>`
+      : `<g transform="translate(${f(x)} ${f(y)})"${extra}>${inner}</g>`;
   if (state === 'bonus' || state === 'bonusFar') {
     const far = state === 'bonusFar';
     return g(
