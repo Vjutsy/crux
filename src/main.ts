@@ -1,17 +1,25 @@
 import Phaser from 'phaser';
+import '@fontsource/neucha/cyrillic-400.css';
+import '@fontsource/neucha/latin-400.css';
+import '@fontsource/nunito/cyrillic-400.css';
+import '@fontsource/nunito/cyrillic-700.css';
+import '@fontsource/nunito/cyrillic-800.css';
+import '@fontsource/nunito/latin-400.css';
+import '@fontsource/nunito/latin-700.css';
+import '@fontsource/nunito/latin-800.css';
 import './styles.css';
 import { setAudio, unlockAudio } from './audio';
 import { getClimber } from './data/climbers';
 import { groups } from './content';
-import { loadProgress, saveProgress, today, touchStreak, type Progress } from './core/save';
+import { loadProgress, saveProgress, touchStreak, type Progress } from './core/save';
 import { walls } from './data/walls';
 import { type ClimbData, ClimbScene, type ClimbSummary } from './scenes/ClimbScene';
-import { type MenuChoice, showMenu, showResult } from './ui/screens';
+import { type MenuChoice, showIntro, showMenu, showResult } from './ui/screens';
 
 const game = new Phaser.Game({
   type: Phaser.AUTO,
   parent: 'game',
-  backgroundColor: '#e9e5db',
+  backgroundColor: '#1c1a2b',
   scale: { mode: Phaser.Scale.RESIZE, width: window.innerWidth, height: window.innerHeight },
   render: { antialias: true },
 });
@@ -32,8 +40,7 @@ function startClimb(choice: MenuChoice) {
     wall: choice.wall,
     boxes: progress.boxes,
     climber: getClimber(progress.settings.climber),
-    tutorial: !progress.tutorialDone && choice.wall.wall === 1 && !choice.daily,
-    seedSalt: choice.daily ? today() : '',
+    tutorial: !progress.tutorialDone && choice.wall.wall === 1,
   };
   hud.hidden = false;
   game.scene.start('climb', data);
@@ -65,11 +72,31 @@ game.events.on('climb:end', (s: ClimbSummary) => {
   void saveProgress(progress);
   const cur = last!;
   const next = walls.find((w) => w.wall === cur.wall.wall + 1);
-  showResult(s, () => startClimb(cur), menu, s.won && next && !cur.daily ? () => startClimb({ ...cur, wall: next }) : undefined);
+  showResult(s, () => startClimb(cur), menu, s.won && next ? () => startClimb({ ...cur, wall: next }) : undefined);
 });
 
 document.getElementById('hud-menu')!.addEventListener('click', menu);
 // Звук можна вмикати лише після жесту користувача.
 setAudio(progress.settings);
 document.addEventListener('pointerdown', unlockAudio, { once: true });
-menu();
+
+// Перше відкриття: вступ із трьох карток → одразу перша стіна з підказками.
+const firstOpen = !progress.introSeen && !progress.tutorialDone && Object.keys(progress.stars).length === 0;
+if (firstOpen) {
+  const seen = () => {
+    progress = { ...progress, introSeen: true };
+    void saveProgress(progress);
+  };
+  const first = groups.find((g) => g.themeId === 'kuchyna' && g.cefr === 'A0') ?? groups[0]!;
+  showIntro(
+    getClimber(progress.settings.climber),
+    () => {
+      seen();
+      startClimb({ group: first, wall: walls[0]! });
+    },
+    () => {
+      seen();
+      menu();
+    },
+  );
+} else menu();

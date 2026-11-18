@@ -73,6 +73,9 @@ test.beforeEach(async ({ page }) => {
   errors = [];
   page.on('pageerror', (e) => errors.push(e.message));
   await page.goto('/?debug');
+  // Перше відкриття — вступ; пропускаємо його до меню.
+  await expect(page.getByRole('heading', { name: 'Лізь угору' })).toBeVisible();
+  await page.getByRole('button', { name: 'Пропустити' }).click();
   await expect(page.getByRole('heading', { name: 'Crux' })).toBeVisible();
 });
 
@@ -81,18 +84,41 @@ test.afterEach(() => {
 });
 
 test('стіна 1 без помилок — вершина і 3 зірки', async ({ page }) => {
+  await page.getByRole('button', { name: 'Грати' }).click();
   await page.getByRole('button', { name: 'Лізти!' }).click();
   expect(await climb(page, 0)).toBe('won');
   await expect(page.locator('#result')).toContainText('Вершина!');
   await expect(page.locator('#result')).toContainText('★★★');
   // Наступна стіна відкрилась.
   await page.getByRole('button', { name: 'Меню' }).click();
-  await expect(page.getByRole('button', { name: /Стіна 2/ })).toBeEnabled();
+  await page.getByRole('button', { name: 'Грати' }).click();
+  await expect(page.getByRole('button', { name: 'Рівень 2', exact: true })).toBeEnabled();
 });
 
 test('самі помилки — падіння і список слів', async ({ page }) => {
+  await page.getByRole('button', { name: 'Грати' }).click();
+  // На «Кухні» стіни 1 бот із підказками доходить і без відповідей (docs/decisions.md, відкрите питання про баланс).
+  await page.getByRole('button', { name: 'Числа, час, погода' }).click();
   await page.getByRole('button', { name: 'Лізти!' }).click();
   expect(await climb(page, 99)).toBe('fallen');
   await expect(page.locator('#result')).toContainText('Зірвався');
   await expect(page.locator('#result .mistakes li').first()).toBeVisible();
+});
+
+test('вибір скелелаза — тапом по ньому в меню', async ({ page }) => {
+  await page.getByRole('button', { name: /Скелелаз: Іва/ }).click();
+  await page.getByRole('button', { name: 'Бо' }).click();
+  await expect(page.getByRole('button', { name: /Скелелаз: Бо/ })).toBeVisible();
+  // Вступ більше не показується.
+  await page.reload();
+  await expect(page.getByRole('heading', { name: 'Crux' })).toBeVisible();
+});
+
+test('перше відкриття — вступ веде одразу на першу стіну', async ({ browser }) => {
+  const page = await browser.newPage();
+  await page.goto('/?debug');
+  for (const name of ['Далі', 'Далі', 'Перша стіна']) await page.getByRole('button', { name }).click();
+  await expect(page.locator('#hud')).toBeVisible();
+  await expect(page.locator('#toast')).toContainText('Торкніться зачепа');
+  await page.close();
 });

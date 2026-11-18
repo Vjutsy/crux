@@ -13,6 +13,8 @@ export interface Progress {
   settings: { sound: boolean; music: boolean; climber: string };
   /** Навчання на першій стіні вже пройдене. */
   tutorialDone: boolean;
+  /** Вступ при першому відкритті гри вже показано. */
+  introSeen: boolean;
 }
 
 const KEY = 'crux-progress';
@@ -25,6 +27,7 @@ export const emptyProgress = (): Progress => ({
   streak: { lastDay: '', count: 0 },
   settings: { sound: true, music: true, climber: 'iva' },
   tutorialDone: false,
+  introSeen: false,
 });
 
 export async function loadProgress(): Promise<Progress> {
