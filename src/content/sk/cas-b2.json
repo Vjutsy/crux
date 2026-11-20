@@ -1,0 +1,646 @@
+{
+  "id": "cas-b2",
+  "themeId": "cas",
+  "theme": "Числа, час, погода",
+  "cefr": "B2",
+  "words": [
+    {
+      "id": "casova-os",
+      "sk": "časová os",
+      "ua": "часова шкала",
+      "pos": "phrase"
+    },
+    {
+      "id": "chronologicky",
+      "sk": "chronologický",
+      "ua": "хронологічний",
+      "pos": "adj"
+    },
+    {
+      "id": "sucasny",
+      "sk": "súčasný",
+      "ua": "теперішній",
+      "pos": "adj"
+    },
+    {
+      "id": "dobovy",
+      "sk": "dobový",
+      "ua": "тогочасний",
+      "pos": "adj"
+    },
+    {
+      "id": "nadcasovy",
+      "sk": "nadčasový",
+      "ua": "позачасовий",
+      "pos": "adj"
+    },
+    {
+      "id": "zastarany",
+      "sk": "zastaraný",
+      "ua": "застарілий",
+      "pos": "adj"
+    },
+    {
+      "id": "aktualny",
+      "sk": "aktuálny",
+      "ua": "актуальний",
+      "pos": "adj"
+    },
+    {
+      "id": "priebezne",
+      "sk": "priebežne",
+      "ua": "у процесі",
+      "pos": "adv"
+    },
+    {
+      "id": "vopred",
+      "sk": "vopred",
+      "ua": "заздалегідь",
+      "pos": "adv"
+    },
+    {
+      "id": "dodatocne",
+      "sk": "dodatočne",
+      "ua": "згодом",
+      "pos": "adv"
+    },
+    {
+      "id": "bezodkladne",
+      "sk": "bezodkladne",
+      "ua": "невідкладно",
+      "pos": "adv"
+    },
+    {
+      "id": "sporadicky",
+      "sk": "sporadicky",
+      "ua": "епізодично",
+      "pos": "adv"
+    },
+    {
+      "id": "nepretrzite",
+      "sk": "nepretržite",
+      "ua": "безперервно",
+      "pos": "adv"
+    },
+    {
+      "id": "prechodne",
+      "sk": "prechodne",
+      "ua": "тимчасово",
+      "pos": "adv"
+    },
+    {
+      "id": "odjakziva",
+      "sk": "odjakživa",
+      "ua": "споконвіку",
+      "pos": "adv"
+    },
+    {
+      "id": "dovtedy",
+      "sk": "dovtedy",
+      "ua": "доти",
+      "pos": "adv"
+    },
+    {
+      "id": "cochvila",
+      "sk": "čochvíľa",
+      "ua": "ось-ось",
+      "pos": "adv"
+    },
+    {
+      "id": "obcasny",
+      "sk": "občasný",
+      "ua": "періодичний",
+      "pos": "adj"
+    },
+    {
+      "id": "cyklicky",
+      "sk": "cyklický",
+      "ua": "циклічний",
+      "pos": "adj"
+    },
+    {
+      "id": "sezona",
+      "sk": "sezóna",
+      "ua": "сезон",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "splatnost",
+      "sk": "splatnosť",
+      "ua": "термін сплати",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "odklad",
+      "sk": "odklad",
+      "ua": "відстрочка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "oneskorenie",
+      "sk": "oneskorenie",
+      "ua": "затримка",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "predstih",
+      "sk": "predstih",
+      "ua": "випередження",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "casova-tiesen",
+      "sk": "časová tieseň",
+      "ua": "брак часу",
+      "pos": "phrase"
+    },
+    {
+      "id": "casovy-ramec",
+      "sk": "časový rámec",
+      "ua": "часові рамки",
+      "pos": "phrase"
+    },
+    {
+      "id": "predlzenie",
+      "sk": "predĺženie",
+      "ua": "продовження терміну",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "uplynut",
+      "sk": "uplynúť",
+      "ua": "минути (про час)",
+      "pos": "verb"
+    },
+    {
+      "id": "nastat",
+      "sk": "nastať",
+      "ua": "настати",
+      "pos": "verb"
+    },
+    {
+      "id": "predchadzat",
+      "sk": "predchádzať",
+      "ua": "передувати",
+      "pos": "verb"
+    },
+    {
+      "id": "nasledovat",
+      "sk": "nasledovať",
+      "ua": "слідувати",
+      "pos": "verb"
+    },
+    {
+      "id": "prebiehat",
+      "sk": "prebiehať",
+      "ua": "відбуватися",
+      "pos": "verb"
+    },
+    {
+      "id": "oneskorit-sa",
+      "sk": "oneskoriť sa",
+      "ua": "затриматися",
+      "pos": "verb"
+    },
+    {
+      "id": "zladit",
+      "sk": "zladiť",
+      "ua": "узгодити",
+      "pos": "verb"
+    },
+    {
+      "id": "synchronizovat",
+      "sk": "synchronizovať",
+      "ua": "синхронізувати",
+      "pos": "verb"
+    },
+    {
+      "id": "odhadnut",
+      "sk": "odhadnúť",
+      "ua": "оцінити приблизно",
+      "pos": "verb"
+    },
+    {
+      "id": "zaokruhlit",
+      "sk": "zaokrúhliť",
+      "ua": "округлити",
+      "pos": "verb"
+    },
+    {
+      "id": "vypocitat",
+      "sk": "vypočítať",
+      "ua": "обчислити",
+      "pos": "verb"
+    },
+    {
+      "id": "umocnit",
+      "sk": "umocniť",
+      "ua": "піднести до степеня",
+      "pos": "verb"
+    },
+    {
+      "id": "odmocnina",
+      "sk": "odmocnina",
+      "ua": "корінь (квадратний)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "rovnica",
+      "sk": "rovnica",
+      "ua": "рівняння",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pravdepodobnost",
+      "sk": "pravdepodobnosť",
+      "ua": "ймовірність",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "statistika",
+      "sk": "štatistika",
+      "ua": "статистика",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "podiel",
+      "sk": "podiel",
+      "ua": "частка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pomer",
+      "sk": "pomer",
+      "ua": "співвідношення",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "narast",
+      "sk": "nárast",
+      "ua": "зростання",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pokles",
+      "sk": "pokles",
+      "ua": "спад",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "odchylka",
+      "sk": "odchýlka",
+      "ua": "відхилення",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "rozsah",
+      "sk": "rozsah",
+      "ua": "діапазон",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "nespocetny",
+      "sk": "nespočetný",
+      "ua": "незліченний",
+      "pos": "adj"
+    },
+    {
+      "id": "nepatrny",
+      "sk": "nepatrný",
+      "ua": "крихітний",
+      "pos": "adj"
+    },
+    {
+      "id": "priblizny",
+      "sk": "približný",
+      "ua": "приблизний",
+      "pos": "adj"
+    },
+    {
+      "id": "presny",
+      "sk": "presný",
+      "ua": "точний",
+      "pos": "adj"
+    },
+    {
+      "id": "nekonecno",
+      "sk": "nekonečno",
+      "ua": "нескінченність",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "klimaticka-zmena",
+      "sk": "klimatická zmena",
+      "ua": "зміна клімату",
+      "pos": "phrase"
+    },
+    {
+      "id": "globalne-oteplovanie",
+      "sk": "globálne otepľovanie",
+      "ua": "глобальне потепління",
+      "pos": "phrase"
+    },
+    {
+      "id": "sklenikovy-efekt",
+      "sk": "skleníkový efekt",
+      "ua": "парниковий ефект",
+      "pos": "phrase"
+    },
+    {
+      "id": "extremne-pocasie",
+      "sk": "extrémne počasie",
+      "ua": "екстремальна погода",
+      "pos": "phrase"
+    },
+    {
+      "id": "prirodna-katastrofa",
+      "sk": "prírodná katastrofa",
+      "ua": "стихійне лихо",
+      "pos": "phrase"
+    },
+    {
+      "id": "tornado",
+      "sk": "tornádo",
+      "ua": "торнадо",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "hurikan",
+      "sk": "hurikán",
+      "ua": "ураган",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "cunami",
+      "sk": "cunami",
+      "ua": "цунамі",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "zosuv-pody",
+      "sk": "zosuv pôdy",
+      "ua": "зсув ґрунту",
+      "pos": "phrase"
+    },
+    {
+      "id": "lavina",
+      "sk": "lavína",
+      "ua": "лавина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zemetrasenie",
+      "sk": "zemetrasenie",
+      "ua": "землетрус",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "vystraha",
+      "sk": "výstraha",
+      "ua": "метеопопередження",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "barometer",
+      "sk": "barometer",
+      "ua": "барометр",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vlhky",
+      "sk": "vlhký",
+      "ua": "вологий",
+      "pos": "adj"
+    },
+    {
+      "id": "sparno",
+      "sk": "sparno",
+      "ua": "спекотно й душно",
+      "pos": "adv"
+    },
+    {
+      "id": "mrholenie",
+      "sk": "mrholenie",
+      "ua": "мряка",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "vytrvaly-dazd",
+      "sk": "vytrvalý dážď",
+      "ua": "затяжний дощ",
+      "pos": "phrase"
+    },
+    {
+      "id": "premenlivy",
+      "sk": "premenlivý",
+      "ua": "мінливий",
+      "pos": "adj"
+    },
+    {
+      "id": "nestale-pocasie",
+      "sk": "nestále počasie",
+      "ua": "нестійка погода",
+      "pos": "phrase"
+    },
+    {
+      "id": "oteplenie",
+      "sk": "oteplenie",
+      "ua": "потепління",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "ochladenie",
+      "sk": "ochladenie",
+      "ua": "похолодання",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "slnovrat",
+      "sk": "slnovrat",
+      "ua": "сонцестояння",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "rovnodennost",
+      "sk": "rovnodennosť",
+      "ua": "рівнодення",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "spln",
+      "sk": "spln",
+      "ua": "повня",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "nov",
+      "sk": "nov",
+      "ua": "молодик (новий місяць)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zatmenie",
+      "sk": "zatmenie",
+      "ua": "затемнення",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "kometa",
+      "sk": "kométa",
+      "ua": "комета",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "suhvezdie",
+      "sk": "súhvezdie",
+      "ua": "сузір'я",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "obezna-draha",
+      "sk": "obežná dráha",
+      "ua": "орбіта",
+      "pos": "phrase"
+    },
+    {
+      "id": "letopocet",
+      "sk": "letopočet",
+      "ua": "літочислення",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pred-nasim-letopoctom",
+      "sk": "pred naším letopočtom",
+      "ua": "до нашої ери",
+      "pos": "phrase"
+    },
+    {
+      "id": "casova-kapsula",
+      "sk": "časová kapsula",
+      "ua": "капсула часу",
+      "pos": "phrase"
+    },
+    {
+      "id": "vyhlad-pocasia",
+      "sk": "výhľad počasia",
+      "ua": "прогноз на кілька днів",
+      "pos": "phrase"
+    },
+    {
+      "id": "mrazive-rano",
+      "sk": "mrazivé ráno",
+      "ua": "морозний ранок",
+      "pos": "phrase"
+    },
+    {
+      "id": "dlhodoba-predpoved",
+      "sk": "dlhodobá predpoveď",
+      "ua": "довгостроковий прогноз",
+      "pos": "phrase"
+    },
+    {
+      "id": "storocna-voda",
+      "sk": "storočná voda",
+      "ua": "повінь, що буває раз на століття",
+      "pos": "phrase"
+    },
+    {
+      "id": "meteorologicka-vystraha",
+      "sk": "meteorologická výstraha",
+      "ua": "штормове попередження",
+      "pos": "phrase"
+    },
+    {
+      "id": "denny-priemer",
+      "sk": "denný priemer",
+      "ua": "середньодобовий показник",
+      "pos": "phrase"
+    },
+    {
+      "id": "astronomicky",
+      "sk": "astronomický",
+      "ua": "астрономічний",
+      "pos": "adj"
+    },
+    {
+      "id": "casovac",
+      "sk": "časovač",
+      "ua": "таймер",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "stopky",
+      "sk": "stopky",
+      "ua": "секундомір",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "prescas",
+      "sk": "presčas",
+      "ua": "понаднормово",
+      "pos": "adv"
+    },
+    {
+      "id": "nadcas",
+      "sk": "nadčas",
+      "ua": "понаднормова робота",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "uzavierka-projektu",
+      "sk": "uzávierka projektu",
+      "ua": "дедлайн проєкту",
+      "pos": "phrase"
+    },
+    {
+      "id": "terminovany",
+      "sk": "termínovaný",
+      "ua": "строковий",
+      "pos": "adj"
+    },
+    {
+      "id": "plynutie-casu",
+      "sk": "plynutie času",
+      "ua": "плин часу",
+      "pos": "phrase"
+    }
+  ]
+}

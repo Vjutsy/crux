@@ -4,10 +4,8 @@ import { join } from 'node:path';
 
 const dir = join(import.meta.dirname, '../src/content/sk');
 const words: { sk: string; ua: string }[] = readdirSync(dir).flatMap((f) => JSON.parse(readFileSync(join(dir, f), 'utf8')).words);
-const answerFor = (prompt: string) => {
-  const w = words.find((x) => x.sk === prompt || x.ua === prompt)!;
-  return w.sk === prompt ? w.ua : w.sk;
-};
+/** Усі можливі правильні відповіді: переклади можуть повторюватись у різних групах. */
+const answersFor = (prompt: string) => words.filter((x) => x.sk === prompt || x.ua === prompt).map((w) => (w.sk === prompt ? w.ua : w.sk));
 
 /** Наступний хід маршруту в екранних координатах (через ?debug-доступ до сцени). */
 async function nextMove(page: Page) {
@@ -50,15 +48,18 @@ async function climb(page: Page, wrongFirst: number) {
       await page.waitForTimeout(150);
       continue;
     }
-    const answer = answerFor(await page.locator('#card-prompt').innerText());
+    // На картці немає назви кінцівки й ігрової клавіатури (лише системна).
+    await expect(page.locator('#card-hint')).not.toContainText(/рука|нога/);
+    await expect(page.locator('#card .keys')).toHaveCount(0);
+    const answers = answersFor(await page.locator('#card-prompt').innerText());
     const wrong = questions < wrongFirst;
     if (await page.locator('#card-input').isVisible()) {
-      await page.locator('#card-input').fill(wrong ? 'xxx' : answer);
+      await page.locator('#card-input').fill(wrong ? 'xxx' : answers[0]!);
       await page.locator('.answers .ok').click();
     } else {
       const opts = page.locator('.answers .opt');
       const texts = await opts.allInnerTexts();
-      const i = texts.findIndex((t) => (t === answer) !== wrong);
+      const i = texts.findIndex((t) => answers.includes(t) !== wrong);
       await opts.nth(i).click();
     }
     questions++;
@@ -88,7 +89,7 @@ test('стіна 1 без помилок — вершина і 3 зірки', as
   await page.getByRole('button', { name: 'Лізти!' }).click();
   expect(await climb(page, 0)).toBe('won');
   await expect(page.locator('#result')).toContainText('Вершина!');
-  await expect(page.locator('#result')).toContainText('★★★');
+  await expect(page.locator('#result')).toContainText('3 з 3');
   // Наступна стіна відкрилась.
   await page.getByRole('button', { name: 'Меню' }).click();
   await page.getByRole('button', { name: 'Грати' }).click();
@@ -101,7 +102,7 @@ test('самі помилки — падіння і список слів', asyn
   await page.getByRole('button', { name: 'Лізти!' }).click();
   expect(await climb(page, 99)).toBe('fallen');
   await expect(page.locator('#result')).toContainText('Зірвався');
-  await expect(page.locator('#result .mistakes li').first()).toBeVisible();
+  await expect(page.locator('#result .pc-word').first()).toBeVisible();
   // «Ще раз» після падіння: стіна й скелелаз на місці, можна лізти далі (раніше лишався порожній екран).
   await page.getByRole('button', { name: 'Ще раз' }).click();
   await expect(page.locator('#scenery #sc-holds > *').first()).toBeAttached();
@@ -197,4 +198,20 @@ test('вихід у меню посеред питання — картка зн
   await expect(page.locator('#hud')).toBeVisible();
   await expect(card).toBeHidden();
   expect((await nextMove(page)).status).not.toBe('busy');
+});
+
+test('змішаний режим і тема «Авто»: стіни проходяться', async ({ page }) => {
+  await page.getByRole('button', { name: 'Грати' }).click();
+  await page.getByRole('button', { name: 'Усе вперемішку' }).click();
+  await page.getByRole('button', { name: 'Усі', exact: true }).click();
+  await page.getByRole('button', { name: 'Лізти!' }).click();
+  expect(await climb(page, 0)).toBe('won');
+  await expect(page.locator('#result')).toContainText('Усе вперемішку · Усі');
+  await page.getByRole('button', { name: 'Меню' }).click();
+  await page.getByRole('button', { name: 'Грати' }).click();
+  await page.getByRole('button', { name: 'Авто й водійські права' }).click();
+  await page.getByRole('button', { name: 'B2' }).click();
+  await page.getByRole('button', { name: 'Лізти!' }).click();
+  expect(await climb(page, 0)).toBe('won');
+  await expect(page.locator('#result')).toContainText('Авто й водійські права · B2');
 });

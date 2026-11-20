@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const PartOfSpeech = z.enum(['noun', 'verb', 'adj', 'adv', 'num', 'pron', 'prep', 'phrase', 'other']);
-export const Cefr = z.enum(['A1', 'A2', 'B1', 'B2', 'C1']);
+export const Cefr = z.enum(['A1', 'A2', 'B1', 'B2', 'C1', 'ALL']);
 
 export const Word = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/, 'id: латиниця в нижньому регістрі, цифри, дефіс'),

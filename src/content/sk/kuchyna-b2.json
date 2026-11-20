@@ -1,0 +1,656 @@
+{
+  "id": "kuchyna-b2",
+  "themeId": "kuchyna",
+  "theme": "Кухня і їжа",
+  "cefr": "B2",
+  "words": [
+    {
+      "id": "narodne-jedlo",
+      "sk": "národné jedlo",
+      "ua": "національна страва",
+      "pos": "phrase"
+    },
+    {
+      "id": "specialita",
+      "sk": "špecialita",
+      "ua": "фірмова страва",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "degustacia",
+      "sk": "degustácia",
+      "ua": "дегустація",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "somelier",
+      "sk": "someliér",
+      "ua": "сомельє",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sefkuchar",
+      "sk": "šéfkuchár",
+      "ua": "шеф-кухар",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "obsluha",
+      "sk": "obsluha",
+      "ua": "обслуговування",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "reklamovat-jedlo",
+      "sk": "reklamovať jedlo",
+      "ua": "поскаржитися на страву",
+      "pos": "phrase"
+    },
+    {
+      "id": "hygiena",
+      "sk": "hygiena",
+      "ua": "гігієна",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "skladovanie",
+      "sk": "skladovanie",
+      "ua": "зберігання",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "dodavatel",
+      "sk": "dodávateľ",
+      "ua": "постачальник",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "surovina",
+      "sk": "surovina",
+      "ua": "сировина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vyrobca",
+      "sk": "výrobca",
+      "ua": "виробник",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "etiketa",
+      "sk": "etiketa",
+      "ua": "етикетка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zlozenie",
+      "sk": "zloženie",
+      "ua": "склад продукту",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "konzervacna-latka",
+      "sk": "konzervačná látka",
+      "ua": "консервант",
+      "pos": "phrase"
+    },
+    {
+      "id": "farbivo",
+      "sk": "farbivo",
+      "ua": "барвник",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "sladidlo",
+      "sk": "sladidlo",
+      "ua": "підсолоджувач",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "geneticky-upraveny",
+      "sk": "geneticky upravený",
+      "ua": "генетично модифікований",
+      "pos": "phrase"
+    },
+    {
+      "id": "cholesterol",
+      "sk": "cholesterol",
+      "ua": "холестерин",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "obezita",
+      "sk": "obezita",
+      "ua": "ожиріння",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "podvyziva",
+      "sk": "podvýživa",
+      "ua": "недоїдання",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "post",
+      "sk": "pôst",
+      "ua": "піст",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "chudnut",
+      "sk": "chudnúť",
+      "ua": "худнути",
+      "pos": "verb"
+    },
+    {
+      "id": "priberat",
+      "sk": "priberať",
+      "ua": "набирати вагу",
+      "pos": "verb"
+    },
+    {
+      "id": "stravovacie-navyky",
+      "sk": "stravovacie návyky",
+      "ua": "харчові звички",
+      "pos": "phrase"
+    },
+    {
+      "id": "striedmy",
+      "sk": "striedmy",
+      "ua": "помірний у їжі",
+      "pos": "adj"
+    },
+    {
+      "id": "vydatny",
+      "sk": "výdatný",
+      "ua": "ситний",
+      "pos": "adj"
+    },
+    {
+      "id": "lahko-stravitelny",
+      "sk": "ľahko stráviteľný",
+      "ua": "легкозасвоюваний",
+      "pos": "phrase"
+    },
+    {
+      "id": "korenisty",
+      "sk": "korenistý",
+      "ua": "пряний",
+      "pos": "adj"
+    },
+    {
+      "id": "aromaticky",
+      "sk": "aromatický",
+      "ua": "ароматний",
+      "pos": "adj"
+    },
+    {
+      "id": "udeny",
+      "sk": "údený",
+      "ua": "копчений",
+      "pos": "adj"
+    },
+    {
+      "id": "marinovany",
+      "sk": "marinovaný",
+      "ua": "маринований",
+      "pos": "adj"
+    },
+    {
+      "id": "duseny",
+      "sk": "dusený",
+      "ua": "тушкований",
+      "pos": "adj"
+    },
+    {
+      "id": "grilovany",
+      "sk": "grilovaný",
+      "ua": "приготований на грилі",
+      "pos": "adj"
+    },
+    {
+      "id": "plneny",
+      "sk": "plnený",
+      "ua": "фарширований",
+      "pos": "adj"
+    },
+    {
+      "id": "struhany",
+      "sk": "strúhaný",
+      "ua": "тертий",
+      "pos": "adj"
+    },
+    {
+      "id": "mlety",
+      "sk": "mletý",
+      "ua": "мелений",
+      "pos": "adj"
+    },
+    {
+      "id": "mlete-maso",
+      "sk": "mleté mäso",
+      "ua": "фарш",
+      "pos": "phrase"
+    },
+    {
+      "id": "zverina",
+      "sk": "zverina",
+      "ua": "дичина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "jahnacina",
+      "sk": "jahňacina",
+      "ua": "ягнятина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "telacina",
+      "sk": "teľacina",
+      "ua": "телятина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "hydina",
+      "sk": "hydina",
+      "ua": "птиця (м'ясо)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "morske-plody",
+      "sk": "morské plody",
+      "ua": "морепродукти",
+      "pos": "phrase"
+    },
+    {
+      "id": "musle",
+      "sk": "mušle",
+      "ua": "мідії",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "chobotnica",
+      "sk": "chobotnica",
+      "ua": "восьминіг",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pstruh",
+      "sk": "pstruh",
+      "ua": "форель",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kapor",
+      "sk": "kapor",
+      "ua": "короп",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kaviar",
+      "sk": "kaviár",
+      "ua": "ікра",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "hluzovka",
+      "sk": "hľuzovka",
+      "ua": "трюфель",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "safran",
+      "sk": "šafran",
+      "ua": "шафран",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zazvor",
+      "sk": "zázvor",
+      "ua": "імбир",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kurkuma",
+      "sk": "kurkuma",
+      "ua": "куркума",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "bazalka",
+      "sk": "bazalka",
+      "ua": "базилік",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "oregano",
+      "sk": "oregano",
+      "ua": "орегано",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "rozmarin",
+      "sk": "rozmarín",
+      "ua": "розмарин",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "tymian",
+      "sk": "tymian",
+      "ua": "чебрець",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "bobkovy-list",
+      "sk": "bobkový list",
+      "ua": "лавровий лист",
+      "pos": "phrase"
+    },
+    {
+      "id": "olivovy-olej",
+      "sk": "olivový olej",
+      "ua": "оливкова олія",
+      "pos": "phrase"
+    },
+    {
+      "id": "kvasenie",
+      "sk": "kvasenie",
+      "ua": "бродіння",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "fermentovat",
+      "sk": "fermentovať",
+      "ua": "ферментувати",
+      "pos": "verb"
+    },
+    {
+      "id": "udit",
+      "sk": "údiť",
+      "ua": "коптити",
+      "pos": "verb"
+    },
+    {
+      "id": "konzervovat",
+      "sk": "konzervovať",
+      "ua": "консервувати",
+      "pos": "verb"
+    },
+    {
+      "id": "zavarat",
+      "sk": "zavárať",
+      "ua": "закривати консервацію",
+      "pos": "verb"
+    },
+    {
+      "id": "zavaranina",
+      "sk": "zaváranina",
+      "ua": "домашня консервація",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "susit",
+      "sk": "sušiť",
+      "ua": "сушити",
+      "pos": "verb"
+    },
+    {
+      "id": "mrazit",
+      "sk": "mraziť",
+      "ua": "заморожувати",
+      "pos": "verb"
+    },
+    {
+      "id": "blansirovat",
+      "sk": "blanšírovať",
+      "ua": "бланшувати",
+      "pos": "verb"
+    },
+    {
+      "id": "karamelizovat",
+      "sk": "karamelizovať",
+      "ua": "карамелізувати",
+      "pos": "verb"
+    },
+    {
+      "id": "flambovat",
+      "sk": "flambovať",
+      "ua": "фламбувати",
+      "pos": "verb"
+    },
+    {
+      "id": "zahustit",
+      "sk": "zahustiť",
+      "ua": "загустити",
+      "pos": "verb"
+    },
+    {
+      "id": "zriedit",
+      "sk": "zriediť",
+      "ua": "розвести (рідиною)",
+      "pos": "verb"
+    },
+    {
+      "id": "odstavit-z-ohna",
+      "sk": "odstaviť z ohňa",
+      "ua": "зняти з вогню",
+      "pos": "phrase"
+    },
+    {
+      "id": "prist-na-chut",
+      "sk": "prísť na chuť",
+      "ua": "розсмакувати",
+      "pos": "phrase"
+    },
+    {
+      "id": "mat-hlad-ako-vlk",
+      "sk": "mať hlad ako vlk",
+      "ua": "бути голодним як вовк",
+      "pos": "phrase"
+    },
+    {
+      "id": "najest-sa-do-syta",
+      "sk": "najesť sa do sýta",
+      "ua": "наїстися досхочу",
+      "pos": "phrase"
+    },
+    {
+      "id": "servirovat",
+      "sk": "servírovať",
+      "ua": "подавати страву",
+      "pos": "verb"
+    },
+    {
+      "id": "ozdobit",
+      "sk": "ozdobiť",
+      "ua": "прикрасити",
+      "pos": "verb"
+    },
+    {
+      "id": "priprava",
+      "sk": "príprava",
+      "ua": "приготування",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kucharska-kniha",
+      "sk": "kuchárska kniha",
+      "ua": "кулінарна книга",
+      "pos": "phrase"
+    },
+    {
+      "id": "kucharsky-kurz",
+      "sk": "kuchársky kurz",
+      "ua": "кулінарні курси",
+      "pos": "phrase"
+    },
+    {
+      "id": "pohostinnost",
+      "sk": "pohostinnosť",
+      "ua": "гостинність",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "banket",
+      "sk": "banket",
+      "ua": "банкет",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "raut",
+      "sk": "raut",
+      "ua": "фуршет",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "catering",
+      "sk": "catering",
+      "ua": "кейтеринг",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "recenzia",
+      "sk": "recenzia",
+      "ua": "відгук",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nadmerny",
+      "sk": "nadmerný",
+      "ua": "надмірний",
+      "pos": "adj"
+    },
+    {
+      "id": "vyvazeny",
+      "sk": "vyvážený",
+      "ua": "збалансований",
+      "pos": "adj"
+    },
+    {
+      "id": "zdravy-zivotny-styl",
+      "sk": "zdravý životný štýl",
+      "ua": "здоровий спосіб життя",
+      "pos": "phrase"
+    },
+    {
+      "id": "plytvanie-jedlom",
+      "sk": "plytvanie jedlom",
+      "ua": "марнування їжі",
+      "pos": "phrase"
+    },
+    {
+      "id": "zvysky",
+      "sk": "zvyšky",
+      "ua": "залишки",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "tlakovy-hrniec",
+      "sk": "tlakový hrniec",
+      "ua": "скороварка",
+      "pos": "phrase"
+    },
+    {
+      "id": "maziar",
+      "sk": "mažiar",
+      "ua": "ступка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "lievik",
+      "sk": "lievik",
+      "ua": "лійка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sitko",
+      "sk": "sitko",
+      "ua": "ситечко",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "odstavovac",
+      "sk": "odšťavovač",
+      "ua": "соковижималка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "mlyncek-na-maso",
+      "sk": "mlynček na mäso",
+      "ua": "м'ясорубка",
+      "pos": "phrase"
+    },
+    {
+      "id": "nakladat",
+      "sk": "nakladať",
+      "ua": "маринувати",
+      "pos": "verb"
+    },
+    {
+      "id": "vykostit",
+      "sk": "vykostiť",
+      "ua": "вийняти кістки",
+      "pos": "verb"
+    },
+    {
+      "id": "vypracovat-cesto",
+      "sk": "vypracovať cesto",
+      "ua": "вимісити тісто",
+      "pos": "phrase"
+    },
+    {
+      "id": "dochutit",
+      "sk": "dochutiť",
+      "ua": "довести до смаку",
+      "pos": "verb"
+    }
+  ]
+}

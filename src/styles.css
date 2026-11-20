@@ -207,21 +207,6 @@ body {
   background: var(--hold);
 }
 
-.keys {
-  grid-column: 1 / -1;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 6px;
-}
-
-.keys button {
-  min-height: 40px;
-  min-width: 40px;
-  background: #eceae4;
-  color: var(--ink);
-  font-size: 17px;
-}
-
 /* Меню, вступ і результат — дизайн «Казкові сутінки» */
 .screen {
   --night: #1c1a2b;
@@ -598,6 +583,14 @@ body {
   grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
+.opts.levels {
+  grid-template-columns: repeat(auto-fit, minmax(58px, 1fr));
+}
+
+.opt.wide {
+  grid-column: 1 / -1;
+}
+
 .opt {
   min-height: 48px;
   border-radius: 14px;
@@ -778,6 +771,248 @@ body {
 
 .mistakes small {
   color: var(--mute);
+}
+
+/* Результат — «Листівка» (дизайн F) */
+.postcard-screen {
+  background: transparent;
+  overflow-y: auto;
+}
+.pc-dim {
+  position: fixed;
+  inset: 0;
+  background: rgba(20, 18, 32, 0.55);
+}
+.postcard {
+  position: relative;
+  margin: max(52px, env(safe-area-inset-top)) auto 0;
+  width: min(346px, calc(100% - 44px));
+  background: #f3ead6;
+  color: #221c2c;
+  border-radius: 10px;
+  padding: 24px 22px 22px;
+  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.45);
+  transform: rotate(-1.5deg);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+.postcard header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
+.pc-meta {
+  font-size: 13px;
+  color: #6b5f74;
+}
+.postcard h1 {
+  margin: 2px 0 0;
+  font:
+    400 50px/1 Neucha,
+    cursive;
+}
+.pc-reason {
+  font-size: 14px;
+  color: #6b5f74;
+}
+.pc-stamp {
+  width: 74px;
+  height: 86px;
+  flex: none;
+  border: 2px dashed #c9574a;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  color: #c9574a;
+  transform: rotate(6deg);
+  font:
+    400 15px Neucha,
+    cursive;
+}
+.pc-stars {
+  display: flex;
+}
+.pc-star {
+  width: 20px;
+  height: 20px;
+}
+.pc-star path {
+  fill: none;
+  stroke: #c9574a;
+  stroke-width: 1.2;
+  stroke-linejoin: round;
+}
+.pc-star.on path {
+  fill: #c9574a;
+}
+.pc-stats {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.pc-stats div {
+  border-radius: 12px;
+  background: #e9dcc3;
+  padding: 10px 12px;
+}
+.pc-stats b {
+  display: block;
+  font:
+    400 38px/1 Neucha,
+    cursive;
+}
+.pc-stats b.teal {
+  color: #2f6f73;
+}
+.pc-stats span {
+  font-size: 14px;
+  color: #5c5066;
+}
+.pc-words h2 {
+  margin: 0 0 4px;
+  font:
+    400 20px Neucha,
+    cursive;
+}
+.pc-word {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  border-bottom: 1px dashed #b8a98f;
+  padding: 4px 0;
+  font-size: 15px;
+}
+.pc-word span {
+  text-align: right;
+}
+.pc-word small,
+.pc-clean {
+  color: #8a7d70;
+}
+.pc-clean {
+  margin: 0;
+  font:
+    400 20px Neucha,
+    cursive;
+}
+.pc-foot {
+  position: relative;
+  width: min(346px, calc(100% - 44px));
+  margin: 22px auto max(28px, env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.pc-foot .go {
+  margin: 0;
+}
+.pc-foot .go.big {
+  min-height: 66px;
+  font-size: 30px;
+}
+.pc-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.pc-row .go.alt {
+  min-height: 52px;
+  background: rgba(28, 26, 43, 0.8);
+  border-color: #4a4568;
+}
+
+/* Анімація: листівка падає з прискоренням і раз коротко відскакує; вміст «приплющується» при ударі. */
+.postcard-screen.anim .postcard {
+  animation: pc-drop 0.42s both;
+}
+.postcard-screen.anim .postcard header > div:first-child,
+.postcard-screen.anim .pc-stats div,
+.postcard-screen.anim .pc-words,
+.postcard-screen.anim .pc-clean {
+  animation: pc-fall 0.28s cubic-bezier(0.55, 0, 1, 0.45) both;
+}
+.postcard-screen.anim .pc-stats div {
+  animation-delay: 0.22s;
+}
+.postcard-screen.anim .pc-words,
+.postcard-screen.anim .pc-clean {
+  animation-delay: 0.3s;
+}
+.postcard-screen.anim .pc-stamp {
+  animation: pc-stamp 0.3s 0.32s both;
+}
+.postcard-screen.anim .pc-star.on {
+  animation: pc-pop 0.22s both;
+}
+.postcard-screen.anim .pc-foot {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 0.18s,
+    transform 0.18s cubic-bezier(0.2, 1.6, 0.4, 1);
+}
+.postcard-screen.anim.shown .pc-foot {
+  opacity: 1;
+  transform: none;
+}
+@keyframes pc-drop {
+  0% {
+    transform: translateY(-110vh) rotate(-6deg);
+    animation-timing-function: cubic-bezier(0.55, 0, 1, 0.45);
+  }
+  70% {
+    transform: translateY(0) rotate(-1.5deg) scaleY(0.97);
+    animation-timing-function: ease-out;
+  }
+  85% {
+    transform: translateY(-10px) rotate(-1.2deg);
+    animation-timing-function: ease-in;
+  }
+  100% {
+    transform: translateY(0) rotate(-1.5deg);
+  }
+}
+@keyframes pc-fall {
+  0% {
+    transform: translateY(-40px);
+    opacity: 0;
+  }
+  80% {
+    transform: translateY(0) scaleY(0.9);
+    opacity: 1;
+  }
+  100% {
+    transform: none;
+  }
+}
+@keyframes pc-stamp {
+  0% {
+    transform: rotate(18deg) scale(1.6);
+    opacity: 0;
+  }
+  70% {
+    transform: rotate(5deg) scale(0.94);
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(6deg);
+  }
+}
+@keyframes pc-pop {
+  0% {
+    transform: scale(0.3);
+  }
+  70% {
+    transform: scale(1.35);
+  }
+  100% {
+    transform: none;
+  }
 }
 
 button:focus-visible,

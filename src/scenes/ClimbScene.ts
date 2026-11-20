@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
 import { sound } from '../audio';
-import { LIMB_NAMES, type Limb, LIMBS, type Point, anchor, danglingEnd, limbLength } from '../core/body';
+import { type Limb, LIMBS, type Point, anchor, danglingEnd, limbLength } from '../core/body';
 import {
   type ClimbEvent,
   type ClimbState,
@@ -23,6 +23,7 @@ import type { Climber } from '../data/climbers';
 import type { WallConfig } from '../data/walls';
 import { drawClimber } from '../ui/climberArt';
 import { askQuestion, closeQuestion } from '../ui/questionCard';
+import { cefrLabel } from '../content';
 import { toast } from '../ui/toast';
 import { type HoldState, SCENERY_DEFS, type WallTheme, holdSvg, themeFor } from './backgrounds';
 import { type Ragdoll, createRagdoll } from './ragdoll';
@@ -52,6 +53,11 @@ export interface ClimbSummary {
   mistakes: { prompt: string; expected: string; given: string }[];
   fallReason?: string;
   tutorialDone: boolean;
+  /** Скільки рухів зробив гравець і скільки займає найкоротший відомий шлях. */
+  moves: number;
+  shortest: number;
+  theme: string;
+  cefr: string;
 }
 
 const HOLD_HIT = 22;
@@ -140,7 +146,7 @@ export class ClimbScene extends Phaser.Scene {
     this.rng = mulberry32(seed ^ 0x5bd1e995);
     const wall = generateWall(seed, { moves: cfg.moves });
     this.s = startClimb(wall, stepBudget(wall, cfg.stepFactor));
-    this.theme = themeFor(group.themeId);
+    this.theme = themeFor(group.themeId, cfg.wall);
     const w = this.s.wall;
 
     // Стіна й зачепи — SVG-шар #scenery під скелелазом (дизайн «Скеледроми і зачепи»).
@@ -179,7 +185,7 @@ export class ClimbScene extends Phaser.Scene {
     this.drawHolds();
     this.updateHud();
     if (this.tutorialStep >= 0) this.showTutorial();
-    else toast(`Стіна ${cfg.wall}: ${group.theme} · ${group.cefr}`);
+    else toast(`Стіна ${cfg.wall}: ${group.theme} · ${cefrLabel(group.cefr)}`);
   }
 
   private fitCamera() {
@@ -312,7 +318,6 @@ export class ClimbScene extends Phaser.Scene {
         this.selected = this.selected === k ? null : k;
         this.look = { at: { ...e }, until: this.time.now + 1200 };
         sound.tap();
-        toast(this.selected === null ? 'Кінцівку обере гра' : `Рухаємо: ${LIMB_NAMES[this.selected]}`);
         this.drawHolds();
         return;
       }
@@ -320,7 +325,7 @@ export class ClimbScene extends Phaser.Scene {
     if (best < 0) return;
     const limb = this.selected ?? autoLimb(this.s, best);
     if (limb === null || !canReach(this.s, limb, best)) {
-      toast(this.selected !== null ? `${LIMB_NAMES[this.selected]} туди не дістане` : 'Туди тіло фізично не дістане');
+      toast('Туди не дістати');
       return;
     }
     void this.moveTo(limb, best);
@@ -348,10 +353,10 @@ export class ClimbScene extends Phaser.Scene {
     this.hintHold = -1;
     this.selected = null;
     if (res.kind === 'moved') this.afterMove(res.events);
-    else await this.ask(limb);
+    else await this.ask();
   }
 
-  private async ask(limb: Limb) {
+  private async ask() {
     this.busy = true;
     this.updateHud();
     this.drawHolds();
@@ -362,7 +367,7 @@ export class ClimbScene extends Phaser.Scene {
     // У навчанні — лише прості питання з вибором.
     const mode = this.tutorialStep >= 0 ? 'choice-sk-ua' : pickMode(cfg.typingShare, this.rng);
     const q = buildQuestion(group, word, mode, this.rng);
-    const res = await askQuestion(q, { requireDiacritics: cfg.requireDiacritics, limbName: LIMB_NAMES[limb] });
+    const res = await askQuestion(q, { requireDiacritics: cfg.requireDiacritics });
     this.boxes = updateBox(this.boxes, word.id, res.correct);
     if (!res.correct || res.check === 'accepted') {
       this.mistakes.push({ prompt: q.prompt, expected: q.expected[0]!, given: res.given });
@@ -390,7 +395,7 @@ export class ClimbScene extends Phaser.Scene {
       }
       if (e.type === 'slipped') {
         sound.slip();
-        toast(`Від утоми зісковзнула ${LIMB_NAMES[e.limb]}: −${SLIP_COST} кроки`);
+        toast(`Від утоми зісковзнула нога: −${SLIP_COST} кроки`);
       }
     }
     if (this.tutorialStep >= 0) {
@@ -463,6 +468,10 @@ export class ClimbScene extends Phaser.Scene {
       mistakes: this.mistakes,
       fallReason: this.s.fallReason ? reasons[this.s.fallReason] : undefined,
       tutorialDone: this.data0.tutorial && this.tutorialStep < 0,
+      moves: this.s.moves,
+      shortest: this.s.status === 'won' ? Math.min(this.s.wall.routeLength, this.s.moves) : this.s.wall.routeLength,
+      theme: this.data0.group.theme,
+      cefr: cefrLabel(this.data0.group.cefr),
     };
     this.game.events.emit('climb:end', summary);
   }

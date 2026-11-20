@@ -10,6 +10,8 @@ import { type Contacts, type Hold, type Limb, LIMBS, anchor, isHand, limbLength,
 import { mulberry32, type Rng } from './rng';
 
 export const WALL_WIDTH = 300;
+/** Як часто на маршруті синій бонусний зачіп: кожні 2–3 рухи (20.11; раніше 3–5). */
+export const BONUS_EVERY: [number, number] = [2, 3];
 /** Скільки пікселів висоти припадає на один рух кінцівкою (з плейтестів прототипу). */
 const PX_PER_MOVE = 23;
 const BASE_HEIGHT = 140;
@@ -121,7 +123,12 @@ export function findRoute(
 }
 
 /** Обирає бонусні зачепи на маршруті: кожні 3–5 рухів, не стартові й не вершина. */
-export function pickBonus(route: RouteResult, wall: Pick<Wall, 'start' | 'top'>, rng: Rng, every: [number, number] = [3, 5]): number[] {
+export function pickBonus(
+  route: RouteResult,
+  wall: Pick<Wall, 'start' | 'top'>,
+  rng: Rng,
+  every: [number, number] = BONUS_EVERY,
+): number[] {
   const [lo, hi] = every;
   const bonus: number[] = [];
   const span = () => lo + Math.floor(rng() * (hi - lo + 1));

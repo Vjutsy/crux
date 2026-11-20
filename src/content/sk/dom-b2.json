@@ -1,0 +1,649 @@
+{
+  "id": "dom-b2",
+  "themeId": "dom",
+  "theme": "Дім і сім'я",
+  "cefr": "B2",
+  "words": [
+    {
+      "id": "najomna-zmluva",
+      "sk": "nájomná zmluva",
+      "ua": "договір оренди",
+      "pos": "phrase"
+    },
+    {
+      "id": "vypoved",
+      "sk": "výpoveď",
+      "ua": "розірвання договору",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vystahovat",
+      "sk": "vysťahovať",
+      "ua": "виселити",
+      "pos": "verb"
+    },
+    {
+      "id": "prenajimatel",
+      "sk": "prenajímateľ",
+      "ua": "орендодавець",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "spoluvlastnik",
+      "sk": "spoluvlastník",
+      "ua": "співвласник",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kataster-nehnutelnosti",
+      "sk": "kataster nehnuteľností",
+      "ua": "кадастр нерухомості",
+      "pos": "phrase"
+    },
+    {
+      "id": "list-vlastnictva",
+      "sk": "list vlastníctva",
+      "ua": "свідоцтво про власність",
+      "pos": "phrase"
+    },
+    {
+      "id": "znalecky-posudok",
+      "sk": "znalecký posudok",
+      "ua": "експертна оцінка",
+      "pos": "phrase"
+    },
+    {
+      "id": "trhova-cena",
+      "sk": "trhová cena",
+      "ua": "ринкова ціна",
+      "pos": "phrase"
+    },
+    {
+      "id": "splatka",
+      "sk": "splátka",
+      "ua": "платіж (внесок)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "urokova-sadzba",
+      "sk": "úroková sadzba",
+      "ua": "процентна ставка",
+      "pos": "phrase"
+    },
+    {
+      "id": "zateplenie",
+      "sk": "zateplenie",
+      "ua": "теплоізоляція",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "tepelne-cerpadlo",
+      "sk": "tepelné čerpadlo",
+      "ua": "тепловий насос",
+      "pos": "phrase"
+    },
+    {
+      "id": "solarne-panely",
+      "sk": "solárne panely",
+      "ua": "сонячні панелі",
+      "pos": "phrase"
+    },
+    {
+      "id": "podlahove-kurenie",
+      "sk": "podlahové kúrenie",
+      "ua": "тепла підлога",
+      "pos": "phrase"
+    },
+    {
+      "id": "plesen",
+      "sk": "pleseň",
+      "ua": "цвіль",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "statik",
+      "sk": "statik",
+      "ua": "інженер-конструктор",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "stavebne-povolenie",
+      "sk": "stavebné povolenie",
+      "ua": "дозвіл на будівництво",
+      "pos": "phrase"
+    },
+    {
+      "id": "kolaudacia",
+      "sk": "kolaudácia",
+      "ua": "прийняття в експлуатацію",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pozemok",
+      "sk": "pozemok",
+      "ua": "земельна ділянка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "novostavba",
+      "sk": "novostavba",
+      "ua": "новобудова",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "drevostavba",
+      "sk": "drevostavba",
+      "ua": "дерев'яний будинок",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "bytovy-dom",
+      "sk": "bytový dom",
+      "ua": "багатоквартирний будинок",
+      "pos": "phrase"
+    },
+    {
+      "id": "mezonet",
+      "sk": "mezonet",
+      "ua": "дворівнева квартира",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "garsonka",
+      "sk": "garsónka",
+      "ua": "квартира-студія",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dispozicia",
+      "sk": "dispozícia",
+      "ua": "планування",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vymera",
+      "sk": "výmera",
+      "ua": "площа",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "obytna-plocha",
+      "sk": "obytná plocha",
+      "ua": "житлова площа",
+      "pos": "phrase"
+    },
+    {
+      "id": "terasa",
+      "sk": "terasa",
+      "ua": "тераса",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "lodzia",
+      "sk": "lodžia",
+      "ua": "лоджія",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "spolocne-priestory",
+      "sk": "spoločné priestory",
+      "ua": "місця загального користування",
+      "pos": "phrase"
+    },
+    {
+      "id": "udrzba",
+      "sk": "údržba",
+      "ua": "обслуговування (догляд)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "havaria",
+      "sk": "havária",
+      "ua": "аварійна ситуація",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zatopit",
+      "sk": "zatopiť",
+      "ua": "затопити",
+      "pos": "verb"
+    },
+    {
+      "id": "poistenie-domacnosti",
+      "sk": "poistenie domácnosti",
+      "ua": "страхування житла",
+      "pos": "phrase"
+    },
+    {
+      "id": "skoda",
+      "sk": "škoda",
+      "ua": "збиток",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nahradit-skodu",
+      "sk": "nahradiť škodu",
+      "ua": "відшкодувати збиток",
+      "pos": "phrase"
+    },
+    {
+      "id": "rusenie-nocneho-pokoja",
+      "sk": "rušenie nočného pokoja",
+      "ua": "порушення нічної тиші",
+      "pos": "phrase"
+    },
+    {
+      "id": "spoluzitie",
+      "sk": "spolužitie",
+      "ua": "співжиття",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "rodinne-vazby",
+      "sk": "rodinné väzby",
+      "ua": "родинні зв'язки",
+      "pos": "phrase"
+    },
+    {
+      "id": "sudrznost",
+      "sk": "súdržnosť",
+      "ua": "згуртованість",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pribuzenstvo",
+      "sk": "príbuzenstvo",
+      "ua": "рідня",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "pokrvny",
+      "sk": "pokrvný",
+      "ua": "кровний",
+      "pos": "adj"
+    },
+    {
+      "id": "osvojenie",
+      "sk": "osvojenie",
+      "ua": "усиновлення",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "pestunska-starostlivost",
+      "sk": "pestúnska starostlivosť",
+      "ua": "прийомна сім'я",
+      "pos": "phrase"
+    },
+    {
+      "id": "opatrovnictvo",
+      "sk": "opatrovníctvo",
+      "ua": "опікунство",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "striedava-starostlivost",
+      "sk": "striedavá starostlivosť",
+      "ua": "почергова опіка",
+      "pos": "phrase"
+    },
+    {
+      "id": "vyzivne",
+      "sk": "výživné",
+      "ua": "аліменти",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "rozvodove-konanie",
+      "sk": "rozvodové konanie",
+      "ua": "шлюборозлучний процес",
+      "pos": "phrase"
+    },
+    {
+      "id": "predmanzelska-zmluva",
+      "sk": "predmanželská zmluva",
+      "ua": "шлюбний договір",
+      "pos": "phrase"
+    },
+    {
+      "id": "dedic",
+      "sk": "dedič",
+      "ua": "спадкоємець",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "dedit",
+      "sk": "dediť",
+      "ua": "успадковувати",
+      "pos": "verb"
+    },
+    {
+      "id": "majetok",
+      "sk": "majetok",
+      "ua": "майно",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "osamely",
+      "sk": "osamelý",
+      "ua": "самотній",
+      "pos": "adj"
+    },
+    {
+      "id": "osamostatnit-sa",
+      "sk": "osamostatniť sa",
+      "ua": "стати самостійним",
+      "pos": "verb"
+    },
+    {
+      "id": "odstahovat-sa-od-rodicov",
+      "sk": "odsťahovať sa od rodičov",
+      "ua": "з'їхати від батьків",
+      "pos": "phrase"
+    },
+    {
+      "id": "prazdne-hniezdo",
+      "sk": "prázdne hniezdo",
+      "ua": "порожнє гніздо",
+      "pos": "phrase"
+    },
+    {
+      "id": "starnutie",
+      "sk": "starnutie",
+      "ua": "старіння",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "medzigeneracny",
+      "sk": "medzigeneračný",
+      "ua": "міжпоколіннєвий",
+      "pos": "adj"
+    },
+    {
+      "id": "rodicovstvo",
+      "sk": "rodičovstvo",
+      "ua": "роль батьків",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "materstvo",
+      "sk": "materstvo",
+      "ua": "материнство",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "otcovstvo",
+      "sk": "otcovstvo",
+      "ua": "батьківство",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "vychovny-styl",
+      "sk": "výchovný štýl",
+      "ua": "стиль виховання",
+      "pos": "phrase"
+    },
+    {
+      "id": "autorita",
+      "sk": "autorita",
+      "ua": "авторитет",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "respekt",
+      "sk": "rešpekt",
+      "ua": "повага",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kompromis",
+      "sk": "kompromis",
+      "ua": "компроміс",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "konflikt",
+      "sk": "konflikt",
+      "ua": "конфлікт",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vyjednavat",
+      "sk": "vyjednávať",
+      "ua": "домовлятися",
+      "pos": "verb"
+    },
+    {
+      "id": "podporovat",
+      "sk": "podporovať",
+      "ua": "підтримувати",
+      "pos": "verb"
+    },
+    {
+      "id": "zanedbavat",
+      "sk": "zanedbávať",
+      "ua": "занедбувати",
+      "pos": "verb"
+    },
+    {
+      "id": "rozmaznavat",
+      "sk": "rozmaznávať",
+      "ua": "розбещувати",
+      "pos": "verb"
+    },
+    {
+      "id": "napomenut",
+      "sk": "napomenúť",
+      "ua": "зробити зауваження",
+      "pos": "verb"
+    },
+    {
+      "id": "trestat",
+      "sk": "trestať",
+      "ua": "карати",
+      "pos": "verb"
+    },
+    {
+      "id": "odmenit",
+      "sk": "odmeniť",
+      "ua": "винагородити",
+      "pos": "verb"
+    },
+    {
+      "id": "doverovat",
+      "sk": "dôverovať",
+      "ua": "довіряти",
+      "pos": "verb"
+    },
+    {
+      "id": "zverit-sa",
+      "sk": "zveriť sa",
+      "ua": "звіритися",
+      "pos": "verb"
+    },
+    {
+      "id": "utajovat",
+      "sk": "utajovať",
+      "ua": "приховувати",
+      "pos": "verb"
+    },
+    {
+      "id": "odpustit",
+      "sk": "odpustiť",
+      "ua": "пробачити",
+      "pos": "verb"
+    },
+    {
+      "id": "ospravedlnit-sa",
+      "sk": "ospravedlniť sa",
+      "ua": "вибачитися",
+      "pos": "verb"
+    },
+    {
+      "id": "pohostinny",
+      "sk": "pohostinný",
+      "ua": "гостинний",
+      "pos": "adj"
+    },
+    {
+      "id": "vdacny",
+      "sk": "vďačný",
+      "ua": "вдячний",
+      "pos": "adj"
+    },
+    {
+      "id": "ohladuplny",
+      "sk": "ohľaduplný",
+      "ua": "тактовний",
+      "pos": "adj"
+    },
+    {
+      "id": "sebecky",
+      "sk": "sebecký",
+      "ua": "егоїстичний",
+      "pos": "adj"
+    },
+    {
+      "id": "panovacny",
+      "sk": "panovačný",
+      "ua": "владний",
+      "pos": "adj"
+    },
+    {
+      "id": "laskavy",
+      "sk": "láskavý",
+      "ua": "лагідний",
+      "pos": "adj"
+    },
+    {
+      "id": "lahostajny",
+      "sk": "ľahostajný",
+      "ua": "байдужий",
+      "pos": "adj"
+    },
+    {
+      "id": "majetnicky",
+      "sk": "majetnícky",
+      "ua": "власницький",
+      "pos": "adj"
+    },
+    {
+      "id": "blizky-vztah",
+      "sk": "blízky vzťah",
+      "ua": "близькі стосунки",
+      "pos": "phrase"
+    },
+    {
+      "id": "nevesta",
+      "sk": "nevesta",
+      "ua": "невістка (дружина сина)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zat",
+      "sk": "zať",
+      "ua": "зять (чоловік доньки)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "utulok",
+      "sk": "útulok",
+      "ua": "притулок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "spotrebic",
+      "sk": "spotrebič",
+      "ua": "побутовий прилад",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "inteligentna-domacnost",
+      "sk": "inteligentná domácnosť",
+      "ua": "розумний дім",
+      "pos": "phrase"
+    },
+    {
+      "id": "hypotekarny-uver",
+      "sk": "hypotekárny úver",
+      "ua": "іпотечний кредит",
+      "pos": "phrase"
+    },
+    {
+      "id": "vlastnicke-pravo",
+      "sk": "vlastnícke právo",
+      "ua": "право власності",
+      "pos": "phrase"
+    },
+    {
+      "id": "bytove-druzstvo",
+      "sk": "bytové družstvo",
+      "ua": "житловий кооператив",
+      "pos": "phrase"
+    },
+    {
+      "id": "fond-oprav",
+      "sk": "fond opráv",
+      "ua": "ремонтний фонд",
+      "pos": "phrase"
+    },
+    {
+      "id": "susedsky-spor",
+      "sk": "susedský spor",
+      "ua": "сусідська суперечка",
+      "pos": "phrase"
+    },
+    {
+      "id": "zmluva-o-dielo",
+      "sk": "zmluva o dielo",
+      "ua": "договір підряду",
+      "pos": "phrase"
+    },
+    {
+      "id": "prestavba",
+      "sk": "prestavba",
+      "ua": "перепланування",
+      "pos": "noun",
+      "gender": "f"
+    }
+  ]
+}

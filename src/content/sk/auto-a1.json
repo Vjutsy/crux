@@ -1,0 +1,651 @@
+{
+  "id": "auto-a1",
+  "themeId": "auto",
+  "theme": "Авто й водійські права",
+  "cefr": "A1",
+  "words": [
+    {
+      "id": "volant",
+      "sk": "volant",
+      "ua": "кермо",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "koleso",
+      "sk": "koleso",
+      "ua": "колесо",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "motor",
+      "sk": "motor",
+      "ua": "двигун",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "brzda",
+      "sk": "brzda",
+      "ua": "гальмо",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "plyn",
+      "sk": "plyn",
+      "ua": "газ (педаль)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "spojka",
+      "sk": "spojka",
+      "ua": "зчеплення",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "batozinovy-priestor",
+      "sk": "batožinový priestor",
+      "ua": "багажник",
+      "pos": "phrase"
+    },
+    {
+      "id": "kapota",
+      "sk": "kapota",
+      "ua": "капот",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "predne-sklo",
+      "sk": "predné sklo",
+      "ua": "лобове скло",
+      "pos": "phrase"
+    },
+    {
+      "id": "stierac",
+      "sk": "stierač",
+      "ua": "склоочисник",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "svetlo",
+      "sk": "svetlo",
+      "ua": "фара",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "smerovka",
+      "sk": "smerovka",
+      "ua": "покажчик повороту",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "trubit",
+      "sk": "trúbiť",
+      "ua": "сигналити",
+      "pos": "verb"
+    },
+    {
+      "id": "spatne-zrkadlo",
+      "sk": "spätné zrkadlo",
+      "ua": "дзеркало заднього виду",
+      "pos": "phrase"
+    },
+    {
+      "id": "bezpecnostny-pas",
+      "sk": "bezpečnostný pás",
+      "ua": "ремінь безпеки",
+      "pos": "phrase"
+    },
+    {
+      "id": "klucik-od-auta",
+      "sk": "kľúčik od auta",
+      "ua": "ключ від авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "nadrz",
+      "sk": "nádrž",
+      "ua": "бак",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "motorovy-olej",
+      "sk": "motorový olej",
+      "ua": "моторна олива",
+      "pos": "phrase"
+    },
+    {
+      "id": "bateria",
+      "sk": "batéria",
+      "ua": "акумулятор",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "rezerva",
+      "sk": "rezerva",
+      "ua": "запасне колесо",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "lekarnicka",
+      "sk": "lekárnička",
+      "ua": "аптечка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vystrazny-trojuholnik",
+      "sk": "výstražný trojuholník",
+      "ua": "аварійний знак",
+      "pos": "phrase"
+    },
+    {
+      "id": "reflexna-vesta",
+      "sk": "reflexná vesta",
+      "ua": "світловідбивний жилет",
+      "pos": "phrase"
+    },
+    {
+      "id": "autoskola",
+      "sk": "autoškola",
+      "ua": "автошкола",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "instruktor",
+      "sk": "inštruktor",
+      "ua": "інструктор",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "skuska",
+      "sk": "skúška",
+      "ua": "іспит",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "test",
+      "sk": "test",
+      "ua": "тест",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "jazda",
+      "sk": "jazda",
+      "ua": "їзда",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "spolujazdec",
+      "sk": "spolujazdec",
+      "ua": "пасажир поруч із водієм",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "startovat",
+      "sk": "štartovať",
+      "ua": "заводити двигун",
+      "pos": "verb"
+    },
+    {
+      "id": "brzdit",
+      "sk": "brzdiť",
+      "ua": "гальмувати",
+      "pos": "verb"
+    },
+    {
+      "id": "zabocit",
+      "sk": "zabočiť",
+      "ua": "звернути",
+      "pos": "verb"
+    },
+    {
+      "id": "cuvat",
+      "sk": "cúvať",
+      "ua": "їхати заднім ходом",
+      "pos": "verb"
+    },
+    {
+      "id": "predbiehat",
+      "sk": "predbiehať",
+      "ua": "обганяти",
+      "pos": "verb"
+    },
+    {
+      "id": "parkovat",
+      "sk": "parkovať",
+      "ua": "паркуватися",
+      "pos": "verb"
+    },
+    {
+      "id": "tankovat",
+      "sk": "tankovať",
+      "ua": "заправлятися",
+      "pos": "verb"
+    },
+    {
+      "id": "umyt-auto",
+      "sk": "umyť auto",
+      "ua": "помити машину",
+      "pos": "phrase"
+    },
+    {
+      "id": "vypnut-motor",
+      "sk": "vypnúť motor",
+      "ua": "вимкнути двигун",
+      "pos": "phrase"
+    },
+    {
+      "id": "zapnut-sa",
+      "sk": "zapnúť sa",
+      "ua": "пристебнутися",
+      "pos": "verb"
+    },
+    {
+      "id": "trasa",
+      "sk": "trasa",
+      "ua": "маршрут поїздки",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dopredu",
+      "sk": "dopredu",
+      "ua": "вперед",
+      "pos": "adv"
+    },
+    {
+      "id": "dozadu",
+      "sk": "dozadu",
+      "ua": "назад",
+      "pos": "adv"
+    },
+    {
+      "id": "dolava",
+      "sk": "doľava",
+      "ua": "наліво",
+      "pos": "adv"
+    },
+    {
+      "id": "doprava",
+      "sk": "doprava",
+      "ua": "направо",
+      "pos": "adv"
+    },
+    {
+      "id": "cervena",
+      "sk": "červená",
+      "ua": "червоне світло",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zelena",
+      "sk": "zelená",
+      "ua": "зелене світло",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "oranzova",
+      "sk": "oranžová",
+      "ua": "жовте світло",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pruh",
+      "sk": "pruh",
+      "ua": "смуга руху",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "tunel",
+      "sk": "tunel",
+      "ua": "тунель",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "myto",
+      "sk": "mýto",
+      "ua": "плата за дорогу",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "dialnicna-znamka",
+      "sk": "diaľničná známka",
+      "ua": "віньєтка",
+      "pos": "phrase"
+    },
+    {
+      "id": "taxikar",
+      "sk": "taxikár",
+      "ua": "таксист",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kamion",
+      "sk": "kamión",
+      "ua": "фура",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "dodavka",
+      "sk": "dodávka",
+      "ua": "фургон",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "skuter",
+      "sk": "skúter",
+      "ua": "скутер",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "elektromobil",
+      "sk": "elektromobil",
+      "ua": "електромобіль",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "ojazdene-auto",
+      "sk": "ojazdené auto",
+      "ua": "вживане авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "rychly",
+      "sk": "rýchly",
+      "ua": "швидкий",
+      "pos": "adj"
+    },
+    {
+      "id": "pomaly-2",
+      "sk": "pomalý",
+      "ua": "повільний",
+      "pos": "adj"
+    },
+    {
+      "id": "opatrny",
+      "sk": "opatrný",
+      "ua": "обережний",
+      "pos": "adj"
+    },
+    {
+      "id": "unaveny",
+      "sk": "unavený",
+      "ua": "втомлений",
+      "pos": "adj"
+    },
+    {
+      "id": "pozor",
+      "sk": "Pozor!",
+      "ua": "Увага!",
+      "pos": "phrase",
+      "skAlt": ["pozor"]
+    },
+    {
+      "id": "volne-miesto",
+      "sk": "voľné miesto",
+      "ua": "вільне місце",
+      "pos": "phrase"
+    },
+    {
+      "id": "autoradio",
+      "sk": "autorádio",
+      "ua": "автомагнітола",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "klimatizacia",
+      "sk": "klimatizácia",
+      "ua": "кондиціонер",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "sedadlo-vodica",
+      "sk": "sedadlo vodiča",
+      "ua": "водійське сидіння",
+      "pos": "phrase"
+    },
+    {
+      "id": "zadne-sedadlo",
+      "sk": "zadné sedadlo",
+      "ua": "заднє сидіння",
+      "pos": "phrase"
+    },
+    {
+      "id": "vyfuk",
+      "sk": "výfuk",
+      "ua": "вихлопна труба",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "autoumyvaren",
+      "sk": "autoumyváreň",
+      "ua": "автомийка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dielna",
+      "sk": "dielňa",
+      "ua": "майстерня",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "mechanik",
+      "sk": "mechanik",
+      "ua": "механік",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "oprava",
+      "sk": "oprava",
+      "ua": "ремонт",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "odtahovka",
+      "sk": "odťahovka",
+      "ua": "евакуатор",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "parkovaci-listok",
+      "sk": "parkovací lístok",
+      "ua": "паркувальний лист",
+      "pos": "phrase"
+    },
+    {
+      "id": "nove-auto",
+      "sk": "nové auto",
+      "ua": "нове авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "osobne-auto",
+      "sk": "osobné auto",
+      "ua": "легковий автомобіль",
+      "pos": "phrase"
+    },
+    {
+      "id": "kolesa-na-zimu",
+      "sk": "kolesá na zimu",
+      "ua": "зимові колеса",
+      "pos": "phrase"
+    },
+    {
+      "id": "vodicka",
+      "sk": "vodička",
+      "ua": "водійка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "soferovat",
+      "sk": "šoférovať",
+      "ua": "кермувати",
+      "pos": "verb"
+    },
+    {
+      "id": "nalozit",
+      "sk": "naložiť",
+      "ua": "завантажити",
+      "pos": "verb"
+    },
+    {
+      "id": "vylozit",
+      "sk": "vyložiť",
+      "ua": "вивантажити",
+      "pos": "verb"
+    },
+    {
+      "id": "zastavka-na-trati",
+      "sk": "zastávka na trati",
+      "ua": "зупинка в дорозі",
+      "pos": "phrase"
+    },
+    {
+      "id": "benzinove-auto",
+      "sk": "benzínové auto",
+      "ua": "бензинове авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "dieselove-auto",
+      "sk": "dieselové auto",
+      "ua": "дизельне авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "farba-auta",
+      "sk": "farba auta",
+      "ua": "колір авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "znacka-auta",
+      "sk": "značka auta",
+      "ua": "марка авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "nadrz-je-prazdna",
+      "sk": "nádrž je prázdna",
+      "ua": "бак порожній",
+      "pos": "phrase"
+    },
+    {
+      "id": "plna-nadrz",
+      "sk": "plná nádrž",
+      "ua": "повний бак",
+      "pos": "phrase"
+    },
+    {
+      "id": "cestou-domov",
+      "sk": "cestou domov",
+      "ua": "дорогою додому",
+      "pos": "phrase"
+    },
+    {
+      "id": "vodicske-skusky",
+      "sk": "vodičské skúšky",
+      "ua": "водійські іспити",
+      "pos": "phrase"
+    },
+    {
+      "id": "ucit-sa-soferovat",
+      "sk": "učiť sa šoférovať",
+      "ua": "вчитися водити",
+      "pos": "phrase"
+    },
+    {
+      "id": "jazdit-autom",
+      "sk": "jazdiť autom",
+      "ua": "їздити машиною",
+      "pos": "phrase"
+    },
+    {
+      "id": "ist-autom",
+      "sk": "ísť autom",
+      "ua": "їхати машиною",
+      "pos": "phrase"
+    },
+    {
+      "id": "nastupit-do-auta",
+      "sk": "nastúpiť do auta",
+      "ua": "сісти в машину",
+      "pos": "phrase"
+    },
+    {
+      "id": "vystupit-z-auta",
+      "sk": "vystúpiť z auta",
+      "ua": "вийти з машини",
+      "pos": "phrase"
+    },
+    {
+      "id": "zabudnut-kluce",
+      "sk": "zabudnúť kľúče",
+      "ua": "забути ключі",
+      "pos": "phrase"
+    },
+    {
+      "id": "stopka",
+      "sk": "stopka",
+      "ua": "знак «Стоп»",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "okno-auta",
+      "sk": "okno auta",
+      "ua": "вікно авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "dvere-auta",
+      "sk": "dvere auta",
+      "ua": "двері авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "strecha-auta",
+      "sk": "strecha auta",
+      "ua": "дах авто",
+      "pos": "phrase"
+    }
+  ]
+}

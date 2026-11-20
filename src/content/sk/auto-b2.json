@@ -1,0 +1,638 @@
+{
+  "id": "auto-b2",
+  "themeId": "auto",
+  "theme": "Авто й водійські права",
+  "cefr": "B2",
+  "words": [
+    {
+      "id": "zakon-o-cestnej-premavke",
+      "sk": "zákon o cestnej premávke",
+      "ua": "закон про дорожній рух",
+      "pos": "phrase"
+    },
+    {
+      "id": "vyhlaska",
+      "sk": "vyhláška",
+      "ua": "постанова (підзаконний акт)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "spravny-delikt",
+      "sk": "správny delikt",
+      "ua": "адміністративне правопорушення",
+      "pos": "phrase"
+    },
+    {
+      "id": "trestny-cin",
+      "sk": "trestný čin",
+      "ua": "кримінальний злочин",
+      "pos": "phrase"
+    },
+    {
+      "id": "zavinenie",
+      "sk": "zavinenie",
+      "ua": "вина",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "spoluzavinenie",
+      "sk": "spoluzavinenie",
+      "ua": "спільна вина",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "poskodeny",
+      "sk": "poškodený",
+      "ua": "потерпілий",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vinnik",
+      "sk": "vinník",
+      "ua": "винуватець",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "poistna-udalost",
+      "sk": "poistná udalosť",
+      "ua": "страховий випадок",
+      "pos": "phrase"
+    },
+    {
+      "id": "poistne-plnenie",
+      "sk": "poistné plnenie",
+      "ua": "страхова виплата",
+      "pos": "phrase"
+    },
+    {
+      "id": "spoluucast",
+      "sk": "spoluúčasť",
+      "ua": "франшиза",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "bonus-za-bezskodovost",
+      "sk": "bonus za bezškodovosť",
+      "ua": "бонус за безаварійність",
+      "pos": "phrase"
+    },
+    {
+      "id": "likvidator",
+      "sk": "likvidátor",
+      "ua": "оцінювач збитків",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "totalna-skoda",
+      "sk": "totálna škoda",
+      "ua": "повна загибель авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "znalec",
+      "sk": "znalec",
+      "ua": "експерт",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sudny-spor",
+      "sk": "súdny spor",
+      "ua": "судовий спір",
+      "pos": "phrase"
+    },
+    {
+      "id": "odskodnenie",
+      "sk": "odškodnenie",
+      "ua": "компенсація",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "ujst-z-miesta-nehody",
+      "sk": "ujsť z miesta nehody",
+      "ua": "втекти з місця ДТП",
+      "pos": "phrase"
+    },
+    {
+      "id": "nedat-prednost",
+      "sk": "nedať prednosť",
+      "ua": "не дати дорогу",
+      "pos": "phrase"
+    },
+    {
+      "id": "jazda-pod-vplyvom",
+      "sk": "jazda pod vplyvom",
+      "ua": "керування в нетверезому стані",
+      "pos": "phrase"
+    },
+    {
+      "id": "odmietnut-dychovu-skusku",
+      "sk": "odmietnuť dychovú skúšku",
+      "ua": "відмовитися від перевірки на алкоголь",
+      "pos": "phrase"
+    },
+    {
+      "id": "zakaz-cinnosti",
+      "sk": "zákaz činnosti",
+      "ua": "позбавлення права керування",
+      "pos": "phrase"
+    },
+    {
+      "id": "blokove-konanie",
+      "sk": "blokové konanie",
+      "ua": "штраф на місці",
+      "pos": "phrase"
+    },
+    {
+      "id": "odvolanie",
+      "sk": "odvolanie",
+      "ua": "оскарження",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "lekarska-prehliadka",
+      "sk": "lekárska prehliadka",
+      "ua": "медичний огляд",
+      "pos": "phrase"
+    },
+    {
+      "id": "psychotest",
+      "sk": "psychotest",
+      "ua": "психологічне тестування",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "preskolenie",
+      "sk": "preškolenie",
+      "ua": "перенавчання",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "vratenie-vodicskeho-preukazu",
+      "sk": "vrátenie vodičského preukazu",
+      "ua": "повернення прав",
+      "pos": "phrase"
+    },
+    {
+      "id": "medzinarodny-vodicsky-preukaz",
+      "sk": "medzinárodný vodičský preukaz",
+      "ua": "міжнародне посвідчення водія",
+      "pos": "phrase"
+    },
+    {
+      "id": "platnost",
+      "sk": "platnosť",
+      "ua": "термін дії",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "predlzit-platnost",
+      "sk": "predĺžiť platnosť",
+      "ua": "продовжити термін дії",
+      "pos": "phrase"
+    },
+    {
+      "id": "emisne-normy",
+      "sk": "emisné normy",
+      "ua": "норми викидів",
+      "pos": "phrase"
+    },
+    {
+      "id": "spalovaci-motor",
+      "sk": "spaľovací motor",
+      "ua": "двигун внутрішнього згоряння",
+      "pos": "phrase"
+    },
+    {
+      "id": "elektromotor",
+      "sk": "elektromotor",
+      "ua": "електродвигун",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "krutiaci-moment",
+      "sk": "krútiaci moment",
+      "ua": "крутний момент",
+      "pos": "phrase"
+    },
+    {
+      "id": "vykon",
+      "sk": "výkon",
+      "ua": "потужність",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "konska-sila",
+      "sk": "konská sila",
+      "ua": "кінська сила",
+      "pos": "phrase"
+    },
+    {
+      "id": "objem-motora",
+      "sk": "objem motora",
+      "ua": "об'єм двигуна",
+      "pos": "phrase"
+    },
+    {
+      "id": "turboduchadlo",
+      "sk": "turbodúchadlo",
+      "ua": "турбонагнітач",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "pohon-vsetkych-kolies",
+      "sk": "pohon všetkých kolies",
+      "ua": "повний привід",
+      "pos": "phrase"
+    },
+    {
+      "id": "predny-nahon",
+      "sk": "predný náhon",
+      "ua": "передній привід",
+      "pos": "phrase"
+    },
+    {
+      "id": "zadny-nahon",
+      "sk": "zadný náhon",
+      "ua": "задній привід",
+      "pos": "phrase"
+    },
+    {
+      "id": "diferencial",
+      "sk": "diferenciál",
+      "ua": "диференціал",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "odpruzenie",
+      "sk": "odpruženie",
+      "ua": "підвіска",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "stabilizacny-system",
+      "sk": "stabilizačný systém",
+      "ua": "система стабілізації",
+      "pos": "phrase"
+    },
+    {
+      "id": "protiblokovaci-system",
+      "sk": "protiblokovací systém",
+      "ua": "антиблокувальна система",
+      "pos": "phrase"
+    },
+    {
+      "id": "adaptivny-tempomat",
+      "sk": "adaptívny tempomat",
+      "ua": "адаптивний круїз-контроль",
+      "pos": "phrase"
+    },
+    {
+      "id": "asistent-udrziavania-v-pruhu",
+      "sk": "asistent udržiavania v pruhu",
+      "ua": "система утримання смуги",
+      "pos": "phrase"
+    },
+    {
+      "id": "autonomne-riadenie",
+      "sk": "autonómne riadenie",
+      "ua": "автономне керування",
+      "pos": "phrase"
+    },
+    {
+      "id": "aerodynamika",
+      "sk": "aerodynamika",
+      "ua": "аеродинаміка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "brzdna-draha",
+      "sk": "brzdná dráha",
+      "ua": "гальмівний шлях",
+      "pos": "phrase"
+    },
+    {
+      "id": "reakcny-cas",
+      "sk": "reakčný čas",
+      "ua": "час реакції",
+      "pos": "phrase"
+    },
+    {
+      "id": "aquaplaning",
+      "sk": "aquaplaning",
+      "ua": "аквапланування",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "defenzivna-jazda",
+      "sk": "defenzívna jazda",
+      "ua": "оборонне водіння",
+      "pos": "phrase"
+    },
+    {
+      "id": "predvidavost",
+      "sk": "predvídavosť",
+      "ua": "передбачливість",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "agresivny-vodic",
+      "sk": "agresívny vodič",
+      "ua": "агресивний водій",
+      "pos": "phrase"
+    },
+    {
+      "id": "riskantny-manever",
+      "sk": "riskantný manéver",
+      "ua": "ризикований маневр",
+      "pos": "phrase"
+    },
+    {
+      "id": "vyhnut-sa-zrazke",
+      "sk": "vyhnúť sa zrážke",
+      "ua": "уникнути зіткнення",
+      "pos": "phrase"
+    },
+    {
+      "id": "strhnut-volant",
+      "sk": "strhnúť volant",
+      "ua": "різко крутнути кермо",
+      "pos": "phrase"
+    },
+    {
+      "id": "protismer",
+      "sk": "protismer",
+      "ua": "зустрічна смуга",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "dostat-sa-do-protismeru",
+      "sk": "dostať sa do protismeru",
+      "ua": "виїхати на зустрічну смугу",
+      "pos": "phrase"
+    },
+    {
+      "id": "dialnicny-privadzac",
+      "sk": "diaľničný privádzač",
+      "ua": "під'їзд до автомагістралі",
+      "pos": "phrase"
+    },
+    {
+      "id": "zjazd",
+      "sk": "zjazd",
+      "ua": "з'їзд",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "najazd",
+      "sk": "nájazd",
+      "ua": "в'їзд на трасу",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "odstavny-pruh",
+      "sk": "odstavný pruh",
+      "ua": "аварійна смуга",
+      "pos": "phrase"
+    },
+    {
+      "id": "rozhlad",
+      "sk": "rozhľad",
+      "ua": "огляд (видимість)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kolona",
+      "sk": "kolóna",
+      "ua": "колона машин",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zachranna-ulicka",
+      "sk": "záchranná ulička",
+      "ua": "коридор для екстрених служб",
+      "pos": "phrase"
+    },
+    {
+      "id": "uzavera-cesty",
+      "sk": "uzávera cesty",
+      "ua": "закриття дороги",
+      "pos": "phrase"
+    },
+    {
+      "id": "mytna-brana",
+      "sk": "mýtna brána",
+      "ua": "пункт оплати проїзду",
+      "pos": "phrase"
+    },
+    {
+      "id": "elektronicke-myto",
+      "sk": "elektronické mýto",
+      "ua": "електронна оплата проїзду",
+      "pos": "phrase"
+    },
+    {
+      "id": "tranzit",
+      "sk": "tranzit",
+      "ua": "транзит",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kamionova-doprava",
+      "sk": "kamiónová doprava",
+      "ua": "вантажні перевезення",
+      "pos": "phrase"
+    },
+    {
+      "id": "tachograf",
+      "sk": "tachograf",
+      "ua": "тахограф",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "bezpecnostna-prestavka",
+      "sk": "bezpečnostná prestávka",
+      "ua": "обов'язкова перерва",
+      "pos": "phrase"
+    },
+    {
+      "id": "pracovny-cas-vodica",
+      "sk": "pracovný čas vodiča",
+      "ua": "робочий час водія",
+      "pos": "phrase"
+    },
+    {
+      "id": "technicky-stav-vozidla",
+      "sk": "technický stav vozidla",
+      "ua": "технічний стан авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "nepojazdny",
+      "sk": "nepojazdný",
+      "ua": "непридатний до руху",
+      "pos": "adj"
+    },
+    {
+      "id": "vrak",
+      "sk": "vrak",
+      "ua": "розбите авто",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "ekologicka-likvidacia",
+      "sk": "ekologická likvidácia",
+      "ua": "утилізація авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "srotovne",
+      "sk": "šrotovné",
+      "ua": "виплата за утилізацію",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "dopravny-priestupok",
+      "sk": "dopravný priestupok",
+      "ua": "порушення ПДР",
+      "pos": "phrase"
+    },
+    {
+      "id": "pokutovy-blok",
+      "sk": "pokutový blok",
+      "ua": "квитанція про штраф",
+      "pos": "phrase"
+    },
+    {
+      "id": "registracna-povinnost",
+      "sk": "registračná povinnosť",
+      "ua": "обов'язок реєстрації",
+      "pos": "phrase"
+    },
+    {
+      "id": "zodpovednost-za-skodu",
+      "sk": "zodpovednosť za škodu",
+      "ua": "відповідальність за збитки",
+      "pos": "phrase"
+    },
+    {
+      "id": "poistna-zmluva",
+      "sk": "poistná zmluva",
+      "ua": "договір страхування",
+      "pos": "phrase"
+    },
+    {
+      "id": "trvale-zranenie",
+      "sk": "trvalé zranenie",
+      "ua": "тривала травма",
+      "pos": "phrase"
+    },
+    {
+      "id": "dopravna-vychova",
+      "sk": "dopravná výchova",
+      "ua": "навчання безпеки руху",
+      "pos": "phrase"
+    },
+    {
+      "id": "rychlostna-cesta",
+      "sk": "rýchlostná cesta",
+      "ua": "швидкісна дорога",
+      "pos": "phrase"
+    },
+    {
+      "id": "dopravne-znacenie",
+      "sk": "dopravné značenie",
+      "ua": "дорожня розмітка й знаки",
+      "pos": "phrase"
+    },
+    {
+      "id": "dopravna-psychologia",
+      "sk": "dopravná psychológia",
+      "ua": "психологія руху",
+      "pos": "phrase"
+    },
+    {
+      "id": "riadenie-unavy",
+      "sk": "riadenie únavy",
+      "ua": "контроль втоми",
+      "pos": "phrase"
+    },
+    {
+      "id": "asistent-nudzoveho-brzdenia",
+      "sk": "asistent núdzového brzdenia",
+      "ua": "система екстреного гальмування",
+      "pos": "phrase"
+    },
+    {
+      "id": "nocne-videnie",
+      "sk": "nočné videnie",
+      "ua": "нічне бачення",
+      "pos": "phrase"
+    },
+    {
+      "id": "rozpoznavanie-znaciek",
+      "sk": "rozpoznávanie značiek",
+      "ua": "розпізнавання знаків",
+      "pos": "phrase"
+    },
+    {
+      "id": "tlak-na-brzdovy-pedal",
+      "sk": "tlak na brzdový pedál",
+      "ua": "тиск на педаль гальма",
+      "pos": "phrase"
+    },
+    {
+      "id": "vodicska-prax",
+      "sk": "vodičská prax",
+      "ua": "водійський стаж",
+      "pos": "phrase"
+    },
+    {
+      "id": "dopravna-nehodovost",
+      "sk": "dopravná nehodovosť",
+      "ua": "аварійність",
+      "pos": "phrase"
+    },
+    {
+      "id": "smrtelna-nehoda",
+      "sk": "smrteľná nehoda",
+      "ua": "смертельна ДТП",
+      "pos": "phrase"
+    },
+    {
+      "id": "bezpecnostne-prvky",
+      "sk": "bezpečnostné prvky",
+      "ua": "елементи безпеки",
+      "pos": "phrase"
+    }
+  ]
+}

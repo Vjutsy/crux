@@ -1,0 +1,661 @@
+{
+  "id": "mesto-b1",
+  "themeId": "mesto",
+  "theme": "Місто і транспорт",
+  "cefr": "B1",
+  "words": [
+    {
+      "id": "infrastruktura",
+      "sk": "infraštruktúra",
+      "ua": "інфраструктура",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "obcan",
+      "sk": "občan",
+      "ua": "громадянин",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "primator",
+      "sk": "primátor",
+      "ua": "мер",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "starosta",
+      "sk": "starosta",
+      "ua": "сільський голова",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "volby",
+      "sk": "voľby",
+      "ua": "вибори",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "uradne-hodiny",
+      "sk": "úradné hodiny",
+      "ua": "прийомні години",
+      "pos": "phrase"
+    },
+    {
+      "id": "formular",
+      "sk": "formulár",
+      "ua": "бланк",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "ziadost",
+      "sk": "žiadosť",
+      "ua": "заява",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "potvrdenie",
+      "sk": "potvrdenie",
+      "ua": "довідка",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "podpis",
+      "sk": "podpis",
+      "ua": "підпис",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "peciatka",
+      "sk": "pečiatka",
+      "ua": "печатка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "cakaren",
+      "sk": "čakáreň",
+      "ua": "зал очікування",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "poradove-cislo",
+      "sk": "poradové číslo",
+      "ua": "номер у черзі",
+      "pos": "phrase"
+    },
+    {
+      "id": "trvaly-pobyt",
+      "sk": "trvalý pobyt",
+      "ua": "постійне проживання",
+      "pos": "phrase"
+    },
+    {
+      "id": "prechodny-pobyt",
+      "sk": "prechodný pobyt",
+      "ua": "тимчасове проживання",
+      "pos": "phrase"
+    },
+    {
+      "id": "obciansky-preukaz",
+      "sk": "občiansky preukaz",
+      "ua": "посвідчення особи",
+      "pos": "phrase"
+    },
+    {
+      "id": "dan",
+      "sk": "daň",
+      "ua": "податок",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "triedenie-odpadu",
+      "sk": "triedenie odpadu",
+      "ua": "сортування сміття",
+      "pos": "phrase"
+    },
+    {
+      "id": "recyklacia",
+      "sk": "recyklácia",
+      "ua": "переробка відходів",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kontajner",
+      "sk": "kontajner",
+      "ua": "контейнер",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zberny-dvor",
+      "sk": "zberný dvor",
+      "ua": "пункт прийому відходів",
+      "pos": "phrase"
+    },
+    {
+      "id": "verejne-osvetlenie",
+      "sk": "verejné osvetlenie",
+      "ua": "вуличне освітлення",
+      "pos": "phrase"
+    },
+    {
+      "id": "kanalizacia",
+      "sk": "kanalizácia",
+      "ua": "каналізація",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vodovod",
+      "sk": "vodovod",
+      "ua": "водопровід",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "stavenisko",
+      "sk": "stavenisko",
+      "ua": "будмайданчик",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "uzavierka",
+      "sk": "uzávierka",
+      "ua": "перекриття дороги",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dopravny-prostriedok",
+      "sk": "dopravný prostriedok",
+      "ua": "транспортний засіб",
+      "pos": "phrase"
+    },
+    {
+      "id": "elektricenka",
+      "sk": "električenka",
+      "ua": "проїзний",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "casovy-listok",
+      "sk": "časový lístok",
+      "ua": "квиток на час",
+      "pos": "phrase"
+    },
+    {
+      "id": "prestupna-stanica",
+      "sk": "prestupná stanica",
+      "ua": "пересадкова станція",
+      "pos": "phrase"
+    },
+    {
+      "id": "konecna",
+      "sk": "konečná",
+      "ua": "кінцева зупинка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "smerom-do-centra",
+      "sk": "smerom do centra",
+      "ua": "у напрямку центру",
+      "pos": "phrase"
+    },
+    {
+      "id": "cyklotrasa",
+      "sk": "cyklotrasa",
+      "ua": "велодоріжка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zdielany-bicykel",
+      "sk": "zdieľaný bicykel",
+      "ua": "велопрокат",
+      "pos": "phrase"
+    },
+    {
+      "id": "kolobezka",
+      "sk": "kolobežka",
+      "ua": "самокат",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nocny-spoj",
+      "sk": "nočný spoj",
+      "ua": "нічний рейс",
+      "pos": "phrase"
+    },
+    {
+      "id": "zelen",
+      "sk": "zeleň",
+      "ua": "зелені насадження",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "ihrisko",
+      "sk": "ihrisko",
+      "ua": "дитячий майданчик",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "pesia-zona",
+      "sk": "pešia zóna",
+      "ua": "пішохідна зона",
+      "pos": "phrase"
+    },
+    {
+      "id": "podchod",
+      "sk": "podchod",
+      "ua": "підземний перехід",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "nadchod",
+      "sk": "nadchod",
+      "ua": "надземний перехід",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "nabrezie",
+      "sk": "nábrežie",
+      "ua": "набережна",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "kulturny-dom",
+      "sk": "kultúrny dom",
+      "ua": "будинок культури",
+      "pos": "phrase"
+    },
+    {
+      "id": "obchodnik",
+      "sk": "obchodník",
+      "ua": "торговець",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "bezpecnost",
+      "sk": "bezpečnosť",
+      "ua": "безпека",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kriminalita",
+      "sk": "kriminalita",
+      "ua": "злочинність",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kradez",
+      "sk": "krádež",
+      "ua": "крадіжка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vreckar",
+      "sk": "vreckár",
+      "ua": "кишеньковий злодій",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "nahlasit",
+      "sk": "nahlásiť",
+      "ua": "повідомити",
+      "pos": "verb"
+    },
+    {
+      "id": "stratene-a-najdene",
+      "sk": "stratené a nájdené",
+      "ua": "бюро знахідок",
+      "pos": "phrase"
+    },
+    {
+      "id": "mestska-policia",
+      "sk": "mestská polícia",
+      "ua": "муніципальна поліція",
+      "pos": "phrase"
+    },
+    {
+      "id": "hasicska-stanica",
+      "sk": "hasičská stanica",
+      "ua": "пожежна частина",
+      "pos": "phrase"
+    },
+    {
+      "id": "pohotovost",
+      "sk": "pohotovosť",
+      "ua": "невідкладна допомога",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "ambulancia",
+      "sk": "ambulancia",
+      "ua": "амбулаторія",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "poliklinika",
+      "sk": "poliklinika",
+      "ua": "поліклініка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "informacne-centrum",
+      "sk": "informačné centrum",
+      "ua": "інформаційний центр",
+      "pos": "phrase"
+    },
+    {
+      "id": "prehliadka-mesta",
+      "sk": "prehliadka mesta",
+      "ua": "екскурсія містом",
+      "pos": "phrase"
+    },
+    {
+      "id": "vyhliadka",
+      "sk": "vyhliadka",
+      "ua": "оглядовий майданчик",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "historicke-centrum",
+      "sk": "historické centrum",
+      "ua": "історичний центр",
+      "pos": "phrase"
+    },
+    {
+      "id": "hradby",
+      "sk": "hradby",
+      "ua": "міські мури",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "katedrala",
+      "sk": "katedrála",
+      "ua": "собор",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "synagoga",
+      "sk": "synagóga",
+      "ua": "синагога",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kaplnka",
+      "sk": "kaplnka",
+      "ua": "каплиця",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pomnik",
+      "sk": "pomník",
+      "ua": "пам'ятник",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "architektura",
+      "sk": "architektúra",
+      "ua": "архітектура",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "obyvatelstvo",
+      "sk": "obyvateľstvo",
+      "ua": "населення",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "susedny",
+      "sk": "susedný",
+      "ua": "сусідній",
+      "pos": "adj"
+    },
+    {
+      "id": "mestsky",
+      "sk": "mestský",
+      "ua": "міський",
+      "pos": "adj"
+    },
+    {
+      "id": "vidiecky",
+      "sk": "vidiecky",
+      "ua": "сільський",
+      "pos": "adj"
+    },
+    {
+      "id": "hustota",
+      "sk": "hustota",
+      "ua": "щільність",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "rozvoj",
+      "sk": "rozvoj",
+      "ua": "розвиток",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vystavba",
+      "sk": "výstavba",
+      "ua": "забудова",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dochadzat-do-prace",
+      "sk": "dochádzať do práce",
+      "ua": "їздити на роботу",
+      "pos": "phrase"
+    },
+    {
+      "id": "dopravna-spicka",
+      "sk": "dopravná špička",
+      "ua": "година пік",
+      "pos": "phrase"
+    },
+    {
+      "id": "spolahlivy",
+      "sk": "spoľahlivý",
+      "ua": "надійний",
+      "pos": "adj"
+    },
+    {
+      "id": "dochvilny",
+      "sk": "dochvíľny",
+      "ua": "пунктуальний",
+      "pos": "adj"
+    },
+    {
+      "id": "priamy-spoj",
+      "sk": "priamy spoj",
+      "ua": "прямий рейс",
+      "pos": "phrase"
+    },
+    {
+      "id": "prestup",
+      "sk": "prestup",
+      "ua": "пересадка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "nastup",
+      "sk": "nástup",
+      "ua": "посадка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vystup",
+      "sk": "výstup",
+      "ua": "вихід (з транспорту)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "cestovne",
+      "sk": "cestovné",
+      "ua": "вартість проїзду",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "zlavneny-listok",
+      "sk": "zľavnený lístok",
+      "ua": "пільговий квиток",
+      "pos": "phrase"
+    },
+    {
+      "id": "platobny-automat",
+      "sk": "platobný automat",
+      "ua": "платіжний автомат",
+      "pos": "phrase"
+    },
+    {
+      "id": "parkovaci-automat",
+      "sk": "parkovací automat",
+      "ua": "паркомат",
+      "pos": "phrase"
+    },
+    {
+      "id": "parkovne",
+      "sk": "parkovné",
+      "ua": "плата за паркування",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "namestie-pred-radnicou",
+      "sk": "námestie pred radnicou",
+      "ua": "площа перед ратушею",
+      "pos": "phrase"
+    },
+    {
+      "id": "stare-mesto",
+      "sk": "staré mesto",
+      "ua": "старе місто",
+      "pos": "phrase"
+    },
+    {
+      "id": "mestska-brana",
+      "sk": "mestská brána",
+      "ua": "міська брама",
+      "pos": "phrase"
+    },
+    {
+      "id": "ulicka",
+      "sk": "ulička",
+      "ua": "провулок",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "roh-ulice",
+      "sk": "roh ulice",
+      "ua": "ріг вулиці",
+      "pos": "phrase"
+    },
+    {
+      "id": "dlazba",
+      "sk": "dlažba",
+      "ua": "бруківка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "lampa-na-ulici",
+      "sk": "lampa na ulici",
+      "ua": "ліхтар на вулиці",
+      "pos": "phrase"
+    },
+    {
+      "id": "odpadkovy-kos",
+      "sk": "odpadkový kôš",
+      "ua": "урна",
+      "pos": "phrase"
+    },
+    {
+      "id": "verejne-wc",
+      "sk": "verejné WC",
+      "ua": "громадський туалет",
+      "pos": "phrase"
+    },
+    {
+      "id": "namestie-mieru",
+      "sk": "námestie mieru",
+      "ua": "площа Миру",
+      "pos": "phrase"
+    },
+    {
+      "id": "mestsky-park",
+      "sk": "mestský park",
+      "ua": "міський парк",
+      "pos": "phrase"
+    },
+    {
+      "id": "okruzna-jazda",
+      "sk": "okružná jazda",
+      "ua": "оглядова поїздка",
+      "pos": "phrase"
+    },
+    {
+      "id": "pamatna-tabula",
+      "sk": "pamätná tabuľa",
+      "ua": "меморіальна дошка",
+      "pos": "phrase"
+    },
+    {
+      "id": "mestsky-znak",
+      "sk": "mestský znak",
+      "ua": "герб міста",
+      "pos": "phrase"
+    },
+    {
+      "id": "nocny-zivot",
+      "sk": "nočný život",
+      "ua": "нічне життя",
+      "pos": "phrase"
+    }
+  ]
+}

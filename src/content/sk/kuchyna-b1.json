@@ -1,0 +1,660 @@
+{
+  "id": "kuchyna-b1",
+  "themeId": "kuchyna",
+  "theme": "Кухня і їжа",
+  "cefr": "B1",
+  "words": [
+    {
+      "id": "vyziva",
+      "sk": "výživa",
+      "ua": "харчування",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "bielkoviny",
+      "sk": "bielkoviny",
+      "ua": "білки",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "sacharidy",
+      "sk": "sacharidy",
+      "ua": "вуглеводи",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "tuky",
+      "sk": "tuky",
+      "ua": "жири",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vlaknina",
+      "sk": "vláknina",
+      "ua": "клітковина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vitamin",
+      "sk": "vitamín",
+      "ua": "вітамін",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "mineralne-latky",
+      "sk": "minerálne látky",
+      "ua": "мінеральні речовини",
+      "pos": "phrase"
+    },
+    {
+      "id": "kaloria",
+      "sk": "kalória",
+      "ua": "калорія",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "trvanlivost",
+      "sk": "trvanlivosť",
+      "ua": "термін придатності",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "datum-spotreby",
+      "sk": "dátum spotreby",
+      "ua": "вжити до (дата)",
+      "pos": "phrase"
+    },
+    {
+      "id": "obal",
+      "sk": "obal",
+      "ua": "упаковка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "konzerva",
+      "sk": "konzerva",
+      "ua": "консерва",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "polotovar",
+      "sk": "polotovar",
+      "ua": "напівфабрикат",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "mliecne-vyrobky",
+      "sk": "mliečne výrobky",
+      "ua": "молочні продукти",
+      "pos": "phrase"
+    },
+    {
+      "id": "celozrnny",
+      "sk": "celozrnný",
+      "ua": "цільнозерновий",
+      "pos": "adj"
+    },
+    {
+      "id": "nizkotucny",
+      "sk": "nízkotučný",
+      "ua": "знежирений",
+      "pos": "adj"
+    },
+    {
+      "id": "bezlepkovy",
+      "sk": "bezlepkový",
+      "ua": "безглютеновий",
+      "pos": "adj"
+    },
+    {
+      "id": "sezonny",
+      "sk": "sezónny",
+      "ua": "сезонний",
+      "pos": "adj"
+    },
+    {
+      "id": "miestny",
+      "sk": "miestny",
+      "ua": "місцевий",
+      "pos": "adj"
+    },
+    {
+      "id": "bio-potraviny",
+      "sk": "bio potraviny",
+      "ua": "органічні продукти",
+      "pos": "phrase"
+    },
+    {
+      "id": "potravina",
+      "sk": "potravina",
+      "ua": "харчовий продукт",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nakupny-zoznam",
+      "sk": "nákupný zoznam",
+      "ua": "список покупок",
+      "pos": "phrase"
+    },
+    {
+      "id": "postup",
+      "sk": "postup",
+      "ua": "спосіб приготування",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "odmerka",
+      "sk": "odmerka",
+      "ua": "мірна склянка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "gram",
+      "sk": "gram",
+      "ua": "грам",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "liter",
+      "sk": "liter",
+      "ua": "літр",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kilogram",
+      "sk": "kilogram",
+      "ua": "кілограм",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "stipka",
+      "sk": "štipka",
+      "ua": "дрібка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "hrncek",
+      "sk": "hrnček",
+      "ua": "кухоль",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "nadoba",
+      "sk": "nádoba",
+      "ua": "ємність",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pekac",
+      "sk": "pekáč",
+      "ua": "форма для запікання",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "friteza",
+      "sk": "fritéza",
+      "ua": "фритюрниця",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "hriankovac",
+      "sk": "hriankovač",
+      "ua": "тостер",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kavovar",
+      "sk": "kávovar",
+      "ua": "кавоварка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "rychlovarna-kanvica",
+      "sk": "rýchlovarná kanvica",
+      "ua": "електрочайник",
+      "pos": "phrase"
+    },
+    {
+      "id": "odsavac-par",
+      "sk": "odsávač pár",
+      "ua": "витяжка",
+      "pos": "phrase"
+    },
+    {
+      "id": "kuchynska-linka",
+      "sk": "kuchynská linka",
+      "ua": "кухонний гарнітур",
+      "pos": "phrase"
+    },
+    {
+      "id": "pracovna-doska",
+      "sk": "pracovná doska",
+      "ua": "робоча поверхня",
+      "pos": "phrase"
+    },
+    {
+      "id": "utierka",
+      "sk": "utierka",
+      "ua": "кухонний рушник",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zastera",
+      "sk": "zástera",
+      "ua": "фартух",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "chnapka",
+      "sk": "chňapka",
+      "ua": "прихватка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "alobal",
+      "sk": "alobal",
+      "ua": "фольга",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "papier-na-pecenie",
+      "sk": "papier na pečenie",
+      "ua": "пергамент",
+      "pos": "phrase"
+    },
+    {
+      "id": "vyvar",
+      "sk": "vývar",
+      "ua": "бульйон",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zemiakove-pyre",
+      "sk": "zemiakové pyré",
+      "ua": "картопляне пюре",
+      "pos": "phrase"
+    },
+    {
+      "id": "kasa",
+      "sk": "kaša",
+      "ua": "каша",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "ovsene-vlocky",
+      "sk": "ovsené vločky",
+      "ua": "вівсяні пластівці",
+      "pos": "phrase"
+    },
+    {
+      "id": "krupica",
+      "sk": "krupica",
+      "ua": "манка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pohanka",
+      "sk": "pohánka",
+      "ua": "гречка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "sosovica",
+      "sk": "šošovica",
+      "ua": "сочевиця",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "cicer",
+      "sk": "cícer",
+      "ua": "нут",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "arasidy",
+      "sk": "arašidy",
+      "ua": "арахіс",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "mak",
+      "sk": "mak",
+      "ua": "мак",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "slanina",
+      "sk": "slanina",
+      "ua": "бекон",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "udeniny",
+      "sk": "údeniny",
+      "ua": "копченості",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pasteta",
+      "sk": "paštéta",
+      "ua": "паштет",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kysla-kapusta",
+      "sk": "kyslá kapusta",
+      "ua": "квашена капуста",
+      "pos": "phrase"
+    },
+    {
+      "id": "nakladana-uhorka",
+      "sk": "nakladaná uhorka",
+      "ua": "маринований огірок",
+      "pos": "phrase"
+    },
+    {
+      "id": "marinada",
+      "sk": "marináda",
+      "ua": "маринад",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "korenina",
+      "sk": "korenina",
+      "ua": "приправа",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "majoneza",
+      "sk": "majonéza",
+      "ua": "майонез",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "horcica",
+      "sk": "horčica",
+      "ua": "гірчиця",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kecup",
+      "sk": "kečup",
+      "ua": "кетчуп",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "donaska-jedla",
+      "sk": "donáška jedla",
+      "ua": "доставка їжі",
+      "pos": "phrase"
+    },
+    {
+      "id": "jedalen",
+      "sk": "jedáleň",
+      "ua": "їдальня",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "bufet",
+      "sk": "bufet",
+      "ua": "буфет",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "rychle-obcerstvenie",
+      "sk": "rýchle občerstvenie",
+      "ua": "фастфуд",
+      "pos": "phrase"
+    },
+    {
+      "id": "denne-menu",
+      "sk": "denné menu",
+      "ua": "комплексний обід",
+      "pos": "phrase"
+    },
+    {
+      "id": "obsadeny",
+      "sk": "obsadený",
+      "ua": "зайнятий",
+      "pos": "adj"
+    },
+    {
+      "id": "volny",
+      "sk": "voľný",
+      "ua": "вільний",
+      "pos": "adj"
+    },
+    {
+      "id": "platit-kartou",
+      "sk": "platiť kartou",
+      "ua": "платити карткою",
+      "pos": "phrase"
+    },
+    {
+      "id": "host",
+      "sk": "hosť",
+      "ua": "гість",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pohostenie",
+      "sk": "pohostenie",
+      "ua": "частування",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "pripitok",
+      "sk": "prípitok",
+      "ua": "тост (застільний)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "uvarit",
+      "sk": "uvariť",
+      "ua": "зварити",
+      "pos": "verb"
+    },
+    {
+      "id": "upiect",
+      "sk": "upiecť",
+      "ua": "спекти",
+      "pos": "verb"
+    },
+    {
+      "id": "oprazit",
+      "sk": "opražiť",
+      "ua": "підсмажити",
+      "pos": "verb"
+    },
+    {
+      "id": "podusit",
+      "sk": "podusiť",
+      "ua": "потушкувати",
+      "pos": "verb"
+    },
+    {
+      "id": "zamiesit-cesto",
+      "sk": "zamiesiť cesto",
+      "ua": "замісити тісто",
+      "pos": "phrase"
+    },
+    {
+      "id": "vyslahat",
+      "sk": "vyšľahať",
+      "ua": "збити (вершки)",
+      "pos": "verb"
+    },
+    {
+      "id": "precedit",
+      "sk": "precediť",
+      "ua": "процідити",
+      "pos": "verb"
+    },
+    {
+      "id": "namocit",
+      "sk": "namočiť",
+      "ua": "замочити",
+      "pos": "verb"
+    },
+    {
+      "id": "nakrajat",
+      "sk": "nakrájať",
+      "ua": "нарізати",
+      "pos": "verb"
+    },
+    {
+      "id": "prihriat",
+      "sk": "prihriať",
+      "ua": "підігріти",
+      "pos": "verb"
+    },
+    {
+      "id": "pripalit-sa",
+      "sk": "pripáliť sa",
+      "ua": "пригоріти",
+      "pos": "verb"
+    },
+    {
+      "id": "pokazit-sa",
+      "sk": "pokaziť sa",
+      "ua": "зіпсуватися",
+      "pos": "verb"
+    },
+    {
+      "id": "plesnivy",
+      "sk": "plesnivý",
+      "ua": "запліснявілий",
+      "pos": "adj"
+    },
+    {
+      "id": "prepeceny",
+      "sk": "prepečený",
+      "ua": "пересушений",
+      "pos": "adj"
+    },
+    {
+      "id": "nedovareny",
+      "sk": "nedovarený",
+      "ua": "недоварений",
+      "pos": "adj"
+    },
+    {
+      "id": "stavnaty",
+      "sk": "šťavnatý",
+      "ua": "соковитий",
+      "pos": "adj"
+    },
+    {
+      "id": "makky",
+      "sk": "mäkký",
+      "ua": "м'який",
+      "pos": "adj"
+    },
+    {
+      "id": "tvrdy",
+      "sk": "tvrdý",
+      "ua": "твердий",
+      "pos": "adj"
+    },
+    {
+      "id": "husty",
+      "sk": "hustý",
+      "ua": "густий",
+      "pos": "adj"
+    },
+    {
+      "id": "riedky",
+      "sk": "riedky",
+      "ua": "рідкий",
+      "pos": "adj"
+    },
+    {
+      "id": "jemny",
+      "sk": "jemný",
+      "ua": "ніжний",
+      "pos": "adj"
+    },
+    {
+      "id": "vegan",
+      "sk": "vegán",
+      "ua": "веган",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "alergicky",
+      "sk": "alergický",
+      "ua": "алергічний",
+      "pos": "adj"
+    },
+    {
+      "id": "predjedlo-dna",
+      "sk": "predjedlo dňa",
+      "ua": "закуска дня",
+      "pos": "phrase"
+    },
+    {
+      "id": "pokrm",
+      "sk": "pokrm",
+      "ua": "страва",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "chod",
+      "sk": "chod",
+      "ua": "подача (страва в меню)",
+      "pos": "noun",
+      "gender": "m"
+    }
+  ]
+}

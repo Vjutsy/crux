@@ -1,0 +1,667 @@
+{
+  "id": "dom-b1",
+  "themeId": "dom",
+  "theme": "Дім і сім'я",
+  "cefr": "B1",
+  "words": [
+    {
+      "id": "byvanie",
+      "sk": "bývanie",
+      "ua": "житло",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "nehnutelnost",
+      "sk": "nehnuteľnosť",
+      "ua": "нерухомість",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "realitna-kancelaria",
+      "sk": "realitná kancelária",
+      "ua": "агентство нерухомості",
+      "pos": "phrase"
+    },
+    {
+      "id": "hypoteka",
+      "sk": "hypotéka",
+      "ua": "іпотека",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "uver",
+      "sk": "úver",
+      "ua": "кредит",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kaucia",
+      "sk": "kaucia",
+      "ua": "застава (депозит)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "energie",
+      "sk": "energie",
+      "ua": "комунальні послуги",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "ucet-za-elektrinu",
+      "sk": "účet za elektrinu",
+      "ua": "рахунок за електрику",
+      "pos": "phrase"
+    },
+    {
+      "id": "spotreba",
+      "sk": "spotreba",
+      "ua": "споживання",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "rekonstrukcia",
+      "sk": "rekonštrukcia",
+      "ua": "ремонт (реконструкція)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "remeselnik",
+      "sk": "remeselník",
+      "ua": "майстер",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "instalater",
+      "sk": "inštalatér",
+      "ua": "сантехнік",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "elektrikar",
+      "sk": "elektrikár",
+      "ua": "електрик",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "maliar",
+      "sk": "maliar",
+      "ua": "маляр",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "murar",
+      "sk": "murár",
+      "ua": "муляр",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "naradie",
+      "sk": "náradie",
+      "ua": "інструменти",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "kladivo",
+      "sk": "kladivo",
+      "ua": "молоток",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "skrutkovac",
+      "sk": "skrutkovač",
+      "ua": "викрутка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "klinec",
+      "sk": "klinec",
+      "ua": "цвях",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "skrutka",
+      "sk": "skrutka",
+      "ua": "гвинт",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vrtacka",
+      "sk": "vŕtačka",
+      "ua": "дриль",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "rebrik",
+      "sk": "rebrík",
+      "ua": "драбина",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "farba",
+      "sk": "farba",
+      "ua": "фарба",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "tapeta",
+      "sk": "tapeta",
+      "ua": "шпалери",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dlazdica",
+      "sk": "dlaždica",
+      "ua": "плитка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "parkety",
+      "sk": "parkety",
+      "ua": "паркет",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "izolacia",
+      "sk": "izolácia",
+      "ua": "утеплення",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "klucka",
+      "sk": "kľučka",
+      "ua": "дверна ручка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "alarm",
+      "sk": "alarm",
+      "ua": "сигналізація",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "susedstvo",
+      "sk": "susedstvo",
+      "ua": "сусідство",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "domovnik",
+      "sk": "domovník",
+      "ua": "двірник",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "spravca",
+      "sk": "správca",
+      "ua": "управитель",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "schodza-vlastnikov",
+      "sk": "schôdza vlastníkov",
+      "ua": "збори власників",
+      "pos": "phrase"
+    },
+    {
+      "id": "domovy-poriadok",
+      "sk": "domový poriadok",
+      "ua": "правила будинку",
+      "pos": "phrase"
+    },
+    {
+      "id": "hluk",
+      "sk": "hluk",
+      "ua": "шум",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "staznost",
+      "sk": "sťažnosť",
+      "ua": "скарга",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "porucha",
+      "sk": "porucha",
+      "ua": "несправність",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kvapkat",
+      "sk": "kvapkať",
+      "ua": "капати",
+      "pos": "verb"
+    },
+    {
+      "id": "upchaty",
+      "sk": "upchatý",
+      "ua": "засмічений",
+      "pos": "adj"
+    },
+    {
+      "id": "pokazeny",
+      "sk": "pokazený",
+      "ua": "зламаний",
+      "pos": "adj"
+    },
+    {
+      "id": "vymenit",
+      "sk": "vymeniť",
+      "ua": "замінити",
+      "pos": "verb"
+    },
+    {
+      "id": "namontovat",
+      "sk": "namontovať",
+      "ua": "змонтувати",
+      "pos": "verb"
+    },
+    {
+      "id": "zavesit",
+      "sk": "zavesiť",
+      "ua": "повісити",
+      "pos": "verb"
+    },
+    {
+      "id": "prestavat",
+      "sk": "prestavať",
+      "ua": "перебудувати",
+      "pos": "verb"
+    },
+    {
+      "id": "zariadit",
+      "sk": "zariadiť",
+      "ua": "облаштувати",
+      "pos": "verb"
+    },
+    {
+      "id": "rodokmen",
+      "sk": "rodokmeň",
+      "ua": "родовід",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "predkovia",
+      "sk": "predkovia",
+      "ua": "предки",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "potomok",
+      "sk": "potomok",
+      "ua": "нащадок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vztah",
+      "sk": "vzťah",
+      "ua": "стосунки",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "rodinny-prislusnik",
+      "sk": "rodinný príslušník",
+      "ua": "член родини",
+      "pos": "phrase"
+    },
+    {
+      "id": "nevlastna-matka",
+      "sk": "nevlastná matka",
+      "ua": "мачуха",
+      "pos": "phrase"
+    },
+    {
+      "id": "nevlastny-otec",
+      "sk": "nevlastný otec",
+      "ua": "вітчим",
+      "pos": "phrase"
+    },
+    {
+      "id": "adoptovat",
+      "sk": "adoptovať",
+      "ua": "усиновити",
+      "pos": "verb"
+    },
+    {
+      "id": "rodicovska-dovolenka",
+      "sk": "rodičovská dovolenka",
+      "ua": "декретна відпустка",
+      "pos": "phrase"
+    },
+    {
+      "id": "materska-skola",
+      "sk": "materská škola",
+      "ua": "дитячий садок",
+      "pos": "phrase"
+    },
+    {
+      "id": "jasle",
+      "sk": "jasle",
+      "ua": "ясла",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "opatrovatelka",
+      "sk": "opatrovateľka",
+      "ua": "няня",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vychovany",
+      "sk": "vychovaný",
+      "ua": "вихований",
+      "pos": "adj"
+    },
+    {
+      "id": "poslusny",
+      "sk": "poslušný",
+      "ua": "слухняний",
+      "pos": "adj"
+    },
+    {
+      "id": "nezbedny",
+      "sk": "nezbedný",
+      "ua": "неслухняний",
+      "pos": "adj"
+    },
+    {
+      "id": "rozmaznany",
+      "sk": "rozmaznaný",
+      "ua": "розбещений",
+      "pos": "adj"
+    },
+    {
+      "id": "starostlivy",
+      "sk": "starostlivý",
+      "ua": "турботливий",
+      "pos": "adj"
+    },
+    {
+      "id": "prisny",
+      "sk": "prísny",
+      "ua": "суворий",
+      "pos": "adj"
+    },
+    {
+      "id": "tolerantny",
+      "sk": "tolerantný",
+      "ua": "толерантний",
+      "pos": "adj"
+    },
+    {
+      "id": "hadka",
+      "sk": "hádka",
+      "ua": "сварка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "hadat-sa",
+      "sk": "hádať sa",
+      "ua": "сваритися",
+      "pos": "verb"
+    },
+    {
+      "id": "udobrit-sa",
+      "sk": "udobriť sa",
+      "ua": "помиритися",
+      "pos": "verb"
+    },
+    {
+      "id": "dovera",
+      "sk": "dôvera",
+      "ua": "довіра",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "laska",
+      "sk": "láska",
+      "ua": "любов",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "ziarlivost",
+      "sk": "žiarlivosť",
+      "ua": "ревнощі",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "rozchod",
+      "sk": "rozchod",
+      "ua": "розрив стосунків",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zasnubit-sa",
+      "sk": "zasnúbiť sa",
+      "ua": "заручитися",
+      "pos": "verb"
+    },
+    {
+      "id": "zasnuby",
+      "sk": "zásnuby",
+      "ua": "заручини",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "svadobna-cesta",
+      "sk": "svadobná cesta",
+      "ua": "весільна подорож",
+      "pos": "phrase"
+    },
+    {
+      "id": "oslavovat",
+      "sk": "oslavovať",
+      "ua": "святкувати",
+      "pos": "verb"
+    },
+    {
+      "id": "darcek",
+      "sk": "darček",
+      "ua": "подарунок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "blahozelat",
+      "sk": "blahoželať",
+      "ua": "вітати",
+      "pos": "verb"
+    },
+    {
+      "id": "spolocna-vecera",
+      "sk": "spoločná večera",
+      "ua": "спільна вечеря",
+      "pos": "phrase"
+    },
+    {
+      "id": "tradicia",
+      "sk": "tradícia",
+      "ua": "традиція",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zvyk",
+      "sk": "zvyk",
+      "ua": "звичай",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "dedicstvo",
+      "sk": "dedičstvo",
+      "ua": "спадщина",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "zavet",
+      "sk": "závet",
+      "ua": "заповіт",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "dochodok",
+      "sk": "dôchodok",
+      "ua": "пенсія",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "domov-dochodcov",
+      "sk": "domov dôchodcov",
+      "ua": "будинок для літніх людей",
+      "pos": "phrase"
+    },
+    {
+      "id": "osetrovat",
+      "sk": "ošetrovať",
+      "ua": "доглядати (за хворим)",
+      "pos": "verb"
+    },
+    {
+      "id": "odkazany",
+      "sk": "odkázaný",
+      "ua": "залежний (від когось)",
+      "pos": "adj"
+    },
+    {
+      "id": "samostatny",
+      "sk": "samostatný",
+      "ua": "самостійний",
+      "pos": "adj"
+    },
+    {
+      "id": "dospievanie",
+      "sk": "dospievanie",
+      "ua": "дорослішання",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "tinedzer",
+      "sk": "tínedžer",
+      "ua": "підліток",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "puberta",
+      "sk": "puberta",
+      "ua": "пубертат",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "generacny-rozdiel",
+      "sk": "generačný rozdiel",
+      "ua": "різниця поколінь",
+      "pos": "phrase"
+    },
+    {
+      "id": "susedsky",
+      "sk": "susedský",
+      "ua": "сусідський",
+      "pos": "adj"
+    },
+    {
+      "id": "ochotny",
+      "sk": "ochotný",
+      "ua": "готовий допомогти",
+      "pos": "adj"
+    },
+    {
+      "id": "domaca-uloha",
+      "sk": "domáca úloha",
+      "ua": "домашнє завдання",
+      "pos": "phrase"
+    },
+    {
+      "id": "vreckove",
+      "sk": "vreckové",
+      "ua": "кишенькові гроші",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "zodpovednost",
+      "sk": "zodpovednosť",
+      "ua": "відповідальність",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pravidlo",
+      "sk": "pravidlo",
+      "ua": "правило",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "prerabka",
+      "sk": "prerábka",
+      "ua": "переробка (житла)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "podlaha-v-kuchyni",
+      "sk": "podlaha v kuchyni",
+      "ua": "підлога на кухні",
+      "pos": "phrase"
+    },
+    {
+      "id": "stolik",
+      "sk": "stolík",
+      "ua": "столик",
+      "pos": "noun",
+      "gender": "m"
+    }
+  ]
+}

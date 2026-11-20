@@ -11,7 +11,22 @@ import { mulberry32 } from '../core/rng';
 const INK = '#221c2c';
 const f = (n: number) => n.toFixed(1);
 
-type ShapeId = 'bun' | 'cheese' | 'egg' | 'knob' | 'button' | 'cushion' | 'stone' | 'hex' | 'cobble' | 'crag' | 'puff' | 'pebble';
+type ShapeId =
+  | 'bun'
+  | 'cheese'
+  | 'egg'
+  | 'knob'
+  | 'button'
+  | 'cushion'
+  | 'stone'
+  | 'hex'
+  | 'cobble'
+  | 'crag'
+  | 'puff'
+  | 'pebble'
+  | 'tire'
+  | 'wheel'
+  | 'cone';
 
 /** Форми зачепів у локальних координатах (~22×15, як у грі). d — контур, x — деталі. */
 const SH: Record<ShapeId, { d: string; x: string }> = {
@@ -36,6 +51,19 @@ const SH: Record<ShapeId, { d: string; x: string }> = {
   crag: { d: 'M-11,5L-6,-5L-1,-2L4,-8L11,4Q0,8 -11,5Z', x: '<path d="M4,-8L2,4" fill="none" stroke-width=".7" opacity=".6"/>' },
   puff: { d: 'M-10,4A5,5 0 0 1 -5,-3A6,6 0 0 1 6,-4A5,5 0 0 1 10,4Z', x: '' },
   pebble: { d: 'M-10,2C-11,-6 -3,-8 1,-7.5C8,-7 11,-3 10,2C9,7 3,7.5 -1,7C-6,7 -9.5,6 -10,2Z', x: '' },
+  // Тема «Авто»: шина, кермо, дорожній конус.
+  tire: {
+    d: 'M-9,0A9,9 0 1 1 9,0A9,9 0 1 1 -9,0Z',
+    x: '<circle r="4.6" fill="#c9c4cf" stroke-width=".9"/><circle r="1.4"/><path d="M-7.6,-3l1.6,.6M7.6,3l-1.6-.6M-3,7.6l.6-1.6M3,-7.6l-.6,1.6" stroke-width="1"/>',
+  },
+  wheel: {
+    d: 'M-9,0A9,9 0 1 1 9,0A9,9 0 1 1 -9,0Z',
+    x: '<circle r="5.6" fill="#8d8a92" stroke-width="1"/><path d="M-5.6,0H5.6M0,0V5.6" fill="none" stroke-width="2"/><circle r="2.2"/>',
+  },
+  cone: {
+    d: 'M-10,7L-3.5,-8.5Q0,-10 3.5,-8.5L10,7Z',
+    x: '<path d="M-6,-1H6" stroke="#f3ead6" stroke-width="2.6" opacity="1"/><path d="M-11,7H11" stroke-width="1.6"/>',
+  },
 };
 const GEM = 'M-8,-2L-4,-7L4,-7L8,-2L0,8Z';
 
@@ -187,8 +215,60 @@ const cas: WallTheme = {
   },
 };
 
-export const THEMES: Record<string, WallTheme> = { kuchyna, dom, mesto, cas };
-export const themeFor = (themeId: string): WallTheme => THEMES[themeId] ?? kuchyna;
+/** Тема «Авто й права»: бетонна стіна паркінгу вночі — знаки, світлофор, рівень «P», асфальт із розміткою внизу. */
+const auto: WallTheme = {
+  base: '#1f2230',
+  shapes: [
+    ['tire', '#4b4752'],
+    ['wheel', '#c9574a'],
+    ['cone', '#e8873a'],
+  ],
+  draw(W, H, seed) {
+    const r = mulberry32(seed);
+    let s = `<rect width="${W}" height="${H}" fill="#8d8a92"/>`;
+    // Бетонні плити зі швами й плямами.
+    s += '<g stroke="#77737d" stroke-width="1">';
+    for (let y = 0; y < H - 60; y += 60) s += `<path d="M0,${y}H${W}"/>`;
+    for (let x = 0; x < W; x += 100) s += `<path d="M${x},0V${H - 60}"/>`;
+    s += '</g>';
+    for (let i = 0; i < (W * H) / 9000; i++)
+      s += `<ellipse cx="${f(r() * W)}" cy="${f(r() * (H - 70))}" rx="${f(6 + r() * 14)}" ry="${f(3 + r() * 6)}" fill="#7d7983" opacity=".45"/>`;
+    // Декор приглушений: знаки й світлофор не мають сперечатися із зачепами.
+    s += '<g opacity=".5">';
+    for (let y0 = H - 60 - STOREY; y0 > -STOREY / 2; y0 -= STOREY) {
+      const flip = r() < 0.5;
+      // Жовто-чорна смуга безпеки.
+      s += `<g transform="translate(0 ${y0 + 20})"><rect width="${W}" height="12" fill="#e9c24a"/>${Array.from({ length: Math.ceil(W / 20) + 1 }, (_, i) => `<path d="M${i * 20 - 6},12L${i * 20 + 4},0H${i * 20 + 12}L${i * 20 + 2},12Z" fill="${INK}"/>`).join('')}</g>`;
+      // Рівень паркінгу.
+      const px = flip ? W - 70 : 30;
+      s += `<g transform="translate(${px} ${y0 + 60})"><rect width="44" height="44" rx="6" fill="#2f5fae" stroke="${INK}" stroke-width="1"/><text x="22" y="33" text-anchor="middle" font-family="Neucha, cursive" font-size="30" fill="#f3ead6">P</text></g>`;
+      // Знаки: «Стоп», «Дай дорогу», обмеження 50.
+      const sx = flip ? 50 : W - 90;
+      s += `<g transform="translate(${sx} ${y0 + 150}) scale(.8)"><path d="M-9,-22h18l13,13v18l-13,13h-18l-13,-13v-18z" fill="#c9574a" stroke="#f3ead6" stroke-width="2"/><text y="5" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="10" fill="#f3ead6">STOP</text></g>`;
+      s += `<g transform="translate(${sx + (flip ? 56 : -56)} ${y0 + 160})"><path d="M-20,-14H20L0,20Z" fill="#f3ead6" stroke="#c9574a" stroke-width="4" stroke-linejoin="round"/></g>`;
+      const cx = W / 2 + (r() - 0.5) * 50;
+      s += `<g transform="translate(${f(cx)} ${y0 + 250}) scale(.8)"><circle r="20" fill="#f3ead6" stroke="#c9574a" stroke-width="5"/><text y="7" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="17" fill="${INK}">50</text></g>`;
+      // Світлофор із живим зеленим.
+      const tx = flip ? W - 46 : 34;
+      s += `<g transform="translate(${tx} ${y0 + 230})"><path d="M0,-34V-60" stroke="#3a3640" stroke-width="3"/><rect x="-11" y="-34" width="22" height="58" rx="6" fill="#2c2833" stroke="${INK}" stroke-width="1"/><circle cy="-23" r="6" fill="#5a2a2a"/><circle cy="-5" r="6" fill="#5a4a24"/><circle cy="13" r="6" fill="#7ad08a"><animate attributeName="opacity" values="1;.55;1" dur="2.4s" repeatCount="indefinite"/></circle><circle cy="13" r="18" fill="url(#lampGlow)" opacity=".6"/></g>`;
+      // Лампа під стелею.
+      const lx = flip ? W / 2 - 60 : W / 2 + 60;
+      s += `<g transform="translate(${lx} ${y0 + 330})"><circle r="40" fill="url(#lampGlow)"/><rect x="-18" y="-3" width="36" height="6" rx="3" fill="#f3e3b8" stroke="${INK}" stroke-width=".8"/></g>`;
+    }
+    s += '</g>';
+    // Асфальт із розміткою внизу.
+    s += `<rect y="${H - 60}" width="${W}" height="60" fill="#3a3842"/><rect y="${H - 64}" width="${W}" height="6" fill="#5f5b66" stroke="${INK}" stroke-width=".8"/>`;
+    s += `<g fill="#f3ead6" opacity=".85">${Array.from({ length: Math.ceil(W / 50) }, (_, i) => `<rect x="${i * 50 + 10}" y="${H - 32}" width="28" height="5" rx="1"/>`).join('')}</g>`;
+    return s;
+  },
+};
+
+/** У змішаному режимі стіни міняють оформлення по черзі — щоб «усе вперемішку» було видно й у декорі. */
+export const MIX_ORDER = ['kuchyna', 'dom', 'mesto', 'cas', 'auto'] as const;
+
+export const THEMES: Record<string, WallTheme> = { kuchyna, dom, mesto, cas, auto };
+export const themeFor = (themeId: string, wall = 1): WallTheme =>
+  THEMES[themeId === 'mix' ? MIX_ORDER[(wall - 1) % MIX_ORDER.length]! : themeId] ?? kuchyna;
 
 /** Спільні градієнти: м'які ореоли без дорогих blur-фільтрів. */
 export const SCENERY_DEFS = `<defs>

@@ -1,0 +1,660 @@
+{
+  "id": "mesto-b2",
+  "themeId": "mesto",
+  "theme": "Місто і транспорт",
+  "cefr": "B2",
+  "words": [
+    {
+      "id": "urbanizmus",
+      "sk": "urbanizmus",
+      "ua": "урбаністика",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "uzemny-plan",
+      "sk": "územný plán",
+      "ua": "генеральний план",
+      "pos": "phrase"
+    },
+    {
+      "id": "regulacia",
+      "sk": "regulácia",
+      "ua": "регулювання",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "gentrifikacia",
+      "sk": "gentrifikácia",
+      "ua": "джентрифікація",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "predrazeny",
+      "sk": "predražený",
+      "ua": "завищений у ціні",
+      "pos": "adj"
+    },
+    {
+      "id": "dostupne-byvanie",
+      "sk": "dostupné bývanie",
+      "ua": "доступне житло",
+      "pos": "phrase"
+    },
+    {
+      "id": "socialne-byty",
+      "sk": "sociálne byty",
+      "ua": "соціальне житло",
+      "pos": "phrase"
+    },
+    {
+      "id": "bezdomovec",
+      "sk": "bezdomovec",
+      "ua": "безхатько",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "chudoba",
+      "sk": "chudoba",
+      "ua": "бідність",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nezamestnanost",
+      "sk": "nezamestnanosť",
+      "ua": "безробіття",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "samosprava",
+      "sk": "samospráva",
+      "ua": "самоврядування",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zastupitelstvo",
+      "sk": "zastupiteľstvo",
+      "ua": "представницька рада",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "poslanec",
+      "sk": "poslanec",
+      "ua": "депутат",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "rozpocet",
+      "sk": "rozpočet",
+      "ua": "бюджет",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "verejne-obstaravanie",
+      "sk": "verejné obstarávanie",
+      "ua": "державні закупівлі",
+      "pos": "phrase"
+    },
+    {
+      "id": "investicia",
+      "sk": "investícia",
+      "ua": "інвестиція",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dotacia",
+      "sk": "dotácia",
+      "ua": "дотація",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "peticia",
+      "sk": "petícia",
+      "ua": "петиція",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "referendum",
+      "sk": "referendum",
+      "ua": "референдум",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "verejna-diskusia",
+      "sk": "verejná diskusia",
+      "ua": "громадське обговорення",
+      "pos": "phrase"
+    },
+    {
+      "id": "obcianska-spolocnost",
+      "sk": "občianska spoločnosť",
+      "ua": "громадянське суспільство",
+      "pos": "phrase"
+    },
+    {
+      "id": "dobrovolnik",
+      "sk": "dobrovoľník",
+      "ua": "волонтер",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "komunita",
+      "sk": "komunita",
+      "ua": "громада",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "znecistenie-ovzdusia",
+      "sk": "znečistenie ovzdušia",
+      "ua": "забруднення повітря",
+      "pos": "phrase"
+    },
+    {
+      "id": "smog",
+      "sk": "smog",
+      "ua": "смог",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "emisie",
+      "sk": "emisie",
+      "ua": "викиди",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "hlukova-zataz",
+      "sk": "hluková záťaž",
+      "ua": "шумове навантаження",
+      "pos": "phrase"
+    },
+    {
+      "id": "udrzatelnost",
+      "sk": "udržateľnosť",
+      "ua": "сталий розвиток",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nizkoemisna-zona",
+      "sk": "nízkoemisná zóna",
+      "ua": "зона низьких викидів",
+      "pos": "phrase"
+    },
+    {
+      "id": "elektromobilita",
+      "sk": "elektromobilita",
+      "ua": "електромобільність",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "verejny-priestor",
+      "sk": "verejný priestor",
+      "ua": "громадський простір",
+      "pos": "phrase"
+    },
+    {
+      "id": "revitalizacia",
+      "sk": "revitalizácia",
+      "ua": "ревіталізація",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "priemyselna-zona",
+      "sk": "priemyselná zóna",
+      "ua": "промислова зона",
+      "pos": "phrase"
+    },
+    {
+      "id": "logistika",
+      "sk": "logistika",
+      "ua": "логістика",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "sklad",
+      "sk": "sklad",
+      "ua": "склад",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zeleznica",
+      "sk": "železnica",
+      "ua": "залізниця",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kolaj",
+      "sk": "koľaj",
+      "ua": "колія",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "trat",
+      "sk": "trať",
+      "ua": "залізнична лінія",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vyluka",
+      "sk": "výluka",
+      "ua": "тимчасове припинення руху",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dopravny-podnik",
+      "sk": "dopravný podnik",
+      "ua": "транспортне підприємство",
+      "pos": "phrase"
+    },
+    {
+      "id": "dopravca",
+      "sk": "dopravca",
+      "ua": "перевізник",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "tarifa",
+      "sk": "tarifa",
+      "ua": "тариф",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "integrovany-dopravny-system",
+      "sk": "integrovaný dopravný systém",
+      "ua": "інтегрована транспортна система",
+      "pos": "phrase"
+    },
+    {
+      "id": "frekvencia",
+      "sk": "frekvencia",
+      "ua": "частота руху",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "interval",
+      "sk": "interval",
+      "ua": "інтервал",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kapacita",
+      "sk": "kapacita",
+      "ua": "місткість",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "bezbarierovy",
+      "sk": "bezbariérový",
+      "ua": "безбар'єрний",
+      "pos": "adj"
+    },
+    {
+      "id": "cyklista",
+      "sk": "cyklista",
+      "ua": "велосипедист",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pamiatkova-zona",
+      "sk": "pamiatková zóna",
+      "ua": "заповідна історична зона",
+      "pos": "phrase"
+    },
+    {
+      "id": "pamiatkar",
+      "sk": "pamiatkar",
+      "ua": "фахівець з охорони пам'яток",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zburat",
+      "sk": "zbúrať",
+      "ua": "знести (будівлю)",
+      "pos": "verb"
+    },
+    {
+      "id": "postavit",
+      "sk": "postaviť",
+      "ua": "збудувати",
+      "pos": "verb"
+    },
+    {
+      "id": "rozsirit",
+      "sk": "rozšíriť",
+      "ua": "розширити",
+      "pos": "verb"
+    },
+    {
+      "id": "zrusit",
+      "sk": "zrušiť",
+      "ua": "скасувати",
+      "pos": "verb"
+    },
+    {
+      "id": "obnovit",
+      "sk": "obnoviť",
+      "ua": "відновити",
+      "pos": "verb"
+    },
+    {
+      "id": "financovat",
+      "sk": "financovať",
+      "ua": "фінансувати",
+      "pos": "verb"
+    },
+    {
+      "id": "schvalit",
+      "sk": "schváliť",
+      "ua": "затвердити",
+      "pos": "verb"
+    },
+    {
+      "id": "zamietnut",
+      "sk": "zamietnuť",
+      "ua": "відхилити",
+      "pos": "verb"
+    },
+    {
+      "id": "protestovat",
+      "sk": "protestovať",
+      "ua": "протестувати",
+      "pos": "verb"
+    },
+    {
+      "id": "demonstracia",
+      "sk": "demonštrácia",
+      "ua": "демонстрація",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zhromazdenie",
+      "sk": "zhromaždenie",
+      "ua": "зібрання",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "povolenie",
+      "sk": "povolenie",
+      "ua": "дозвіл",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "priestupok",
+      "sk": "priestupok",
+      "ua": "правопорушення",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vandalizmus",
+      "sk": "vandalizmus",
+      "ua": "вандалізм",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "graffiti",
+      "sk": "graffiti",
+      "ua": "графіті",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "kamerovy-system",
+      "sk": "kamerový systém",
+      "ua": "система відеоспостереження",
+      "pos": "phrase"
+    },
+    {
+      "id": "metropola",
+      "sk": "metropola",
+      "ua": "мегаполіс",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "aglomeracia",
+      "sk": "aglomerácia",
+      "ua": "агломерація",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "migracia",
+      "sk": "migrácia",
+      "ua": "міграція",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "multikulturny",
+      "sk": "multikultúrny",
+      "ua": "мультикультурний",
+      "pos": "adj"
+    },
+    {
+      "id": "anonymny",
+      "sk": "anonymný",
+      "ua": "анонімний",
+      "pos": "adj"
+    },
+    {
+      "id": "prosperujuci",
+      "sk": "prosperujúci",
+      "ua": "процвітаючий",
+      "pos": "adj"
+    },
+    {
+      "id": "zanedbany",
+      "sk": "zanedbaný",
+      "ua": "занедбаний",
+      "pos": "adj"
+    },
+    {
+      "id": "kozmopolitny",
+      "sk": "kozmopolitný",
+      "ua": "космополітичний",
+      "pos": "adj"
+    },
+    {
+      "id": "kulturne-podujatie",
+      "sk": "kultúrne podujatie",
+      "ua": "культурний захід",
+      "pos": "phrase"
+    },
+    {
+      "id": "festival",
+      "sk": "festival",
+      "ua": "фестиваль",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vernisaz",
+      "sk": "vernisáž",
+      "ua": "вернісаж",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "premiera",
+      "sk": "premiéra",
+      "ua": "прем'єра",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "predstavenie",
+      "sk": "predstavenie",
+      "ua": "вистава",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "vypredany",
+      "sk": "vypredaný",
+      "ua": "розпроданий",
+      "pos": "adj"
+    },
+    {
+      "id": "hladisko",
+      "sk": "hľadisko",
+      "ua": "глядацька зала",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "satna",
+      "sk": "šatňa",
+      "ua": "гардероб (у театрі)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "trznica",
+      "sk": "tržnica",
+      "ua": "критий ринок",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "stanok",
+      "sk": "stánok",
+      "ua": "кіоск",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "poulicny-predajca",
+      "sk": "pouličný predajca",
+      "ua": "вуличний торговець",
+      "pos": "phrase"
+    },
+    {
+      "id": "konzulat",
+      "sk": "konzulát",
+      "ua": "консульство",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "mestska-hromadna-doprava-v-noci",
+      "sk": "mestská hromadná doprava v noci",
+      "ua": "нічний громадський транспорт",
+      "pos": "phrase"
+    },
+    {
+      "id": "obnova-centra",
+      "sk": "obnova centra",
+      "ua": "оновлення центру",
+      "pos": "phrase"
+    },
+    {
+      "id": "stavebny-ruch",
+      "sk": "stavebný ruch",
+      "ua": "будівельний бум",
+      "pos": "phrase"
+    },
+    {
+      "id": "mestska-sprava",
+      "sk": "mestská správa",
+      "ua": "міська адміністрація",
+      "pos": "phrase"
+    },
+    {
+      "id": "verejna-zakazka",
+      "sk": "verejná zákazka",
+      "ua": "державне замовлення",
+      "pos": "phrase"
+    },
+    {
+      "id": "najom-pozemku",
+      "sk": "nájom pozemku",
+      "ua": "оренда землі",
+      "pos": "phrase"
+    },
+    {
+      "id": "ekologicky",
+      "sk": "ekologický",
+      "ua": "екологічний",
+      "pos": "adj"
+    },
+    {
+      "id": "mestska-hala",
+      "sk": "mestská hala",
+      "ua": "міська зала",
+      "pos": "phrase"
+    },
+    {
+      "id": "rusna-krizovatka",
+      "sk": "rušná križovatka",
+      "ua": "жваве перехрестя",
+      "pos": "phrase"
+    },
+    {
+      "id": "mestske-planovanie",
+      "sk": "mestské plánovanie",
+      "ua": "міське планування",
+      "pos": "phrase"
+    },
+    {
+      "id": "verejna-doprava",
+      "sk": "verejná doprava",
+      "ua": "громадський транспорт",
+      "pos": "phrase"
+    },
+    {
+      "id": "rozvojovy-projekt",
+      "sk": "rozvojový projekt",
+      "ua": "проєкт розвитку",
+      "pos": "phrase"
+    },
+    {
+      "id": "obcianska-iniciativa",
+      "sk": "občianska iniciatíva",
+      "ua": "громадська ініціатива",
+      "pos": "phrase"
+    },
+    {
+      "id": "dopravny-uzol",
+      "sk": "dopravný uzol",
+      "ua": "транспортний вузол",
+      "pos": "phrase"
+    }
+  ]
+}

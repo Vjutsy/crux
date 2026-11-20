@@ -2,7 +2,7 @@
  * Картка питання — DOM-оверлей поверх canvas: нативна клавіатура, коректна діакритика, доступність.
  * Без таймера (погоджено із замовником). Помилка — картка відлітає вгору.
  */
-import { SK_DIACRITICS, checkTyped, type CheckResult } from '../core/answer';
+import { checkTyped, type CheckResult } from '../core/answer';
 import type { Question } from '../core/questions';
 
 export interface CardResult {
@@ -32,10 +32,10 @@ export function closeQuestion() {
   cancelOpen = null;
 }
 
-export function askQuestion(q: Question, opts: { requireDiacritics: boolean; limbName: string }): Promise<CardResult> {
+export function askQuestion(q: Question, opts: { requireDiacritics: boolean }): Promise<CardResult> {
   const card = $<HTMLDivElement>('card');
   const answers = $<HTMLDivElement>('card-answers');
-  $('card-hint').textContent = `${HINTS[q.mode]} · ${opts.limbName}`;
+  $('card-hint').textContent = HINTS[q.mode];
   $('card-prompt').textContent = q.prompt;
   card.className = 'card';
   card.hidden = false;
@@ -45,12 +45,10 @@ export function askQuestion(q: Question, opts: { requireDiacritics: boolean; lim
   const toSk = q.mode === 'typing-ua-sk';
   if (typing) {
     answers.className = 'answers typing';
+    // Без ігрової клавіатури: відкривається системна клавіатура телефона (для словацької — зі словацькою розкладкою, якщо вона є).
     answers.innerHTML =
-      `<input id="card-input" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" aria-label="Відповідь" lang="${toSk ? 'sk' : 'uk'}">` +
-      `<button type="button" class="ok">OK</button>` +
-      (toSk
-        ? `<div class="keys">${SK_DIACRITICS.map((ch) => `<button type="button" data-key="${ch}">${ch}</button>`).join('')}</div>`
-        : '');
+      `<input id="card-input" type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" enterkeyhint="done" aria-label="Відповідь" lang="${toSk ? 'sk' : 'uk'}">` +
+      `<button type="button" class="ok">OK</button>`;
   } else {
     answers.className = 'answers';
     answers.innerHTML = q
@@ -67,7 +65,8 @@ export function askQuestion(q: Question, opts: { requireDiacritics: boolean; lim
     };
     vv?.addEventListener('resize', place);
     place();
-    input?.focus();
+    // Фокус — у тому самому дотику, що відкрив питання: лише так iOS і Android показують клавіатуру одразу.
+    input?.focus({ preventScroll: true });
 
     let done = false;
     cancelOpen = () => {
@@ -102,11 +101,7 @@ export function askQuestion(q: Question, opts: { requireDiacritics: boolean; lim
     answers.onclick = (e) => {
       const b = (e.target as HTMLElement).closest('button');
       if (!b) return;
-      if (b.dataset.key && input) {
-        const s = input.selectionStart ?? input.value.length;
-        input.setRangeText(b.dataset.key, s, input.selectionEnd ?? s, 'end');
-        input.focus();
-      } else if (b.classList.contains('ok')) submitTyped();
+      if (b.classList.contains('ok')) submitTyped();
       else if (b.dataset.i) {
         const given = q.options![Number(b.dataset.i)]!;
         finish({ correct: q.expected.includes(given), given });

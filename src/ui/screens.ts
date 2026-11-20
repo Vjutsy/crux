@@ -5,6 +5,7 @@
  *  - «Куди лізти?»: тема, рівень мови, рівень гри 1–10 із зірками, «Лізти!»;
  *  - результат стіни: зірки + слова з помилками.
  */
+import { cefrLabel } from '../content';
 import type { WordGroup } from '../content/schema';
 import type { Point } from '../core/body';
 import type { Progress } from '../core/save';
@@ -12,6 +13,7 @@ import { type Climber, climbers, getClimber } from '../data/climbers';
 import type { WallConfig } from '../data/walls';
 import type { ClimbSummary } from '../scenes/ClimbScene';
 import { drawClimber } from './climberArt';
+import { sound } from '../audio';
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 const starsText = (n: number) => '★'.repeat(n) + '☆'.repeat(3 - n);
@@ -50,7 +52,8 @@ const climberSvg = (c: Climber, t: number, cls: string) =>
   `<svg class="${cls}" viewBox="${HERO_BOX}" aria-hidden="true">${drawClimber(c, HERO_C, HERO_ENDS, t)}</svg>`;
 
 /** Порядок тем у меню: кухня перша — з неї починається навчання. */
-const THEME_ORDER = ['kuchyna', 'dom', 'mesto', 'cas'];
+const THEME_ORDER = ['kuchyna', 'dom', 'mesto', 'cas', 'auto', 'mix'];
+const LEVEL_ORDER = ['A1', 'A2', 'B1', 'B2', 'C1', 'ALL'];
 const themeRank = (id: string) => (THEME_ORDER.includes(id) ? THEME_ORDER.indexOf(id) : THEME_ORDER.length);
 
 export interface MenuChoice {
@@ -140,7 +143,9 @@ export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Pro
   };
 
   const play = () => {
-    const levels = groups.filter((g) => g.themeId === pick.themeId);
+    const levels = groups
+      .filter((g) => g.themeId === pick.themeId)
+      .sort((a, b) => LEVEL_ORDER.indexOf(a.cefr) - LEVEL_ORDER.indexOf(b.cefr));
     if (!levels.some((g) => g.id === pick.groupId)) pick.groupId = levels[0]?.id ?? '';
     const group = groups.find((g) => g.id === pick.groupId);
     const theme = themes.find(([id]) => id === pick.themeId)?.[1] ?? '';
@@ -150,13 +155,13 @@ export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Pro
         <h1>Куди лізти?</h1>
       </div>
       <section><h2>Тема</h2>
-        <div class="opts two">${themes.map(([id, name]) => `<button class="opt" data-theme="${id}" aria-pressed="${id === pick.themeId}">${esc(name)}</button>`).join('')}</div>
+        <div class="opts two">${themes.map(([id, name]) => `<button class="opt${id === 'mix' ? ' wide' : ''}" data-theme="${id}" aria-pressed="${id === pick.themeId}">${esc(name)}</button>`).join('')}</div>
       </section>
       <section><h2>Рівень мови</h2>
-        <div class="opts three">${levels
+        <div class="opts levels">${levels
           .map(
             (g) =>
-              `<button class="opt lvl" data-group="${g.id}" aria-pressed="${g.id === pick.groupId}" title="${g.words.length} слів">${g.cefr}</button>`,
+              `<button class="opt lvl" data-group="${g.id}" aria-pressed="${g.id === pick.groupId}" title="${g.words.length} слів">${cefrLabel(g.cefr)}</button>`,
           )
           .join('')}</div>
       </section>
@@ -170,7 +175,7 @@ export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Pro
           .join('')}</div>
       </section>
       <div class="foot">
-        <p class="muted">${esc(theme)} · ${group?.cefr ?? ''} · рівень ${pick.wall}</p>
+        <p class="muted">${esc(theme)} · ${group ? cefrLabel(group.cefr) : ''} · рівень ${pick.wall}</p>
         <button class="go big" data-act="go">Лізти!</button>
       </div>
     </div>`;
@@ -245,25 +250,46 @@ export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Pro
   render();
 }
 
+const STAR_PATH = 'M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.1-4.5-4.2 6.1-.8z';
+
+/**
+ * Результат стіни — «Листівка» (дизайн F, полотно «Crux — варіанти меню»): кремова листівка над вершиною,
+ * марка із зірками, «твій шлях» і найкоротший шлях, слова для повторення, кнопки під листівкою.
+ * Листівка падає з прискоренням і раз коротко відскакує, цифри набігають із «піком», зірки дзенькають, у кінці — акорд.
+ */
 export function showResult(s: ClimbSummary, onAgain: () => void, onMenu: () => void, onNext?: () => void) {
   const el = document.getElementById('result')!;
-  el.innerHTML = `<div class="result">
-    <h1>${s.won ? 'Вершина!' : 'Зірвався'}</h1>
-    <p class="stars" aria-label="Зірки: ${s.stars} з 3">${starsText(s.stars)}</p>
-    ${s.won ? '' : `<p class="muted">${esc(s.fallReason ?? '')}</p>`}
-    ${
-      s.mistakes.length
-        ? `<h2>Слова, де були помилки</h2><ul class="mistakes">${s.mistakes
-            .map((m) => `<li><b>${esc(m.prompt)}</b> → ${esc(m.expected)}${m.given ? ` <small>(ви: ${esc(m.given)})</small>` : ''}</li>`)
-            .join('')}</ul>`
-        : '<p class="muted">Жодної помилки!</p>'
-    }
-    <div class="foot">
+  const stamp = [0, 1, 2]
+    .map((i) => `<svg class="pc-star" data-i="${i}" viewBox="0 0 24 24" aria-hidden="true"><path d="${STAR_PATH}"/></svg>`)
+    .join('');
+  const words = s.mistakes.length
+    ? `<div class="pc-words"><h2>Повтори ці слова</h2>${s.mistakes
+        .slice(0, 6)
+        .map(
+          (m) =>
+            `<div class="pc-word"><b>${esc(m.prompt)}</b><span>${esc(m.expected)}${m.given ? ` <small>(ви: ${esc(m.given)})</small>` : ''}</span></div>`,
+        )
+        .join('')}</div>`
+    : `<p class="pc-clean">${s.won ? 'Жодної помилки!' : ''}</p>`;
+  el.className = 'screen postcard-screen';
+  el.innerHTML = `<div class="pc-dim"></div>
+    <article class="postcard" aria-label="${s.won ? 'Вершина' : 'Зірвався'}">
+      <header>
+        <div><span class="pc-meta">Стіна ${s.wall} · ${esc(s.theme)} · ${esc(s.cefr)}</span>
+          <h1>${s.won ? 'Вершина!' : 'Зірвався'}</h1>
+          ${s.won ? '' : `<span class="pc-reason">${esc(s.fallReason ?? '')}</span>`}</div>
+        <div class="pc-stamp" aria-label="Зірки: ${s.stars} з 3"><div class="pc-stars">${stamp}</div><span>${s.stars} з 3</span></div>
+      </header>
+      <div class="pc-stats">
+        <div><b data-count="${s.moves}">${s.moves}</b><span>${s.won ? 'кроків — твій шлях' : 'кроків зроблено'}</span></div>
+        <div><b class="teal" data-count="${s.shortest}">${s.shortest}</b><span>найкоротший шлях</span></div>
+      </div>
+      ${words}
+    </article>
+    <div class="pc-foot">
       ${onNext ? '<button class="go big" id="next">Наступна стіна</button>' : ''}
-      <button class="go alt" id="again">Ще раз</button>
-      <button class="go alt" id="tomenu">Меню</button>
-    </div>
-  </div>`;
+      <div class="pc-row"><button class="go alt" id="again">Ще раз</button><button class="go alt" id="tomenu">Меню</button></div>
+    </div>`;
   el.onclick = (e) => {
     const id = (e.target as HTMLElement).closest('button')?.id;
     if (!id) return;
@@ -273,6 +299,55 @@ export function showResult(s: ClimbSummary, onAgain: () => void, onMenu: () => v
     if (id === 'tomenu') onMenu();
   };
   el.hidden = false;
+  animatePostcard(el, s);
+}
+
+/** Послідовність: удар листівки (0.42 с) → цифри набігають → зірки по одній → кнопки й акорд. Разом ~1.1 с. */
+function animatePostcard(el: HTMLElement, s: ClimbSummary) {
+  const lit = (i: number) => el.querySelector(`.pc-star[data-i="${i}"]`)?.classList.add('on');
+  if (reducedMotion()) {
+    for (let i = 0; i < s.stars; i++) lit(i);
+    el.classList.add('shown');
+    return;
+  }
+  el.classList.add('anim');
+  const counters = [...el.querySelectorAll<HTMLElement>('[data-count]')];
+  const T_LAND = 420;
+  const T_COUNT = 330;
+  setTimeout(() => {
+    counters.forEach((c) => (c.textContent = '0'));
+    const t0 = performance.now();
+    let last = counters.map(() => 0);
+    const tick = (now: number) => {
+      const k = Math.min(1, (now - t0) / T_COUNT);
+      counters.forEach((c, i) => {
+        const v = Math.round(Number(c.dataset.count) * k);
+        if (v !== last[i]) {
+          c.textContent = String(v);
+          if (i === 0) sound.pik();
+        }
+      });
+      last = counters.map((c) => Number(c.textContent));
+      if (k < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  }, T_LAND - 100);
+  const starsAt = T_LAND + T_COUNT - 60;
+  for (let i = 0; i < s.stars; i++)
+    setTimeout(
+      () => {
+        lit(i);
+        sound.star(i);
+      },
+      starsAt + i * 110,
+    );
+  setTimeout(
+    () => {
+      el.classList.add('shown');
+      if (s.won && s.stars > 0) sound.chord();
+    },
+    starsAt + Math.max(1, s.stars) * 110,
+  );
 }
 
 /** Вступ при першому відкритті гри: три короткі картки, потім одразу перша стіна з підказками. */

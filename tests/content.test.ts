@@ -33,9 +33,9 @@ describe('усі групи разом', () => {
     const ids = files.flatMap((f) => WordGroup.parse(JSON.parse(readFileSync(join(dir, f), 'utf8'))).words.map((w) => w.id));
     expect(new Set(ids).size).toBe(ids.length);
   });
-  it('є 4 теми × рівні A1, A2 (рівня A0 немає)', () => {
+  it('є 5 тем × рівні A1, A2, B1, B2 (рівня A0 немає)', () => {
     const keys = files.map((f) => f.replace('.json', '')).sort();
-    const want = ['kuchyna', 'dom', 'mesto', 'cas'].flatMap((t) => [`${t}-a1`, `${t}-a2`]).sort();
+    const want = ['kuchyna', 'dom', 'mesto', 'cas', 'auto'].flatMap((t) => ['a1', 'a2', 'b1', 'b2'].map((l) => `${t}-${l}`)).sort();
     expect(keys).toEqual(want);
   });
   it('словацькі слова не повторюються між групами', () => {
@@ -47,5 +47,19 @@ describe('усі групи разом', () => {
       const ua = WordGroup.parse(JSON.parse(readFileSync(join(dir, f), 'utf8'))).words.map((w) => w.ua);
       expect(ua.length - new Set(ua).size, f).toBe(0);
     }
+  });
+});
+
+describe('змішаний режим', () => {
+  it('для кожного рівня є група «Усе вперемішку» з усіма словами цього рівня, і є «усі рівні»', async () => {
+    const { groups } = await import('../src/content');
+    const themed = groups.filter((g) => g.themeId !== 'mix');
+    for (const c of ['A1', 'A2', 'B1', 'B2'] as const) {
+      const mix = groups.find((g) => g.id === `mix-${c.toLowerCase()}`)!;
+      expect(mix.words.length).toBe(themed.filter((g) => g.cefr === c).reduce((n, g) => n + g.words.length, 0));
+    }
+    const all = groups.find((g) => g.id === 'mix-all')!;
+    expect(all.words.length).toBe(themed.reduce((n, g) => n + g.words.length, 0));
+    expect(all.words.length).toBe(2000);
   });
 });

@@ -1,0 +1,1257 @@
+# Нові слова (20.11.2026, друга частина): B1, B2 для 4 тем і тема «Авто й водійські права» A1–B2.
+# Формат як у new-words.txt: sk | ua | pos | рід | skAlt. Дублі з наявними словами збирач пропускає.
+
+## kuchyna B1
+výživa | харчування | n | f
+bielkoviny | білки | n | f
+sacharidy | вуглеводи | n | m
+tuky | жири | n | m
+vláknina | клітковина | n | f
+vitamín | вітамін | n | m
+minerálne látky | мінеральні речовини | p
+kalória | калорія | n | f
+trvanlivosť | термін придатності | n | f
+dátum spotreby | вжити до (дата) | p
+obal | упаковка | n | m
+konzerva | консерва | n | f
+polotovar | напівфабрикат | n | m
+mliečne výrobky | молочні продукти | p
+celozrnný | цільнозерновий | a
+nízkotučný | знежирений | a
+bezlepkový | безглютеновий | a
+sezónny | сезонний | a
+miestny | місцевий | a
+bio potraviny | органічні продукти | p
+potravina | харчовий продукт | n | f
+nákupný zoznam | список покупок | p
+postup | спосіб приготування | n | m
+odmerka | мірна склянка | n | f
+gram | грам | n | m
+liter | літр | n | m
+kilogram | кілограм | n | m
+štipka | дрібка | n | f
+hrnček | кухоль | n | m
+nádoba | ємність | n | f
+pekáč | форма для запікання | n | m
+fritéza | фритюрниця | n | f
+hriankovač | тостер | n | m
+kávovar | кавоварка | n | m
+rýchlovarná kanvica | електрочайник | p
+odsávač pár | витяжка | p
+kuchynská linka | кухонний гарнітур | p
+pracovná doska | робоча поверхня | p
+utierka | кухонний рушник | n | f
+zástera | фартух | n | f
+chňapka | прихватка | n | f
+alobal | фольга | n | m
+papier na pečenie | пергамент | p
+vývar | бульйон | n | m
+zemiakové pyré | картопляне пюре | p
+kaša | каша | n | f
+ovsené vločky | вівсяні пластівці | p
+krupica | манка | n | f
+pohánka | гречка | n | f
+šošovica | сочевиця | n | f
+cícer | нут | n | m
+arašidy | арахіс | n | m
+mak | мак | n | m
+slanina | бекон | n | f
+údeniny | копченості | n | f
+paštéta | паштет | n | f
+kyslá kapusta | квашена капуста | p
+nakladaná uhorka | маринований огірок | p
+marináda | маринад | n | f
+korenina | приправа | n | f
+majonéza | майонез | n | f
+horčica | гірчиця | n | f
+kečup | кетчуп | n | m
+donáška jedla | доставка їжі | p
+jedáleň | їдальня | n | f
+bufet | буфет | n | m
+rýchle občerstvenie | фастфуд | p
+denné menu | комплексний обід | p
+obsadený | зайнятий | a
+voľný | вільний | a
+platiť kartou | платити карткою | p
+hosť | гість | n | m
+pohostenie | частування | n | n
+prípitok | тост (застільний) | n | m
+uvariť | зварити | v
+upiecť | спекти | v
+opražiť | підсмажити | v
+podusiť | потушкувати | v
+zamiesiť cesto | замісити тісто | p
+vyšľahať | збити (вершки) | v
+precediť | процідити | v
+namočiť | замочити | v
+nakrájať | нарізати | v
+prihriať | підігріти | v
+pripáliť sa | пригоріти | v
+pokaziť sa | зіпсуватися | v
+plesnivý | запліснявілий | a
+prepečený | пересушений | a
+nedovarený | недоварений | a
+šťavnatý | соковитий | a
+mäkký | м'який | a
+tvrdý | твердий | a
+hustý | густий | a
+riedky | рідкий | a
+jemný | ніжний | a
+vegán | веган | n | m
+alergický | алергічний | a
+predjedlo dňa | закуска дня | p
+pokrm | страва | n | m
+chod | подача (страва в меню) | n | m
+recept na koláč | рецепт пирога | p
+pečený | печений | a
+varený | варений | a
+smažený | смажений | a
+
+## kuchyna B2
+národné jedlo | національна страва | p
+špecialita | фірмова страва | n | f
+degustácia | дегустація | n | f
+someliér | сомельє | n | m
+šéfkuchár | шеф-кухар | n | m
+obsluha | обслуговування | n | f
+reklamovať jedlo | поскаржитися на страву | p
+hygiena | гігієна | n | f
+skladovanie | зберігання | n | n
+dodávateľ | постачальник | n | m
+surovina | сировина | n | f
+výrobca | виробник | n | m
+etiketa | етикетка | n | f
+zloženie | склад продукту | n | n
+konzervačná látka | консервант | p
+farbivo | барвник | n | n
+sladidlo | підсолоджувач | n | n
+geneticky upravený | генетично модифікований | p
+cholesterol | холестерин | n | m
+obezita | ожиріння | n | f
+podvýživa | недоїдання | n | f
+pôst | піст | n | m
+chudnúť | худнути | v
+priberať | набирати вагу | v
+stravovacie návyky | харчові звички | p
+striedmy | помірний у їжі | a
+výdatný | ситний | a
+ľahko stráviteľný | легкозасвоюваний | p
+korenistý | пряний | a
+aromatický | ароматний | a
+údený | копчений | a
+marinovaný | маринований | a
+dusený | тушкований | a
+grilovaný | приготований на грилі | a
+plnený | фарширований | a
+strúhaný | тертий | a
+mletý | мелений | a
+mleté mäso | фарш | p
+zverina | дичина | n | f
+jahňacina | ягнятина | n | f
+teľacina | телятина | n | f
+hydina | птиця (м'ясо) | n | f
+morské plody | морепродукти | p
+mušle | мідії | n | f
+chobotnica | восьминіг | n | f
+pstruh | форель | n | m
+kapor | короп | n | m
+kaviár | ікра | n | m
+hľuzovka | трюфель | n | f
+šafran | шафран | n | m
+zázvor | імбир | n | m
+kurkuma | куркума | n | f
+bazalka | базилік | n | f
+oregano | орегано | n | n
+rozmarín | розмарин | n | m
+tymian | чебрець | n | m
+bobkový list | лавровий лист | p
+olivový olej | оливкова олія | p
+kvasenie | бродіння | n | n
+fermentovať | ферментувати | v
+údiť | коптити | v
+konzervovať | консервувати | v
+zavárať | закривати консервацію | v
+zaváranina | домашня консервація | n | f
+sušiť | сушити | v
+mraziť | заморожувати | v
+blanšírovať | бланшувати | v
+karamelizovať | карамелізувати | v
+flambovať | фламбувати | v
+zahustiť | загустити | v
+zriediť | розвести (рідиною) | v
+odstaviť z ohňa | зняти з вогню | p
+prísť na chuť | розсмакувати | p
+mať hlad ako vlk | бути голодним як вовк | p
+najesť sa do sýta | наїстися досхочу | p
+servírovať | подавати страву | v
+ozdobiť | прикрасити | v
+príprava | приготування | n | f
+kuchárska kniha | кулінарна книга | p
+kuchársky kurz | кулінарні курси | p
+pohostinnosť | гостинність | n | f
+banket | банкет | n | m
+raut | фуршет | n | m
+catering | кейтеринг | n | m
+recenzia | відгук | n | f
+nadmerný | надмірний | a
+vyvážený | збалансований | a
+zdravý životný štýl | здоровий спосіб життя | p
+plytvanie jedlom | марнування їжі | p
+zvyšky | залишки | n | m
+tlakový hrniec | скороварка | p
+mažiar | ступка | n | m
+lievik | лійка | n | m
+sitko | ситечко | n | n
+odšťavovač | соковижималка | n | m
+mlynček na mäso | м'ясорубка | p
+nakladať | маринувати | v
+vykostiť | вийняти кістки | v
+vypracovať cesto | вимісити тісто | p
+dochutiť | довести до смаку | v
+pochúťka | делікатес | n | f
+labužník | гурман | n | m
+
+## dom B1
+bývanie | житло | n | n
+nehnuteľnosť | нерухомість | n | f
+realitná kancelária | агентство нерухомості | p
+hypotéka | іпотека | n | f
+úver | кредит | n | m
+kaucia | застава (депозит) | n | f
+energie | комунальні послуги | n | f
+účet za elektrinu | рахунок за електрику | p
+spotreba | споживання | n | f
+rekonštrukcia | ремонт (реконструкція) | n | f
+remeselník | майстер | n | m
+inštalatér | сантехнік | n | m
+elektrikár | електрик | n | m
+maliar | маляр | n | m
+murár | муляр | n | m
+náradie | інструменти | n | n
+kladivo | молоток | n | n
+skrutkovač | викрутка | n | m
+klinec | цвях | n | m
+skrutka | гвинт | n | f
+vŕtačka | дриль | n | f
+rebrík | драбина | n | m
+farba | фарба | n | f
+tapeta | шпалери | n | f
+dlaždica | плитка | n | f
+parkety | паркет | n | f
+izolácia | утеплення | n | f
+kľučka | дверна ручка | n | f
+alarm | сигналізація | n | m
+susedstvo | сусідство | n | n
+domovník | двірник | n | m
+správca | управитель | n | m
+schôdza vlastníkov | збори власників | p
+domový poriadok | правила будинку | p
+hluk | шум | n | m
+sťažnosť | скарга | n | f
+porucha | несправність | n | f
+kvapkať | капати | v
+upchatý | засмічений | a
+pokazený | зламаний | a
+vymeniť | замінити | v
+namontovať | змонтувати | v
+zavesiť | повісити | v
+prestavať | перебудувати | v
+zariadiť | облаштувати | v
+rodokmeň | родовід | n | m
+predkovia | предки | n | m
+potomok | нащадок | n | m
+vzťah | стосунки | n | m
+rodinný príslušník | член родини | p
+nevlastná matka | мачуха | p
+nevlastný otec | вітчим | p
+adoptovať | усиновити | v
+rodičovská dovolenka | декретна відпустка | p
+materská škola | дитячий садок | p
+jasle | ясла | n | f
+opatrovateľka | няня | n | f
+vychovaný | вихований | a
+poslušný | слухняний | a
+nezbedný | неслухняний | a
+rozmaznaný | розбещений | a
+starostlivý | турботливий | a
+prísny | суворий | a
+tolerantný | толерантний | a
+hádka | сварка | n | f
+hádať sa | сваритися | v
+udobriť sa | помиритися | v
+dôvera | довіра | n | f
+láska | любов | n | f
+žiarlivosť | ревнощі | n | f
+rozchod | розрив стосунків | n | m
+zasnúbiť sa | заручитися | v
+zásnuby | заручини | n | f
+svadobná cesta | весільна подорож | p
+oslavovať | святкувати | v
+darček | подарунок | n | m
+blahoželať | вітати | v
+spoločná večera | спільна вечеря | p
+tradícia | традиція | n | f
+zvyk | звичай | n | m
+dedičstvo | спадщина | n | n
+závet | заповіт | n | m
+dôchodok | пенсія | n | m
+domov dôchodcov | будинок для літніх людей | p
+ošetrovať | доглядати (за хворим) | v
+odkázaný | залежний (від когось) | a
+samostatný | самостійний | a
+dospievanie | дорослішання | n | n
+tínedžer | підліток | n | m
+puberta | пубертат | n | f
+generačný rozdiel | різниця поколінь | p
+susedský | сусідський | a
+ochotný | готовий допомогти | a
+domáca úloha | домашнє завдання | p
+vreckové | кишенькові гроші | n | n
+zodpovednosť | відповідальність | n | f
+pravidlo | правило | n | n
+prerábka | переробка (житла) | n | f
+podlaha v kuchyni | підлога на кухні | p
+stolík | столик | n | m
+kôš na bielizeň | кошик для білизни | p
+sušiak | сушарка для білизни | n | m
+
+## dom B2
+nájomná zmluva | договір оренди | p
+výpoveď | розірвання договору | n | f
+vysťahovať | виселити | v
+prenajímateľ | орендодавець | n | m
+spoluvlastník | співвласник | n | m
+kataster nehnuteľností | кадастр нерухомості | p
+list vlastníctva | свідоцтво про власність | p
+znalecký posudok | експертна оцінка | p
+trhová cena | ринкова ціна | p
+splátka | платіж (внесок) | n | f
+úroková sadzba | процентна ставка | p
+zateplenie | теплоізоляція | n | n
+tepelné čerpadlo | тепловий насос | p
+solárne panely | сонячні панелі | p
+podlahové kúrenie | тепла підлога | p
+pleseň | цвіль | n | f
+statik | інженер-конструктор | n | m
+stavebné povolenie | дозвіл на будівництво | p
+kolaudácia | прийняття в експлуатацію | n | f
+pozemok | земельна ділянка | n | m
+novostavba | новобудова | n | f
+drevostavba | дерев'яний будинок | n | f
+bytový dom | багатоквартирний будинок | p
+mezonet | дворівнева квартира | n | m
+garsónka | квартира-студія | n | f
+dispozícia | планування | n | f
+výmera | площа | n | f
+obytná plocha | житлова площа | p
+terasa | тераса | n | f
+lodžia | лоджія | n | f
+spoločné priestory | місця загального користування | p
+údržba | обслуговування (догляд) | n | f
+havária | аварійна ситуація | n | f
+zatopiť | затопити | v
+poistenie domácnosti | страхування житла | p
+škoda | збиток | n | f
+nahradiť škodu | відшкодувати збиток | p
+rušenie nočného pokoja | порушення нічної тиші | p
+spolužitie | співжиття | n | n
+rodinné väzby | родинні зв'язки | p
+súdržnosť | згуртованість | n | f
+príbuzenstvo | рідня | n | n
+pokrvný | кровний | a
+osvojenie | усиновлення | n | n
+pestúnska starostlivosť | прийомна сім'я | p
+opatrovníctvo | опікунство | n | n
+striedavá starostlivosť | почергова опіка | p
+výživné | аліменти | n | n
+rozvodové konanie | шлюборозлучний процес | p
+predmanželská zmluva | шлюбний договір | p
+dedič | спадкоємець | n | m
+dediť | успадковувати | v
+majetok | майно | n | m
+osamelý | самотній | a
+osamostatniť sa | стати самостійним | v
+odsťahovať sa od rodičov | з'їхати від батьків | p
+prázdne hniezdo | порожнє гніздо | p
+starnutie | старіння | n | n
+medzigeneračný | міжпоколіннєвий | a
+rodičovstvo | роль батьків | n | n
+materstvo | материнство | n | n
+otcovstvo | батьківство | n | n
+výchovný štýl | стиль виховання | p
+autorita | авторитет | n | f
+rešpekt | повага | n | m
+kompromis | компроміс | n | m
+konflikt | конфлікт | n | m
+vyjednávať | домовлятися | v
+podporovať | підтримувати | v
+zanedbávať | занедбувати | v
+rozmaznávať | розбещувати | v
+napomenúť | зробити зауваження | v
+trestať | карати | v
+odmeniť | винагородити | v
+dôverovať | довіряти | v
+zveriť sa | звіритися | v
+utajovať | приховувати | v
+odpustiť | пробачити | v
+ospravedlniť sa | вибачитися | v
+pohostinný | гостинний | a
+vďačný | вдячний | a
+ohľaduplný | тактовний | a
+sebecký | егоїстичний | a
+panovačný | владний | a
+láskavý | лагідний | a
+ľahostajný | байдужий | a
+majetnícky | власницький | a
+blízky vzťah | близькі стосунки | p
+nevesta | невістка (дружина сина) | n | f
+zať | зять (чоловік доньки) | n | m
+útulok | притулок | n | m
+spotrebič | побутовий прилад | n | m
+inteligentná domácnosť | розумний дім | p
+hypotekárny úver | іпотечний кредит | p
+vlastnícke právo | право власності | p
+bytové družstvo | житловий кооператив | p
+fond opráv | ремонтний фонд | p
+susedský spor | сусідська суперечка | p
+zmluva o dielo | договір підряду | p
+prestavba | перепланування | n | f
+správcovská spoločnosť | керуюча компанія | p
+nedoplatok | заборгованість | n | m
+
+## mesto B1
+infraštruktúra | інфраструктура | n | f
+občan | громадянин | n | m
+primátor | мер | n | m
+starosta | сільський голова | n | m
+voľby | вибори | n | f
+úradné hodiny | прийомні години | p
+formulár | бланк | n | m
+žiadosť | заява | n | f
+potvrdenie | довідка | n | n
+podpis | підпис | n | m
+pečiatka | печатка | n | f
+čakáreň | зал очікування | n | f
+poradové číslo | номер у черзі | p
+trvalý pobyt | постійне проживання | p
+prechodný pobyt | тимчасове проживання | p
+občiansky preukaz | посвідчення особи | p
+daň | податок | n | f
+triedenie odpadu | сортування сміття | p
+recyklácia | переробка відходів | n | f
+kontajner | контейнер | n | m
+zberný dvor | пункт прийому відходів | p
+verejné osvetlenie | вуличне освітлення | p
+kanalizácia | каналізація | n | f
+vodovod | водопровід | n | m
+stavenisko | будмайданчик | n | n
+uzávierka | перекриття дороги | n | f
+dopravný prostriedok | транспортний засіб | p
+električenka | проїзний | n | f
+časový lístok | квиток на час | p
+prestupná stanica | пересадкова станція | p
+konečná | кінцева зупинка | n | f
+smerom do centra | у напрямку центру | p
+cyklotrasa | велодоріжка | n | f
+zdieľaný bicykel | велопрокат | p
+kolobežka | самокат | n | f
+nočný spoj | нічний рейс | p
+zeleň | зелені насадження | n | f
+ihrisko | дитячий майданчик | n | n
+pešia zóna | пішохідна зона | p
+podchod | підземний перехід | n | m
+nadchod | надземний перехід | n | m
+nábrežie | набережна | n | n
+kultúrny dom | будинок культури | p
+obchodník | торговець | n | m
+bezpečnosť | безпека | n | f
+kriminalita | злочинність | n | f
+krádež | крадіжка | n | f
+vreckár | кишеньковий злодій | n | m
+nahlásiť | повідомити | v
+stratené a nájdené | бюро знахідок | p
+mestská polícia | муніципальна поліція | p
+hasičská stanica | пожежна частина | p
+pohotovosť | невідкладна допомога | n | f
+ambulancia | амбулаторія | n | f
+poliklinika | поліклініка | n | f
+informačné centrum | інформаційний центр | p
+prehliadka mesta | екскурсія містом | p
+vyhliadka | оглядовий майданчик | n | f
+historické centrum | історичний центр | p
+hradby | міські мури | n | f
+katedrála | собор | n | f
+synagóga | синагога | n | f
+kaplnka | каплиця | n | f
+pomník | пам'ятник | n | m
+architektúra | архітектура | n | f
+obyvateľstvo | населення | n | n
+susedný | сусідній | a
+mestský | міський | a
+vidiecky | сільський | a
+hustota | щільність | n | f
+rozvoj | розвиток | n | m
+výstavba | забудова | n | f
+dochádzať do práce | їздити на роботу | p
+dopravná špička | година пік | p
+spoľahlivý | надійний | a
+dochvíľny | пунктуальний | a
+priamy spoj | прямий рейс | p
+prestup | пересадка | n | m
+nástup | посадка | n | m
+výstup | вихід (з транспорту) | n | m
+cestovné | вартість проїзду | n | n
+zľavnený lístok | пільговий квиток | p
+platobný automat | платіжний автомат | p
+parkovací automat | паркомат | p
+parkovné | плата за паркування | n | n
+námestie pred radnicou | площа перед ратушею | p
+staré mesto | старе місто | p
+mestská brána | міська брама | p
+ulička | провулок | n | f
+roh ulice | ріг вулиці | p
+dlažba | бруківка | n | f
+lampa na ulici | ліхтар на вулиці | p
+odpadkový kôš | урна | p
+verejné WC | громадський туалет | p
+námestie mieru | площа Миру | p
+mestský park | міський парк | p
+okružná jazda | оглядова поїздка | p
+pamätná tabuľa | меморіальна дошка | p
+mestský znak | герб міста | p
+nočný život | нічне життя | p
+turistický sprievodca | путівник | p
+sprievodca mestom | екскурсовод містом | p
+centrum mesta | центр міста | p
+
+## mesto B2
+urbanizmus | урбаністика | n | m
+územný plán | генеральний план | p
+regulácia | регулювання | n | f
+gentrifikácia | джентрифікація | n | f
+predražený | завищений у ціні | a
+dostupné bývanie | доступне житло | p
+sociálne byty | соціальне житло | p
+bezdomovec | безхатько | n | m
+chudoba | бідність | n | f
+nezamestnanosť | безробіття | n | f
+samospráva | самоврядування | n | f
+zastupiteľstvo | представницька рада | n | n
+poslanec | депутат | n | m
+rozpočet | бюджет | n | m
+verejné obstarávanie | державні закупівлі | p
+investícia | інвестиція | n | f
+dotácia | дотація | n | f
+petícia | петиція | n | f
+referendum | референдум | n | n
+verejná diskusia | громадське обговорення | p
+občianska spoločnosť | громадянське суспільство | p
+dobrovoľník | волонтер | n | m
+komunita | громада | n | f
+znečistenie ovzdušia | забруднення повітря | p
+smog | смог | n | m
+emisie | викиди | n | f
+hluková záťaž | шумове навантаження | p
+udržateľnosť | сталий розвиток | n | f
+nízkoemisná zóna | зона низьких викидів | p
+elektromobilita | електромобільність | n | f
+verejný priestor | громадський простір | p
+revitalizácia | ревіталізація | n | f
+priemyselná zóna | промислова зона | p
+logistika | логістика | n | f
+sklad | склад | n | m
+železnica | залізниця | n | f
+koľaj | колія | n | f
+trať | залізнична лінія | n | f
+výluka | тимчасове припинення руху | n | f
+dopravný podnik | транспортне підприємство | p
+dopravca | перевізник | n | m
+tarifa | тариф | n | f
+integrovaný dopravný systém | інтегрована транспортна система | p
+frekvencia | частота руху | n | f
+interval | інтервал | n | m
+kapacita | місткість | n | f
+bezbariérový | безбар'єрний | a
+cyklista | велосипедист | n | m
+pamiatková zóna | заповідна історична зона | p
+pamiatkar | фахівець з охорони пам'яток | n | m
+zbúrať | знести (будівлю) | v
+postaviť | збудувати | v
+rozšíriť | розширити | v
+zrušiť | скасувати | v
+obnoviť | відновити | v
+financovať | фінансувати | v
+schváliť | затвердити | v
+zamietnuť | відхилити | v
+protestovať | протестувати | v
+demonštrácia | демонстрація | n | f
+zhromaždenie | зібрання | n | n
+povolenie | дозвіл | n | n
+priestupok | правопорушення | n | m
+vandalizmus | вандалізм | n | m
+graffiti | графіті | n | n
+kamerový systém | система відеоспостереження | p
+metropola | мегаполіс | n | f
+aglomerácia | агломерація | n | f
+migrácia | міграція | n | f
+multikultúrny | мультикультурний | a
+anonymný | анонімний | a
+prosperujúci | процвітаючий | a
+zanedbaný | занедбаний | a
+kozmopolitný | космополітичний | a
+kultúrne podujatie | культурний захід | p
+festival | фестиваль | n | m
+vernisáž | вернісаж | n | f
+premiéra | прем'єра | n | f
+predstavenie | вистава | n | n
+vypredaný | розпроданий | a
+hľadisko | глядацька зала | n | n
+šatňa | гардероб (у театрі) | n | f
+tržnica | критий ринок | n | f
+stánok | кіоск | n | m
+pouličný predajca | вуличний торговець | p
+konzulát | консульство | n | m
+mestská hromadná doprava v noci | нічний громадський транспорт | p
+obnova centra | оновлення центру | p
+stavebný ruch | будівельний бум | p
+mestská správa | міська адміністрація | p
+verejná zákazka | державне замовлення | p
+nájom pozemku | оренда землі | p
+ekologický | екологічний | a
+mestská hala | міська зала | p
+rušná križovatka | жваве перехрестя | p
+mestské plánovanie | міське планування | p
+verejná doprava | громадський транспорт | p
+rozvojový projekt | проєкт розвитку | p
+občianska iniciatíva | громадська ініціатива | p
+dopravný uzol | транспортний вузол | p
+satelitné mesto | місто-супутник | p
+kultúrne dedičstvo | культурна спадщина | p
+mestský architekt | головний архітектор міста | p
+
+## cas B1
+časový plán | графік | p
+harmonogram | розклад робіт | n | m
+lehota | строк | n | f
+dochvíľnosť | пунктуальність | n | f
+predĺžiť | продовжити | v
+skrátiť | скоротити | v
+posunúť | перенести (у часі) | v
+odložiť | відкласти | v
+naplánovať | запланувати | v
+dohodnúť sa | домовитися | v
+stretnutie | зустріч | n | n
+schôdzka | побачення | n | f
+pracovná doba | робочий час | p
+voľno | вихідний | n | n
+voľný čas | дозвілля | p
+prázdniny | канікули | n | f
+semester | семестр | n | m
+školský rok | навчальний рік | p
+štvrťrok | квартал (року) | n | m
+polrok | півроку | n | m
+minulý týždeň | минулого тижня | p
+budúci mesiac | наступного місяця | p
+o týždeň | через тиждень | p
+cez víkend | на вихідних | p
+odvčera | з учорашнього дня | d
+doteraz | досі | d
+odteraz | відтепер | d
+medzitým | тим часом | d
+zároveň | водночас | d
+naraz | раптом | d
+postupne | поступово | d
+okamžite | негайно | d
+nakoniec | зрештою | d
+najprv | спочатку | d
+pravidelne | регулярно | d
+dlhodobo | довгостроково | d
+krátkodobý | короткостроковий | a
+dočasný | тимчасовий | a
+trvalý | постійний | a
+každoročný | щорічний | a
+budúcnosť | майбутнє | n | f
+minulosť | минуле | n | f
+prítomnosť | теперішнє | n | f
+história | історія | n | f
+epocha | епоха | n | f
+letný čas | літній час | p
+zimný čas | зимовий час | p
+posunúť hodiny | перевести годинник | p
+desatinné číslo | десяткове число | p
+zlomok | дріб | n | m
+párne číslo | парне число | p
+nepárne číslo | непарне число | p
+násobiť | множити | v
+deliť | ділити | v
+rovná sa | дорівнює | p
+priemer | середнє значення | n | m
+súčet | сума | n | m
+rozdiel | різниця | n | m
+tretina | третина | n | f
+štvrtina | чверть (1/4) | n | f
+dvojnásobok | подвійна кількість | n | m
+počet | кількість | n | m
+množstvo | велика кількість | n | n
+meranie | вимірювання | n | n
+meter | метр | n | m
+kilometer | кілометр | n | m
+centimeter | сантиметр | n | m
+hmotnosť | маса | n | f
+dĺžka | довжина | n | f
+šírka | ширина | n | f
+výška | висота | n | f
+podnebie | клімат | n | n
+meteorológ | метеоролог | n | m
+zrážky | опади | n | f
+oblačnosť | хмарність | n | f
+prehánky | короткочасні зливи | n | f
+lejak | злива | n | m
+búrkový | грозовий | a
+hmlistý | туманний | a
+námraza | паморозь | n | f
+fujavica | завірюха | n | f
+topenie snehu | танення снігу | p
+tlak vzduchu | атмосферний тиск | p
+stupne Celzia | градуси Цельсія | p
+pod nulou | нижче нуля | p
+nad nulou | вище нуля | p
+teplotný rekord | температурний рекорд | p
+vlna horúčav | хвиля спеки | p
+dvojtýždeň | два тижні | n | m
+týždenný | щотижневий | a
+denný | щоденний | a
+nočný | нічний | a
+ranný | ранковий | a
+večerný | вечірній | a
+hodinový | годинний | a
+mesačný | щомісячний | a
+ročný | річний | a
+jarný | весняний | a
+letný | літній | a
+jesenný | осінній | a
+zimný | зимовий | a
+slnečný | сонячний | a
+oblačný | хмарний | a
+
+## cas B2
+časová os | часова шкала | p
+chronologický | хронологічний | a
+súčasný | теперішній | a
+dobový | тогочасний | a
+nadčasový | позачасовий | a
+zastaraný | застарілий | a
+aktuálny | актуальний | a
+priebežne | у процесі | d
+vopred | заздалегідь | d
+dodatočne | згодом | d
+bezodkladne | невідкладно | d
+sporadicky | епізодично | d
+nepretržite | безперервно | d
+prechodne | тимчасово | d
+odjakživa | споконвіку | d
+dovtedy | доти | d
+čochvíľa | ось-ось | d
+občasný | періодичний | a
+cyklický | циклічний | a
+sezóna | сезон | n | f
+splatnosť | термін сплати | n | f
+odklad | відстрочка | n | m
+oneskorenie | затримка | n | n
+predstih | випередження | n | m
+časová tieseň | брак часу | p
+časový rámec | часові рамки | p
+predĺženie | продовження терміну | n | n
+uplynúť | минути (про час) | v
+nastať | настати | v
+predchádzať | передувати | v
+nasledovať | слідувати | v
+prebiehať | відбуватися | v
+oneskoriť sa | затриматися | v
+zladiť | узгодити | v
+synchronizovať | синхронізувати | v
+odhadnúť | оцінити приблизно | v
+zaokrúhliť | округлити | v
+vypočítať | обчислити | v
+umocniť | піднести до степеня | v
+odmocnina | корінь (квадратний) | n | f
+rovnica | рівняння | n | f
+pravdepodobnosť | ймовірність | n | f
+štatistika | статистика | n | f
+podiel | частка | n | m
+pomer | співвідношення | n | m
+nárast | зростання | n | m
+pokles | спад | n | m
+odchýlka | відхилення | n | f
+rozsah | діапазон | n | m
+nespočetný | незліченний | a
+nepatrný | крихітний | a
+približný | приблизний | a
+presný | точний | a
+nekonečno | нескінченність | n | n
+klimatická zmena | зміна клімату | p
+globálne otepľovanie | глобальне потепління | p
+skleníkový efekt | парниковий ефект | p
+extrémne počasie | екстремальна погода | p
+prírodná katastrofa | стихійне лихо | p
+tornádo | торнадо | n | n
+hurikán | ураган | n | m
+cunami | цунамі | n | n
+zosuv pôdy | зсув ґрунту | p
+lavína | лавина | n | f
+zemetrasenie | землетрус | n | n
+výstraha | метеопопередження | n | f
+barometer | барометр | n | m
+vlhký | вологий | a
+sparno | спекотно й душно | d
+mrholenie | мряка | n | n
+vytrvalý dážď | затяжний дощ | p
+premenlivý | мінливий | a
+nestále počasie | нестійка погода | p
+oteplenie | потепління | n | n
+ochladenie | похолодання | n | n
+slnovrat | сонцестояння | n | m
+rovnodennosť | рівнодення | n | f
+spln | повня | n | m
+nov | молодик (новий місяць) | n | m
+zatmenie | затемнення | n | n
+kométa | комета | n | f
+súhvezdie | сузір'я | n | n
+obežná dráha | орбіта | p
+letopočet | літочислення | n | m
+pred naším letopočtom | до нашої ери | p
+časová kapsula | капсула часу | p
+výhľad počasia | прогноз на кілька днів | p
+mrazivé ráno | морозний ранок | p
+dlhodobá predpoveď | довгостроковий прогноз | p
+storočná voda | повінь, що буває раз на століття | p
+meteorologická výstraha | штормове попередження | p
+denný priemer | середньодобовий показник | p
+astronomický | астрономічний | a
+časovač | таймер | n | m
+stopky | секундомір | n | f
+presčas | понаднормово | d
+nadčas | понаднормова робота | n | m
+uzávierka projektu | дедлайн проєкту | p
+termínovaný | строковий | a
+plynutie času | плин часу | p
+okamžitý | миттєвий | a
+predčasne | передчасно | d
+oneskorene | із запізненням | d
+
+## auto A1
+volant | кермо | n | m
+koleso | колесо | n | n
+motor | двигун | n | m
+brzda | гальмо | n | f
+plyn | газ (педаль) | n | m
+spojka | зчеплення | n | f
+batožinový priestor | багажник | p
+kapota | капот | n | f
+predné sklo | лобове скло | p
+stierač | склоочисник | n | m
+svetlo | фара | n | n
+smerovka | покажчик повороту | n | f
+trúbiť | сигналити | v
+spätné zrkadlo | дзеркало заднього виду | p
+bezpečnostný pás | ремінь безпеки | p
+kľúčik od auta | ключ від авто | p
+nádrž | бак | n | f
+motorový olej | моторна олива | p
+batéria | акумулятор | n | f
+rezerva | запасне колесо | n | f
+lekárnička | аптечка | n | f
+výstražný trojuholník | аварійний знак | p
+reflexná vesta | світловідбивний жилет | p
+autoškola | автошкола | n | f
+inštruktor | інструктор | n | m
+skúška | іспит | n | f
+test | тест | n | m
+jazda | їзда | n | f
+spolujazdec | пасажир поруч із водієм | n | m
+štartovať | заводити двигун | v
+brzdiť | гальмувати | v
+zabočiť | звернути | v
+cúvať | їхати заднім ходом | v
+predbiehať | обганяти | v
+parkovať | паркуватися | v
+tankovať | заправлятися | v
+umyť auto | помити машину | p
+vypnúť motor | вимкнути двигун | p
+zapnúť sa | пристебнутися | v
+trasa | маршрут поїздки | n | f
+dopredu | вперед | d
+dozadu | назад | d
+doľava | наліво | d
+doprava | направо | d
+červená | червоне світло | n | f
+zelená | зелене світло | n | f
+oranžová | жовте світло | n | f
+pruh | смуга руху | n | m
+tunel | тунель | n | m
+mýto | плата за дорогу | n | n
+diaľničná známka | віньєтка | p
+taxikár | таксист | n | m
+kamión | фура | n | m
+dodávka | фургон | n | f
+skúter | скутер | n | m
+elektromobil | електромобіль | n | m
+ojazdené auto | вживане авто | p
+rýchly | швидкий | a
+pomalý | повільний | a
+opatrný | обережний | a
+unavený | втомлений | a
+Pozor! | Увага! | p | | pozor
+voľné miesto | вільне місце | p
+autorádio | автомагнітола | n | n
+klimatizácia | кондиціонер | n | f
+sedadlo vodiča | водійське сидіння | p
+zadné sedadlo | заднє сидіння | p
+výfuk | вихлопна труба | n | m
+autoumyváreň | автомийка | n | f
+dielňa | майстерня | n | f
+mechanik | механік | n | m
+oprava | ремонт | n | f
+odťahovka | евакуатор | n | f
+parkovací lístok | паркувальний лист | p
+nové auto | нове авто | p
+osobné auto | легковий автомобіль | p
+kolesá na zimu | зимові колеса | p
+vodička | водійка | n | f
+šoférovať | кермувати | v
+naložiť | завантажити | v
+vyložiť | вивантажити | v
+zastávka na trati | зупинка в дорозі | p
+benzínové auto | бензинове авто | p
+dieselové auto | дизельне авто | p
+farba auta | колір авто | p
+značka auta | марка авто | p
+nádrž je prázdna | бак порожній | p
+plná nádrž | повний бак | p
+cestou domov | дорогою додому | p
+vodičské skúšky | водійські іспити | p
+učiť sa šoférovať | вчитися водити | p
+jazdiť autom | їздити машиною | p
+ísť autom | їхати машиною | p
+nastúpiť do auta | сісти в машину | p
+vystúpiť z auta | вийти з машини | p
+zabudnúť kľúče | забути ключі | p
+stopka | знак «Стоп» | n | f
+okno auta | вікно авто | p
+dvere auta | двері авто | p
+strecha auta | дах авто | p
+nový vodič | новий водій | p
+cesta autom | поїздка машиною | p
+
+## auto A2
+cestná premávka | дорожній рух | p
+pravidlá cestnej premávky | правила дорожнього руху | p
+prednosť v jazde | перевага в русі | p
+hlavná cesta | головна дорога | p
+vedľajšia cesta | другорядна дорога | p
+daj prednosť v jazde | дай дорогу | p
+zákaz vjazdu | в'їзд заборонено | p
+zákaz zastavenia | зупинку заборонено | p
+zákaz státia | стоянку заборонено | p
+obytná zóna | житлова зона | p
+železničné priecestie | залізничний переїзд | p
+povolená rýchlosť | дозволена швидкість | p
+prekročiť rýchlosť | перевищити швидкість | p
+radar | радар | n | m
+alkohol za volantom | алкоголь за кермом | p
+dychová skúška | перевірка на алкоголь | p
+promile | проміле | n | n
+policajná kontrola | поліцейська перевірка | p
+doklady | документи | n | m
+technický preukaz | техпаспорт | p
+povinné zmluvné poistenie | обов'язкове автострахування | p
+havarijné poistenie | страхування КАСКО | p
+emisná kontrola | перевірка викидів | p
+technická kontrola | техогляд | p
+evidenčné číslo | номерний знак | p | | ŠPZ, EČV
+skupina B | категорія B | p
+teoretická skúška | теоретичний іспит | p
+praktická skúška | практичний іспит | p
+skúšobný komisár | екзаменатор | p
+cvičná jazda | навчальна поїздка | p
+testové otázky | тестові питання | p
+zložiť skúšku | скласти іспит | p
+prepadnúť na skúške | провалити іспит | p
+začínajúci vodič | водій-початківець | p
+skúsený vodič | досвідчений водій | p
+parkovanie | паркування | n | n
+pozdĺžne parkovanie | паралельне паркування | p
+cúvanie | рух заднім ходом | n | n
+otáčanie | розворот | n | n
+otočiť sa | розвернутися | v
+radiť | перемикати передачі | v
+prevodovka | коробка передач | n | f
+manuál | механічна коробка | n | m
+automat | автоматична коробка | n | m
+rýchlostný stupeň | передача | p
+neutrál | нейтральна передача | n | m
+ručná brzda | ручне гальмо | p
+pedál | педаль | n | m
+tachometer | спідометр | n | m
+otáčkomer | тахометр | n | m
+palubná doska | приладова панель | p
+kontrolka | контрольна лампа | n | f
+stretávacie svetlá | ближнє світло | p
+diaľkové svetlá | дальнє світло | p
+hmlové svetlá | протитуманні фари | p
+výstražné svetlá | аварійна сигналізація | p
+predbiehanie | обгін | n | n
+zaraďovanie | перестроювання | n | n
+zmeniť jazdný pruh | змінити смугу руху | p
+bezpečná vzdialenosť | безпечна дистанція | p
+mŕtvy uhol | сліпа зона | p
+krajnica | узбіччя | n | f
+stredová čiara | осьова лінія | p
+plná čiara | суцільна лінія | p
+prerušovaná čiara | переривчаста лінія | p
+šmyk | занос | n | m
+dostať šmyk | потрапити в занос | p
+zimné pneumatiky | зимові шини | p
+snehové reťaze | ланцюги проти ковзання | p
+defekt | прокол шини | n | m
+vymeniť koleso | замінити колесо | p
+zdvihák | домкрат | n | m
+ťažné lano | буксирний трос | p
+odtiahnuť | відбуксирувати | v
+zrážka | зіткнення | n | f
+svedok | свідок | n | m
+záznam o nehode | протокол ДТП | p
+zranený | поранений | a
+prvá pomoc | перша допомога | p
+zavolať políciu | викликати поліцію | p
+zaplatiť pokutu | сплатити штраф | p
+bodový systém | система штрафних балів | p
+odobrať vodičský preukaz | позбавити прав | p
+hasiaci prístroj | вогнегасник | p
+detská autosedačka | дитяче автокрісло | p
+povinná výbava | обов'язкове оснащення | p
+nebezpečná zákruta | небезпечний поворот | p
+zákruta | поворот дороги | n | f
+stúpanie | підйом | n | n
+klesanie | спуск | n | n
+úzka cesta | вузька дорога | p
+zľadovatená vozovka | слизька дорога | p
+vozovka | проїжджа частина | n | f
+riadiť auto | керувати автомобілем | p
+vodičský kurz | курси водіїв | p
+jazdná skúška | іспит з водіння | p
+autoškola v meste | автошкола в місті | p
+vodičák | водійські права (розм.) | n | m | vodičský preukaz
+skúška z jazdy | іспит з їзди | p
+predpisy | правила (приписи) | n | m
+dopravný policajt | регулювальник | p
+parkovacie miesto | паркувальне місце | p
+
+## auto B1
+karoséria | кузов | n | f
+podvozok | ходова частина | n | m
+nárazník | бампер | n | m
+blatník | крило авто | n | m
+strešný nosič | багажник на даху | p
+ťažné zariadenie | фаркоп | p
+svetlomet | фара головного світла | n | m
+brzdové svetlá | стоп-сигнали | p
+cúvacie svetlo | ліхтар заднього ходу | p
+palivo | пальне | n | n
+spotreba paliva | витрата пального | p
+dojazd | запас ходу | n | m
+chladiaca kvapalina | охолоджувальна рідина | p
+brzdová kvapalina | гальмівна рідина | p
+nemrznúca zmes | антифриз | p
+filter | фільтр | n | m
+sviečka | свічка запалювання | n | f
+remeň | ремінь двигуна | n | m
+tlmič | амортизатор | n | m
+katalyzátor | каталізатор | n | m
+zbiehavosť | розвал-сходження | n | f
+vyváženie kolies | балансування коліс | p
+dezén | протектор | n | m
+tlak v pneumatikách | тиск у шинах | p
+dofúkať pneumatiku | підкачати шину | p
+výmena oleja | заміна оливи | p
+servisná prehliadka | планове ТО | p
+servisná knižka | сервісна книжка | p
+záruka | гарантія | n | f
+náhradný diel | запчастина | p
+originálny | оригінальний | a
+opotrebovaný | зношений | a
+hrdzavý | іржавий | a
+hrdza | іржа | n | f
+škrabanec | подряпина | n | m
+preliačina | вм'ятина | n | f
+lakovať | фарбувати кузов | v
+diagnostika | діагностика | n | f
+porucha motora | несправність двигуна | p
+prehriať sa | перегрітися | v
+vybiť sa | розрядитися | v
+nenaštartovať | не завестися | v
+riadenie | кермове керування | n | n
+posilňovač riadenia | підсилювач керма | p
+airbag | подушка безпеки | n | m
+parkovací senzor | парктронік | p
+cúvacia kamera | камера заднього виду | p
+tempomat | круїз-контроль | n | m
+hybridné auto | гібридне авто | p
+nabíjacia stanica | зарядна станція | p
+nabíjať | заряджати | v
+kombi | універсал (кузов) | n | n
+sedan | седан | n | m
+terénne auto | позашляховик | p
+kabriolet | кабріолет | n | m
+karavan | автобудинок | n | m
+príves | причіп | n | m
+autobazár | автобазар | n | m
+autosalón | автосалон | n | m
+leasing | лізинг | n | m
+kúpna zmluva | договір купівлі-продажу | p
+prepis vozidla | переоформлення авто | p
+dopravný inšpektorát | відділ дорожньої поліції | p
+evidencia vozidiel | реєстрація транспортних засобів | p
+parkovacia karta | паркувальна карта | p
+rezidentské parkovanie | паркування для мешканців | p
+modrá zóna | зона платного паркування | p
+odtiahnutie vozidla | евакуація авто | p
+spolujazda | спільна поїздка | n | f
+zdieľanie áut | каршеринг | p
+odpočívadlo | зона відпочинку на трасі | n | n
+únava za volantom | втома за кермом | p
+mikrospánok | мікросон | n | m
+pozornosť | зосередженість | n | f
+telefonovať za volantom | телефонувати за кермом | p
+obmedzená viditeľnosť | обмежена видимість | p
+bezohľadný | нерозсудливий | a
+plynulý | плавний | a
+plynule | плавно | d
+náhle | різко | d
+prudko brzdiť | різко гальмувати | p
+zrýchliť | прискоритися | v
+spomaliť | сповільнитися | v
+zaradiť sa | перестроїтися | v
+uvoľniť cestu | звільнити дорогу | p
+vodičský preukaz skupiny C | права категорії C | p
+osvedčenie o evidencii | свідоцтво про реєстрацію | p
+pravidelný servis | регулярне обслуговування | p
+nová batéria | новий акумулятор | p
+vymeniť olej | замінити оливу | p
+skontrolovať tlak | перевірити тиск | p
+kontrola svetiel | перевірка світла | p
+stav tachometra | пробіг | p
+najazdené kilometre | пройдені кілометри | p
+výmena pneumatík | заміна шин | p
+letné pneumatiky | літні шини | p
+zimná výbava | зимове спорядження | p
+umývanie podvozku | миття днища | p
+ťažné vozidlo | тягач | p
+nákladný priestor | вантажний відсік | p
+predajca áut | продавець авто | p
+skúšobná jazda | тест-драйв | p
+
+## auto B2
+zákon o cestnej premávke | закон про дорожній рух | p
+vyhláška | постанова (підзаконний акт) | n | f
+správny delikt | адміністративне правопорушення | p
+trestný čin | кримінальний злочин | p
+zavinenie | вина | n | n
+spoluzavinenie | спільна вина | n | n
+poškodený | потерпілий | n | m
+vinník | винуватець | n | m
+poistná udalosť | страховий випадок | p
+poistné plnenie | страхова виплата | p
+spoluúčasť | франшиза | n | f
+bonus za bezškodovosť | бонус за безаварійність | p
+likvidátor | оцінювач збитків | n | m
+totálna škoda | повна загибель авто | p
+znalec | експерт | n | m
+súdny spor | судовий спір | p
+odškodnenie | компенсація | n | n
+ujsť z miesta nehody | втекти з місця ДТП | p
+nedať prednosť | не дати дорогу | p
+jazda pod vplyvom | керування в нетверезому стані | p
+odmietnuť dychovú skúšku | відмовитися від перевірки на алкоголь | p
+zákaz činnosti | позбавлення права керування | p
+blokové konanie | штраф на місці | p
+odvolanie | оскарження | n | n
+lekárska prehliadka | медичний огляд | p
+psychotest | психологічне тестування | n | m
+preškolenie | перенавчання | n | n
+vrátenie vodičského preukazu | повернення прав | p
+medzinárodný vodičský preukaz | міжнародне посвідчення водія | p
+platnosť | термін дії | n | f
+predĺžiť platnosť | продовжити термін дії | p
+emisné normy | норми викидів | p
+spaľovací motor | двигун внутрішнього згоряння | p
+elektromotor | електродвигун | n | m
+krútiaci moment | крутний момент | p
+výkon | потужність | n | m
+konská sila | кінська сила | p
+objem motora | об'єм двигуна | p
+turbodúchadlo | турбонагнітач | n | n
+pohon všetkých kolies | повний привід | p
+predný náhon | передній привід | p
+zadný náhon | задній привід | p
+diferenciál | диференціал | n | m
+odpruženie | підвіска | n | n
+stabilizačný systém | система стабілізації | p
+protiblokovací systém | антиблокувальна система | p
+adaptívny tempomat | адаптивний круїз-контроль | p
+asistent udržiavania v pruhu | система утримання смуги | p
+autonómne riadenie | автономне керування | p
+aerodynamika | аеродинаміка | n | f
+brzdná dráha | гальмівний шлях | p
+reakčný čas | час реакції | p
+aquaplaning | аквапланування | n | m
+defenzívna jazda | оборонне водіння | p
+predvídavosť | передбачливість | n | f
+agresívny vodič | агресивний водій | p
+riskantný manéver | ризикований маневр | p
+vyhnúť sa zrážke | уникнути зіткнення | p
+strhnúť volant | різко крутнути кермо | p
+protismer | зустрічна смуга | n | m
+dostať sa do protismeru | виїхати на зустрічну смугу | p
+diaľničný privádzač | під'їзд до автомагістралі | p
+zjazd | з'їзд | n | m
+nájazd | в'їзд на трасу | n | m
+odstavný pruh | аварійна смуга | p
+rozhľad | огляд (видимість) | n | m
+kolóna | колона машин | n | f
+záchranná ulička | коридор для екстрених служб | p
+uzávera cesty | закриття дороги | p
+mýtna brána | пункт оплати проїзду | p
+elektronické mýto | електронна оплата проїзду | p
+tranzit | транзит | n | m
+kamiónová doprava | вантажні перевезення | p
+tachograf | тахограф | n | m
+bezpečnostná prestávka | обов'язкова перерва | p
+pracovný čas vodiča | робочий час водія | p
+technický stav vozidla | технічний стан авто | p
+nepojazdný | непридатний до руху | a
+vrak | розбите авто | n | m
+ekologická likvidácia | утилізація авто | p
+šrotovné | виплата за утилізацію | n | n
+dopravný priestupok | порушення ПДР | p
+pokutový blok | квитанція про штраф | p
+registračná povinnosť | обов'язок реєстрації | p
+zodpovednosť za škodu | відповідальність за збитки | p
+poistná zmluva | договір страхування | p
+trvalé zranenie | тривала травма | p
+dopravná výchova | навчання безпеки руху | p
+rýchlostná cesta | швидкісна дорога | p
+dopravné značenie | дорожня розмітка й знаки | p
+dopravná psychológia | психологія руху | p
+riadenie únavy | контроль втоми | p
+asistent núdzového brzdenia | система екстреного гальмування | p
+nočné videnie | нічне бачення | p
+rozpoznávanie značiek | розпізнавання знаків | p
+tlak na brzdový pedál | тиск на педаль гальма | p
+vodičská prax | водійський стаж | p
+dopravná nehodovosť | аварійність | p
+smrteľná nehoda | смертельна ДТП | p
+bezpečnostné prvky | елементи безпеки | p
+riadiaca jednotka | блок керування | p
+palivová účinnosť | паливна ефективність | p
+vodík | водень | n | m

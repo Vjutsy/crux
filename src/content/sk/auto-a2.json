@@ -1,0 +1,638 @@
+{
+  "id": "auto-a2",
+  "themeId": "auto",
+  "theme": "Авто й водійські права",
+  "cefr": "A2",
+  "words": [
+    {
+      "id": "cestna-premavka",
+      "sk": "cestná premávka",
+      "ua": "дорожній рух",
+      "pos": "phrase"
+    },
+    {
+      "id": "pravidla-cestnej-premavky",
+      "sk": "pravidlá cestnej premávky",
+      "ua": "правила дорожнього руху",
+      "pos": "phrase"
+    },
+    {
+      "id": "prednost-v-jazde",
+      "sk": "prednosť v jazde",
+      "ua": "перевага в русі",
+      "pos": "phrase"
+    },
+    {
+      "id": "hlavna-cesta",
+      "sk": "hlavná cesta",
+      "ua": "головна дорога",
+      "pos": "phrase"
+    },
+    {
+      "id": "vedlajsia-cesta",
+      "sk": "vedľajšia cesta",
+      "ua": "другорядна дорога",
+      "pos": "phrase"
+    },
+    {
+      "id": "daj-prednost-v-jazde",
+      "sk": "daj prednosť v jazde",
+      "ua": "дай дорогу",
+      "pos": "phrase"
+    },
+    {
+      "id": "zakaz-vjazdu",
+      "sk": "zákaz vjazdu",
+      "ua": "в'їзд заборонено",
+      "pos": "phrase"
+    },
+    {
+      "id": "zakaz-zastavenia",
+      "sk": "zákaz zastavenia",
+      "ua": "зупинку заборонено",
+      "pos": "phrase"
+    },
+    {
+      "id": "zakaz-statia",
+      "sk": "zákaz státia",
+      "ua": "стоянку заборонено",
+      "pos": "phrase"
+    },
+    {
+      "id": "obytna-zona",
+      "sk": "obytná zóna",
+      "ua": "житлова зона",
+      "pos": "phrase"
+    },
+    {
+      "id": "zeleznicne-priecestie",
+      "sk": "železničné priecestie",
+      "ua": "залізничний переїзд",
+      "pos": "phrase"
+    },
+    {
+      "id": "povolena-rychlost",
+      "sk": "povolená rýchlosť",
+      "ua": "дозволена швидкість",
+      "pos": "phrase"
+    },
+    {
+      "id": "prekrocit-rychlost",
+      "sk": "prekročiť rýchlosť",
+      "ua": "перевищити швидкість",
+      "pos": "phrase"
+    },
+    {
+      "id": "radar",
+      "sk": "radar",
+      "ua": "радар",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "alkohol-za-volantom",
+      "sk": "alkohol za volantom",
+      "ua": "алкоголь за кермом",
+      "pos": "phrase"
+    },
+    {
+      "id": "dychova-skuska",
+      "sk": "dychová skúška",
+      "ua": "перевірка на алкоголь",
+      "pos": "phrase"
+    },
+    {
+      "id": "promile",
+      "sk": "promile",
+      "ua": "проміле",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "policajna-kontrola",
+      "sk": "policajná kontrola",
+      "ua": "поліцейська перевірка",
+      "pos": "phrase"
+    },
+    {
+      "id": "doklady",
+      "sk": "doklady",
+      "ua": "документи",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "technicky-preukaz",
+      "sk": "technický preukaz",
+      "ua": "техпаспорт",
+      "pos": "phrase"
+    },
+    {
+      "id": "povinne-zmluvne-poistenie",
+      "sk": "povinné zmluvné poistenie",
+      "ua": "обов'язкове автострахування",
+      "pos": "phrase"
+    },
+    {
+      "id": "havarijne-poistenie",
+      "sk": "havarijné poistenie",
+      "ua": "страхування КАСКО",
+      "pos": "phrase"
+    },
+    {
+      "id": "emisna-kontrola",
+      "sk": "emisná kontrola",
+      "ua": "перевірка викидів",
+      "pos": "phrase"
+    },
+    {
+      "id": "technicka-kontrola",
+      "sk": "technická kontrola",
+      "ua": "техогляд",
+      "pos": "phrase"
+    },
+    {
+      "id": "evidencne-cislo",
+      "sk": "evidenčné číslo",
+      "ua": "номерний знак",
+      "pos": "phrase",
+      "skAlt": ["ŠPZ", "EČV"]
+    },
+    {
+      "id": "skupina-b",
+      "sk": "skupina B",
+      "ua": "категорія B",
+      "pos": "phrase"
+    },
+    {
+      "id": "teoreticka-skuska",
+      "sk": "teoretická skúška",
+      "ua": "теоретичний іспит",
+      "pos": "phrase"
+    },
+    {
+      "id": "prakticka-skuska",
+      "sk": "praktická skúška",
+      "ua": "практичний іспит",
+      "pos": "phrase"
+    },
+    {
+      "id": "skusobny-komisar",
+      "sk": "skúšobný komisár",
+      "ua": "екзаменатор",
+      "pos": "phrase"
+    },
+    {
+      "id": "cvicna-jazda",
+      "sk": "cvičná jazda",
+      "ua": "навчальна поїздка",
+      "pos": "phrase"
+    },
+    {
+      "id": "testove-otazky",
+      "sk": "testové otázky",
+      "ua": "тестові питання",
+      "pos": "phrase"
+    },
+    {
+      "id": "zlozit-skusku",
+      "sk": "zložiť skúšku",
+      "ua": "скласти іспит",
+      "pos": "phrase"
+    },
+    {
+      "id": "prepadnut-na-skuske",
+      "sk": "prepadnúť na skúške",
+      "ua": "провалити іспит",
+      "pos": "phrase"
+    },
+    {
+      "id": "zacinajuci-vodic",
+      "sk": "začínajúci vodič",
+      "ua": "водій-початківець",
+      "pos": "phrase"
+    },
+    {
+      "id": "skuseny-vodic",
+      "sk": "skúsený vodič",
+      "ua": "досвідчений водій",
+      "pos": "phrase"
+    },
+    {
+      "id": "parkovanie",
+      "sk": "parkovanie",
+      "ua": "паркування",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "pozdlzne-parkovanie",
+      "sk": "pozdĺžne parkovanie",
+      "ua": "паралельне паркування",
+      "pos": "phrase"
+    },
+    {
+      "id": "cuvanie",
+      "sk": "cúvanie",
+      "ua": "рух заднім ходом",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "otacanie",
+      "sk": "otáčanie",
+      "ua": "розворот",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "otocit-sa",
+      "sk": "otočiť sa",
+      "ua": "розвернутися",
+      "pos": "verb"
+    },
+    {
+      "id": "radit",
+      "sk": "radiť",
+      "ua": "перемикати передачі",
+      "pos": "verb"
+    },
+    {
+      "id": "prevodovka",
+      "sk": "prevodovka",
+      "ua": "коробка передач",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "manual",
+      "sk": "manuál",
+      "ua": "механічна коробка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "automat",
+      "sk": "automat",
+      "ua": "автоматична коробка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "rychlostny-stupen",
+      "sk": "rýchlostný stupeň",
+      "ua": "передача",
+      "pos": "phrase"
+    },
+    {
+      "id": "neutral",
+      "sk": "neutrál",
+      "ua": "нейтральна передача",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "rucna-brzda",
+      "sk": "ručná brzda",
+      "ua": "ручне гальмо",
+      "pos": "phrase"
+    },
+    {
+      "id": "pedal",
+      "sk": "pedál",
+      "ua": "педаль",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "tachometer",
+      "sk": "tachometer",
+      "ua": "спідометр",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "otackomer",
+      "sk": "otáčkomer",
+      "ua": "тахометр",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "palubna-doska",
+      "sk": "palubná doska",
+      "ua": "приладова панель",
+      "pos": "phrase"
+    },
+    {
+      "id": "kontrolka",
+      "sk": "kontrolka",
+      "ua": "контрольна лампа",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "stretavacie-svetla",
+      "sk": "stretávacie svetlá",
+      "ua": "ближнє світло",
+      "pos": "phrase"
+    },
+    {
+      "id": "dialkove-svetla",
+      "sk": "diaľkové svetlá",
+      "ua": "дальнє світло",
+      "pos": "phrase"
+    },
+    {
+      "id": "hmlove-svetla",
+      "sk": "hmlové svetlá",
+      "ua": "протитуманні фари",
+      "pos": "phrase"
+    },
+    {
+      "id": "vystrazne-svetla",
+      "sk": "výstražné svetlá",
+      "ua": "аварійна сигналізація",
+      "pos": "phrase"
+    },
+    {
+      "id": "predbiehanie",
+      "sk": "predbiehanie",
+      "ua": "обгін",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "zaradovanie",
+      "sk": "zaraďovanie",
+      "ua": "перестроювання",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "zmenit-jazdny-pruh",
+      "sk": "zmeniť jazdný pruh",
+      "ua": "змінити смугу руху",
+      "pos": "phrase"
+    },
+    {
+      "id": "bezpecna-vzdialenost",
+      "sk": "bezpečná vzdialenosť",
+      "ua": "безпечна дистанція",
+      "pos": "phrase"
+    },
+    {
+      "id": "mrtvy-uhol",
+      "sk": "mŕtvy uhol",
+      "ua": "сліпа зона",
+      "pos": "phrase"
+    },
+    {
+      "id": "krajnica",
+      "sk": "krajnica",
+      "ua": "узбіччя",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "stredova-ciara",
+      "sk": "stredová čiara",
+      "ua": "осьова лінія",
+      "pos": "phrase"
+    },
+    {
+      "id": "plna-ciara",
+      "sk": "plná čiara",
+      "ua": "суцільна лінія",
+      "pos": "phrase"
+    },
+    {
+      "id": "prerusovana-ciara",
+      "sk": "prerušovaná čiara",
+      "ua": "переривчаста лінія",
+      "pos": "phrase"
+    },
+    {
+      "id": "smyk",
+      "sk": "šmyk",
+      "ua": "занос",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "dostat-smyk",
+      "sk": "dostať šmyk",
+      "ua": "потрапити в занос",
+      "pos": "phrase"
+    },
+    {
+      "id": "zimne-pneumatiky",
+      "sk": "zimné pneumatiky",
+      "ua": "зимові шини",
+      "pos": "phrase"
+    },
+    {
+      "id": "snehove-retaze",
+      "sk": "snehové reťaze",
+      "ua": "ланцюги проти ковзання",
+      "pos": "phrase"
+    },
+    {
+      "id": "defekt",
+      "sk": "defekt",
+      "ua": "прокол шини",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vymenit-koleso",
+      "sk": "vymeniť koleso",
+      "ua": "замінити колесо",
+      "pos": "phrase"
+    },
+    {
+      "id": "zdvihak",
+      "sk": "zdvihák",
+      "ua": "домкрат",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "tazne-lano",
+      "sk": "ťažné lano",
+      "ua": "буксирний трос",
+      "pos": "phrase"
+    },
+    {
+      "id": "odtiahnut",
+      "sk": "odtiahnuť",
+      "ua": "відбуксирувати",
+      "pos": "verb"
+    },
+    {
+      "id": "zrazka",
+      "sk": "zrážka",
+      "ua": "зіткнення",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "svedok",
+      "sk": "svedok",
+      "ua": "свідок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zaznam-o-nehode",
+      "sk": "záznam o nehode",
+      "ua": "протокол ДТП",
+      "pos": "phrase"
+    },
+    {
+      "id": "zraneny",
+      "sk": "zranený",
+      "ua": "поранений",
+      "pos": "adj"
+    },
+    {
+      "id": "prva-pomoc",
+      "sk": "prvá pomoc",
+      "ua": "перша допомога",
+      "pos": "phrase"
+    },
+    {
+      "id": "zavolat-policiu",
+      "sk": "zavolať políciu",
+      "ua": "викликати поліцію",
+      "pos": "phrase"
+    },
+    {
+      "id": "zaplatit-pokutu",
+      "sk": "zaplatiť pokutu",
+      "ua": "сплатити штраф",
+      "pos": "phrase"
+    },
+    {
+      "id": "bodovy-system",
+      "sk": "bodový systém",
+      "ua": "система штрафних балів",
+      "pos": "phrase"
+    },
+    {
+      "id": "odobrat-vodicsky-preukaz",
+      "sk": "odobrať vodičský preukaz",
+      "ua": "позбавити прав",
+      "pos": "phrase"
+    },
+    {
+      "id": "hasiaci-pristroj",
+      "sk": "hasiaci prístroj",
+      "ua": "вогнегасник",
+      "pos": "phrase"
+    },
+    {
+      "id": "detska-autosedacka",
+      "sk": "detská autosedačka",
+      "ua": "дитяче автокрісло",
+      "pos": "phrase"
+    },
+    {
+      "id": "povinna-vybava",
+      "sk": "povinná výbava",
+      "ua": "обов'язкове оснащення",
+      "pos": "phrase"
+    },
+    {
+      "id": "nebezpecna-zakruta",
+      "sk": "nebezpečná zákruta",
+      "ua": "небезпечний поворот",
+      "pos": "phrase"
+    },
+    {
+      "id": "zakruta",
+      "sk": "zákruta",
+      "ua": "поворот дороги",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "stupanie",
+      "sk": "stúpanie",
+      "ua": "підйом",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "klesanie",
+      "sk": "klesanie",
+      "ua": "спуск",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "uzka-cesta",
+      "sk": "úzka cesta",
+      "ua": "вузька дорога",
+      "pos": "phrase"
+    },
+    {
+      "id": "zladovatena-vozovka",
+      "sk": "zľadovatená vozovka",
+      "ua": "слизька дорога",
+      "pos": "phrase"
+    },
+    {
+      "id": "vozovka",
+      "sk": "vozovka",
+      "ua": "проїжджа частина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "riadit-auto",
+      "sk": "riadiť auto",
+      "ua": "керувати автомобілем",
+      "pos": "phrase"
+    },
+    {
+      "id": "vodicsky-kurz",
+      "sk": "vodičský kurz",
+      "ua": "курси водіїв",
+      "pos": "phrase"
+    },
+    {
+      "id": "jazdna-skuska",
+      "sk": "jazdná skúška",
+      "ua": "іспит з водіння",
+      "pos": "phrase"
+    },
+    {
+      "id": "autoskola-v-meste",
+      "sk": "autoškola v meste",
+      "ua": "автошкола в місті",
+      "pos": "phrase"
+    },
+    {
+      "id": "vodicak",
+      "sk": "vodičák",
+      "ua": "водійські права (розм.)",
+      "pos": "noun",
+      "gender": "m",
+      "skAlt": ["vodičský preukaz"]
+    },
+    {
+      "id": "skuska-z-jazdy",
+      "sk": "skúška z jazdy",
+      "ua": "іспит з їзди",
+      "pos": "phrase"
+    },
+    {
+      "id": "predpisy",
+      "sk": "predpisy",
+      "ua": "правила (приписи)",
+      "pos": "noun",
+      "gender": "m"
+    }
+  ]
+}

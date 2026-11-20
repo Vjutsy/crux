@@ -1,0 +1,642 @@
+{
+  "id": "auto-b1",
+  "themeId": "auto",
+  "theme": "Авто й водійські права",
+  "cefr": "B1",
+  "words": [
+    {
+      "id": "karoseria",
+      "sk": "karoséria",
+      "ua": "кузов",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "podvozok",
+      "sk": "podvozok",
+      "ua": "ходова частина",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "naraznik",
+      "sk": "nárazník",
+      "ua": "бампер",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "blatnik",
+      "sk": "blatník",
+      "ua": "крило авто",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "stresny-nosic",
+      "sk": "strešný nosič",
+      "ua": "багажник на даху",
+      "pos": "phrase"
+    },
+    {
+      "id": "tazne-zariadenie",
+      "sk": "ťažné zariadenie",
+      "ua": "фаркоп",
+      "pos": "phrase"
+    },
+    {
+      "id": "svetlomet",
+      "sk": "svetlomet",
+      "ua": "фара головного світла",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "brzdove-svetla",
+      "sk": "brzdové svetlá",
+      "ua": "стоп-сигнали",
+      "pos": "phrase"
+    },
+    {
+      "id": "cuvacie-svetlo",
+      "sk": "cúvacie svetlo",
+      "ua": "ліхтар заднього ходу",
+      "pos": "phrase"
+    },
+    {
+      "id": "palivo",
+      "sk": "palivo",
+      "ua": "пальне",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "spotreba-paliva",
+      "sk": "spotreba paliva",
+      "ua": "витрата пального",
+      "pos": "phrase"
+    },
+    {
+      "id": "dojazd",
+      "sk": "dojazd",
+      "ua": "запас ходу",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "chladiaca-kvapalina",
+      "sk": "chladiaca kvapalina",
+      "ua": "охолоджувальна рідина",
+      "pos": "phrase"
+    },
+    {
+      "id": "brzdova-kvapalina",
+      "sk": "brzdová kvapalina",
+      "ua": "гальмівна рідина",
+      "pos": "phrase"
+    },
+    {
+      "id": "nemrznuca-zmes",
+      "sk": "nemrznúca zmes",
+      "ua": "антифриз",
+      "pos": "phrase"
+    },
+    {
+      "id": "filter",
+      "sk": "filter",
+      "ua": "фільтр",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sviecka",
+      "sk": "sviečka",
+      "ua": "свічка запалювання",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "remen",
+      "sk": "remeň",
+      "ua": "ремінь двигуна",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "tlmic",
+      "sk": "tlmič",
+      "ua": "амортизатор",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "katalyzator",
+      "sk": "katalyzátor",
+      "ua": "каталізатор",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zbiehavost",
+      "sk": "zbiehavosť",
+      "ua": "розвал-сходження",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vyvazenie-kolies",
+      "sk": "vyváženie kolies",
+      "ua": "балансування коліс",
+      "pos": "phrase"
+    },
+    {
+      "id": "dezen",
+      "sk": "dezén",
+      "ua": "протектор",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "tlak-v-pneumatikach",
+      "sk": "tlak v pneumatikách",
+      "ua": "тиск у шинах",
+      "pos": "phrase"
+    },
+    {
+      "id": "dofukat-pneumatiku",
+      "sk": "dofúkať pneumatiku",
+      "ua": "підкачати шину",
+      "pos": "phrase"
+    },
+    {
+      "id": "vymena-oleja",
+      "sk": "výmena oleja",
+      "ua": "заміна оливи",
+      "pos": "phrase"
+    },
+    {
+      "id": "servisna-prehliadka",
+      "sk": "servisná prehliadka",
+      "ua": "планове ТО",
+      "pos": "phrase"
+    },
+    {
+      "id": "servisna-knizka",
+      "sk": "servisná knižka",
+      "ua": "сервісна книжка",
+      "pos": "phrase"
+    },
+    {
+      "id": "zaruka",
+      "sk": "záruka",
+      "ua": "гарантія",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nahradny-diel",
+      "sk": "náhradný diel",
+      "ua": "запчастина",
+      "pos": "phrase"
+    },
+    {
+      "id": "originalny",
+      "sk": "originálny",
+      "ua": "оригінальний",
+      "pos": "adj"
+    },
+    {
+      "id": "opotrebovany",
+      "sk": "opotrebovaný",
+      "ua": "зношений",
+      "pos": "adj"
+    },
+    {
+      "id": "hrdzavy",
+      "sk": "hrdzavý",
+      "ua": "іржавий",
+      "pos": "adj"
+    },
+    {
+      "id": "hrdza",
+      "sk": "hrdza",
+      "ua": "іржа",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "skrabanec",
+      "sk": "škrabanec",
+      "ua": "подряпина",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "preliacina",
+      "sk": "preliačina",
+      "ua": "вм'ятина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "lakovat",
+      "sk": "lakovať",
+      "ua": "фарбувати кузов",
+      "pos": "verb"
+    },
+    {
+      "id": "diagnostika",
+      "sk": "diagnostika",
+      "ua": "діагностика",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "porucha-motora",
+      "sk": "porucha motora",
+      "ua": "несправність двигуна",
+      "pos": "phrase"
+    },
+    {
+      "id": "prehriat-sa",
+      "sk": "prehriať sa",
+      "ua": "перегрітися",
+      "pos": "verb"
+    },
+    {
+      "id": "vybit-sa",
+      "sk": "vybiť sa",
+      "ua": "розрядитися",
+      "pos": "verb"
+    },
+    {
+      "id": "nenastartovat",
+      "sk": "nenaštartovať",
+      "ua": "не завестися",
+      "pos": "verb"
+    },
+    {
+      "id": "riadenie",
+      "sk": "riadenie",
+      "ua": "кермове керування",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "posilnovac-riadenia",
+      "sk": "posilňovač riadenia",
+      "ua": "підсилювач керма",
+      "pos": "phrase"
+    },
+    {
+      "id": "airbag",
+      "sk": "airbag",
+      "ua": "подушка безпеки",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "parkovaci-senzor",
+      "sk": "parkovací senzor",
+      "ua": "парктронік",
+      "pos": "phrase"
+    },
+    {
+      "id": "cuvacia-kamera",
+      "sk": "cúvacia kamera",
+      "ua": "камера заднього виду",
+      "pos": "phrase"
+    },
+    {
+      "id": "tempomat",
+      "sk": "tempomat",
+      "ua": "круїз-контроль",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "hybridne-auto",
+      "sk": "hybridné auto",
+      "ua": "гібридне авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "nabijacia-stanica",
+      "sk": "nabíjacia stanica",
+      "ua": "зарядна станція",
+      "pos": "phrase"
+    },
+    {
+      "id": "nabijat",
+      "sk": "nabíjať",
+      "ua": "заряджати",
+      "pos": "verb"
+    },
+    {
+      "id": "kombi",
+      "sk": "kombi",
+      "ua": "універсал (кузов)",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "sedan",
+      "sk": "sedan",
+      "ua": "седан",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "terenne-auto",
+      "sk": "terénne auto",
+      "ua": "позашляховик",
+      "pos": "phrase"
+    },
+    {
+      "id": "kabriolet",
+      "sk": "kabriolet",
+      "ua": "кабріолет",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "karavan",
+      "sk": "karavan",
+      "ua": "автобудинок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "prives",
+      "sk": "príves",
+      "ua": "причіп",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "autobazar",
+      "sk": "autobazár",
+      "ua": "автобазар",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "autosalon",
+      "sk": "autosalón",
+      "ua": "автосалон",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "leasing",
+      "sk": "leasing",
+      "ua": "лізинг",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kupna-zmluva",
+      "sk": "kúpna zmluva",
+      "ua": "договір купівлі-продажу",
+      "pos": "phrase"
+    },
+    {
+      "id": "prepis-vozidla",
+      "sk": "prepis vozidla",
+      "ua": "переоформлення авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "dopravny-inspektorat",
+      "sk": "dopravný inšpektorát",
+      "ua": "відділ дорожньої поліції",
+      "pos": "phrase"
+    },
+    {
+      "id": "evidencia-vozidiel",
+      "sk": "evidencia vozidiel",
+      "ua": "реєстрація транспортних засобів",
+      "pos": "phrase"
+    },
+    {
+      "id": "parkovacia-karta",
+      "sk": "parkovacia karta",
+      "ua": "паркувальна карта",
+      "pos": "phrase"
+    },
+    {
+      "id": "rezidentske-parkovanie",
+      "sk": "rezidentské parkovanie",
+      "ua": "паркування для мешканців",
+      "pos": "phrase"
+    },
+    {
+      "id": "modra-zona",
+      "sk": "modrá zóna",
+      "ua": "зона платного паркування",
+      "pos": "phrase"
+    },
+    {
+      "id": "odtiahnutie-vozidla",
+      "sk": "odtiahnutie vozidla",
+      "ua": "евакуація авто",
+      "pos": "phrase"
+    },
+    {
+      "id": "spolujazda",
+      "sk": "spolujazda",
+      "ua": "спільна поїздка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zdielanie-aut",
+      "sk": "zdieľanie áut",
+      "ua": "каршеринг",
+      "pos": "phrase"
+    },
+    {
+      "id": "odpocivadlo",
+      "sk": "odpočívadlo",
+      "ua": "зона відпочинку на трасі",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "unava-za-volantom",
+      "sk": "únava za volantom",
+      "ua": "втома за кермом",
+      "pos": "phrase"
+    },
+    {
+      "id": "mikrospanok",
+      "sk": "mikrospánok",
+      "ua": "мікросон",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pozornost",
+      "sk": "pozornosť",
+      "ua": "зосередженість",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "telefonovat-za-volantom",
+      "sk": "telefonovať za volantom",
+      "ua": "телефонувати за кермом",
+      "pos": "phrase"
+    },
+    {
+      "id": "obmedzena-viditelnost",
+      "sk": "obmedzená viditeľnosť",
+      "ua": "обмежена видимість",
+      "pos": "phrase"
+    },
+    {
+      "id": "bezohladny",
+      "sk": "bezohľadný",
+      "ua": "нерозсудливий",
+      "pos": "adj"
+    },
+    {
+      "id": "plynuly",
+      "sk": "plynulý",
+      "ua": "плавний",
+      "pos": "adj"
+    },
+    {
+      "id": "plynule",
+      "sk": "plynule",
+      "ua": "плавно",
+      "pos": "adv"
+    },
+    {
+      "id": "nahle",
+      "sk": "náhle",
+      "ua": "різко",
+      "pos": "adv"
+    },
+    {
+      "id": "prudko-brzdit",
+      "sk": "prudko brzdiť",
+      "ua": "різко гальмувати",
+      "pos": "phrase"
+    },
+    {
+      "id": "zrychlit",
+      "sk": "zrýchliť",
+      "ua": "прискоритися",
+      "pos": "verb"
+    },
+    {
+      "id": "spomalit",
+      "sk": "spomaliť",
+      "ua": "сповільнитися",
+      "pos": "verb"
+    },
+    {
+      "id": "zaradit-sa",
+      "sk": "zaradiť sa",
+      "ua": "перестроїтися",
+      "pos": "verb"
+    },
+    {
+      "id": "uvolnit-cestu",
+      "sk": "uvoľniť cestu",
+      "ua": "звільнити дорогу",
+      "pos": "phrase"
+    },
+    {
+      "id": "vodicsky-preukaz-skupiny-c",
+      "sk": "vodičský preukaz skupiny C",
+      "ua": "права категорії C",
+      "pos": "phrase"
+    },
+    {
+      "id": "osvedcenie-o-evidencii",
+      "sk": "osvedčenie o evidencii",
+      "ua": "свідоцтво про реєстрацію",
+      "pos": "phrase"
+    },
+    {
+      "id": "pravidelny-servis",
+      "sk": "pravidelný servis",
+      "ua": "регулярне обслуговування",
+      "pos": "phrase"
+    },
+    {
+      "id": "nova-bateria",
+      "sk": "nová batéria",
+      "ua": "новий акумулятор",
+      "pos": "phrase"
+    },
+    {
+      "id": "vymenit-olej",
+      "sk": "vymeniť olej",
+      "ua": "замінити оливу",
+      "pos": "phrase"
+    },
+    {
+      "id": "skontrolovat-tlak",
+      "sk": "skontrolovať tlak",
+      "ua": "перевірити тиск",
+      "pos": "phrase"
+    },
+    {
+      "id": "kontrola-svetiel",
+      "sk": "kontrola svetiel",
+      "ua": "перевірка світла",
+      "pos": "phrase"
+    },
+    {
+      "id": "stav-tachometra",
+      "sk": "stav tachometra",
+      "ua": "пробіг",
+      "pos": "phrase"
+    },
+    {
+      "id": "najazdene-kilometre",
+      "sk": "najazdené kilometre",
+      "ua": "пройдені кілометри",
+      "pos": "phrase"
+    },
+    {
+      "id": "vymena-pneumatik",
+      "sk": "výmena pneumatík",
+      "ua": "заміна шин",
+      "pos": "phrase"
+    },
+    {
+      "id": "letne-pneumatiky",
+      "sk": "letné pneumatiky",
+      "ua": "літні шини",
+      "pos": "phrase"
+    },
+    {
+      "id": "zimna-vybava",
+      "sk": "zimná výbava",
+      "ua": "зимове спорядження",
+      "pos": "phrase"
+    },
+    {
+      "id": "umyvanie-podvozku",
+      "sk": "umývanie podvozku",
+      "ua": "миття днища",
+      "pos": "phrase"
+    },
+    {
+      "id": "tazne-vozidlo",
+      "sk": "ťažné vozidlo",
+      "ua": "тягач",
+      "pos": "phrase"
+    },
+    {
+      "id": "nakladny-priestor",
+      "sk": "nákladný priestor",
+      "ua": "вантажний відсік",
+      "pos": "phrase"
+    }
+  ]
+}
