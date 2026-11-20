@@ -1,7 +1,7 @@
 import { z } from 'zod';
 
 export const PartOfSpeech = z.enum(['noun', 'verb', 'adj', 'adv', 'num', 'pron', 'prep', 'phrase', 'other']);
-export const Cefr = z.enum(['A0', 'A1', 'A2', 'B1', 'B2', 'C1']);
+export const Cefr = z.enum(['A1', 'A2', 'B1', 'B2', 'C1']);
 
 export const Word = z.object({
   id: z.string().regex(/^[a-z0-9-]+$/, 'id: латиниця в нижньому регістрі, цифри, дефіс'),
@@ -22,7 +22,7 @@ export const WordGroup = z
     themeId: z.string(),
     theme: z.string(),
     cefr: Cefr,
-    words: z.array(Word).min(20, 'у групі має бути щонайменше 20 слів'),
+    words: z.array(Word).min(100, 'у групі має бути щонайменше 100 слів'),
   })
   .superRefine((g, ctx) => {
     const ids = new Set<string>();

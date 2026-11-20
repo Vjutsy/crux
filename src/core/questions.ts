@@ -44,17 +44,31 @@ export function updateBox(boxes: LeitnerBoxes, wordId: string, correct: boolean)
   return { ...boxes, [wordId]: correct ? Math.min(5, cur + 1) : 1 };
 }
 
-/** Обирає наступне слово: слабкі частіше, без повторів серед останніх recentLimit. */
-export function pickWord(group: WordGroup, boxes: LeitnerBoxes, recent: readonly string[], rng: Rng, recentLimit = 6): Word {
+/** Коли слово показували востаннє: номер питання з лічильника `asked` (між стінами й сесіями). */
+export type SeenLog = Record<string, number>;
+
+/** Частка питань, що повертають слово з помилкою, поки в групі ще є нові слова. */
+export const REVIEW_SHARE = 0.25;
+/** Зі скількох «найдавніших» слів обираємо випадково — щоб порядок не був завченим. */
+const FRESH_POOL = 4;
+
+/**
+ * Обирає наступне слово так, щоб слова чергувались: спершу ті, яких ще не було, потім ті,
+ * що показувались найдавніше, — за ~100 питань група проходиться повністю, без повторів.
+ * Слова з помилкою (коробка 1) повертаються раніше: приблизно кожне 4-те питання.
+ * Останні `recentLimit` слів цієї стіни не повторюються ніколи.
+ */
+export function pickWord(group: WordGroup, boxes: LeitnerBoxes, seen: SeenLog, recent: readonly string[], rng: Rng, recentLimit = 6): Word {
   const recentSet = new Set(recent.slice(-Math.min(recentLimit, group.words.length - 1)));
   const pool = group.words.filter((w) => !recentSet.has(w.id));
-  const weights = pool.map((w) => BOX_WEIGHT[boxes[w.id] ?? 1]!);
-  let r = rng() * weights.reduce((a, b) => a + b, 0);
-  for (let i = 0; i < pool.length; i++) {
-    r -= weights[i]!;
-    if (r <= 0) return pool[i]!;
-  }
-  return pool[pool.length - 1]!;
+  const age = (w: Word) => seen[w.id] ?? -Infinity;
+  const weak = pool.filter((w) => seen[w.id] !== undefined && (boxes[w.id] ?? 1) <= 1).sort((a, b) => age(a) - age(b));
+  if (weak.length > 0 && rng() < REVIEW_SHARE) return weak[0]!;
+  // Найдавніші (або ще не показані) — на початку; при рівності — легші коробки пізніше.
+  const ordered = [...pool].sort((a, b) => age(a) - age(b) || BOX_WEIGHT[boxes[b.id] ?? 1]! - BOX_WEIGHT[boxes[a.id] ?? 1]!);
+  const unseen = ordered.filter((w) => seen[w.id] === undefined);
+  const candidates = (unseen.length > 0 ? unseen : ordered).slice(0, FRESH_POOL);
+  return candidates[Math.floor(rng() * candidates.length)]!;
 }
 
 /** Режим питання з урахуванням частки вписування на цій стіні. */

@@ -5,6 +5,214 @@
   "cefr": "A1",
   "words": [
     {
+      "id": "noz",
+      "sk": "nôž",
+      "ua": "ніж",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "lyzica",
+      "sk": "lyžica",
+      "ua": "ложка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vidlicka",
+      "sk": "vidlička",
+      "ua": "виделка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "tanier",
+      "sk": "tanier",
+      "ua": "тарілка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "hrniec",
+      "sk": "hrniec",
+      "ua": "каструля",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "panvica",
+      "sk": "panvica",
+      "ua": "сковорідка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "salka",
+      "sk": "šálka",
+      "ua": "чашка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pohar",
+      "sk": "pohár",
+      "ua": "склянка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "chladnicka",
+      "sk": "chladnička",
+      "ua": "холодильник",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "sporak",
+      "sk": "sporák",
+      "ua": "плита",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "rura",
+      "sk": "rúra",
+      "ua": "духовка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "stol",
+      "sk": "stôl",
+      "ua": "стіл",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "stolicka",
+      "sk": "stolička",
+      "ua": "стілець",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "chlieb",
+      "sk": "chlieb",
+      "ua": "хліб",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "voda",
+      "sk": "voda",
+      "ua": "вода",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "mlieko",
+      "sk": "mlieko",
+      "ua": "молоко",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "sol",
+      "sk": "soľ",
+      "ua": "сіль",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "cukor",
+      "sk": "cukor",
+      "ua": "цукор",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "maslo",
+      "sk": "maslo",
+      "ua": "масло",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "syr",
+      "sk": "syr",
+      "ua": "сир",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vajce",
+      "sk": "vajce",
+      "ua": "яйце",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "maso",
+      "sk": "mäso",
+      "ua": "м'ясо",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "jablko",
+      "sk": "jablko",
+      "ua": "яблуко",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "polievka",
+      "sk": "polievka",
+      "ua": "суп",
+      "pos": "noun",
+      "gender": "f",
+      "uaAlt": ["юшка"]
+    },
+    {
+      "id": "kava",
+      "sk": "káva",
+      "ua": "кава",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "caj",
+      "sk": "čaj",
+      "ua": "чай",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "jest",
+      "sk": "jesť",
+      "ua": "їсти",
+      "pos": "verb"
+    },
+    {
+      "id": "pit",
+      "sk": "piť",
+      "ua": "пити",
+      "pos": "verb"
+    },
+    {
+      "id": "varit",
+      "sk": "variť",
+      "ua": "варити",
+      "pos": "verb"
+    },
+    {
+      "id": "kuchyna",
+      "sk": "kuchyňa",
+      "ua": "кухня",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
       "id": "ryza",
       "sk": "ryža",
       "ua": "рис",
@@ -189,6 +397,299 @@
       "id": "umyvat",
       "sk": "umývať",
       "ua": "мити",
+      "pos": "verb"
+    },
+    {
+      "id": "banan",
+      "sk": "banán",
+      "ua": "банан",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pomaranc",
+      "sk": "pomaranč",
+      "ua": "апельсин",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "citron",
+      "sk": "citrón",
+      "ua": "лимон",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "hruska",
+      "sk": "hruška",
+      "ua": "груша",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "slivka",
+      "sk": "slivka",
+      "ua": "слива",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "ceresna",
+      "sk": "čerešňa",
+      "ua": "черешня",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "jahoda",
+      "sk": "jahoda",
+      "ua": "полуниця",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "hrozno",
+      "sk": "hrozno",
+      "ua": "виноград",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "broskyna",
+      "sk": "broskyňa",
+      "ua": "персик",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kapusta",
+      "sk": "kapusta",
+      "ua": "капуста",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "paprika",
+      "sk": "paprika",
+      "ua": "перець (овоч)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "salat",
+      "sk": "šalát",
+      "ua": "салат",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "hrach",
+      "sk": "hrach",
+      "ua": "горох",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "fazula",
+      "sk": "fazuľa",
+      "ua": "квасоля",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "huba",
+      "sk": "huba",
+      "ua": "гриб",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "korenie",
+      "sk": "korenie",
+      "ua": "спеції",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "ocot",
+      "sk": "ocot",
+      "ua": "оцет",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "med",
+      "sk": "med",
+      "ua": "мед",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "dzem",
+      "sk": "džem",
+      "ua": "джем",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kolac",
+      "sk": "koláč",
+      "ua": "пиріг",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "torta",
+      "sk": "torta",
+      "ua": "торт",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "cokolada",
+      "sk": "čokoláda",
+      "ua": "шоколад",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zmrzlina",
+      "sk": "zmrzlina",
+      "ua": "морозиво",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "susienka",
+      "sk": "sušienka",
+      "ua": "печиво",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "rozok",
+      "sk": "rožok",
+      "ua": "рогалик",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pecivo",
+      "sk": "pečivo",
+      "ua": "випічка",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "dzus",
+      "sk": "džús",
+      "ua": "сік",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pivo",
+      "sk": "pivo",
+      "ua": "пиво",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "vino",
+      "sk": "víno",
+      "ua": "вино",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "hovadzina",
+      "sk": "hovädzina",
+      "ua": "яловичина",
+      "pos": "noun",
+      "gender": "f",
+      "skAlt": ["hovädzie mäso"]
+    },
+    {
+      "id": "bravcovina",
+      "sk": "bravčovina",
+      "ua": "свинина",
+      "pos": "noun",
+      "gender": "f",
+      "skAlt": ["bravčové mäso"]
+    },
+    {
+      "id": "flasa",
+      "sk": "fľaša",
+      "ua": "пляшка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "miska",
+      "sk": "miska",
+      "ua": "миска",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "podnos",
+      "sk": "podnos",
+      "ua": "піднос",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "obrusok",
+      "sk": "obrúsok",
+      "ua": "серветка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "otvarac",
+      "sk": "otvárač",
+      "ua": "відкривачка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "lyzicka",
+      "sk": "lyžička",
+      "ua": "чайна ложка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "riad",
+      "sk": "riad",
+      "ua": "посуд",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "mraznicka",
+      "sk": "mraznička",
+      "ua": "морозилка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "horuci",
+      "sk": "horúci",
+      "ua": "гарячий",
+      "pos": "adj"
+    },
+    {
+      "id": "miesat",
+      "sk": "miešať",
+      "ua": "змішувати",
+      "pos": "verb"
+    },
+    {
+      "id": "pripravit",
+      "sk": "pripraviť",
+      "ua": "приготувати",
       "pos": "verb"
     }
   ]

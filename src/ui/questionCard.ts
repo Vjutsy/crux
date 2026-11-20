@@ -23,6 +23,15 @@ const HINTS: Record<Question['mode'], string> = {
 
 const esc = (s: string) => s.replace(/[&<>"']/g, (c) => `&#${c.charCodeAt(0)};`);
 
+/** Скасування відкритої картки (вихід у меню посеред питання). */
+let cancelOpen: (() => void) | null = null;
+
+/** Ховає відкриту картку без відповіді; її проміс так і не завершиться — стара стіна вже неактивна. */
+export function closeQuestion() {
+  cancelOpen?.();
+  cancelOpen = null;
+}
+
 export function askQuestion(q: Question, opts: { requireDiacritics: boolean; limbName: string }): Promise<CardResult> {
   const card = $<HTMLDivElement>('card');
   const answers = $<HTMLDivElement>('card-answers');
@@ -61,9 +70,18 @@ export function askQuestion(q: Question, opts: { requireDiacritics: boolean; lim
     input?.focus();
 
     let done = false;
+    cancelOpen = () => {
+      done = true;
+      answers.onclick = null;
+      vv?.removeEventListener('resize', place);
+      card.style.top = '';
+      card.hidden = true;
+      answers.innerHTML = '';
+    };
     const finish = (res: CardResult) => {
       if (done) return;
       done = true;
+      cancelOpen = null;
       answers.onclick = null;
       vv?.removeEventListener('resize', place);
       card.style.top = '';

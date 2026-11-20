@@ -19,6 +19,13 @@ export const COMBO_EVERY = 3;
 /** З якої втоми помилка може зірвати ногу. */
 export const SLIP_FATIGUE = 0.6;
 export const SLIP_CHANCE = 0.5;
+/** Наскільки нижче (px) має бути зачіп, на який з'їжджає нога. */
+export const SLIP_DROP = 12;
+/**
+ * Скільки кроків забирає зісковзування ноги. Без цього зісковзування було вигідним: пошук шляху
+ * з нової пози часто знаходив коротший маршрут, і з самими помилками ~20% перших стін проходились.
+ */
+export const SLIP_COST = 2;
 
 export type Status = 'climbing' | 'question' | 'won' | 'fallen';
 export type FallReason = 'no-steps' | 'slip' | 'stuck';
@@ -124,6 +131,40 @@ function doMove(s: ClimbState, limb: Limb, hold: number, events: ClimbEvent[]) {
   events.push({ type: 'moved', limb, hold });
 }
 
+/**
+ * Нога зісковзує: з'їжджає на найвищий нижчий зачіп, до якого дістає, — тіло опиняється нижче,
+ * тож помилка відкидає назад. Якщо нижче нічого немає, нога повисає, а тулуб лишається на місці.
+ * (Раніше нога просто повисала, а поза перераховувалась вільніше — і зісковзування скорочувало шлях.)
+ */
+function slip(s: ClimbState, f: Limb, events: ClimbEvent[]) {
+  const holds = s.wall.holds;
+  const curY = holds[s.contacts[f]]!.y;
+  let best: { contacts: Contacts; torso: Point; y: number } | null = null;
+  for (let i = 0; i < holds.length; i++) {
+    const h = holds[i]!;
+    if (h.y < curY + SLIP_DROP || (best && h.y >= best.y) || s.contacts.includes(i)) continue;
+    const res = tryMove(holds, s.contacts, f, i, { prev: s.torso });
+    // Тулуб не може піднятися через зісковзування.
+    if (res && res.torso.y >= s.torso.y) best = { ...res, y: h.y };
+  }
+  s.steps -= SLIP_COST;
+  events.push({ type: 'slipped', limb: f });
+  if (best) {
+    s.contacts = best.contacts;
+    s.torso = best.torso;
+    return;
+  }
+  const next = s.contacts.slice() as Contacts;
+  next[f] = -1;
+  if (solvePose(holds, next, { prev: s.torso }) === null) {
+    s.contacts = next;
+    fall(s, 'slip', events);
+    return;
+  }
+  // Поточна поза лишається валідною й без цієї ноги — тулуб не зсуваємо.
+  s.contacts = next;
+}
+
 /** Після руху: вершина, кінець кроків або глухий кут. */
 function settle(s: ClimbState, limb: Limb, hold: number, events: ClimbEvent[]) {
   if (s.status !== 'climbing') return;
@@ -181,16 +222,8 @@ export function answer(s: ClimbState, correct: boolean, rng: Rng): ClimbEvent[] 
       const feet = ([2, 3] as Limb[]).filter((f) => s.contacts[f] >= 0 && f !== limb);
       if (feet.length) {
         const f = feet[Math.floor(rng() * feet.length)]!;
-        const next = s.contacts.slice() as Contacts;
-        next[f] = -1;
-        const torso = solvePose(s.wall.holds, next, { prev: s.torso });
-        s.contacts = next;
-        events.push({ type: 'slipped', limb: f });
-        if (!torso) {
-          fall(s, 'slip', events);
-          return events;
-        }
-        s.torso = torso;
+        slip(s, f, events);
+        if (s.status !== 'climbing') return events;
       }
     }
   }

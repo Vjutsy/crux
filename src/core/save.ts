@@ -1,6 +1,6 @@
 /** Локальне збереження прогресу (IndexedDB через idb-keyval). Без акаунтів. */
 import { get, set } from 'idb-keyval';
-import type { LeitnerBoxes } from './questions';
+import type { LeitnerBoxes, SeenLog } from './questions';
 
 export interface Progress {
   version: 1;
@@ -9,6 +9,9 @@ export interface Progress {
   /** Найкращі зірки: ключ `${groupId}#${wall}`. */
   stars: Record<string, number>;
   boxes: LeitnerBoxes;
+  /** Коли яке слово показували востаннє (для чергування слів) і лічильник усіх питань. */
+  seen: SeenLog;
+  asked: number;
   streak: { lastDay: string; count: number };
   settings: { sound: boolean; music: boolean; climber: string };
   /** Навчання на першій стіні вже пройдене. */
@@ -24,6 +27,8 @@ export const emptyProgress = (): Progress => ({
   unlockedWall: 1,
   stars: {},
   boxes: {},
+  seen: {},
+  asked: 0,
   streak: { lastDay: '', count: 0 },
   settings: { sound: true, music: true, climber: 'iva' },
   tutorialDone: false,

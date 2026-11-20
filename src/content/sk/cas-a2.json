@@ -202,6 +202,449 @@
       "sk": "druhý",
       "ua": "другий",
       "pos": "num"
+    },
+    {
+      "id": "treti",
+      "sk": "tretí",
+      "ua": "третій",
+      "pos": "num"
+    },
+    {
+      "id": "stvrty",
+      "sk": "štvrtý",
+      "ua": "четвертий",
+      "pos": "num"
+    },
+    {
+      "id": "piaty",
+      "sk": "piaty",
+      "ua": "п'ятий",
+      "pos": "num"
+    },
+    {
+      "id": "desiaty",
+      "sk": "desiaty",
+      "ua": "десятий",
+      "pos": "num"
+    },
+    {
+      "id": "desatrocie",
+      "sk": "desaťročie",
+      "ua": "десятиліття",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "tisicrocie",
+      "sk": "tisícročie",
+      "ua": "тисячоліття",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "prestupny-rok",
+      "sk": "prestupný rok",
+      "ua": "високосний рік",
+      "pos": "phrase"
+    },
+    {
+      "id": "obdobie",
+      "sk": "obdobie",
+      "ua": "період",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "okamih",
+      "sk": "okamih",
+      "ua": "мить",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "chvila",
+      "sk": "chvíľa",
+      "ua": "хвилинка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "termin",
+      "sk": "termín",
+      "ua": "термін",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "rozvrh",
+      "sk": "rozvrh",
+      "ua": "розклад",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pracovny-den",
+      "sk": "pracovný deň",
+      "ua": "робочий день",
+      "pos": "phrase"
+    },
+    {
+      "id": "cez-tyzden",
+      "sk": "cez týždeň",
+      "ua": "у будні",
+      "pos": "phrase"
+    },
+    {
+      "id": "predvcerom",
+      "sk": "predvčerom",
+      "ua": "позавчора",
+      "pos": "adv"
+    },
+    {
+      "id": "pozajtra",
+      "sk": "pozajtra",
+      "ua": "післязавтра",
+      "pos": "adv"
+    },
+    {
+      "id": "nedavno",
+      "sk": "nedávno",
+      "ua": "нещодавно",
+      "pos": "adv"
+    },
+    {
+      "id": "coskoro",
+      "sk": "čoskoro",
+      "ua": "незабаром",
+      "pos": "adv"
+    },
+    {
+      "id": "zatial",
+      "sk": "zatiaľ",
+      "ua": "поки що",
+      "pos": "adv"
+    },
+    {
+      "id": "odvtedy",
+      "sk": "odvtedy",
+      "ua": "відтоді",
+      "pos": "adv"
+    },
+    {
+      "id": "denne",
+      "sk": "denne",
+      "ua": "щодня",
+      "pos": "adv"
+    },
+    {
+      "id": "tyzdenne",
+      "sk": "týždenne",
+      "ua": "щотижня",
+      "pos": "adv"
+    },
+    {
+      "id": "rocne",
+      "sk": "ročne",
+      "ua": "щороку",
+      "pos": "adv"
+    },
+    {
+      "id": "zriedka",
+      "sk": "zriedka",
+      "ua": "рідко",
+      "pos": "adv"
+    },
+    {
+      "id": "obcas",
+      "sk": "občas",
+      "ua": "час від часу",
+      "pos": "adv"
+    },
+    {
+      "id": "vianoce",
+      "sk": "Vianoce",
+      "ua": "Різдво",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "velka-noc",
+      "sk": "Veľká noc",
+      "ua": "Великдень",
+      "pos": "phrase"
+    },
+    {
+      "id": "novy-rok",
+      "sk": "Nový rok",
+      "ua": "Новий рік",
+      "pos": "phrase"
+    },
+    {
+      "id": "silvester",
+      "sk": "Silvester",
+      "ua": "новорічна ніч",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "meniny",
+      "sk": "meniny",
+      "ua": "іменини",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vyrocie",
+      "sk": "výročie",
+      "ua": "річниця",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "vlhkost",
+      "sk": "vlhkosť",
+      "ua": "вологість",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "krupobitie",
+      "sk": "krupobitie",
+      "ua": "град",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "mrholi",
+      "sk": "mrholí",
+      "ua": "мрячить",
+      "pos": "phrase"
+    },
+    {
+      "id": "poladovica",
+      "sk": "poľadovica",
+      "ua": "ожеледиця",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "povoden",
+      "sk": "povodeň",
+      "ua": "повінь",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "sucho",
+      "sk": "sucho",
+      "ua": "посуха",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "horucava",
+      "sk": "horúčava",
+      "ua": "спека",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vichrica",
+      "sk": "víchrica",
+      "ua": "буревій",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "snehuliak",
+      "sk": "snehuliak",
+      "ua": "сніговик",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "cencul",
+      "sk": "cencúľ",
+      "ua": "бурулька",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zapad-slnka",
+      "sk": "západ slnka",
+      "ua": "захід сонця",
+      "pos": "phrase"
+    },
+    {
+      "id": "vychod-slnka",
+      "sk": "východ slnka",
+      "ua": "схід сонця",
+      "pos": "phrase"
+    },
+    {
+      "id": "svitanie",
+      "sk": "svitanie",
+      "ua": "світанок",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "sumrak",
+      "sk": "súmrak",
+      "ua": "сутінки",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "jasny",
+      "sk": "jasný",
+      "ua": "ясний",
+      "pos": "adj"
+    },
+    {
+      "id": "dazdivy",
+      "sk": "daždivý",
+      "ua": "дощовий",
+      "pos": "adj"
+    },
+    {
+      "id": "veterny",
+      "sk": "veterný",
+      "ua": "вітряний",
+      "pos": "adj"
+    },
+    {
+      "id": "mrazivy",
+      "sk": "mrazivý",
+      "ua": "морозний",
+      "pos": "adj"
+    },
+    {
+      "id": "dusno",
+      "sk": "dusno",
+      "ua": "задушливо",
+      "pos": "adv"
+    },
+    {
+      "id": "ochladit-sa",
+      "sk": "ochladiť sa",
+      "ua": "похолоднішати",
+      "pos": "verb"
+    },
+    {
+      "id": "otepli-sa",
+      "sk": "oteplí sa",
+      "ua": "потеплішає",
+      "pos": "phrase"
+    },
+    {
+      "id": "vyjasnit-sa",
+      "sk": "vyjasniť sa",
+      "ua": "прояснитися",
+      "pos": "verb"
+    },
+    {
+      "id": "mrznut",
+      "sk": "mrznúť",
+      "ua": "замерзати",
+      "pos": "verb"
+    },
+    {
+      "id": "topit-sa",
+      "sk": "topiť sa",
+      "ua": "танути",
+      "pos": "verb"
+    },
+    {
+      "id": "ponahlat-sa",
+      "sk": "ponáhľať sa",
+      "ua": "поспішати",
+      "pos": "verb"
+    },
+    {
+      "id": "stihnut",
+      "sk": "stihnúť",
+      "ua": "встигнути",
+      "pos": "verb"
+    },
+    {
+      "id": "trvat",
+      "sk": "trvať",
+      "ua": "тривати",
+      "pos": "verb"
+    },
+    {
+      "id": "zacat",
+      "sk": "začať",
+      "ua": "почати",
+      "pos": "verb"
+    },
+    {
+      "id": "skoncit",
+      "sk": "skončiť",
+      "ua": "закінчити",
+      "pos": "verb"
+    },
+    {
+      "id": "presne",
+      "sk": "presne",
+      "ua": "точно",
+      "pos": "adv"
+    },
+    {
+      "id": "asi",
+      "sk": "asi",
+      "ua": "приблизно",
+      "pos": "adv"
+    },
+    {
+      "id": "o-pat-minut",
+      "sk": "o päť minút",
+      "ua": "через п'ять хвилин",
+      "pos": "phrase"
+    },
+    {
+      "id": "pred-hodinou",
+      "sk": "pred hodinou",
+      "ua": "годину тому",
+      "pos": "phrase"
+    },
+    {
+      "id": "o-pol-tretej",
+      "sk": "o pol tretej",
+      "ua": "о пів на третю",
+      "pos": "phrase"
+    },
+    {
+      "id": "pocitat",
+      "sk": "počítať",
+      "ua": "рахувати",
+      "pos": "verb"
+    },
+    {
+      "id": "scitat",
+      "sk": "sčítať",
+      "ua": "додати (числа)",
+      "pos": "verb"
+    },
+    {
+      "id": "odcitat",
+      "sk": "odčítať",
+      "ua": "відняти",
+      "pos": "verb"
+    },
+    {
+      "id": "percento",
+      "sk": "percento",
+      "ua": "відсоток",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "casove-pasmo",
+      "sk": "časové pásmo",
+      "ua": "часовий пояс",
+      "pos": "phrase"
     }
   ]
 }

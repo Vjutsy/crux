@@ -5,6 +5,197 @@
   "cefr": "A1",
   "words": [
     {
+      "id": "jeden",
+      "sk": "jeden",
+      "ua": "один",
+      "pos": "num"
+    },
+    {
+      "id": "dva",
+      "sk": "dva",
+      "ua": "два",
+      "pos": "num"
+    },
+    {
+      "id": "tri",
+      "sk": "tri",
+      "ua": "три",
+      "pos": "num"
+    },
+    {
+      "id": "styri",
+      "sk": "štyri",
+      "ua": "чотири",
+      "pos": "num"
+    },
+    {
+      "id": "pat",
+      "sk": "päť",
+      "ua": "п'ять",
+      "pos": "num"
+    },
+    {
+      "id": "sest",
+      "sk": "šesť",
+      "ua": "шість",
+      "pos": "num"
+    },
+    {
+      "id": "sedem",
+      "sk": "sedem",
+      "ua": "сім",
+      "pos": "num"
+    },
+    {
+      "id": "osem",
+      "sk": "osem",
+      "ua": "вісім",
+      "pos": "num"
+    },
+    {
+      "id": "devat",
+      "sk": "deväť",
+      "ua": "дев'ять",
+      "pos": "num"
+    },
+    {
+      "id": "desat",
+      "sk": "desať",
+      "ua": "десять",
+      "pos": "num"
+    },
+    {
+      "id": "pondelok",
+      "sk": "pondelok",
+      "ua": "понеділок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "utorok",
+      "sk": "utorok",
+      "ua": "вівторок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "streda",
+      "sk": "streda",
+      "ua": "середа",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "stvrtok",
+      "sk": "štvrtok",
+      "ua": "четвер",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "piatok",
+      "sk": "piatok",
+      "ua": "п'ятниця",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sobota",
+      "sk": "sobota",
+      "ua": "субота",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nedela",
+      "sk": "nedeľa",
+      "ua": "неділя",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "den",
+      "sk": "deň",
+      "ua": "день",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "noc",
+      "sk": "noc",
+      "ua": "ніч",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "rano",
+      "sk": "ráno",
+      "ua": "ранок",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "vecer",
+      "sk": "večer",
+      "ua": "вечір",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "hodina",
+      "sk": "hodina",
+      "ua": "година",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zima",
+      "sk": "zima",
+      "ua": "зима",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "slnko",
+      "sk": "slnko",
+      "ua": "сонце",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "dazd",
+      "sk": "dážď",
+      "ua": "дощ",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sneh",
+      "sk": "sneh",
+      "ua": "сніг",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "dnes",
+      "sk": "dnes",
+      "ua": "сьогодні",
+      "pos": "adv"
+    },
+    {
+      "id": "zajtra",
+      "sk": "zajtra",
+      "ua": "завтра",
+      "pos": "adv"
+    },
+    {
+      "id": "vcera",
+      "sk": "včera",
+      "ua": "вчора",
+      "pos": "adv",
+      "uaAlt": ["учора"]
+    },
+    {
       "id": "jedenast",
       "sk": "jedenásť",
       "ua": "одинадцять",
@@ -206,6 +397,268 @@
       "sk": "studený",
       "ua": "холодний",
       "pos": "adj"
+    },
+    {
+      "id": "trinast",
+      "sk": "trinásť",
+      "ua": "тринадцять",
+      "pos": "num"
+    },
+    {
+      "id": "patnast",
+      "sk": "pätnásť",
+      "ua": "п'ятнадцять",
+      "pos": "num"
+    },
+    {
+      "id": "styridsat",
+      "sk": "štyridsať",
+      "ua": "сорок",
+      "pos": "num"
+    },
+    {
+      "id": "patdesiat",
+      "sk": "päťdesiat",
+      "ua": "п'ятдесят",
+      "pos": "num"
+    },
+    {
+      "id": "dvesto",
+      "sk": "dvesto",
+      "ua": "двісті",
+      "pos": "num"
+    },
+    {
+      "id": "milion",
+      "sk": "milión",
+      "ua": "мільйон",
+      "pos": "num"
+    },
+    {
+      "id": "nula",
+      "sk": "nula",
+      "ua": "нуль",
+      "pos": "num"
+    },
+    {
+      "id": "cislo",
+      "sk": "číslo",
+      "ua": "число",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "cas",
+      "sk": "čas",
+      "ua": "час",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sekunda",
+      "sk": "sekunda",
+      "ua": "секунда",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "popoludnie",
+      "sk": "popoludnie",
+      "ua": "друга половина дня",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "kolko-je-hodin",
+      "sk": "Koľko je hodín?",
+      "ua": "Котра година?",
+      "pos": "phrase",
+      "skAlt": ["koľko je hodín"]
+    },
+    {
+      "id": "teraz",
+      "sk": "teraz",
+      "ua": "зараз",
+      "pos": "adv"
+    },
+    {
+      "id": "potom",
+      "sk": "potom",
+      "ua": "потім",
+      "pos": "adv"
+    },
+    {
+      "id": "hned",
+      "sk": "hneď",
+      "ua": "одразу",
+      "pos": "adv"
+    },
+    {
+      "id": "uz",
+      "sk": "už",
+      "ua": "вже",
+      "pos": "adv"
+    },
+    {
+      "id": "este",
+      "sk": "ešte",
+      "ua": "ще",
+      "pos": "adv"
+    },
+    {
+      "id": "datum",
+      "sk": "dátum",
+      "ua": "дата",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kalendar",
+      "sk": "kalendár",
+      "ua": "календар",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "hodinky",
+      "sk": "hodinky",
+      "ua": "годинник (наручний)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "budik",
+      "sk": "budík",
+      "ua": "будильник",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pocasie",
+      "sk": "počasie",
+      "ua": "погода",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "teply",
+      "sk": "teplý",
+      "ua": "теплий",
+      "pos": "adj"
+    },
+    {
+      "id": "horuco",
+      "sk": "horúco",
+      "ua": "спекотно",
+      "pos": "adv"
+    },
+    {
+      "id": "chladno",
+      "sk": "chladno",
+      "ua": "прохолодно",
+      "pos": "adv"
+    },
+    {
+      "id": "teplo",
+      "sk": "teplo",
+      "ua": "тепло",
+      "pos": "adv"
+    },
+    {
+      "id": "mokry",
+      "sk": "mokrý",
+      "ua": "мокрий",
+      "pos": "adj"
+    },
+    {
+      "id": "suchy",
+      "sk": "suchý",
+      "ua": "сухий",
+      "pos": "adj"
+    },
+    {
+      "id": "nebo",
+      "sk": "nebo",
+      "ua": "небо",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "hviezda",
+      "sk": "hviezda",
+      "ua": "зірка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dazdnik",
+      "sk": "dáždnik",
+      "ua": "парасолька",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "lad",
+      "sk": "ľad",
+      "ua": "лід",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "teplomer",
+      "sk": "teplomer",
+      "ua": "термометр",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kolko",
+      "sk": "koľko",
+      "ua": "скільки",
+      "pos": "adv"
+    },
+    {
+      "id": "malo",
+      "sk": "málo",
+      "ua": "мало",
+      "pos": "adv"
+    },
+    {
+      "id": "vela",
+      "sk": "veľa",
+      "ua": "багато",
+      "pos": "adv"
+    },
+    {
+      "id": "polovica",
+      "sk": "polovica",
+      "ua": "половина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "prsat",
+      "sk": "pršať",
+      "ua": "дощити",
+      "pos": "verb"
+    },
+    {
+      "id": "snezit",
+      "sk": "snežiť",
+      "ua": "падати (про сніг)",
+      "pos": "verb"
+    },
+    {
+      "id": "svietit",
+      "sk": "svietiť",
+      "ua": "світити",
+      "pos": "verb"
+    },
+    {
+      "id": "rocne-obdobie",
+      "sk": "ročné obdobie",
+      "ua": "пора року",
+      "pos": "phrase"
     }
   ]
 }

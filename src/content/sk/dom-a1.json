@@ -5,6 +5,216 @@
   "cefr": "A1",
   "words": [
     {
+      "id": "dom",
+      "sk": "dom",
+      "ua": "будинок",
+      "pos": "noun",
+      "gender": "m",
+      "uaAlt": ["дім"]
+    },
+    {
+      "id": "byt",
+      "sk": "byt",
+      "ua": "квартира",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "izba",
+      "sk": "izba",
+      "ua": "кімната",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "okno",
+      "sk": "okno",
+      "ua": "вікно",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "dvere",
+      "sk": "dvere",
+      "ua": "двері",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "postel",
+      "sk": "posteľ",
+      "ua": "ліжко",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "stena",
+      "sk": "stena",
+      "ua": "стіна",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "strecha",
+      "sk": "strecha",
+      "ua": "дах",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kupelna",
+      "sk": "kúpeľňa",
+      "ua": "ванна кімната",
+      "pos": "noun",
+      "gender": "f",
+      "uaAlt": ["ванна"]
+    },
+    {
+      "id": "zachod",
+      "sk": "záchod",
+      "ua": "туалет",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "mama",
+      "sk": "mama",
+      "ua": "мама",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "otec",
+      "sk": "otec",
+      "ua": "батько",
+      "pos": "noun",
+      "gender": "m",
+      "uaAlt": ["тато"]
+    },
+    {
+      "id": "brat",
+      "sk": "brat",
+      "ua": "брат",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sestra",
+      "sk": "sestra",
+      "ua": "сестра",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "syn",
+      "sk": "syn",
+      "ua": "син",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "dcera",
+      "sk": "dcéra",
+      "ua": "донька",
+      "pos": "noun",
+      "gender": "f",
+      "uaAlt": ["дочка"]
+    },
+    {
+      "id": "rodina",
+      "sk": "rodina",
+      "ua": "сім'я",
+      "pos": "noun",
+      "gender": "f",
+      "uaAlt": ["родина"]
+    },
+    {
+      "id": "dieta-2",
+      "sk": "dieťa",
+      "ua": "дитина",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "babka",
+      "sk": "babka",
+      "ua": "бабуся",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dedko",
+      "sk": "dedko",
+      "ua": "дідусь",
+      "pos": "noun",
+      "gender": "m",
+      "skAlt": ["dedo"]
+    },
+    {
+      "id": "muz",
+      "sk": "muž",
+      "ua": "чоловік",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zena",
+      "sk": "žena",
+      "ua": "жінка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kniha",
+      "sk": "kniha",
+      "ua": "книжка",
+      "pos": "noun",
+      "gender": "f",
+      "uaAlt": ["книга"]
+    },
+    {
+      "id": "lampa",
+      "sk": "lampa",
+      "ua": "лампа",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kluc",
+      "sk": "kľúč",
+      "ua": "ключ",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pes",
+      "sk": "pes",
+      "ua": "собака",
+      "pos": "noun",
+      "gender": "m",
+      "uaAlt": ["пес"]
+    },
+    {
+      "id": "macka",
+      "sk": "mačka",
+      "ua": "кішка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "byvat",
+      "sk": "bývať",
+      "ua": "жити",
+      "pos": "verb",
+      "uaAlt": ["мешкати"]
+    },
+    {
+      "id": "spat",
+      "sk": "spať",
+      "ua": "спати",
+      "pos": "verb"
+    },
+    {
       "id": "obyvacka",
       "sk": "obývačka",
       "ua": "вітальня",
@@ -197,6 +407,293 @@
       "id": "oprat",
       "sk": "oprať",
       "ua": "випрати",
+      "pos": "verb"
+    },
+    {
+      "id": "kreslo",
+      "sk": "kreslo",
+      "ua": "крісло",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "polica",
+      "sk": "polica",
+      "ua": "полиця",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zasuvka",
+      "sk": "zásuvka",
+      "ua": "шухляда",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zaclona",
+      "sk": "záclona",
+      "ua": "фіранка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "obraz",
+      "sk": "obraz",
+      "ua": "картина",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "televizor",
+      "sk": "televízor",
+      "ua": "телевізор",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pocitac",
+      "sk": "počítač",
+      "ua": "комп'ютер",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "telefon",
+      "sk": "telefón",
+      "ua": "телефон",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "umyvadlo",
+      "sk": "umývadlo",
+      "ua": "умивальник",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "uterak",
+      "sk": "uterák",
+      "ua": "рушник",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "mydlo",
+      "sk": "mydlo",
+      "ua": "мило",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "zubna-kefka",
+      "sk": "zubná kefka",
+      "ua": "зубна щітка",
+      "pos": "phrase"
+    },
+    {
+      "id": "hreben",
+      "sk": "hrebeň",
+      "ua": "гребінець",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pracka",
+      "sk": "práčka",
+      "ua": "пральна машина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zehlicka",
+      "sk": "žehlička",
+      "ua": "праска",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vysavac",
+      "sk": "vysávač",
+      "ua": "пилосос",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "metla",
+      "sk": "metla",
+      "ua": "мітла",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "plot",
+      "sk": "plot",
+      "ua": "паркан",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "brana",
+      "sk": "brána",
+      "ua": "ворота",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "garaz",
+      "sk": "garáž",
+      "ua": "гараж",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dvor",
+      "sk": "dvor",
+      "ua": "двір",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kvet",
+      "sk": "kvet",
+      "ua": "квітка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "strom",
+      "sk": "strom",
+      "ua": "дерево",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "trava",
+      "sk": "tráva",
+      "ua": "трава",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dedina",
+      "sk": "dedina",
+      "ua": "село",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dievca",
+      "sk": "dievča",
+      "ua": "дівчинка",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "chlapec",
+      "sk": "chlapec",
+      "ua": "хлопчик",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "babatko",
+      "sk": "bábätko",
+      "ua": "немовля",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "priatel",
+      "sk": "priateľ",
+      "ua": "друг",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "priatelka",
+      "sk": "priateľka",
+      "ua": "подруга",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "mlady",
+      "sk": "mladý",
+      "ua": "молодий",
+      "pos": "adj"
+    },
+    {
+      "id": "stary",
+      "sk": "starý",
+      "ua": "старий",
+      "pos": "adj"
+    },
+    {
+      "id": "velky",
+      "sk": "veľký",
+      "ua": "великий",
+      "pos": "adj"
+    },
+    {
+      "id": "maly",
+      "sk": "malý",
+      "ua": "малий",
+      "pos": "adj"
+    },
+    {
+      "id": "novy",
+      "sk": "nový",
+      "ua": "новий",
+      "pos": "adj"
+    },
+    {
+      "id": "pekny",
+      "sk": "pekný",
+      "ua": "гарний",
+      "pos": "adj"
+    },
+    {
+      "id": "cisty",
+      "sk": "čistý",
+      "ua": "чистий",
+      "pos": "adj"
+    },
+    {
+      "id": "spinavy",
+      "sk": "špinavý",
+      "ua": "брудний",
+      "pos": "adj"
+    },
+    {
+      "id": "otvorit",
+      "sk": "otvoriť",
+      "ua": "відчинити",
+      "pos": "verb"
+    },
+    {
+      "id": "zatvorit",
+      "sk": "zatvoriť",
+      "ua": "зачинити",
+      "pos": "verb"
+    },
+    {
+      "id": "sediet",
+      "sk": "sedieť",
+      "ua": "сидіти",
+      "pos": "verb"
+    },
+    {
+      "id": "lezat",
+      "sk": "ležať",
+      "ua": "лежати",
+      "pos": "verb"
+    },
+    {
+      "id": "umyvat-sa",
+      "sk": "umývať sa",
+      "ua": "умиватися",
       "pos": "verb"
     }
   ]

@@ -97,12 +97,27 @@ test('стіна 1 без помилок — вершина і 3 зірки', as
 
 test('самі помилки — падіння і список слів', async ({ page }) => {
   await page.getByRole('button', { name: 'Грати' }).click();
-  // На «Кухні» стіни 1 бот із підказками доходить і без відповідей (docs/decisions.md, відкрите питання про баланс).
   await page.getByRole('button', { name: 'Числа, час, погода' }).click();
   await page.getByRole('button', { name: 'Лізти!' }).click();
   expect(await climb(page, 99)).toBe('fallen');
   await expect(page.locator('#result')).toContainText('Зірвався');
   await expect(page.locator('#result .mistakes li').first()).toBeVisible();
+  // «Ще раз» після падіння: стіна й скелелаз на місці, можна лізти далі (раніше лишався порожній екран).
+  await page.getByRole('button', { name: 'Ще раз' }).click();
+  await expect(page.locator('#scenery #sc-holds > *').first()).toBeAttached();
+  await expect(page.locator('#actor > *').first()).toBeAttached();
+  await page.waitForTimeout(500);
+  const st = await nextMove(page);
+  expect(st.status).toBe('climbing');
+  if ('x' in st) await page.mouse.click(st.x, st.y);
+  // Хід зараховано — або відкрилось питання (якщо цей зачіп синій, хід рахується після відповіді).
+  const moved = () =>
+    page.evaluate(
+      () =>
+        (window as unknown as { crux: { scene: { getScene(k: string): { s: { moves: number } } } } }).crux.scene.getScene('climb').s.moves >
+        0,
+    );
+  await expect.poll(async () => (await page.locator('#card').isVisible()) || (await moved())).toBe(true);
 });
 
 test('вибір скелелаза — тапом по ньому в меню', async ({ page }) => {
@@ -163,4 +178,23 @@ test('руку чи ногу можна перетягнути до зачепа
         ),
       )
       .toBe(plan.hold);
+});
+
+test('вихід у меню посеред питання — картка зникає й не заважає новій стіні', async ({ page }) => {
+  await page.getByRole('button', { name: 'Грати' }).click();
+  await page.getByRole('button', { name: 'Лізти!' }).click();
+  const card = page.locator('#card');
+  for (let i = 0; i < 40 && !(await card.isVisible()); i++) {
+    const st = await nextMove(page);
+    if ('x' in st) await page.mouse.click(st.x, st.y);
+    await page.waitForTimeout(300);
+  }
+  await expect(card).toBeVisible();
+  await page.locator('#hud-menu').click();
+  await expect(card).toBeHidden();
+  await page.getByRole('button', { name: 'Грати' }).click();
+  await page.getByRole('button', { name: 'Лізти!' }).click();
+  await expect(page.locator('#hud')).toBeVisible();
+  await expect(card).toBeHidden();
+  expect((await nextMove(page)).status).not.toBe('busy');
 });

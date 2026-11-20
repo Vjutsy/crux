@@ -184,6 +184,488 @@
       "ua": "пенсіонер",
       "pos": "noun",
       "gender": "m"
+    },
+    {
+      "id": "podkrovie",
+      "sk": "podkrovie",
+      "ua": "мансарда",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "prizemie",
+      "sk": "prízemie",
+      "ua": "перший поверх",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "rodinny-dom",
+      "sk": "rodinný dom",
+      "ua": "приватний будинок",
+      "pos": "phrase"
+    },
+    {
+      "id": "najomnik",
+      "sk": "nájomník",
+      "ua": "орендар",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "podnajom",
+      "sk": "podnájom",
+      "ua": "оренда житла",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zmluva",
+      "sk": "zmluva",
+      "ua": "договір",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "zamok",
+      "sk": "zámok",
+      "ua": "дверний замок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zvoncek",
+      "sk": "zvonček",
+      "ua": "дверний дзвінок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vypinac",
+      "sk": "vypínač",
+      "ua": "вимикач",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "ziarovka",
+      "sk": "žiarovka",
+      "ua": "лампочка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "radiator",
+      "sk": "radiátor",
+      "ua": "батарея (опалення)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kozub",
+      "sk": "kozub",
+      "ua": "камін",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "komin",
+      "sk": "komín",
+      "ua": "димар",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "parapet",
+      "sk": "parapet",
+      "ua": "підвіконня",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "roleta",
+      "sk": "roleta",
+      "ua": "ролета",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "postelna-bielizen",
+      "sk": "posteľná bielizeň",
+      "ua": "постільна білизна",
+      "pos": "phrase"
+    },
+    {
+      "id": "plachta",
+      "sk": "plachta",
+      "ua": "простирадло",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "deka",
+      "sk": "deka",
+      "ua": "плед",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nocny-stolik",
+      "sk": "nočný stolík",
+      "ua": "приліжкова тумбочка",
+      "pos": "phrase"
+    },
+    {
+      "id": "satnik",
+      "sk": "šatník",
+      "ua": "гардероб",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vesiak",
+      "sk": "vešiak",
+      "ua": "вішак",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "botnik",
+      "sk": "botník",
+      "ua": "шафка для взуття",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "rohozka",
+      "sk": "rohožka",
+      "ua": "килимок біля дверей",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kvetinac",
+      "sk": "kvetináč",
+      "ua": "вазон",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vaza",
+      "sk": "váza",
+      "ua": "ваза",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "odpad",
+      "sk": "odpad",
+      "ua": "сміття",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "smetny-kos",
+      "sk": "smetný kôš",
+      "ua": "смітник",
+      "pos": "phrase"
+    },
+    {
+      "id": "prach",
+      "sk": "prach",
+      "ua": "пил",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "domacnost",
+      "sk": "domácnosť",
+      "ua": "домашнє господарство",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "domace-prace",
+      "sk": "domáce práce",
+      "ua": "хатні справи",
+      "pos": "phrase"
+    },
+    {
+      "id": "zehlit",
+      "sk": "žehliť",
+      "ua": "прасувати",
+      "pos": "verb"
+    },
+    {
+      "id": "vysavat",
+      "sk": "vysávať",
+      "ua": "пилососити",
+      "pos": "verb"
+    },
+    {
+      "id": "utierat-prach",
+      "sk": "utierať prach",
+      "ua": "витирати пил",
+      "pos": "phrase"
+    },
+    {
+      "id": "vyniest-smeti",
+      "sk": "vyniesť smeti",
+      "ua": "винести сміття",
+      "pos": "phrase"
+    },
+    {
+      "id": "zalievat",
+      "sk": "zalievať",
+      "ua": "поливати",
+      "pos": "verb"
+    },
+    {
+      "id": "kosit",
+      "sk": "kosiť",
+      "ua": "косити",
+      "pos": "verb"
+    },
+    {
+      "id": "zabyvat-sa",
+      "sk": "zabývať sa",
+      "ua": "облаштуватися",
+      "pos": "verb"
+    },
+    {
+      "id": "predat",
+      "sk": "predať",
+      "ua": "продати",
+      "pos": "verb"
+    },
+    {
+      "id": "prenajat",
+      "sk": "prenajať",
+      "ua": "здати в оренду",
+      "pos": "verb"
+    },
+    {
+      "id": "svokra",
+      "sk": "svokra",
+      "ua": "свекруха, теща",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "svokor",
+      "sk": "svokor",
+      "ua": "свекор, тесть",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "svagor",
+      "sk": "švagor",
+      "ua": "зять (чоловік сестри)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "svagrina",
+      "sk": "švagriná",
+      "ua": "невістка (дружина брата)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "synovec",
+      "sk": "synovec",
+      "ua": "племінник",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "neter",
+      "sk": "neter",
+      "ua": "племінниця",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pravnuk",
+      "sk": "pravnuk",
+      "ua": "правнук",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "krstny-otec",
+      "sk": "krstný otec",
+      "ua": "хрещений батько",
+      "pos": "phrase"
+    },
+    {
+      "id": "krstna-mama",
+      "sk": "krstná mama",
+      "ua": "хрещена мати",
+      "pos": "phrase"
+    },
+    {
+      "id": "snubenec",
+      "sk": "snúbenec",
+      "ua": "наречений",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "snubenica",
+      "sk": "snúbenica",
+      "ua": "наречена",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "manzelstvo",
+      "sk": "manželstvo",
+      "ua": "шлюб",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "rozvod",
+      "sk": "rozvod",
+      "ua": "розлучення",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "narodit-sa",
+      "sk": "narodiť sa",
+      "ua": "народитися",
+      "pos": "verb"
+    },
+    {
+      "id": "ozenit-sa",
+      "sk": "oženiť sa",
+      "ua": "одружитися (про чоловіка)",
+      "pos": "verb"
+    },
+    {
+      "id": "vydat-sa",
+      "sk": "vydať sa",
+      "ua": "вийти заміж",
+      "pos": "verb"
+    },
+    {
+      "id": "rozviest-sa",
+      "sk": "rozviesť sa",
+      "ua": "розлучитися",
+      "pos": "verb"
+    },
+    {
+      "id": "dospely",
+      "sk": "dospelý",
+      "ua": "дорослий",
+      "pos": "adj"
+    },
+    {
+      "id": "slobodny",
+      "sk": "slobodný",
+      "ua": "неодружений",
+      "pos": "adj"
+    },
+    {
+      "id": "zenaty",
+      "sk": "ženatý",
+      "ua": "одружений",
+      "pos": "adj"
+    },
+    {
+      "id": "vydata",
+      "sk": "vydatá",
+      "ua": "заміжня",
+      "pos": "adj"
+    },
+    {
+      "id": "tehotna",
+      "sk": "tehotná",
+      "ua": "вагітна",
+      "pos": "adj"
+    },
+    {
+      "id": "generacia",
+      "sk": "generácia",
+      "ua": "покоління",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "detstvo",
+      "sk": "detstvo",
+      "ua": "дитинство",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "mladost",
+      "sk": "mladosť",
+      "ua": "молодість",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "staroba",
+      "sk": "staroba",
+      "ua": "старість",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vychova",
+      "sk": "výchova",
+      "ua": "виховання",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "domace-zviera",
+      "sk": "domáce zviera",
+      "ua": "домашня тварина",
+      "pos": "phrase"
+    },
+    {
+      "id": "papagaj",
+      "sk": "papagáj",
+      "ua": "папуга",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "skrecok",
+      "sk": "škrečok",
+      "ua": "хом'як",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "korytnacka",
+      "sk": "korytnačka",
+      "ua": "черепаха",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "hlucny",
+      "sk": "hlučný",
+      "ua": "галасливий",
+      "pos": "adj"
+    },
+    {
+      "id": "tichy",
+      "sk": "tichý",
+      "ua": "тихий",
+      "pos": "adj"
+    },
+    {
+      "id": "tmavy",
+      "sk": "tmavý",
+      "ua": "темний",
+      "pos": "adj"
     }
   ]
 }

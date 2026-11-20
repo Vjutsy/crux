@@ -33,8 +33,19 @@ describe('усі групи разом', () => {
     const ids = files.flatMap((f) => WordGroup.parse(JSON.parse(readFileSync(join(dir, f), 'utf8'))).words.map((w) => w.id));
     expect(new Set(ids).size).toBe(ids.length);
   });
-  it('є 4 теми × 3 рівні', () => {
-    const keys = files.map((f) => f.replace('.json', ''));
-    for (const t of ['kuchyna', 'dom', 'mesto', 'cas']) for (const c of ['a0', 'a1', 'a2']) expect(keys).toContain(`${t}-${c}`);
+  it('є 4 теми × рівні A1, A2 (рівня A0 немає)', () => {
+    const keys = files.map((f) => f.replace('.json', '')).sort();
+    const want = ['kuchyna', 'dom', 'mesto', 'cas'].flatMap((t) => [`${t}-a1`, `${t}-a2`]).sort();
+    expect(keys).toEqual(want);
+  });
+  it('словацькі слова не повторюються між групами', () => {
+    const sk = files.flatMap((f) => WordGroup.parse(JSON.parse(readFileSync(join(dir, f), 'utf8'))).words.map((w) => w.sk.toLowerCase()));
+    expect(sk.length - new Set(sk).size).toBe(0);
+  });
+  it('у групі немає двох слів з однаковим перекладом', () => {
+    for (const f of files) {
+      const ua = WordGroup.parse(JSON.parse(readFileSync(join(dir, f), 'utf8'))).words.map((w) => w.ua);
+      expect(ua.length - new Set(ua).size, f).toBe(0);
+    }
   });
 });

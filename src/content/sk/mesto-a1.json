@@ -5,6 +5,213 @@
   "cefr": "A1",
   "words": [
     {
+      "id": "mesto",
+      "sk": "mesto",
+      "ua": "місто",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "ulica",
+      "sk": "ulica",
+      "ua": "вулиця",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "namestie",
+      "sk": "námestie",
+      "ua": "площа",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "obchod",
+      "sk": "obchod",
+      "ua": "магазин",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "banka",
+      "sk": "banka",
+      "ua": "банк",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "posta",
+      "sk": "pošta",
+      "ua": "пошта",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "skola",
+      "sk": "škola",
+      "ua": "школа",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nemocnica",
+      "sk": "nemocnica",
+      "ua": "лікарня",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "lekaren",
+      "sk": "lekáreň",
+      "ua": "аптека",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "restauracia",
+      "sk": "reštaurácia",
+      "ua": "ресторан",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kaviaren",
+      "sk": "kaviareň",
+      "ua": "кав'ярня",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "park",
+      "sk": "park",
+      "ua": "парк",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "most",
+      "sk": "most",
+      "ua": "міст",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "kostol",
+      "sk": "kostol",
+      "ua": "церква",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "hrad",
+      "sk": "hrad",
+      "ua": "замок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "auto",
+      "sk": "auto",
+      "ua": "автомобіль",
+      "pos": "noun",
+      "gender": "n",
+      "uaAlt": ["машина", "авто"]
+    },
+    {
+      "id": "autobus",
+      "sk": "autobus",
+      "ua": "автобус",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vlak",
+      "sk": "vlak",
+      "ua": "потяг",
+      "pos": "noun",
+      "gender": "m",
+      "uaAlt": ["поїзд"]
+    },
+    {
+      "id": "elektricka",
+      "sk": "električka",
+      "ua": "трамвай",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "bicykel",
+      "sk": "bicykel",
+      "ua": "велосипед",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "lietadlo",
+      "sk": "lietadlo",
+      "ua": "літак",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "taxik",
+      "sk": "taxík",
+      "ua": "таксі",
+      "pos": "noun",
+      "gender": "m",
+      "skAlt": ["taxi"]
+    },
+    {
+      "id": "stanica",
+      "sk": "stanica",
+      "ua": "станція",
+      "pos": "noun",
+      "gender": "f",
+      "uaAlt": ["вокзал"]
+    },
+    {
+      "id": "letisko",
+      "sk": "letisko",
+      "ua": "аеропорт",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "ist",
+      "sk": "ísť",
+      "ua": "іти",
+      "pos": "verb",
+      "uaAlt": ["йти"]
+    },
+    {
+      "id": "vlavo",
+      "sk": "vľavo",
+      "ua": "ліворуч",
+      "pos": "adv",
+      "uaAlt": ["наліво"]
+    },
+    {
+      "id": "vpravo",
+      "sk": "vpravo",
+      "ua": "праворуч",
+      "pos": "adv",
+      "uaAlt": ["направо"]
+    },
+    {
+      "id": "rovno",
+      "sk": "rovno",
+      "ua": "прямо",
+      "pos": "adv"
+    },
+    {
+      "id": "mapa",
+      "sk": "mapa",
+      "ua": "мапа",
+      "pos": "noun",
+      "gender": "f",
+      "uaAlt": ["карта"]
+    },
+    {
       "id": "zastavka",
       "sk": "zastávka",
       "ua": "зупинка",
@@ -202,6 +409,280 @@
       "sk": "ďaleko",
       "ua": "далеко",
       "pos": "adv"
+    },
+    {
+      "id": "supermarket",
+      "sk": "supermarket",
+      "ua": "супермаркет",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pekaren",
+      "sk": "pekáreň",
+      "ua": "пекарня",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "cukraren",
+      "sk": "cukráreň",
+      "ua": "кондитерська",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kadernictvo",
+      "sk": "kaderníctvo",
+      "ua": "перукарня",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "obchodne-centrum",
+      "sk": "obchodné centrum",
+      "ua": "торговий центр",
+      "pos": "phrase"
+    },
+    {
+      "id": "bankomat",
+      "sk": "bankomat",
+      "ua": "банкомат",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "peniaze",
+      "sk": "peniaze",
+      "ua": "гроші",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "cena",
+      "sk": "cena",
+      "ua": "ціна",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "lacny",
+      "sk": "lacný",
+      "ua": "дешевий",
+      "pos": "adj"
+    },
+    {
+      "id": "drahy",
+      "sk": "drahý",
+      "ua": "дорогий",
+      "pos": "adj"
+    },
+    {
+      "id": "kupit",
+      "sk": "kúpiť",
+      "ua": "купити",
+      "pos": "verb"
+    },
+    {
+      "id": "platit",
+      "sk": "platiť",
+      "ua": "платити",
+      "pos": "verb"
+    },
+    {
+      "id": "otvorene",
+      "sk": "otvorené",
+      "ua": "відчинено",
+      "pos": "adv"
+    },
+    {
+      "id": "zatvorene",
+      "sk": "zatvorené",
+      "ua": "зачинено",
+      "pos": "adv"
+    },
+    {
+      "id": "fontana",
+      "sk": "fontána",
+      "ua": "фонтан",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "socha",
+      "sk": "socha",
+      "ua": "статуя",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "veza",
+      "sk": "veža",
+      "ua": "вежа",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "rieka",
+      "sk": "rieka",
+      "ua": "річка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kopec",
+      "sk": "kopec",
+      "ua": "пагорб",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "cesta",
+      "sk": "cesta",
+      "ua": "дорога",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "dialnica",
+      "sk": "diaľnica",
+      "ua": "автомагістраль",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "policajt",
+      "sk": "policajt",
+      "ua": "поліцейський",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "lekar",
+      "sk": "lekár",
+      "ua": "лікар",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "predavac",
+      "sk": "predavač",
+      "ua": "продавець",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "smer",
+      "sk": "smer",
+      "ua": "напрямок",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sever",
+      "sk": "sever",
+      "ua": "північ (сторона світу)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "juh",
+      "sk": "juh",
+      "ua": "південь",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vychod",
+      "sk": "východ",
+      "ua": "схід",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "zapad",
+      "sk": "západ",
+      "ua": "захід",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "za-rohom",
+      "sk": "za rohom",
+      "ua": "за рогом",
+      "pos": "phrase"
+    },
+    {
+      "id": "oproti",
+      "sk": "oproti",
+      "ua": "навпроти",
+      "pos": "adv"
+    },
+    {
+      "id": "vedla",
+      "sk": "vedľa",
+      "ua": "поруч",
+      "pos": "adv"
+    },
+    {
+      "id": "hore",
+      "sk": "hore",
+      "ua": "вгору, нагорі",
+      "pos": "adv"
+    },
+    {
+      "id": "dole",
+      "sk": "dole",
+      "ua": "вниз, унизу",
+      "pos": "adv"
+    },
+    {
+      "id": "rychlo",
+      "sk": "rýchlo",
+      "ua": "швидко",
+      "pos": "adv"
+    },
+    {
+      "id": "pomaly",
+      "sk": "pomaly",
+      "ua": "повільно",
+      "pos": "adv"
+    },
+    {
+      "id": "cakat",
+      "sk": "čakať",
+      "ua": "чекати",
+      "pos": "verb"
+    },
+    {
+      "id": "bezat",
+      "sk": "bežať",
+      "ua": "бігти",
+      "pos": "verb"
+    },
+    {
+      "id": "jazdit",
+      "sk": "jazdiť",
+      "ua": "їздити",
+      "pos": "verb"
+    },
+    {
+      "id": "letiet",
+      "sk": "letieť",
+      "ua": "летіти",
+      "pos": "verb"
+    },
+    {
+      "id": "zastavit",
+      "sk": "zastaviť",
+      "ua": "зупинити",
+      "pos": "verb"
+    },
+    {
+      "id": "hladat",
+      "sk": "hľadať",
+      "ua": "шукати",
+      "pos": "verb"
     }
   ]
 }

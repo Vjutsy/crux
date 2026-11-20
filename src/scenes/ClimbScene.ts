@@ -6,6 +6,7 @@ import {
   type ClimbState,
   answer,
   autoLimb,
+  SLIP_COST,
   canReach,
   fatigue,
   move,
@@ -15,13 +16,13 @@ import {
   stepBudget,
 } from '../core/climb';
 import { findRoute, generateWall } from '../core/generator';
-import { type LeitnerBoxes, buildQuestion, pickMode, pickWord, updateBox } from '../core/questions';
+import { type LeitnerBoxes, type SeenLog, buildQuestion, pickMode, pickWord, updateBox } from '../core/questions';
 import { hashSeed, mulberry32, type Rng } from '../core/rng';
 import type { WordGroup } from '../content/schema';
 import type { Climber } from '../data/climbers';
 import type { WallConfig } from '../data/walls';
 import { drawClimber } from '../ui/climberArt';
-import { askQuestion } from '../ui/questionCard';
+import { askQuestion, closeQuestion } from '../ui/questionCard';
 import { toast } from '../ui/toast';
 import { type HoldState, SCENERY_DEFS, type WallTheme, holdSvg, themeFor } from './backgrounds';
 import { type Ragdoll, createRagdoll } from './ragdoll';
@@ -31,6 +32,8 @@ export interface ClimbData {
   group: WordGroup;
   wall: WallConfig;
   boxes: LeitnerBoxes;
+  seen: SeenLog;
+  asked: number;
   climber: Climber;
   /** Показувати навчальні підказки. */
   tutorial: boolean;
@@ -44,6 +47,8 @@ export interface ClimbSummary {
   groupId: string;
   wall: number;
   boxes: LeitnerBoxes;
+  seen: SeenLog;
+  asked: number;
   mistakes: { prompt: string; expected: string; given: string }[];
   fallReason?: string;
   tutorialDone: boolean;
@@ -78,6 +83,8 @@ export class ClimbScene extends Phaser.Scene {
   private theme!: WallTheme;
   private rng!: Rng;
   private boxes: LeitnerBoxes = {};
+  private seen: SeenLog = {};
+  private asked = 0;
   private recent: string[] = [];
   private mistakes: ClimbSummary['mistakes'] = [];
   private selected: Limb | null = null;
@@ -113,6 +120,8 @@ export class ClimbScene extends Phaser.Scene {
   init(data: ClimbData) {
     this.data0 = data;
     this.boxes = { ...data.boxes };
+    this.seen = { ...data.seen };
+    this.asked = data.asked;
     this.recent = [];
     this.mistakes = [];
     this.selected = null;
@@ -156,8 +165,12 @@ export class ClimbScene extends Phaser.Scene {
         el.style.transform = '';
       }
       this.scale.off('resize', this.fitCamera, this);
-      this.ragdoll?.destroy();
-      for (const b of this.bounds) this.matter.world.remove(b);
+      // Світ Matter.js плагін очищає сам (і обнуляє до нашого обробника) — лише забуваємо посилання.
+      // Раніше тут викликався ragdoll.destroy(), і «Ще раз» після падіння падало з помилкою й лишало порожній екран.
+      this.ragdoll = null;
+      this.bounds = [];
+      // Вихід у меню посеред питання: картка не має лишатися над наступною стіною.
+      closeQuestion();
     });
 
     this.input.on('pointerdown', (p: Phaser.Input.Pointer) => this.onDown(p));
@@ -343,8 +356,9 @@ export class ClimbScene extends Phaser.Scene {
     this.updateHud();
     this.drawHolds();
     const { group, wall: cfg } = this.data0;
-    const word = pickWord(group, this.boxes, this.recent, this.rng);
+    const word = pickWord(group, this.boxes, this.seen, this.recent, this.rng);
     this.recent.push(word.id);
+    this.seen = { ...this.seen, [word.id]: ++this.asked };
     // У навчанні — лише прості питання з вибором.
     const mode = this.tutorialStep >= 0 ? 'choice-sk-ua' : pickMode(cfg.typingShare, this.rng);
     const q = buildQuestion(group, word, mode, this.rng);
@@ -376,7 +390,7 @@ export class ClimbScene extends Phaser.Scene {
       }
       if (e.type === 'slipped') {
         sound.slip();
-        toast(`Від утоми зісковзнула ${LIMB_NAMES[e.limb]}!`);
+        toast(`Від утоми зісковзнула ${LIMB_NAMES[e.limb]}: −${SLIP_COST} кроки`);
       }
     }
     if (this.tutorialStep >= 0) {
@@ -444,6 +458,8 @@ export class ClimbScene extends Phaser.Scene {
       groupId: this.data0.group.id,
       wall: this.data0.wall.wall,
       boxes: this.boxes,
+      seen: this.seen,
+      asked: this.asked,
       mistakes: this.mistakes,
       fallReason: this.s.fallReason ? reasons[this.s.fallReason] : undefined,
       tutorialDone: this.data0.tutorial && this.tutorialStep < 0,

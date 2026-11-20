@@ -49,6 +49,8 @@ function startClimb(choice: MenuChoice) {
     group: choice.group,
     wall: choice.wall,
     boxes: progress.boxes,
+    seen: progress.seen,
+    asked: progress.asked,
     climber: getClimber(progress.settings.climber),
     tutorial: !progress.tutorialDone && choice.wall.wall === 1,
   };
@@ -75,6 +77,8 @@ game.events.on('climb:end', (s: ClimbSummary) => {
   progress = {
     ...progress,
     boxes: s.boxes,
+    seen: s.seen,
+    asked: s.asked,
     stars: { ...progress.stars, [key]: Math.max(progress.stars[key] ?? 0, s.stars) },
     tutorialDone: progress.tutorialDone || s.tutorialDone,
     unlockedWall: s.won ? Math.max(progress.unlockedWall, Math.min(walls.length, s.wall + 1)) : progress.unlockedWall,
@@ -97,7 +101,7 @@ if (firstOpen) {
     progress = { ...progress, introSeen: true };
     void saveProgress(progress);
   };
-  const first = groups.find((g) => g.themeId === 'kuchyna' && g.cefr === 'A0') ?? groups[0]!;
+  const first = groups.find((g) => g.themeId === 'kuchyna' && g.cefr === 'A1') ?? groups[0]!;
   showIntro(
     getClimber(progress.settings.climber),
     () => {

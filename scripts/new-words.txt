@@ -1,0 +1,494 @@
+# Нові слова (20.11.2026). Формат: sk | ua | pos | рід | skAlt через кому
+# pos: n — іменник, v — дієслово, a — прикметник, d — прислівник, u — числівник, p — вислів
+# Розділ: ## тема рівень
+
+## kuchyna A1
+banán | банан | n | m
+pomaranč | апельсин | n | m
+citrón | лимон | n | m
+hruška | груша | n | f
+slivka | слива | n | f
+čerešňa | черешня | n | f
+jahoda | полуниця | n | f
+hrozno | виноград | n | n
+broskyňa | персик | n | f
+kapusta | капуста | n | f
+paprika | перець (овоч) | n | f
+šalát | салат | n | m
+hrach | горох | n | m
+fazuľa | квасоля | n | f
+huba | гриб | n | f
+korenie | спеції | n | n
+ocot | оцет | n | m
+med | мед | n | m
+džem | джем | n | m
+koláč | пиріг | n | m
+torta | торт | n | f
+čokoláda | шоколад | n | f
+zmrzlina | морозиво | n | f
+sušienka | печиво | n | f
+rožok | рогалик | n | m
+pečivo | випічка | n | n
+džús | сік | n | m
+pivo | пиво | n | n
+víno | вино | n | n
+hovädzina | яловичина | n | f | hovädzie mäso
+bravčovina | свинина | n | f | bravčové mäso
+fľaša | пляшка | n | f
+miska | миска | n | f
+podnos | піднос | n | m
+obrúsok | серветка | n | m
+otvárač | відкривачка | n | m
+lyžička | чайна ложка | n | f
+riad | посуд | n | m
+mraznička | морозилка | n | f
+horúci | гарячий | a
+miešať | змішувати | v
+pripraviť | приготувати | v
+nalievať | наливати | v
+pikantný | гострий | a
+mixér | міксер | n | m
+desiata | другий сніданок | n | f
+chutiť | смакувати | v
+
+## kuchyna A2
+zákusok | десерт | n | m
+predjedlo | закуска | n | n
+hlavné jedlo | основна страва | p
+príloha | гарнір | n | f
+omáčka | соус | n | f
+cesto | тісто | n | n
+droždie | дріжджі | n | n
+smotana | вершки | n | f
+tvaroh | кисломолочний сир | n | m
+bryndza | бринза | n | f
+šľahačka | збиті вершки | n | f
+orech | горіх | n | m
+škorica | кориця | n | f
+petržlen | петрушка | n | m
+kôpor | кріп | n | m
+pažítka | шніт-цибуля | n | f
+bylinky | пряні трави | n | f
+cuketa | кабачок | n | f
+baklažán | баклажан | n | m
+karfiol | цвітна капуста | n | m
+brokolica | броколі | n | f
+špenát | шпинат | n | m
+kukurica | кукурудза | n | f
+cvikla | буряк | n | f
+reďkovka | редиска | n | f
+tekvica | гарбуз | n | f
+melón | диня | n | m
+marhuľa | абрикос | n | f
+malina | малина | n | f
+čučoriedka | чорниця | n | f
+ríbezľa | смородина | n | f
+ananás | ананас | n | m
+losos | лосось | n | m
+tuniak | тунець | n | m
+krevety | креветки | n | f
+morka | індичка | n | f
+rezeň | відбивна | n | m
+guláš | гуляш | n | m
+halušky | галушки | n | f
+palacinka | млинець | n | f
+knedľa | кнедлик | n | f
+sendvič | сендвіч | n | m
+minerálna voda | мінеральна вода | p | | minerálka
+nápoj | напій | n | m
+obrus | скатертина | n | m
+cedidlo | друшляк | n | n
+valček | качалка | n | m
+váha | ваги | n | f
+pokrievka | кришка (каструлі) | n | f
+mäsiar | м'ясник | n | m
+pekár | пекар | n | m
+kuchár | кухар | n | m
+diéta | дієта | n | f
+chrumkavý | хрусткий | a
+nezdravý | нездоровий | a
+domáci | домашній | a
+surový | сирий | a
+mrazený | заморожений | a
+zrelý | стиглий | a
+ošúpať | почистити (від шкірки) | v
+nastrúhať | натерти (на тертці) | v
+osoliť | посолити | v
+ochutiť | приправити | v
+grilovať | смажити на грилі | v
+zapiecť | запекти | v
+rozmraziť | розморозити | v
+vychladiť | охолодити | v
+zjesť | з'їсти | v
+vypiť | випити | v
+zaplatiť | заплатити | v
+rezervovať stôl | забронювати столик | p
+Dobrú chuť! | Смачного! | p | | dobrú chuť
+Na zdravie! | Будьмо! | p | | na zdravie
+strúhanka | панірувальні сухарі | n | f
+pálivý | пекучий | a
+uvarený | зварений | a
+chlebíček | канапка | n | m
+plech | деко | n | m
+
+## dom A1
+kreslo | крісло | n | n
+polica | полиця | n | f
+zásuvka | шухляда | n | f
+záclona | фіранка | n | f
+obraz | картина | n | m
+televízor | телевізор | n | m
+počítač | комп'ютер | n | m
+telefón | телефон | n | m
+umývadlo | умивальник | n | n
+uterák | рушник | n | m
+mydlo | мило | n | n
+zubná kefka | зубна щітка | p
+hrebeň | гребінець | n | m
+práčka | пральна машина | n | f
+žehlička | праска | n | f
+vysávač | пилосос | n | m
+metla | мітла | n | f
+plot | паркан | n | m
+brána | ворота | n | f
+garáž | гараж | n | f
+dvor | двір | n | m
+kvet | квітка | n | m
+strom | дерево | n | m
+tráva | трава | n | f
+dedina | село | n | f
+dievča | дівчинка | n | n
+chlapec | хлопчик | n | m
+bábätko | немовля | n | n
+priateľ | друг | n | m
+priateľka | подруга | n | f
+mladý | молодий | a
+starý | старий | a
+veľký | великий | a
+malý | малий | a
+nový | новий | a
+pekný | гарний | a
+čistý | чистий | a
+špinavý | брудний | a
+otvoriť | відчинити | v
+zatvoriť | зачинити | v
+sedieť | сидіти | v
+ležať | лежати | v
+umývať sa | умиватися | v
+obliecť sa | одягнутися | v
+zobudiť sa | прокинутися | v
+doma | вдома | d
+domov | додому | d
+
+## dom A2
+podkrovie | мансарда | n | n
+prízemie | перший поверх | n | n
+rodinný dom | приватний будинок | p
+nájomník | орендар | n | m
+podnájom | оренда житла | n | m
+zmluva | договір | n | f
+zámok | дверний замок | n | m
+zvonček | дверний дзвінок | n | m
+vypínač | вимикач | n | m
+žiarovka | лампочка | n | f
+radiátor | батарея (опалення) | n | m
+kozub | камін | n | m
+komín | димар | n | m
+parapet | підвіконня | n | m
+roleta | ролета | n | f
+posteľná bielizeň | постільна білизна | p
+plachta | простирадло | n | f
+deka | плед | n | f
+nočný stolík | приліжкова тумбочка | p
+šatník | гардероб | n | m
+vešiak | вішак | n | m
+botník | шафка для взуття | n | m
+rohožka | килимок біля дверей | n | f
+kvetináč | вазон | n | m
+váza | ваза | n | f
+odpad | сміття | n | m
+smetný kôš | смітник | p
+prach | пил | n | m
+domácnosť | домашнє господарство | n | f
+domáce práce | хатні справи | p
+žehliť | прасувати | v
+vysávať | пилососити | v
+utierať prach | витирати пил | p
+vyniesť smeti | винести сміття | p
+zalievať | поливати | v
+kosiť | косити | v
+zabývať sa | облаштуватися | v
+predať | продати | v
+prenajať | здати в оренду | v
+svokra | свекруха, теща | n | f
+svokor | свекор, тесть | n | m
+švagor | зять (чоловік сестри) | n | m
+švagriná | невістка (дружина брата) | n | f
+synovec | племінник | n | m
+neter | племінниця | n | f
+pravnuk | правнук | n | m
+krstný otec | хрещений батько | p
+krstná mama | хрещена мати | p
+snúbenec | наречений | n | m
+snúbenica | наречена | n | f
+manželstvo | шлюб | n | n
+rozvod | розлучення | n | m
+narodiť sa | народитися | v
+oženiť sa | одружитися (про чоловіка) | v
+vydať sa | вийти заміж | v
+rozviesť sa | розлучитися | v
+dospelý | дорослий | a
+slobodný | неодружений | a
+ženatý | одружений | a
+vydatá | заміжня | a
+tehotná | вагітна | a
+generácia | покоління | n | f
+detstvo | дитинство | n | n
+mladosť | молодість | n | f
+staroba | старість | n | f
+výchova | виховання | n | f
+domáce zviera | домашня тварина | p
+papagáj | папуга | n | m
+škrečok | хом'як | n | m
+korytnačka | черепаха | n | f
+hlučný | галасливий | a
+tichý | тихий | a
+tmavý | темний | a
+svetlý | світлий | a
+pohodlný | зручний | a
+
+## mesto A1
+supermarket | супермаркет | n | m
+pekáreň | пекарня | n | f
+cukráreň | кондитерська | n | f
+kaderníctvo | перукарня | n | n
+obchodné centrum | торговий центр | p
+bankomat | банкомат | n | m
+peniaze | гроші | n | m
+cena | ціна | n | f
+lacný | дешевий | a
+drahý | дорогий | a
+kúpiť | купити | v
+platiť | платити | v
+otvorené | відчинено | d
+zatvorené | зачинено | d
+fontána | фонтан | n | f
+socha | статуя | n | f
+veža | вежа | n | f
+rieka | річка | n | f
+kopec | пагорб | n | m
+cesta | дорога | n | f
+diaľnica | автомагістраль | n | f
+policajt | поліцейський | n | m
+lekár | лікар | n | m
+predavač | продавець | n | m
+smer | напрямок | n | m
+sever | північ (сторона світу) | n | m
+juh | південь | n | m
+východ | схід | n | m
+západ | захід | n | m
+za rohom | за рогом | p
+oproti | навпроти | d
+vedľa | поруч | d
+hore | вгору, нагорі | d
+dole | вниз, унизу | d
+rýchlo | швидко | d
+pomaly | повільно | d
+čakať | чекати | v
+bežať | бігти | v
+jazdiť | їздити | v
+letieť | летіти | v
+zastaviť | зупинити | v
+hľadať | шукати | v
+kúpalisko | басейн (відкритий) | n | n
+štadión | стадіон | n | m
+
+## mesto A2
+úrad | установа (офіс) | n | m
+mestský úrad | міська рада | p
+veľvyslanectvo | посольство | n | n
+hasiči | пожежники | n | m
+sanitka | швидка (машина) | n | f
+poisťovňa | страхова компанія | n | f
+galéria | галерея | n | f
+výstava | виставка | n | f
+koncert | концерт | n | m
+vstupenka | вхідний квиток | n | f
+pokladňa | каса | n | f
+otváracie hodiny | години роботи | p
+obchodný dom | універмаг | p
+zľava | знижка | n | f
+výpredaj | розпродаж | n | m
+reklamácia | повернення товару | n | f
+nákup | покупка | n | m
+nakupovať | робити покупки | v
+vrátiť | повернути (річ) | v
+vymeniť peniaze | обміняти гроші | p
+zmenáreň | пункт обміну валют | n | f
+platobná karta | платіжна картка | p
+v hotovosti | готівкою | p
+mestská hromadná doprava | громадський транспорт | p | | MHD
+linka | маршрут (лінія) | n | f
+spoj | рейс (сполучення) | n | m
+vozeň | вагон | n | m
+lôžkový vozeň | спальний вагон | p
+sedadlo | сидіння | n | n
+miestenka | квиток із місцем | n | f
+prípoj | пересадка (на інший рейс) | n | m
+terminál | термінал | n | m
+odlet | виліт | n | m
+prílet | приліт | n | m
+palubný lístok | посадковий талон | p
+prístav | порт | n | m
+trajekt | пором | n | m
+obchádzka | об'їзд | n | f
+kruhový objazd | кругове перехрестя | p
+jednosmerná ulica | вулиця з одностороннім рухом | p
+značka | дорожній знак | n | f
+rýchlosť | швидкість | n | f
+vodičský preukaz | водійські права | p
+autopožičovňa | прокат автомобілів | n | f
+servis | автосервіс | n | m
+pneumatika | шина | n | f
+benzín | бензин | n | m
+nafta | дизельне пальне | n | f
+pýtať sa na cestu | питати дорогу | p
+ukázať | показати | v
+odviezť | відвезти | v
+odísť | піти, поїхати | v
+prísť | прийти, приїхати | v
+navigácia | навігатор | n | f
+obyvateľ | мешканець | n | m
+hlavné mesto | столиця | p
+okres | район (округ) | n | m
+sídlisko | житловий масив | n | n
+vidiek | сільська місцевість | n | m
+okolie | околиці | n | n
+historický | історичний | a
+moderný | сучасний | a
+preplnený | переповнений | a
+bezpečný | безпечний | a
+nebezpečný | небезпечний | a
+lavička | лавка | n | f
+pouličná lampa | вуличний ліхтар | p
+kontrolór | контролер | n | m
+označiť lístok | прокомпостувати квиток | p
+cestovná kancelária | туристична агенція | p
+pohľadnica | листівка | n | f
+suvenír | сувенір | n | m
+mestská časť | район міста | p
+
+## cas A1
+trinásť | тринадцять | u
+pätnásť | п'ятнадцять | u
+štyridsať | сорок | u
+päťdesiat | п'ятдесят | u
+dvesto | двісті | u
+milión | мільйон | u
+nula | нуль | u
+číslo | число | n | n
+čas | час | n | m
+sekunda | секунда | n | f
+popoludnie | друга половина дня | n | n
+Koľko je hodín? | Котра година? | p | | koľko je hodín
+teraz | зараз | d
+potom | потім | d
+hneď | одразу | d
+už | вже | d
+ešte | ще | d
+dátum | дата | n | m
+kalendár | календар | n | m
+hodinky | годинник (наручний) | n | f
+budík | будильник | n | m
+počasie | погода | n | n
+teplý | теплий | a
+horúco | спекотно | d
+chladno | прохолодно | d
+teplo | тепло | d
+mokrý | мокрий | a
+suchý | сухий | a
+nebo | небо | n | n
+hviezda | зірка | n | f
+dáždnik | парасолька | n | m
+ľad | лід | n | m
+teplomer | термометр | n | m
+koľko | скільки | d
+málo | мало | d
+veľa | багато | d
+polovica | половина | n | f
+pršať | дощити | v
+snežiť | падати (про сніг) | v
+svietiť | світити | v
+ročné obdobie | пора року | p
+
+## cas A2
+tretí | третій | u
+štvrtý | четвертий | u
+piaty | п'ятий | u
+desiaty | десятий | u
+desaťročie | десятиліття | n | n
+tisícročie | тисячоліття | n | n
+prestupný rok | високосний рік | p
+obdobie | період | n | n
+okamih | мить | n | m
+chvíľa | хвилинка | n | f
+termín | термін | n | m
+rozvrh | розклад | n | m
+pracovný deň | робочий день | p
+cez týždeň | у будні | p
+predvčerom | позавчора | d
+pozajtra | післязавтра | d
+nedávno | нещодавно | d
+čoskoro | незабаром | d
+zatiaľ | поки що | d
+odvtedy | відтоді | d
+denne | щодня | d
+týždenne | щотижня | d
+ročne | щороку | d
+zriedka | рідко | d
+občas | час від часу | d
+Vianoce | Різдво | n | f
+Veľká noc | Великдень | p
+Nový rok | Новий рік | p
+Silvester | новорічна ніч | n | m
+meniny | іменини | n | f
+výročie | річниця | n | n
+vlhkosť | вологість | n | f
+krupobitie | град | n | n
+mrholí | мрячить | p
+poľadovica | ожеледиця | n | f
+povodeň | повінь | n | f
+sucho | посуха | n | n
+horúčava | спека | n | f
+víchrica | буревій | n | f
+snehuliak | сніговик | n | m
+cencúľ | бурулька | n | m
+západ slnka | захід сонця | p
+východ slnka | схід сонця | p
+svitanie | світанок | n | n
+súmrak | сутінки | n | m
+jasný | ясний | a
+daždivý | дощовий | a
+veterný | вітряний | a
+mrazivý | морозний | a
+dusno | задушливо | d
+ochladiť sa | похолоднішати | v
+oteplí sa | потеплішає | p
+vyjasniť sa | прояснитися | v
+mrznúť | замерзати | v
+topiť sa | танути | v
+ponáhľať sa | поспішати | v
+stihnúť | встигнути | v
+trvať | тривати | v
+začať | почати | v
+skončiť | закінчити | v
+presne | точно | d
+asi | приблизно | d
+o päť minút | через п'ять хвилин | p
+pred hodinou | годину тому | p
+o pol tretej | о пів на третю | p
+počítať | рахувати | v
+sčítať | додати (числа) | v
+odčítať | відняти | v
+percento | відсоток | n | n
+časové pásmo | часовий пояс | p

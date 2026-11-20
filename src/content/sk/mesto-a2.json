@@ -195,6 +195,483 @@
       "ua": "жвавий",
       "pos": "adj",
       "uaAlt": ["людний"]
+    },
+    {
+      "id": "urad",
+      "sk": "úrad",
+      "ua": "установа (офіс)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "mestsky-urad",
+      "sk": "mestský úrad",
+      "ua": "міська рада",
+      "pos": "phrase"
+    },
+    {
+      "id": "velvyslanectvo",
+      "sk": "veľvyslanectvo",
+      "ua": "посольство",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "hasici",
+      "sk": "hasiči",
+      "ua": "пожежники",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sanitka",
+      "sk": "sanitka",
+      "ua": "швидка (машина)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "poistovna",
+      "sk": "poisťovňa",
+      "ua": "страхова компанія",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "galeria",
+      "sk": "galéria",
+      "ua": "галерея",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vystava",
+      "sk": "výstava",
+      "ua": "виставка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "koncert",
+      "sk": "koncert",
+      "ua": "концерт",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vstupenka",
+      "sk": "vstupenka",
+      "ua": "вхідний квиток",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pokladna",
+      "sk": "pokladňa",
+      "ua": "каса",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "otvaracie-hodiny",
+      "sk": "otváracie hodiny",
+      "ua": "години роботи",
+      "pos": "phrase"
+    },
+    {
+      "id": "obchodny-dom",
+      "sk": "obchodný dom",
+      "ua": "універмаг",
+      "pos": "phrase"
+    },
+    {
+      "id": "zlava",
+      "sk": "zľava",
+      "ua": "знижка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vypredaj",
+      "sk": "výpredaj",
+      "ua": "розпродаж",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "reklamacia",
+      "sk": "reklamácia",
+      "ua": "повернення товару",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "nakup",
+      "sk": "nákup",
+      "ua": "покупка",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "nakupovat",
+      "sk": "nakupovať",
+      "ua": "робити покупки",
+      "pos": "verb"
+    },
+    {
+      "id": "vratit",
+      "sk": "vrátiť",
+      "ua": "повернути (річ)",
+      "pos": "verb"
+    },
+    {
+      "id": "vymenit-peniaze",
+      "sk": "vymeniť peniaze",
+      "ua": "обміняти гроші",
+      "pos": "phrase"
+    },
+    {
+      "id": "zmenaren",
+      "sk": "zmenáreň",
+      "ua": "пункт обміну валют",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "platobna-karta",
+      "sk": "platobná karta",
+      "ua": "платіжна картка",
+      "pos": "phrase"
+    },
+    {
+      "id": "v-hotovosti",
+      "sk": "v hotovosti",
+      "ua": "готівкою",
+      "pos": "phrase"
+    },
+    {
+      "id": "mestska-hromadna-doprava",
+      "sk": "mestská hromadná doprava",
+      "ua": "громадський транспорт",
+      "pos": "phrase",
+      "skAlt": ["MHD"]
+    },
+    {
+      "id": "linka",
+      "sk": "linka",
+      "ua": "маршрут (лінія)",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "spoj",
+      "sk": "spoj",
+      "ua": "рейс (сполучення)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "vozen",
+      "sk": "vozeň",
+      "ua": "вагон",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "lozkovy-vozen",
+      "sk": "lôžkový vozeň",
+      "ua": "спальний вагон",
+      "pos": "phrase"
+    },
+    {
+      "id": "sedadlo",
+      "sk": "sedadlo",
+      "ua": "сидіння",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "miestenka",
+      "sk": "miestenka",
+      "ua": "квиток із місцем",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pripoj",
+      "sk": "prípoj",
+      "ua": "пересадка (на інший рейс)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "terminal",
+      "sk": "terminál",
+      "ua": "термінал",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "odlet",
+      "sk": "odlet",
+      "ua": "виліт",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "prilet",
+      "sk": "prílet",
+      "ua": "приліт",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "palubny-listok",
+      "sk": "palubný lístok",
+      "ua": "посадковий талон",
+      "pos": "phrase"
+    },
+    {
+      "id": "pristav",
+      "sk": "prístav",
+      "ua": "порт",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "trajekt",
+      "sk": "trajekt",
+      "ua": "пором",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "obchadzka",
+      "sk": "obchádzka",
+      "ua": "об'їзд",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "kruhovy-objazd",
+      "sk": "kruhový objazd",
+      "ua": "кругове перехрестя",
+      "pos": "phrase"
+    },
+    {
+      "id": "jednosmerna-ulica",
+      "sk": "jednosmerná ulica",
+      "ua": "вулиця з одностороннім рухом",
+      "pos": "phrase"
+    },
+    {
+      "id": "znacka",
+      "sk": "značka",
+      "ua": "дорожній знак",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "rychlost",
+      "sk": "rýchlosť",
+      "ua": "швидкість",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "vodicsky-preukaz",
+      "sk": "vodičský preukaz",
+      "ua": "водійські права",
+      "pos": "phrase"
+    },
+    {
+      "id": "autopozicovna",
+      "sk": "autopožičovňa",
+      "ua": "прокат автомобілів",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "servis",
+      "sk": "servis",
+      "ua": "автосервіс",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "pneumatika",
+      "sk": "pneumatika",
+      "ua": "шина",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "benzin",
+      "sk": "benzín",
+      "ua": "бензин",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "nafta",
+      "sk": "nafta",
+      "ua": "дизельне пальне",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "pytat-sa-na-cestu",
+      "sk": "pýtať sa na cestu",
+      "ua": "питати дорогу",
+      "pos": "phrase"
+    },
+    {
+      "id": "ukazat",
+      "sk": "ukázať",
+      "ua": "показати",
+      "pos": "verb"
+    },
+    {
+      "id": "odviezt",
+      "sk": "odviezť",
+      "ua": "відвезти",
+      "pos": "verb"
+    },
+    {
+      "id": "odist",
+      "sk": "odísť",
+      "ua": "піти, поїхати",
+      "pos": "verb"
+    },
+    {
+      "id": "prist",
+      "sk": "prísť",
+      "ua": "прийти, приїхати",
+      "pos": "verb"
+    },
+    {
+      "id": "navigacia",
+      "sk": "navigácia",
+      "ua": "навігатор",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "obyvatel",
+      "sk": "obyvateľ",
+      "ua": "мешканець",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "hlavne-mesto",
+      "sk": "hlavné mesto",
+      "ua": "столиця",
+      "pos": "phrase"
+    },
+    {
+      "id": "okres",
+      "sk": "okres",
+      "ua": "район (округ)",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "sidlisko",
+      "sk": "sídlisko",
+      "ua": "житловий масив",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "vidiek",
+      "sk": "vidiek",
+      "ua": "сільська місцевість",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "okolie",
+      "sk": "okolie",
+      "ua": "околиці",
+      "pos": "noun",
+      "gender": "n"
+    },
+    {
+      "id": "historicky",
+      "sk": "historický",
+      "ua": "історичний",
+      "pos": "adj"
+    },
+    {
+      "id": "moderny",
+      "sk": "moderný",
+      "ua": "сучасний",
+      "pos": "adj"
+    },
+    {
+      "id": "preplneny",
+      "sk": "preplnený",
+      "ua": "переповнений",
+      "pos": "adj"
+    },
+    {
+      "id": "bezpecny",
+      "sk": "bezpečný",
+      "ua": "безпечний",
+      "pos": "adj"
+    },
+    {
+      "id": "nebezpecny",
+      "sk": "nebezpečný",
+      "ua": "небезпечний",
+      "pos": "adj"
+    },
+    {
+      "id": "lavicka",
+      "sk": "lavička",
+      "ua": "лавка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "poulicna-lampa",
+      "sk": "pouličná lampa",
+      "ua": "вуличний ліхтар",
+      "pos": "phrase"
+    },
+    {
+      "id": "kontrolor",
+      "sk": "kontrolór",
+      "ua": "контролер",
+      "pos": "noun",
+      "gender": "m"
+    },
+    {
+      "id": "oznacit-listok",
+      "sk": "označiť lístok",
+      "ua": "прокомпостувати квиток",
+      "pos": "phrase"
+    },
+    {
+      "id": "cestovna-kancelaria",
+      "sk": "cestovná kancelária",
+      "ua": "туристична агенція",
+      "pos": "phrase"
+    },
+    {
+      "id": "pohladnica",
+      "sk": "pohľadnica",
+      "ua": "листівка",
+      "pos": "noun",
+      "gender": "f"
+    },
+    {
+      "id": "suvenir",
+      "sk": "suvenír",
+      "ua": "сувенір",
+      "pos": "noun",
+      "gender": "m"
     }
   ]
 }
