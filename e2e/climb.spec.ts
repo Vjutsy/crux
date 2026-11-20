@@ -90,6 +90,10 @@ test('стіна 1 без помилок — вершина і 3 зірки', as
   expect(await climb(page, 0)).toBe('won');
   await expect(page.locator('#result')).toContainText('Вершина!');
   await expect(page.locator('#result')).toContainText('3 з 3');
+  // 3 зірки — відкрилась Лисичка для Іви: наклейка на листівці й «Вдягнути».
+  await expect(page.locator('.pc-sticker')).toContainText('Лисичка');
+  await page.getByRole('button', { name: 'Вдягнути' }).click();
+  await expect(page.getByRole('button', { name: 'Вдягнено ✓' })).toBeDisabled();
   // Наступна стіна відкрилась.
   await page.getByRole('button', { name: 'Меню' }).click();
   await page.getByRole('button', { name: 'Грати' }).click();
@@ -214,4 +218,23 @@ test('змішаний режим і тема «Авто»: стіни прох�
   await page.getByRole('button', { name: 'Лізти!' }).click();
   expect(await climb(page, 0)).toBe('won');
   await expect(page.locator('#result')).toContainText('Авто й водійські права · B2');
+});
+
+test('скіни: вибір вбрання в панелі скелелаза, закриті — з умовою', async ({ page }) => {
+  await page.getByRole('button', { name: 'Грати' }).click();
+  await page.getByRole('button', { name: 'Лізти!' }).click();
+  expect(await climb(page, 0)).toBe('won');
+  await expect(page.locator('#result')).toBeVisible();
+  await page.locator('#result').getByRole('button', { name: 'Меню' }).click();
+  await page.getByRole('button', { name: /Скелелаз: Іва/ }).click();
+  await page.getByRole('button', { name: 'Лисичка' }).click();
+  await expect(page.getByRole('button', { name: 'Лисичка' })).toHaveAttribute('aria-pressed', 'true');
+  await expect(page.getByRole('button', { name: 'Бджілка: ще 12 ★' })).toBeDisabled();
+  await page.getByRole('button', { name: 'Мартин', exact: true }).click();
+  await expect(page.getByRole('button', { name: 'Шеф: ще 3 ★' })).toBeDisabled();
+  // Вибір зберігається.
+  await page.getByRole('button', { name: 'Іва', exact: true }).click();
+  await page.reload();
+  await page.getByRole('button', { name: /Скелелаз: Іва/ }).click();
+  await expect(page.getByRole('button', { name: 'Лисичка' })).toHaveAttribute('aria-pressed', 'true');
 });

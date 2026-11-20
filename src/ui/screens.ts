@@ -10,6 +10,7 @@ import type { WordGroup } from '../content/schema';
 import type { Point } from '../core/body';
 import type { Progress } from '../core/save';
 import { type Climber, climbers, getClimber } from '../data/climbers';
+import { type Skin, lookOf, skinsOf, totalStars, unlocked } from '../data/skins';
 import type { WallConfig } from '../data/walls';
 import type { ClimbSummary } from '../scenes/ClimbScene';
 import { drawClimber } from './climberArt';
@@ -88,9 +89,11 @@ export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Pro
 
   const starsFor = (wall: number) => progress.stars[`${pick.groupId}#${wall}`] ?? 0;
   const passed = Math.max(0, Math.min(walls.length, progress.unlockedWall - 1));
+  const total = totalStars(progress.stars);
+  const look = (id = settings.climber) => lookOf(id, settings.skins, total);
 
   const home = () => {
-    const c = getClimber(settings.climber);
+    const c = look();
     const muted = !settings.sound && !settings.music;
     const streak = progress.streak.count;
     return `<div class="home">
@@ -111,15 +114,31 @@ export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Pro
     </div>`;
   };
 
+  /** Кнопка вбрання: звичайне (null) або скін; закритий — силует і «ще N ★». */
+  const outfitBtn = (sk: Skin | null) => {
+    const owner = getClimber(settings.climber);
+    const chosen = (settings.skins[owner.id] ?? '') === (sk?.id ?? '');
+    if (!sk)
+      return `<button class="outfit" data-skin="" aria-pressed="${chosen}">${climberSvg(owner, 0, 'mini-art')}<span>Звичайне</span></button>`;
+    if (!unlocked(sk, total)) {
+      const left = sk.need - total;
+      return `<button class="outfit locked" disabled aria-label="${esc(sk.name)}: ще ${left} ★">${climberSvg(sk, 0, 'mini-art')}<span>${esc(sk.name)}</span><small>ще ${left} ★</small></button>`;
+    }
+    return `<button class="outfit" data-skin="${sk.id}" aria-pressed="${chosen}">${climberSvg(sk, 0, 'mini-art')}<span>${esc(sk.name)}</span></button>`;
+  };
+
   const sheetHtml = () => {
     const body =
       sheet === 'climber'
         ? `<div class="climbers">${climbers
             .map(
               (c) =>
-                `<button class="climber-pick" data-climber="${c.id}" aria-pressed="${c.id === settings.climber}">${climberSvg(c, 0, 'mini-art')}<span>${esc(c.name)}</span></button>`,
+                `<button class="climber-pick" data-climber="${c.id}" aria-pressed="${c.id === settings.climber}">${climberSvg(look(c.id), 0, 'mini-art')}<span>${esc(c.name)}</span></button>`,
             )
-            .join('')}</div><p class="muted">Вигляд різний — лазять усі однаково.</p>`
+            .join('')}</div>
+          <div class="row"><h3 class="outfit-title">Вбрання · ${esc(getClimber(settings.climber).name)}</h3><span class="star-chip" aria-label="Зірок: ${total}">★ ${total}</span></div>
+          <div class="outfits">${[null, ...skinsOf(settings.climber)].map(outfitBtn).join('')}</div>
+          <p class="muted">Вигляд різний — лазять усі однаково. Нові вбрання відкриваються за зірки.</p>`
         : `<div class="switches">${(
             [
               ['sound', 'Звуки'],
@@ -188,7 +207,7 @@ export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Pro
     const tick = (now: number) => {
       const host = document.getElementById('menu-hero');
       if (el.hidden || !host || view !== 'home') return;
-      host.innerHTML = climberSvg(getClimber(settings.climber), (now - t0) / 1000, 'hero-art');
+      host.innerHTML = climberSvg(look(), (now - t0) / 1000, 'hero-art');
       raf = requestAnimationFrame(tick);
     };
     raf = requestAnimationFrame(tick);
@@ -219,9 +238,12 @@ export function showMenu(groups: WordGroup[], walls: WallConfig[], progress: Pro
     else if (act === 'play') view = 'play';
     else if (act === 'back') view = 'home';
     else if (b.dataset.climber) {
+      // Панель лишається відкритою: одразу видно вбрання цього скелелаза.
       settings.climber = b.dataset.climber;
       onSettings({ ...settings });
-      sheet = null;
+    } else if (b.dataset.skin !== undefined) {
+      settings.skins = { ...settings.skins, [settings.climber]: b.dataset.skin };
+      onSettings({ ...settings });
     } else if (b.dataset.toggle === 'sound' || b.dataset.toggle === 'music') {
       settings[b.dataset.toggle] = !settings[b.dataset.toggle];
       onSettings({ ...settings });
@@ -257,7 +279,12 @@ const STAR_PATH = 'M12 2.8l2.7 5.6 6.1.8-4.5 4.2 1.1 6.1L12 16.6l-5.4 2.9 1.1-6.
  * марка із зірками, «твій шлях» і найкоротший шлях, слова для повторення, кнопки під листівкою.
  * Листівка падає з прискоренням і раз коротко відскакує, цифри набігають із «піком», зірки дзенькають, у кінці — акорд.
  */
-export function showResult(s: ClimbSummary, onAgain: () => void, onMenu: () => void, onNext?: () => void) {
+export interface NewSkins {
+  skins: Skin[];
+  onWear: (skinId: string) => void;
+}
+
+export function showResult(s: ClimbSummary, onAgain: () => void, onMenu: () => void, onNext?: () => void, fresh?: NewSkins) {
   const el = document.getElementById('result')!;
   const stamp = [0, 1, 2]
     .map((i) => `<svg class="pc-star" data-i="${i}" viewBox="0 0 24 24" aria-hidden="true"><path d="${STAR_PATH}"/></svg>`)
@@ -285,13 +312,30 @@ export function showResult(s: ClimbSummary, onAgain: () => void, onMenu: () => v
         <div><b class="teal" data-count="${s.shortest}">${s.shortest}</b><span>найкоротший шлях</span></div>
       </div>
       ${words}
+      ${(fresh?.skins ?? [])
+        .map(
+          (sk) => `<div class="pc-sticker">
+        ${climberSvg(sk, 0, 'pc-skin-art')}
+        <div><b>Новий скін!</b><span>${esc(sk.name)} · ${esc(getClimber(sk.owner).name)}</span>
+          <button class="pc-wear" data-wear="${sk.id}">Вдягнути</button></div>
+      </div>`,
+        )
+        .join('')}
     </article>
     <div class="pc-foot">
       ${onNext ? '<button class="go big" id="next">Наступна стіна</button>' : ''}
       <div class="pc-row"><button class="go alt" id="again">Ще раз</button><button class="go alt" id="tomenu">Меню</button></div>
     </div>`;
   el.onclick = (e) => {
-    const id = (e.target as HTMLElement).closest('button')?.id;
+    const btn = (e.target as HTMLElement).closest('button');
+    if (btn?.dataset.wear) {
+      fresh?.onWear(btn.dataset.wear);
+      btn.textContent = 'Вдягнено ✓';
+      btn.disabled = true;
+      sound.star(2);
+      return;
+    }
+    const id = btn?.id;
     if (!id) return;
     el.hidden = true;
     if (id === 'next') onNext?.();
@@ -299,11 +343,11 @@ export function showResult(s: ClimbSummary, onAgain: () => void, onMenu: () => v
     if (id === 'tomenu') onMenu();
   };
   el.hidden = false;
-  animatePostcard(el, s);
+  animatePostcard(el, s, (fresh?.skins.length ?? 0) > 0);
 }
 
 /** Послідовність: удар листівки (0.42 с) → цифри набігають → зірки по одній → кнопки й акорд. Разом ~1.1 с. */
-function animatePostcard(el: HTMLElement, s: ClimbSummary) {
+function animatePostcard(el: HTMLElement, s: ClimbSummary, hasSkin: boolean) {
   const lit = (i: number) => el.querySelector(`.pc-star[data-i="${i}"]`)?.classList.add('on');
   if (reducedMotion()) {
     for (let i = 0; i < s.stars; i++) lit(i);
@@ -345,6 +389,7 @@ function animatePostcard(el: HTMLElement, s: ClimbSummary) {
     () => {
       el.classList.add('shown');
       if (s.won && s.stars > 0) sound.chord();
+      if (hasSkin) setTimeout(() => sound.star(4), 260);
     },
     starsAt + Math.max(1, s.stars) * 110,
   );

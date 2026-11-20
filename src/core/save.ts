@@ -13,7 +13,8 @@ export interface Progress {
   seen: SeenLog;
   asked: number;
   streak: { lastDay: string; count: number };
-  settings: { sound: boolean; music: boolean; climber: string };
+  /** skins: вибраний скін для кожного скелелаза (id скелелаза → id скіна). */
+  settings: { sound: boolean; music: boolean; climber: string; skins: Record<string, string> };
   /** Навчання на першій стіні вже пройдене. */
   tutorialDone: boolean;
   /** Вступ при першому відкритті гри вже показано. */
@@ -30,7 +31,7 @@ export const emptyProgress = (): Progress => ({
   seen: {},
   asked: 0,
   streak: { lastDay: '', count: 0 },
-  settings: { sound: true, music: true, climber: 'iva' },
+  settings: { sound: true, music: true, climber: 'iva', skins: {} },
   tutorialDone: false,
   introSeen: false,
 });

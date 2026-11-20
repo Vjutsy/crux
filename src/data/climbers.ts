@@ -6,7 +6,7 @@ export interface Climber {
   id: string;
   name: string;
   note: string;
-  cap: 'stocking' | 'beanie' | 'helmet';
+  cap: Cap;
   hat: string;
   band: string;
   pom: string;
@@ -20,7 +20,22 @@ export interface Climber {
   legs: string;
   boots: string;
   braid?: boolean;
+  /** Дві коси по боках (вікінг). */
+  braids2?: boolean;
+  /** Що на шиї: шарф (як було), хустинка, комір скафандра або нічого. */
+  neck?: 'scarf' | 'kerchief' | 'collar' | 'none';
+  /** Горизонтальні смуги на светрі. */
+  bands?: { color: string; n: number };
+  extras?: Extra[];
+  /** Колір накидки / хвоста / ранця. */
+  accent?: string;
+  accentDk?: string;
+  /** Зірочки, шипи, вогник. */
+  spark?: string;
 }
+
+export type Cap = 'stocking' | 'beanie' | 'helmet' | 'fox' | 'frog' | 'astro' | 'bee' | 'chef' | 'wizard' | 'viking' | 'dino';
+export type Extra = 'tail-fox' | 'tail-dino' | 'cape' | 'fur' | 'wings' | 'pack' | 'spikes';
 
 export const climbers: Climber[] = [
   {

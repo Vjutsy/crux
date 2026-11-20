@@ -11,6 +11,7 @@ import './styles.css';
 import { registerSW } from 'virtual:pwa-register';
 import { setAudio, unlockAudio } from './audio';
 import { getClimber } from './data/climbers';
+import { lookOf, newlyUnlocked, totalStars } from './data/skins';
 import { groups } from './content';
 import { loadProgress, saveProgress, touchStreak, type Progress } from './core/save';
 import { walls } from './data/walls';
@@ -51,7 +52,7 @@ function startClimb(choice: MenuChoice) {
     boxes: progress.boxes,
     seen: progress.seen,
     asked: progress.asked,
-    climber: getClimber(progress.settings.climber),
+    climber: lookOf(progress.settings.climber, progress.settings.skins, totalStars(progress.stars)),
     tutorial: !progress.tutorialDone && choice.wall.wall === 1,
   };
   hud.hidden = false;
@@ -74,6 +75,7 @@ function menu() {
 game.events.on('climb:end', (s: ClimbSummary) => {
   hud.hidden = true;
   const key = `${s.groupId}#${s.wall}`;
+  const before = totalStars(progress.stars);
   progress = {
     ...progress,
     boxes: s.boxes,
@@ -86,7 +88,21 @@ game.events.on('climb:end', (s: ClimbSummary) => {
   void saveProgress(progress);
   const cur = last!;
   const next = walls.find((w) => w.wall === cur.wall.wall + 1);
-  showResult(s, () => startClimb(cur), menu, s.won && next ? () => startClimb({ ...cur, wall: next }) : undefined);
+  // Новий скін — наклейка на листівці з кнопкою «Вдягнути».
+  const fresh = newlyUnlocked(before, totalStars(progress.stars));
+  const wear = (id: string) => {
+    const sk = fresh.find((x) => x.id === id);
+    if (!sk) return;
+    progress = {
+      ...progress,
+      settings: { ...progress.settings, climber: sk.owner, skins: { ...progress.settings.skins, [sk.owner]: sk.id } },
+    };
+    void saveProgress(progress);
+  };
+  showResult(s, () => startClimb(cur), menu, s.won && next ? () => startClimb({ ...cur, wall: next }) : undefined, {
+    skins: fresh,
+    onWear: wear,
+  });
 });
 
 document.getElementById('hud-menu')!.addEventListener('click', menu);

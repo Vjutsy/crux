@@ -69,6 +69,8 @@ const SNAP = 30;
 const DRAG_START = 8;
 /** Скільки «неба» над стіною може показати камера (частка висоти екрана). */
 const SKY = 0.45;
+/** Скільки триває сцена вершини перед листівкою. */
+const SUMMIT_MS = 1100;
 /** Скільки кружляють зірочки, перш ніж з'явиться екран результату. */
 const DIZZY_MS = 1900;
 /** Відстань від центру тулуба до центру голови в моделі скелелаза. */
@@ -110,6 +112,8 @@ export class ClimbScene extends Phaser.Scene {
   private shakeTimer = 0;
   private beatTimer = 0;
   private ragdoll: Ragdoll | null = null;
+  /** Вершина: скелелаз кладе руки на край стіни й підтягується (сцена з чату дизайну), потім листівка. */
+  private summit: { torso: Point; ends: Point[] } | null = null;
   /** Підлога й бокові стінки для регдолу. */
   private bounds: MatterJS.BodyType[] = [];
   private fallAt = 0;
@@ -133,6 +137,7 @@ export class ClimbScene extends Phaser.Scene {
     this.selected = null;
     this.busy = false;
     this.ragdoll = null;
+    this.summit = null;
     this.bounds = [];
     this.fallAt = 0;
     this.landedAt = 0;
@@ -406,9 +411,31 @@ export class ClimbScene extends Phaser.Scene {
     this.drawHolds();
     if (this.s.status === 'won') {
       sound.win();
-      this.time.delayedCall(450, () => this.finish());
+      this.reachSummit();
     }
     if (this.s.status === 'fallen') this.fall();
+  }
+
+  /** Руки лягають на край стіни, голова вже над ним, ноги звисають (за ескізом); за мить — листівка. */
+  private reachSummit() {
+    this.busy = true;
+    this.selected = null;
+    this.drag = null;
+    const W = this.s.wall.width;
+    const x = Math.max(60, Math.min(W - 60, this.s.torso.x));
+    this.summit = {
+      torso: { x, y: 12 },
+      ends: [
+        { x: x - 26, y: 1 },
+        { x: x + 26, y: 1 },
+        { x: x - 24, y: 66 },
+        { x: x + 26, y: 60 },
+      ],
+    };
+    // Поки скелелаз вилазить, «☰» ховаємо: вихід у меню зараз загубив би перемогу.
+    document.getElementById('hud')!.hidden = true;
+    navigator.vibrate?.([30, 40, 30]);
+    this.time.delayedCall(SUMMIT_MS, () => this.finish());
   }
 
   /** Підказка: наступний рух маршруту з поточної пози (для навчання і e2e-тестів). */
@@ -529,14 +556,15 @@ export class ClimbScene extends Phaser.Scene {
       this.drawRagdoll(time);
       return;
     }
-    this.disp.torso = lerp(this.disp.torso, this.s.torso);
-    // Кінцівка, яку тягнуть, іде за пальцем швидше, решта — плавно до своїх зачепів.
+    const target = this.summit?.torso ?? this.s.torso;
+    this.disp.torso = lerp(this.disp.torso, target);
+    // Кінцівка, яку тягнуть, іде за пальцем швидше, решта — плавно до своїх зачепів (або до краю стіни на вершині).
     this.disp.ends = LIMBS.map((k) =>
-      this.drag?.moved && this.drag.limb === k ? this.drag.end : lerp(this.disp.ends[k]!, this.limbEnd(k)),
+      this.drag?.moved && this.drag.limb === k ? this.drag.end : lerp(this.disp.ends[k]!, this.summit?.ends[k] ?? this.limbEnd(k)),
     );
 
     // Камера плавно тримає скелелаза трохи нижче центру екрана.
-    this.camY += (this.s.torso.y - 40 - this.camY) * a;
+    this.camY += (target.y - 40 - this.camY) * a;
     this.cameras.main.centerOn(this.s.wall.width / 2, this.camY);
 
     // Втома: тремтіння тіла, на межі — тряска камери й серцебиття.
