@@ -68,5 +68,75 @@
     "typingShare": 0.5,
     "requireDiacritics": true,
     "stepFactor": 0.4
+  },
+  {
+    "wall": 11,
+    "moves": 27,
+    "typingShare": 0.51,
+    "requireDiacritics": true,
+    "stepFactor": 0.39
+  },
+  {
+    "wall": 12,
+    "moves": 27,
+    "typingShare": 0.52,
+    "requireDiacritics": true,
+    "stepFactor": 0.38
+  },
+  {
+    "wall": 13,
+    "moves": 28,
+    "typingShare": 0.53,
+    "requireDiacritics": true,
+    "stepFactor": 0.37
+  },
+  {
+    "wall": 14,
+    "moves": 29,
+    "typingShare": 0.54,
+    "requireDiacritics": true,
+    "stepFactor": 0.36
+  },
+  {
+    "wall": 15,
+    "moves": 29,
+    "typingShare": 0.55,
+    "requireDiacritics": true,
+    "stepFactor": 0.35
+  },
+  {
+    "wall": 16,
+    "moves": 30,
+    "typingShare": 0.56,
+    "requireDiacritics": true,
+    "stepFactor": 0.34
+  },
+  {
+    "wall": 17,
+    "moves": 31,
+    "typingShare": 0.57,
+    "requireDiacritics": true,
+    "stepFactor": 0.34
+  },
+  {
+    "wall": 18,
+    "moves": 31,
+    "typingShare": 0.58,
+    "requireDiacritics": true,
+    "stepFactor": 0.33
+  },
+  {
+    "wall": 19,
+    "moves": 32,
+    "typingShare": 0.59,
+    "requireDiacritics": true,
+    "stepFactor": 0.32
+  },
+  {
+    "wall": 20,
+    "moves": 33,
+    "typingShare": 0.6,
+    "requireDiacritics": true,
+    "stepFactor": 0.31
   }
 ]

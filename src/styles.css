@@ -682,7 +682,7 @@ body {
 }
 
 .wall {
-  height: 58px;
+  height: 52px;
   border-radius: 16px;
   border: 1px solid #2f4f57;
   background: #2f4f57;
@@ -724,6 +724,15 @@ body {
 
 .foot .go.big {
   margin-top: 0;
+}
+
+/* На «Куди лізти?» кнопка «Лізти!» завжди видна знизу: 20 стін не вміщаються на екран без прокрутки. */
+.play .foot {
+  position: sticky;
+  bottom: 0;
+  margin-top: 16px;
+  padding: 18px 0 max(4px, env(safe-area-inset-bottom));
+  background: linear-gradient(to bottom, #1c1a2b00, var(--night) 28%);
 }
 
 /* Вступ */
