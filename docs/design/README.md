@@ -3,13 +3,14 @@
 Дизайни робились як артефакти в claude.ai (приватні, відкриваються з акаунта власника).
 Усе, що з них потрібно грі, уже перенесено в код — посилання лишаються як еталон вигляду.
 
-| Дизайн                             | Посилання                                                                         | Де в коді                                                              |
-| ---------------------------------- | --------------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
-| План розробки                      | https://claude.ai/artifact/FxVd3T7wh3fxYyqTE9Xdg3 · копія: [plan.html](plan.html) | —                                                                      |
-| Модель скелелаза (Іва, Мартин, Бо) | https://claude.ai/artifact/DRNVSzERQiTZUYe6dkHAaA                                 | `src/ui/climberArt.ts`, `src/data/climbers.ts`                         |
-| Скеледроми і зачепи                | https://claude.ai/artifact/4esKe9GjzgTNnLqGkk9cMr                                 | `src/scenes/backgrounds.ts`                                            |
-| Скіни скелелазів (полотно)         | https://claude.ai/artifact/4W1mw1D3z1MaqsqLkQV9Pc                                 | `src/data/skins.ts`, `src/ui/climberArt.ts` (`fancyCap`, `backExtras`) |
-| Варіанти меню (полотно)            | https://claude.ai/artifact/7DdxxbvYBcqKdSryizroLT                                 | `src/ui/screens.ts`, `src/styles.css` (обрано «Казкові сутінки»)       |
+| Дизайн                             | Посилання                                                                         | Де в коді                                                                              |
+| ---------------------------------- | --------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- |
+| План розробки                      | https://claude.ai/artifact/FxVd3T7wh3fxYyqTE9Xdg3 · копія: [plan.html](plan.html) | —                                                                                      |
+| Модель скелелаза (Іва, Мартин, Бо) | https://claude.ai/artifact/DRNVSzERQiTZUYe6dkHAaA                                 | `src/ui/climberArt.ts`, `src/data/climbers.ts`                                         |
+| Скеледроми і зачепи                | https://claude.ai/artifact/4esKe9GjzgTNnLqGkk9cMr                                 | `src/scenes/backgrounds.ts`                                                            |
+| Скіни скелелазів (полотно)         | https://claude.ai/artifact/4W1mw1D3z1MaqsqLkQV9Pc                                 | `src/data/skins.ts` (`skins`; Пінгвін і Комета — `draftSkins`), `src/ui/climberArt.ts` |
+| Варіанти меню (полотно)            | https://claude.ai/artifact/7DdxxbvYBcqKdSryizroLT                                 | `src/ui/screens.ts`, `src/styles.css` (обрано «Казкові сутінки»)                       |
+| Кінець стіни E–H (там само)        | https://claude.ai/artifact/7DdxxbvYBcqKdSryizroLT                                 | `showResult` у `src/ui/screens.ts` (обрано F «Листівка»)                               |
 
 ## Візуальна мова
 

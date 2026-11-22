@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { climbers } from '../src/data/climbers';
-import { lookOf, newlyUnlocked, skins, skinsOf, totalStars } from '../src/data/skins';
+import { draftSkins, lookOf, newlyUnlocked, skins, skinsOf, totalStars } from '../src/data/skins';
 import { drawClimber } from '../src/ui/climberArt';
 
 describe('скіни', () => {
@@ -49,5 +49,26 @@ describe('скіни', () => {
     const svgs = [...climbers, ...skins].map((p) => drawClimber(p, c, ends, 1.3, { tired: 0.5 }));
     for (const s of svgs) expect(s).not.toMatch(/NaN|undefined/);
     expect(new Set(svgs).size).toBe(svgs.length);
+  });
+
+  it('чернетки Пінгвін і Комета малюються, але ще не в грі', () => {
+    expect(draftSkins.map((s) => s.id)).toEqual(['penguin', 'comet']);
+    for (const d of draftSkins) {
+      expect(skins.some((s) => s.id === d.id)).toBe(false);
+      const svg = drawClimber(
+        { ...d },
+        { x: 100, y: 100 },
+        [
+          { x: 70, y: 50 },
+          { x: 130, y: 50 },
+          { x: 80, y: 170 },
+          { x: 120, y: 170 },
+        ],
+        1,
+      );
+      expect(svg.length).toBeGreaterThan(1000);
+      expect(svg).not.toContain('NaN');
+      expect(svg).not.toContain('undefined');
+    }
   });
 });

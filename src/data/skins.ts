@@ -188,6 +188,55 @@ export const skins: Skin[] = [
   },
 ];
 
+/**
+ * Чернетки скінів (22.11): уже намальовані (полотно «Crux — скіни скелелазів»), але ще НЕ в грі —
+ * чекають рішення, чиї вони (owner) і за скільки зірок відкриваються (need). Щоб увімкнути —
+ * перенести в `skins` з правильними owner/need і додати поріг у docs/decisions.md.
+ * «Комета» — власна чарівна героїня замість Сейлор Мун (чужого персонажа малювати не можна).
+ */
+export const draftSkins: Omit<Skin, 'owner' | 'need'>[] = [
+  {
+    ...base,
+    id: 'penguin',
+    name: 'Пінгвін',
+    note: 'Чорний каптур із чубчиком, червоний шарф і помаранчеві ласти',
+    cap: 'penguin',
+    hat: '#2a2833',
+    band: '#2a2833',
+    pom: '#f4f1ea',
+    sweater: '#2f2d3a',
+    sweaterDk: '#1f1d28',
+    scarf: '#d1453b',
+    stripe: '#f4f1ea',
+    hair: '#2a2833',
+    legs: '#f0973a',
+    boots: '#f0973a',
+    neck: 'scarf',
+    extras: ['tail-penguin'],
+    accent: '#2a2833',
+  },
+  {
+    ...base,
+    id: 'comet',
+    name: 'Комета',
+    note: 'Бірюзове каре із зірочкою-заколкою, навколо мерехтять іскри',
+    cap: 'comet',
+    hat: '#5fc4c0',
+    band: '#5fc4c0',
+    pom: '#ffe27a',
+    sweater: '#a78bd8',
+    sweaterDk: '#7d63b0',
+    scarf: '#f6c9dc',
+    stripe: '#ffe27a',
+    hair: '#5fc4c0',
+    legs: '#4a3f6b',
+    boots: '#f6c9dc',
+    neck: 'scarf',
+    extras: ['sparkles'],
+    spark: '#ffe27a',
+  },
+];
+
 /** Усього зірок: найкращий результат кожної стіни кожної групи. */
 export const totalStars = (stars: Record<string, number>) => Object.values(stars).reduce((a, b) => a + b, 0);
 

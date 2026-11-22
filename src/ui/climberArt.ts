@@ -286,6 +286,27 @@ function fancyCap(P: Climber, hx: number, hy: number, hs: number, t: number): st
       s += `<ellipse cx="${f(hx)}" cy="${f(hy - 6)}" rx="24" ry="5" fill="${P.hat}"/><rect x="${f(hx - 14)}" y="${f(hy - 12)}" width="28" height="5" rx="1" fill="${P.band}"/>`;
       break;
     }
+    case 'penguin': {
+      s += hood(hx, hy, P.hat);
+      // Чубчик на маківці гойдається.
+      s += `<path d="M${f(hx - 2)},${f(hy - 16)}Q${f(hx - 1 + hs)},${f(hy - 26)} ${f(hx + 5 + hs * 1.4)},${f(hy - 27)}Q${f(hx + 2 + hs)},${f(hy - 22)} ${f(hx + 3)},${f(hy - 16)}Z" fill="${P.hat}"/>`;
+      s += `<path d="M${f(hx - 9)},${f(hy - 12)}C${f(hx - 3)},${f(hy - 16)} ${f(hx + 6)},${f(hy - 15)} ${f(hx + 11)},${f(hy - 9)}" fill="none" stroke="#fff" stroke-width="1.6" opacity=".18"/>`;
+      for (const d of [-1, 1])
+        s += `<ellipse cx="${f(hx + d * 12.5)}" cy="${f(hy + 8)}" rx="4.6" ry="6" fill="${P.pom}" stroke-width="1"/>`;
+      // Дзьобик видно збоку, коли голова повертається.
+      s += `<path d="M${f(hx + 16)},${f(hy + 3)}L${f(hx + 23)},${f(hy + 5)}L${f(hx + 16)},${f(hy + 8)}Z" fill="${P.legs}" stroke-width="1"/>`;
+      break;
+    }
+    case 'comet': {
+      // Каре: волосся до підборіддя з підкрученими кінчиками.
+      s += `<path d="M${f(hx - 18)},${f(hy + 2)}C${f(hx - 20)},${f(hy - 24)} ${f(hx + 20)},${f(hy - 24)} ${f(hx + 18)},${f(hy + 2)}Q${f(hx + 19)},${f(hy + 14)} ${f(hx + 13)},${f(hy + 16)}Q${f(hx + 15)},${f(hy + 10)} ${f(hx + 10)},${f(hy + 11)}L${f(hx - 10)},${f(hy + 11)}Q${f(hx - 15)},${f(hy + 10)} ${f(hx - 13)},${f(hy + 16)}Q${f(hx - 19)},${f(hy + 14)} ${f(hx - 18)},${f(hy + 2)}Z" fill="${P.hair}"/>`;
+      s += `<path d="M${f(hx - 8)},${f(hy - 12)}q-3,10 -3,20M${f(hx)},${f(hy - 14)}q0,12 0,22M${f(hx + 8)},${f(hy - 12)}q3,10 3,20" fill="none" stroke-width=".7" opacity=".35"/>`;
+      s += `<path d="M${f(hx - 10)},${f(hy - 14)}C${f(hx - 2)},${f(hy - 18)} ${f(hx + 8)},${f(hy - 16)} ${f(hx + 13)},${f(hy - 10)}" fill="none" stroke="#fff" stroke-width="1.8" opacity=".3"/>`;
+      const glow = 0.35 + 0.25 * Math.sin(t * 3);
+      s += `<circle cx="${f(hx + 13)}" cy="${f(hy - 8)}" r="9" fill="${P.pom}" opacity="${f(glow)}" stroke="none"/>`;
+      s += `<path d="M${f(hx + 13)},${f(hy - 15)}L${f(hx + 15)},${f(hy - 10)}L${f(hx + 20)},${f(hy - 9.5)}L${f(hx + 16)},${f(hy - 6.5)}L${f(hx + 17.5)},${f(hy - 1.5)}L${f(hx + 13)},${f(hy - 4.5)}L${f(hx + 8.5)},${f(hy - 1.5)}L${f(hx + 10)},${f(hy - 6.5)}L${f(hx + 6)},${f(hy - 9.5)}L${f(hx + 11)},${f(hy - 10)}Z" fill="${P.pom}" stroke-width="1"/>`;
+      break;
+    }
     case 'viking': {
       for (const d of [-1, 1])
         s += `<path d="M${f(hx + d * 14)},${f(hy - 12)}Q${f(hx + d * 30)},${f(hy - 14)} ${f(hx + d * 29)},${f(hy - 35)}Q${f(hx + d * 24)},${f(hy - 22)} ${f(hx + d * 11)},${f(hy - 19)}Z" fill="${P.pom}"/><path d="M${f(hx + d * 21)},${f(hy - 16)}l${-d * 2},-4M${f(hx + d * 25)},${f(hy - 21)}l${-d * 3},-2" stroke-width=".8"/>`;
@@ -360,6 +381,24 @@ function backExtras(P: Climber, c: Point, y0: number, y1: number, t: number, sw:
       const x = c.x + 4 + (tx - c.x - 4) * k;
       const y = y1 + 2 + (ty - y1 - 2) * k * k;
       s += `<path d="M${f(x - 3)},${f(y - 2)}L${f(x + 1)},${f(y - 7 + i)}L${f(x + 4)},${f(y)}Z" fill="${spark}" stroke="${INK}" stroke-width="1"/>`;
+    }
+  }
+  if (ex.includes('tail-penguin')) {
+    const w = Math.sin(t * 6) * 2;
+    s += `<path d="M${f(c.x - 7)},${f(y1 - 1)}L${f(c.x + 7)},${f(y1 - 1)}L${f(c.x + w)},${f(y1 + 11)}Z" fill="${P.accent}" stroke="${INK}" stroke-width="1.2" stroke-linejoin="round"/>`;
+  }
+  if (ex.includes('sparkles')) {
+    const pts = [
+      [-30, -40, 0],
+      [26, -52, 1.3],
+      [-22, 6, 2.1],
+      [30, 14, 0.7],
+      [-34, 40, 1.7],
+      [24, 46, 2.6],
+    ];
+    for (const [dx, dy, ph] of pts) {
+      const k = 0.5 + 0.5 * Math.sin(t * 3 + ph!);
+      s += `<g opacity="${f(0.35 + k * 0.65)}">${star(c.x + dx!, c.y + dy!, 2 + k * 2.2, P.spark!)}</g>`;
     }
   }
   if (ex.includes('tail-fox')) {

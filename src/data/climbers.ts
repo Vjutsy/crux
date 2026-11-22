@@ -34,8 +34,9 @@ export interface Climber {
   spark?: string;
 }
 
-export type Cap = 'stocking' | 'beanie' | 'helmet' | 'fox' | 'frog' | 'astro' | 'bee' | 'chef' | 'wizard' | 'viking' | 'dino';
-export type Extra = 'tail-fox' | 'tail-dino' | 'cape' | 'fur' | 'wings' | 'pack' | 'spikes';
+export type Cap =
+  'stocking' | 'beanie' | 'helmet' | 'fox' | 'frog' | 'astro' | 'bee' | 'chef' | 'wizard' | 'viking' | 'dino' | 'penguin' | 'comet';
+export type Extra = 'tail-fox' | 'tail-dino' | 'cape' | 'fur' | 'wings' | 'pack' | 'spikes' | 'tail-penguin' | 'sparkles';
 
 export const climbers: Climber[] = [
   {
