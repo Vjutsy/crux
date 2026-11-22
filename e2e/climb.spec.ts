@@ -238,3 +238,16 @@ test('скіни: вибір вбрання в панелі скелелаза, 
   await page.getByRole('button', { name: /Скелелаз: Іва/ }).click();
   await expect(page.getByRole('button', { name: 'Лисичка' })).toHaveAttribute('aria-pressed', 'true');
 });
+
+test('десктоп 1440×900: стіна по центру з полями, стіну можна пройти', async ({ page }) => {
+  await page.setViewportSize({ width: 1440, height: 900 });
+  await page.getByRole('button', { name: 'Грати' }).click();
+  await page.getByRole('button', { name: 'Лізти!' }).click();
+  // Масштаб від висоти: видно щонайменше 560 одиниць світу, стіна (300) — по центру з полями.
+  const box = await page.locator('#scenery').getAttribute('viewBox');
+  const [x, , w, h] = (box ?? '').split(' ').map(Number);
+  expect(h).toBeGreaterThanOrEqual(559);
+  expect(w).toBeGreaterThan(300);
+  expect(Math.abs(x! + w! / 2 - 150)).toBeLessThan(2);
+  expect(await climb(page, 0)).toBe('won');
+});

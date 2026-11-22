@@ -110,5 +110,18 @@ export function askQuestion(q: Question, opts: { requireDiacritics: boolean }): 
     input?.addEventListener('keydown', (e) => {
       if (e.key === 'Enter') submitTyped();
     });
+    // Десктоп: варіанти можна обрати клавішами 1–4 або A–D.
+    if (q.options) {
+      const onKey = (e: KeyboardEvent) => {
+        if (done) return document.removeEventListener('keydown', onKey);
+        const i = '1234'.indexOf(e.key) >= 0 ? '1234'.indexOf(e.key) : 'abcd'.indexOf(e.key.toLowerCase());
+        if (i < 0 || i >= q.options!.length) return;
+        e.preventDefault();
+        document.removeEventListener('keydown', onKey);
+        const given = q.options![i]!;
+        finish({ correct: q.expected.includes(given), given });
+      };
+      document.addEventListener('keydown', onKey);
+    }
   });
 }

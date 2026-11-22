@@ -87,6 +87,21 @@ const TUTORIAL = [
   'Руку чи ногу можна тягнути пальцем до зачепа — він збільшиться, коли кінцівка дістане. Далі — самі!',
 ];
 
+/** Скільки світу (по висоті) має бути видно щонайменше — на планшеті й десктопі стіна не роздувається. */
+const MIN_VIEW_H = 560;
+
+/** На широкому екрані обабіч стіни — притемнення й м'яка тінь від краю, щоб стіна читалась як окрема. */
+function wallSides(W: number, H: number) {
+  const y = -2000;
+  const h = H + 2400;
+  return (
+    `<defs><linearGradient id="sideL" x1="1" x2="0"><stop offset="0" stop-color="#0b0a16" stop-opacity=".55"/><stop offset="1" stop-color="#0b0a16" stop-opacity=".72"/></linearGradient>` +
+    `<linearGradient id="sideR" x1="0" x2="1"><stop offset="0" stop-color="#0b0a16" stop-opacity=".55"/><stop offset="1" stop-color="#0b0a16" stop-opacity=".72"/></linearGradient></defs>` +
+    `<rect x="-4000" y="${y}" width="4000" height="${h}" fill="url(#sideL)"/><rect x="${W}" y="${y}" width="4000" height="${h}" fill="url(#sideR)"/>` +
+    `<rect x="-3" y="0" width="3" height="${H}" fill="#0b0a16" opacity=".5"/><rect x="${W}" y="0" width="3" height="${H}" fill="#0b0a16" opacity=".5"/>`
+  );
+}
+
 export class ClimbScene extends Phaser.Scene {
   private s!: ClimbState;
   private data0!: ClimbData;
@@ -162,7 +177,7 @@ export class ClimbScene extends Phaser.Scene {
     // Фон із запасом угору й убоки: на високих екранах над стіною видно «небо».
     this.burned = new Set();
     this.scenery = document.getElementById('scenery') as unknown as SVGSVGElement;
-    this.scenery.innerHTML = `${SCENERY_DEFS}<rect x="-200" y="-2000" width="${w.width + 400}" height="${w.height + 2400}" fill="${this.theme.base}"/><g>${this.theme.draw(w.width, w.height, seed)}</g><g id="sc-holds"></g>`;
+    this.scenery.innerHTML = `${SCENERY_DEFS}<rect x="-4000" y="-2000" width="${w.width + 8000}" height="${w.height + 2400}" fill="${this.theme.base}"/><g>${this.theme.draw(w.width, w.height, seed)}</g>${wallSides(w.width, w.height)}<g id="sc-holds"></g>`;
     this.holdsLayer = this.scenery.querySelector('#sc-holds') as SVGGElement;
     this.scenery.removeAttribute('hidden');
     this.actor = document.getElementById('actor') as unknown as SVGSVGElement;
@@ -200,13 +215,17 @@ export class ClimbScene extends Phaser.Scene {
   private fitCamera() {
     const cam = this.cameras.main;
     const { width: W, height: H } = this.s.wall;
-    const zoom = this.scale.width / W;
+    // Телефон: стіна на всю ширину. Планшет і десктоп: екран ширший, ніж треба, — масштаб від висоти,
+    // щоб було видно щонайменше MIN_VIEW_H світу (маршрут на кілька рухів уперед); стіна по центру.
+    const zoom = Math.min(this.scale.width / W, this.scale.height / MIN_VIEW_H);
     cam.setZoom(zoom);
     // Над стіною — «небо»: камера може піднятися вище, тож верхні зачепи не ховаються під кнопками.
     // Низ стіни притиснутий до низу екрана.
+    const viewW = this.scale.width / zoom;
     const viewH = this.scale.height / zoom;
     const top = Math.min(-viewH * SKY, H - viewH);
-    cam.setBounds(0, top, W, H - top);
+    const left = Math.min(0, (W - viewW) / 2);
+    cam.setBounds(left, top, Math.max(W, viewW), H - top);
     cam.centerOn(W / 2, this.camY);
   }
 
