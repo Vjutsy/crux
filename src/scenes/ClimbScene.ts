@@ -17,7 +17,7 @@ import {
 } from '../core/climb';
 import { findRoute, generateWall } from '../core/generator';
 import { type LeitnerBoxes, type SeenLog, buildQuestion, pickMode, pickWord, updateBox } from '../core/questions';
-import { hashSeed, mulberry32, type Rng } from '../core/rng';
+import { hashSeed, mulberry32, randomSeed, type Rng } from '../core/rng';
 import type { WordGroup } from '../content/schema';
 import type { Climber } from '../data/climbers';
 import type { WallConfig } from '../data/walls';
@@ -35,6 +35,8 @@ export interface ClimbData {
   boxes: LeitnerBoxes;
   seen: SeenLog;
   asked: number;
+  /** Seed для питань; за замовчуванням — випадковий щоразу (тести можуть зафіксувати). */
+  questionSeed?: number;
   climber: Climber;
   /** Показувати навчальні підказки. */
   tutorial: boolean;
@@ -148,7 +150,9 @@ export class ClimbScene extends Phaser.Scene {
   create() {
     const { group, wall: cfg, seedSalt = '' } = this.data0;
     const seed = hashSeed(group.id, cfg.wall, seedSalt);
-    this.rng = mulberry32(seed ^ 0x5bd1e995);
+    // Стіна — з seed (та сама при «Ще раз»), а питання й зісковзування — щоразу з нового випадкового seed,
+    // щоб слова, варіанти відповіді й їх порядок не повторювались від спроби до спроби.
+    this.rng = mulberry32(this.data0.questionSeed ?? randomSeed());
     const wall = generateWall(seed, { moves: cfg.moves });
     this.s = startClimb(wall, stepBudget(wall, cfg.stepFactor));
     this.theme = themeFor(group.themeId, cfg.wall);

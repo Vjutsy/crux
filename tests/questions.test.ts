@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import type { WordGroup } from '../src/content/schema';
 import { type LeitnerBoxes, type SeenLog, pickWord, updateBox } from '../src/core/questions';
-import { mulberry32 } from '../src/core/rng';
+import { mulberry32, randomSeed } from '../src/core/rng';
 
 const group: WordGroup = {
   id: 't-a1',
@@ -36,12 +36,21 @@ describe('чергування слів', () => {
     expect(new Set(order).size).toBe(100);
   });
 
-  it('другий круг починається з найдавніших слів', () => {
+  it('другий круг бере з найдавніших слів', () => {
     const order = play(200, () => true);
-    const first = order.slice(0, 20);
-    const secondStart = new Set(order.slice(100, 120));
-    // Більшість слів, з яких почався перший круг, повертаються першими й у другому.
-    expect(first.filter((id) => secondStart.has(id)).length).toBeGreaterThanOrEqual(12);
+    const firstHalf = new Set(order.slice(0, 50));
+    // Перші 20 слів другого круга — з тих, що показувались у першій половині першого.
+    expect(order.slice(100, 120).every((id) => firstHalf.has(id))).toBe(true);
+  });
+
+  it('слова йдуть випадково: різні ігри починаються з різних слів, не за порядком у файлі', () => {
+    const starts = [1, 2, 3, 4, 5, 6].map((seed) => play(10, () => true, seed).join(','));
+    expect(new Set(starts).size).toBe(6);
+    const firstWords = [1, 2, 3, 4, 5, 6, 7, 8].map((seed) => play(1, () => true, seed)[0]);
+    expect(new Set(firstWords).size).toBeGreaterThanOrEqual(6);
+    // Перші 10 слів — не просто перші 10 у списку групи.
+    const first10 = play(10, () => true, 1);
+    expect(first10.filter((id) => Number(id.slice(1)) < 10).length).toBeLessThan(5);
   });
 
   it('слово з помилкою повертається раніше за решту, але не одразу', () => {
@@ -68,3 +77,9 @@ describe('чергування слів', () => {
 
 // Перше слово, яке гра обирає з seed 1, — його й «плутаємо» в тесті вище.
 const order0 = play(1, () => true)[0]!;
+
+describe('randomSeed', () => {
+  it('щоразу інший', () => {
+    expect(new Set(Array.from({ length: 20 }, () => randomSeed())).size).toBe(20);
+  });
+});

@@ -49,12 +49,13 @@ export type SeenLog = Record<string, number>;
 
 /** Частка питань, що повертають слово з помилкою, поки в групі ще є нові слова. */
 export const REVIEW_SHARE = 0.25;
-/** Зі скількох «найдавніших» слів обираємо випадково — щоб порядок не був завченим. */
-const FRESH_POOL = 4;
+/** Коли нових слів не лишилось: беремо випадкове з найдавнішої третини показаних (щонайменше з 4). */
+const OLD_SHARE = 1 / 3;
 
 /**
  * Обирає наступне слово так, щоб слова чергувались: спершу ті, яких ще не було, потім ті,
- * що показувались найдавніше, — за ~100 питань група проходиться повністю, без повторів.
+ * що показувались найдавніше; серед них — випадково. За ~100 питань група проходиться повністю, без повторів,
+ * а порядок щоразу інший.
  * Слова з помилкою (коробка 1) повертаються раніше: приблизно кожне 4-те питання.
  * Останні `recentLimit` слів цієї стіни не повторюються ніколи.
  */
@@ -66,8 +67,9 @@ export function pickWord(group: WordGroup, boxes: LeitnerBoxes, seen: SeenLog, r
   if (weak.length > 0 && rng() < REVIEW_SHARE) return weak[0]!;
   // Найдавніші (або ще не показані) — на початку; при рівності — легші коробки пізніше.
   const ordered = [...pool].sort((a, b) => age(a) - age(b) || BOX_WEIGHT[boxes[b.id] ?? 1]! - BOX_WEIGHT[boxes[a.id] ?? 1]!);
+  // Ще не показані — усі рівноймовірно (а не за порядком у файлі), тож кожна гра починається з різних слів.
   const unseen = ordered.filter((w) => seen[w.id] === undefined);
-  const candidates = (unseen.length > 0 ? unseen : ordered).slice(0, FRESH_POOL);
+  const candidates = unseen.length > 0 ? unseen : ordered.slice(0, Math.max(4, Math.ceil(ordered.length * OLD_SHARE)));
   return candidates[Math.floor(rng() * candidates.length)]!;
 }
 

@@ -29,3 +29,10 @@ export function shuffle<T>(arr: readonly T[], rng: Rng): T[] {
   }
   return a;
 }
+
+/** Справді випадковий seed (для того, що має щоразу відрізнятися, — напр. порядку слів). */
+export function randomSeed(): number {
+  const a = new Uint32Array(1);
+  globalThis.crypto.getRandomValues(a);
+  return a[0]!;
+}
